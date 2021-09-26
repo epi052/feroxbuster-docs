@@ -15,7 +15,7 @@ target-specific tuning issue. When lowering the `-t` value, the error doesn't oc
 
 This isn't a bug. Simply slow down the scan. A `-t` value of 50 was chosen as a sane default that's still quite fast out
 of the box. However, network related errors may occur when the client and/or server become over-saturated.
-The [Threads and Connection Limits At A High-Level](/docs/configuration/limit-connections/) section details how
+The [Threads and Connection Limits At A High-Level](../../configuration/limit-connections/) section details how
 to accomplish per-target tuning.
 
 > This is just due to the racy nature of networking.

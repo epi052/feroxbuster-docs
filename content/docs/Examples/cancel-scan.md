@@ -14,7 +14,7 @@ Scans that are started via `-u` or passed in through `--stdin` cannot be cancell
 {{% /alert %}}
 
 
-Version 1.12.0 expanded the pause/resume functionality introduced in [v1.4.0](/docs/examples/pause-scan/) by 
+Version 1.12.0 expanded the pause/resume functionality introduced in [v1.4.0](../pause-scan/) by 
 adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan.  Scans can still be paused indefinitely by pressing `ENTER`, however, the   
 
 ## Example 
