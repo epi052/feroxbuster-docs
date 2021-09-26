@@ -103,4 +103,10 @@ URL(s) to exclude from recursion/scans
 Sets the User-Agent (default: feroxbuster/VERSION)
 -w, --wordlist &amp;lt;FILE&amp;gt;
 Path to the wordlist
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Progress bars print one line at a time</title><link>/feroxbuster-docs/docs/faq/progress-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/progress-bars/</guid><description>
+&lt;h2 id="progress-bars-print-one-line-at-a-time">Progress bars print one line at a time&lt;/h2>
+&lt;p>&lt;code>feroxbuster&lt;/code> needs a terminal width of at least the size of what&amp;rsquo;s being printed in order to do progress bar printing
+correctly. If your width is too small, you may see output like what&amp;rsquo;s shown below.&lt;/p>
+&lt;p>&lt;img src="../small-term.png" alt="small-term">&lt;/p>
+&lt;p>If you can, simply make the terminal wider and rerun. If you&amp;rsquo;re unable to make your terminal wider consider using &lt;code>-q&lt;/code>
+to suppress the progress bars.&lt;/p></description></item></channel></rss>
