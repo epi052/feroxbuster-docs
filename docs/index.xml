@@ -210,7 +210,7 @@ magnitude slower on requests/second).&lt;/p></description></item><item><title>Do
 &lt;h4 class="alert-heading">Note&lt;/h4>
 Scans that are started via &lt;code>-u&lt;/code> or passed in through &lt;code>--stdin&lt;/code> cannot be cancelled, only scans found via &lt;code>--extract-links&lt;/code> or recursion are eligible.
 &lt;/div>
-&lt;p>Version 1.12.0 expanded the pause/resume functionality introduced in &lt;a href="/feroxbuster-docs/docs/examples/pause-scan/">v1.4.0&lt;/a> by
+&lt;p>Version 1.12.0 expanded the pause/resume functionality introduced in &lt;a href="../pause-scan/">v1.4.0&lt;/a> by
 adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing &lt;code>ENTER&lt;/code>, however, the&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;p>Below is an example of the Scan Cancel Menu™.&lt;/p>
@@ -548,7 +548,7 @@ project explains what is happening (quoted below to save you a click). This isn&
 target-specific tuning issue. When lowering the &lt;code>-t&lt;/code> value, the error doesn&amp;rsquo;t occur (or happens much less frequently).&lt;/p>
 &lt;p>This isn&amp;rsquo;t a bug. Simply slow down the scan. A &lt;code>-t&lt;/code> value of 50 was chosen as a sane default that&amp;rsquo;s still quite fast out
 of the box. However, network related errors may occur when the client and/or server become over-saturated.
-The &lt;a href="/feroxbuster-docs/docs/configuration/limit-connections/">Threads and Connection Limits At A High-Level&lt;/a> section details how
+The &lt;a href="../../configuration/limit-connections/">Threads and Connection Limits At A High-Level&lt;/a> section details how
 to accomplish per-target tuning.&lt;/p>
 &lt;blockquote>
 &lt;p>This is just due to the racy nature of networking.&lt;/p>
@@ -582,7 +582,7 @@ to accomplish per-target tuning.&lt;/p>
 &lt;/code>&lt;/pre>&lt;h2 id="piping-from-stdin-and-proxying-all-requests-through-socks5-proxy">Piping from stdin and proxying all requests through socks5 proxy&lt;/h2>
 &lt;pre tabindex="0">&lt;code>cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdin -x js,html --proxy socks5://127.0.0.1:9050
 &lt;/code>&lt;/pre>&lt;h2 id="mount-a-volume-to-pass-in-ferox-configtoml">Mount a volume to pass in &lt;code>ferox-config.toml&lt;/code>&lt;/h2>
-&lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="/feroxbuster-docs/docs/configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
+&lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="../../configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
 live in multiple locations and still be valid, so it&amp;rsquo;s up to you how you&amp;rsquo;d like to pass it in. Below are a few valid
 examples:&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo docker run --init -v $(pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml -it epi052/feroxbuster -u http://example.com
@@ -617,7 +617,7 @@ brew install feroxbuster
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/feroxbuster-docs/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-kali/</guid><description>
 &lt;h2 id="kali-install">Kali Install&lt;/h2>
 &lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the official Kali Linux repos 🥳&lt;/p>
-&lt;p>If you&amp;rsquo;re using kali, this is the preferred install method. Installing from the repos adds a &lt;a href="/feroxbuster-docs/docs/configuration/ferox-config-toml/">&lt;strong>ferox-config.toml&lt;/strong>&lt;/a> in &lt;code>/etc/feroxbuster/&lt;/code>, adds command completion for bash, fish, and zsh, includes a man page entry, and installs &lt;code>feroxbuster&lt;/code> itself.&lt;/p>
+&lt;p>If you&amp;rsquo;re using kali, this is the preferred install method. Installing from the repos adds a &lt;a href="../..//configuration/ferox-config-toml/">&lt;strong>ferox-config.toml&lt;/strong>&lt;/a> in &lt;code>/etc/feroxbuster/&lt;/code>, adds command completion for bash, fish, and zsh, includes a man page entry, and installs &lt;code>feroxbuster&lt;/code> itself.&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo apt update &amp;amp;&amp;amp; sudo apt install -y feroxbuster
 &lt;/code>&lt;/pre></description></item><item><title>Docs: No file descriptors available</title><link>/feroxbuster-docs/docs/faq/no-file-descriptors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/no-file-descriptors/</guid><description>
 &lt;h2 id="no-file-descriptors-available">No file descriptors available&lt;/h2>

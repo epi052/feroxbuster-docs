@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/feroxbuster-docs/docs/faq/connection-closed/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-25T16:39:08-05:00">
+<meta property="article:modified_time" content="2021-09-25T20:36:27-05:00">
 <meta itemprop=name content="Connection closed before message completed">
 <meta itemprop=description content="lower your `-t` value
 ">
-<meta itemprop=dateModified content="2021-09-25T16:39:08-05:00">
+<meta itemprop=dateModified content="2021-09-25T20:36:27-05:00">
 <meta itemprop=wordCount content="222"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
 <meta itemprop=keywords content><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/feroxbuster-docs/images/profile.png">
@@ -289,14 +289,14 @@ project explains what is happening (quoted below to save you a click). This isn&
 target-specific tuning issue. When lowering the <code>-t</code> value, the error doesn&rsquo;t occur (or happens much less frequently).</p>
 <p>This isn&rsquo;t a bug. Simply slow down the scan. A <code>-t</code> value of 50 was chosen as a sane default that&rsquo;s still quite fast out
 of the box. However, network related errors may occur when the client and/or server become over-saturated.
-The <a href=/docs/configuration/limit-connections/>Threads and Connection Limits At A High-Level</a> section details how
+The <a href=../../configuration/limit-connections/>Threads and Connection Limits At A High-Level</a> section details how
 to accomplish per-target tuning.</p>
 <blockquote>
 <p>This is just due to the racy nature of networking.</p>
 <p>hyper has a connection pool of idle connections, and it selected one to send your request. Most of the time, hyper will receive the server&rsquo;s FIN and drop the dead connection from its pool. But occasionally, a connection will be selected from the pool and written to at the same time the server is deciding to close the connection. Since hyper already wrote some of the request, it can&rsquo;t really retry it automatically on a new connection, since the server may have acted already.</p>
 </blockquote>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/5e018724a8ea333f74bed07e1e32ac44411796f1>initial port of docs (5e01872)</a>
+Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/6dd746f0f31aa208afa53c0f058cf05d19b93c11>refixed urls again (6dd746f)</a>
 </div>
 </div>
 </main>

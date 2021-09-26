@@ -3,7 +3,7 @@
 output and what it means, this is the section for you!&lt;/p>
 &lt;h3 id="discovered-resource">Discovered Resource&lt;/h3>
 &lt;p>When &lt;code>feroxbuster&lt;/code> finds a response that you haven&amp;rsquo;t filtered out, it&amp;rsquo;s reported above the progress bars and looks similar to what&amp;rsquo;s pictured below.&lt;/p>
-&lt;p>The number of lines, words, and bytes shown here can be used to &lt;a href="/feroxbuster-docs/docs/examples/filter-word-line/">filter those responses&lt;/a>&lt;/p>
+&lt;p>The number of lines, words, and bytes shown here can be used to &lt;a href="../examples/filter-word-line/">filter those responses&lt;/a>&lt;/p>
 &lt;p>&lt;img src="response-bar-explained.png" alt="response-bar-explained">&lt;/p>
 &lt;h3 id="overall-scan-progress-bar">Overall Scan Progress Bar&lt;/h3>
 &lt;p>The top progress bar, colored yellow, tracks the overall scan status. Its fields are described in the image below.&lt;/p>

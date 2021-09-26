@@ -210,7 +210,7 @@ magnitude slower on requests/second).&lt;/p></description></item><item><title>Do
 &lt;h4 class="alert-heading">Note&lt;/h4>
 Scans that are started via &lt;code>-u&lt;/code> or passed in through &lt;code>--stdin&lt;/code> cannot be cancelled, only scans found via &lt;code>--extract-links&lt;/code> or recursion are eligible.
 &lt;/div>
-&lt;p>Version 1.12.0 expanded the pause/resume functionality introduced in &lt;a href="/feroxbuster-docs/docs/examples/pause-scan/">v1.4.0&lt;/a> by
+&lt;p>Version 1.12.0 expanded the pause/resume functionality introduced in &lt;a href="../pause-scan/">v1.4.0&lt;/a> by
 adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing &lt;code>ENTER&lt;/code>, however, the&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;p>Below is an example of the Scan Cancel Menu™.&lt;/p>
