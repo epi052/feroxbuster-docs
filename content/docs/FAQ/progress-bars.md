@@ -1,6 +1,8 @@
 ---
 title: "Progress bars print one line at a time"
 linkTitle: "Progress bars print one line at a time"
+categories: ["faq"]
+tags: ["terminal"]
 description: >
   Widen your terminal
 ---

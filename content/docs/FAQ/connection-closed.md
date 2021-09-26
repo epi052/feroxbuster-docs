@@ -1,6 +1,8 @@
 ---
 title: "Connection closed before message completed"
 linkTitle: "Connection closed before message completed"
+categories: ["faq"]
+tags: ["connections", "limit"]
 description: >
   lower your `-t` value
 ---

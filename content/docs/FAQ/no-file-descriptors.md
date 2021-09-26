@@ -1,5 +1,7 @@
 ---
 title: "No file descriptors available"
+categories: ["faq"]
+tags: ["limit", "linux", "mac"]
 description: >
   Run `ulimit -n 4096`
 ---

@@ -1,6 +1,7 @@
 ---
 title: "SSL Error ... verify failed"
-linkTitle: ""
+categories: ["faq"]
+tags: ["cert", "insecure", "ssl"]
 description: >
   use the `-k|--insecure` flag
 ---
