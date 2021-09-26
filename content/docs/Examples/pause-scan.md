@@ -9,7 +9,7 @@ description: >
 
 
 {{% alert title="Note" %}}
-[v1.12.0](/docs/examples/cancel-scan/) added an interactive menu to the pause/resume
+[v1.12.0](../cancel-scan/) added an interactive menu to the pause/resume
 functionality.  
 
 Active scans can still be paused, however, you'll be presented with the option to cancel a scan instead
@@ -18,4 +18,4 @@ of simply seeing a spinner.
 
 ## Pause an Active Scan
 
-Scans can be paused and resumed by pressing the `ENTER` key (~~shown below~~, please see [v1.12.0](/docs/examples/cancel-scan/)'s entry for the latest visual representation)
+Scans can be paused and resumed by pressing the `ENTER` key (~~shown below~~, please see [v1.12.0](../cancel-scan/)'s entry for the latest visual representation)
