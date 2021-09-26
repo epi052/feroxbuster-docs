@@ -2,6 +2,8 @@
 ---
 title: "🧐 Comparison w/ Similar Tools"
 linkTitle: "🧐 Comparison w/ Similar Tools"
+categories: ["comparison"]
+tags: ["gobuster", "ffuf", "rustbuster"]
 weight: 8
 description: >
   Feature set comparison of similar scanning tools
