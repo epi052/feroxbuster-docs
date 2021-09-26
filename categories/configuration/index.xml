@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– configuration</title><link>/categories/configuration/</link><description>Recent content in configuration on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/categories/configuration/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Command Line Interface</title><link>/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/configuration/command-line/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– configuration</title><link>/feroxbuster-docs/categories/configuration/</link><description>Recent content in configuration on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/categories/configuration/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Command Line Interface</title><link>/feroxbuster-docs/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/command-line/</guid><description>
 &lt;h3 id="command-line-parsing">Command Line Parsing&lt;/h3>
 &lt;p>Finally, after parsing the available config file, any options/arguments given on the commandline will override any
 values that were set as a built-in or config-file value.&lt;/p>
@@ -91,7 +91,7 @@ URL(s) to exclude from recursion/scans
 Sets the User-Agent (default: feroxbuster/VERSION)
 -w, --wordlist &amp;lt;FILE&amp;gt;
 Path to the wordlist
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Configuration File</title><link>/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/configuration/ferox-config-toml/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Configuration File</title><link>/feroxbuster-docs/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/ferox-config-toml/</guid><description>
 &lt;h2 id="ferox-configtoml">ferox-config.toml&lt;/h2>
 &lt;p>After built-in default values are set, any values defined in a &lt;code>ferox-config.toml&lt;/code> config file will override the
 built-in defaults.&lt;/p>
@@ -182,7 +182,7 @@ the &lt;code>wordlist&lt;/code> value in the config file to override the baked-i
 &lt;span style="color:#8f5902;font-style:italic"># [headers]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># stuff = &amp;#34;things&amp;#34;&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># more = &amp;#34;headers&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Default Values</title><link>/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/configuration/default-values/</guid><description>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Default Values</title><link>/feroxbuster-docs/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/default-values/</guid><description>
 &lt;h2 id="default-values">Default Values&lt;/h2>
 &lt;p>Configuration begins with the following built-in default values baked into the binary:&lt;/p>
 &lt;ul>
@@ -199,7 +199,7 @@ the &lt;code>wordlist&lt;/code> value in the config file to override the baked-i
 &lt;li>auto-filter wildcards - &lt;code>true&lt;/code>&lt;/li>
 &lt;li>output: &lt;code>stdout&lt;/code>&lt;/li>
 &lt;li>save_state: &lt;code>true&lt;/code> (create a state file in cwd when &lt;code>Ctrl+C&lt;/code> is received)&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Threads and Connection Limits</title><link>/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/configuration/limit-connections/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>
 &lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
 &lt;p>This section explains how the &lt;code>-t&lt;/code> and &lt;code>-L&lt;/code> options work together to determine the overall aggressiveness of a scan. The
 combination of the two values set by these options determines how hard your target will get hit and to some extent also

@@ -1,23 +1,23 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– linux</title><link>/tags/linux/</link><description>Recent content in linux on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: apt Install</title><link>/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-apt/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– linux</title><link>/feroxbuster-docs/tags/linux/</link><description>Recent content in linux on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: apt Install</title><link>/feroxbuster-docs/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-apt/</guid><description>
 &lt;h2 id="apt-install">apt Install&lt;/h2>
 &lt;p>Download &lt;code>feroxbuster_amd64.deb&lt;/code> from the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section. After
 that, use your favorite package manager to install the &lt;code>.deb&lt;/code>.&lt;/p>
 &lt;pre tabindex="0">&lt;code>curl -sLO https://github.com/epi052/feroxbuster/releases/latest/download/feroxbuster_amd64.deb.zip
 unzip feroxbuster_amd64.deb.zip
 sudo apt install ./feroxbuster_*_amd64.deb
-&lt;/code>&lt;/pre></description></item><item><title>Docs: AUR Install</title><link>/docs/installation/install-aur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-aur/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: AUR Install</title><link>/feroxbuster-docs/docs/installation/install-aur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-aur/</guid><description>
 &lt;h2 id="aur-install">AUR Install&lt;/h2>
 &lt;p>Install &lt;code>feroxbuster-git&lt;/code> on Arch Linux with your AUR helper of choice:&lt;/p>
 &lt;pre tabindex="0">&lt;code>yay -S feroxbuster-git
-&lt;/code>&lt;/pre></description></item><item><title>Docs: BlackArch Install</title><link>/docs/installation/install-blackarch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-blackarch/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: BlackArch Install</title><link>/feroxbuster-docs/docs/installation/install-blackarch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-blackarch/</guid><description>
 &lt;h2 id="blackarch-install">BlackArch install&lt;/h2>
 &lt;p>Install &lt;code>feroxbuster&lt;/code> on BlackArch Linux:&lt;/p>
 &lt;pre tabindex="0">&lt;code>pacman -S feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Build from Source</title><link>/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-cargo/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Build from Source</title><link>/feroxbuster-docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-cargo/</guid><description>
 &lt;h2 id="cargo-install">Cargo Install&lt;/h2>
 &lt;p>&lt;code>feroxbuster&lt;/code> is published on crates.io, making it easy to install if you already have rust installed on your system.&lt;/p>
 &lt;pre tabindex="0">&lt;code>cargo install feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Docker Install</title><link>/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-docker/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Docker Install</title><link>/feroxbuster-docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-docker/</guid><description>
 &lt;h2 id="docker-install">Docker Install&lt;/h2>
 &lt;blockquote>
 &lt;p>The following steps assume you have docker installed / setup&lt;/p>
@@ -38,7 +38,7 @@ examples:&lt;/p>
 &lt;pre tabindex="0">&lt;code>docker run --init -v (pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml:Z -it epi052/feroxbuster -u http://example.com
 &lt;/code>&lt;/pre>&lt;h2 id="define-an-alias-for-simplicity">Define an alias for simplicity&lt;/h2>
 &lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;quot;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;quot;
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Download a Release</title><link>/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-release/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>
 &lt;h2 id="download-a-release">Download a Release&lt;/h2>
 &lt;p>Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p>
 &lt;h2 id="linux-32-and-64-bit--macos">Linux (32 and 64-bit) &amp;amp; MacOS&lt;/h2>
@@ -52,7 +52,7 @@ Expand-Archive .\feroxbuster.zip
 Expand-Archive .\feroxbuster.zip
 .\feroxbuster\feroxbuster.exe -V
 &lt;/code>&lt;/pre>&lt;h2 id="all-other-releases">All other releases&lt;/h2>
-&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Docs: Homebrew Install</title><link>/docs/installation/install-homebrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-homebrew/</guid><description>
+&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Docs: Homebrew Install</title><link>/feroxbuster-docs/docs/installation/install-homebrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-homebrew/</guid><description>
 &lt;h2 id="homebrew-on-macos-and-linux">Homebrew on MacOS and Linux&lt;/h2>
 &lt;p>Install using Homebrew via tap&lt;/p>
 &lt;p>🍏 &lt;a href="https://github.com/TGotwig/homebrew-feroxbuster/blob/main/feroxbuster.rb">MacOS tap&lt;/a>&lt;/p>
@@ -61,12 +61,12 @@ brew install feroxbuster
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>🐧 &lt;a href="https://github.com/TGotwig/homebrew-linux-feroxbuster/blob/main/feroxbuster.rb">Linux tap&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">brew tap tgotwig/linux-feroxbuster
 brew install feroxbuster
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-kali/</guid><description>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/feroxbuster-docs/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-kali/</guid><description>
 &lt;h2 id="kali-install">Kali Install&lt;/h2>
 &lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the official Kali Linux repos 🥳&lt;/p>
 &lt;p>If you&amp;rsquo;re using kali, this is the preferred install method. Installing from the repos adds a &lt;a href="docs/configuration/ferox-config-toml/">&lt;strong>ferox-config.toml&lt;/strong>&lt;/a> in &lt;code>/etc/feroxbuster/&lt;/code>, adds command completion for bash, fish, and zsh, includes a man page entry, and installs &lt;code>feroxbuster&lt;/code> itself.&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo apt update &amp;amp;&amp;amp; sudo apt install -y feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Snap Install</title><link>/docs/installation/install-snap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-snap/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Snap Install</title><link>/feroxbuster-docs/docs/installation/install-snap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-snap/</guid><description>
 &lt;h2 id="install-using-snap">Install using &lt;code>snap&lt;/code>&lt;/h2>
 &lt;pre tabindex="0">&lt;code>sudo snap install feroxbuster
 &lt;/code>&lt;/pre>&lt;h2 id="gotchas">Gotchas&lt;/h2>

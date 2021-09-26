@@ -1,10 +1,10 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– limit</title><link>/tags/limit/</link><description>Recent content in limit on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/limit/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Limit Number of Scans</title><link>/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/examples/limit-scans/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– limit</title><link>/feroxbuster-docs/tags/limit/</link><description>Recent content in limit on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/limit/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Limit Number of Scans</title><link>/feroxbuster-docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-scans/</guid><description>
 &lt;h2 id="limit-total-number-of-concurrent-scans">Limit Total Number of Concurrent Scans&lt;/h2>
 &lt;p>Limit the number of scans permitted to run at any given time. Recursion will still identify new directories, but newly
 discovered directories can only begin scanning when the total number of active scans drops below the value passed to
 &lt;code>--scan-limit&lt;/code>.&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --scan-limit 2
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../limit-demo.gif" alt="limit-demo">&lt;/p></description></item><item><title>Docs: Enforce Time Limit</title><link>/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/examples/time-limit/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../limit-demo.gif" alt="limit-demo">&lt;/p></description></item><item><title>Docs: Enforce Time Limit</title><link>/feroxbuster-docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/time-limit/</guid><description>
 &lt;h2 id="enforce-a-time-limit-on-your-scan">Enforce a Time Limit on Your Scan&lt;/h2>
 &lt;p>Version 1.10.0 adds the ability to set a maximum runtime, or time limit, on your scan. The usage is pretty simple: a
 number followed directly by a single character representing seconds, minutes, hours, or days. &lt;code>feroxbuster&lt;/code> refers to
@@ -17,7 +17,7 @@ this combination as a time_spec.&lt;/p>
 &lt;li>&lt;code>1d&lt;/code> - 1 day (why??)&lt;/li>
 &lt;/ul>
 &lt;p>A valid time_spec can be passed to &lt;code>--time-limit&lt;/code> in order to force a shutdown after the given time has elapsed.&lt;/p>
-&lt;p>&lt;img src="../time-limit.gif" alt="time-limit">&lt;/p></description></item><item><title>Docs: Rate Limiting</title><link>/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/examples/rate-limit/</guid><description>
+&lt;p>&lt;img src="../time-limit.gif" alt="time-limit">&lt;/p></description></item><item><title>Docs: Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>
 &lt;h2 id="limit-number-of-requests-per-second">Limit Number of Requests per Second&lt;/h2>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
@@ -31,7 +31,7 @@ Rate limiting is enforced on a &lt;strong>per-directory&lt;/strong> basis.
 limiting the number of requests per second overall)&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://localhost --rate-limit 100 --scan-limit 1
 &lt;/code>&lt;/pre>&lt;h2 id="demonstration">Demonstration&lt;/h2>
-&lt;p>&lt;img src="../rate-limit-demo.gif" alt="rate-limit">&lt;/p></description></item><item><title>Docs: Auto-tune / Auto-bail</title><link>/docs/examples/auto-tune/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/examples/auto-tune/</guid><description>
+&lt;p>&lt;img src="../rate-limit-demo.gif" alt="rate-limit">&lt;/p></description></item><item><title>Docs: Auto-tune / Auto-bail</title><link>/feroxbuster-docs/docs/examples/auto-tune/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/auto-tune/</guid><description>
 &lt;h2 id="auto-tune-or-auto-bail-from-scans">Auto-tune or Auto-bail from scans&lt;/h2>
 &lt;p>Version 2.1.0 introduces the &lt;code>--auto-tune&lt;/code> and &lt;code>--auto-bail&lt;/code> flags. You can think of these flags as Policies. Both actions (tuning and bailing) are triggered by the same criteria (below). Policies are only enforced after at least 50 requests have been made (or # of threads, if that&amp;rsquo;s &amp;gt; 50).&lt;/p>
 &lt;p>Policy Enforcement Criteria:&lt;/p>
@@ -48,7 +48,7 @@ limiting the number of requests per second overall)&lt;/p>
 &lt;p>&lt;img src="../auto-tune-demo.gif" alt="auto-tune">&lt;/p>
 &lt;h4 id="--auto-bail">--auto-bail&lt;/h4>
 &lt;p>The AutoBail policy aborts individual directory scans when one of the criteria above is met. They just stop getting scanned, no muss, no fuss.&lt;/p>
-&lt;p>&lt;img src="../auto-bail-demo.gif" alt="auto-bail">&lt;/p></description></item><item><title>Docs: Threads and Connection Limits</title><link>/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/configuration/limit-connections/</guid><description>
+&lt;p>&lt;img src="../auto-bail-demo.gif" alt="auto-bail">&lt;/p></description></item><item><title>Docs: Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>
 &lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
 &lt;p>This section explains how the &lt;code>-t&lt;/code> and &lt;code>-L&lt;/code> options work together to determine the overall aggressiveness of a scan. The
 combination of the two values set by these options determines how hard your target will get hit and to some extent also

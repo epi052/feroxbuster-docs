@@ -1,8 +1,8 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– mac</title><link>/tags/mac/</link><description>Recent content in mac on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/mac/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Build from Source</title><link>/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-cargo/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– mac</title><link>/feroxbuster-docs/tags/mac/</link><description>Recent content in mac on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/mac/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Build from Source</title><link>/feroxbuster-docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-cargo/</guid><description>
 &lt;h2 id="cargo-install">Cargo Install&lt;/h2>
 &lt;p>&lt;code>feroxbuster&lt;/code> is published on crates.io, making it easy to install if you already have rust installed on your system.&lt;/p>
 &lt;pre tabindex="0">&lt;code>cargo install feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Docker Install</title><link>/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-docker/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Docker Install</title><link>/feroxbuster-docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-docker/</guid><description>
 &lt;h2 id="docker-install">Docker Install&lt;/h2>
 &lt;blockquote>
 &lt;p>The following steps assume you have docker installed / setup&lt;/p>
@@ -23,7 +23,7 @@ examples:&lt;/p>
 &lt;pre tabindex="0">&lt;code>docker run --init -v (pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml:Z -it epi052/feroxbuster -u http://example.com
 &lt;/code>&lt;/pre>&lt;h2 id="define-an-alias-for-simplicity">Define an alias for simplicity&lt;/h2>
 &lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;quot;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;quot;
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Download a Release</title><link>/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-release/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>
 &lt;h2 id="download-a-release">Download a Release&lt;/h2>
 &lt;p>Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p>
 &lt;h2 id="linux-32-and-64-bit--macos">Linux (32 and 64-bit) &amp;amp; MacOS&lt;/h2>
@@ -37,7 +37,7 @@ Expand-Archive .\feroxbuster.zip
 Expand-Archive .\feroxbuster.zip
 .\feroxbuster\feroxbuster.exe -V
 &lt;/code>&lt;/pre>&lt;h2 id="all-other-releases">All other releases&lt;/h2>
-&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Docs: Homebrew Install</title><link>/docs/installation/install-homebrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-homebrew/</guid><description>
+&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Docs: Homebrew Install</title><link>/feroxbuster-docs/docs/installation/install-homebrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-homebrew/</guid><description>
 &lt;h2 id="homebrew-on-macos-and-linux">Homebrew on MacOS and Linux&lt;/h2>
 &lt;p>Install using Homebrew via tap&lt;/p>
 &lt;p>🍏 &lt;a href="https://github.com/TGotwig/homebrew-feroxbuster/blob/main/feroxbuster.rb">MacOS tap&lt;/a>&lt;/p>

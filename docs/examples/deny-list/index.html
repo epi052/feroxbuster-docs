@@ -3,16 +3,16 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=generator content="Hugo 0.88.1"><meta name=ROBOTS content="INDEX, FOLLOW">
-<link rel="shortcut icon" href=/favicons/favicon.ico>
-<link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
-<link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
-<link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=/favicons/android-36x36.png sizes=36x36>
-<link rel=icon type=image/png href=/favicons/android-48x48.png sizes=48x48>
-<link rel=icon type=image/png href=/favicons/android-72x72.png sizes=72x72>
-<link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
-<link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
-<link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
+<link rel="shortcut icon" href=/feroxbuster-docs/favicons/favicon.ico>
+<link rel=apple-touch-icon href=/feroxbuster-docs/favicons/apple-touch-icon-180x180.png sizes=180x180>
+<link rel=icon type=image/png href=/feroxbuster-docs/favicons/favicon-16x16.png sizes=16x16>
+<link rel=icon type=image/png href=/feroxbuster-docs/favicons/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-36x36.png sizes=36x36>
+<link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-48x48.png sizes=48x48>
+<link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-72x72.png sizes=72x72>
+<link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-96x96.png sizes=96x96>
+<link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-144x144.png sizes=144x144>
+<link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-192x192.png sizes=192x192>
 <title>Deny List | </title>
 <meta name=description content="Added in version **2.3.0**
 ">
@@ -20,32 +20,32 @@
 <meta property="og:description" content="Added in version **2.3.0**
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/docs/examples/deny-list/"><meta property="og:image" content="/images/profile.png"><meta property="article:section" content="docs">
+<meta property="og:url" content="/feroxbuster-docs/docs/examples/deny-list/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
 <meta property="article:modified_time" content="2021-09-25T16:39:08-05:00">
 <meta itemprop=name content="Deny List">
 <meta itemprop=description content="Added in version **2.3.0**
 ">
 <meta itemprop=dateModified content="2021-09-25T16:39:08-05:00">
-<meta itemprop=wordCount content="186"><meta itemprop=image content="/images/profile.png">
+<meta itemprop=wordCount content="186"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
 <meta itemprop=keywords content="feature,deny,block,"><meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="/images/profile.png">
+<meta name=twitter:image content="/feroxbuster-docs/images/profile.png">
 <meta name=twitter:title content="Deny List">
 <meta name=twitter:description content="Added in version **2.3.0**
 ">
-<link rel=preload href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
-<link href=/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
+<link rel=preload href=/feroxbuster-docs/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
+<link href=/feroxbuster-docs/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 </head>
 <body class=td-page>
 <header>
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-<a class=navbar-brand href=/>
+<a class=navbar-brand href=/feroxbuster-docs/>
 <span class=navbar-logo><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="text-uppercase font-weight-bold"></span>
 </a>
 <div class="td-navbar-nav-scroll ml-md-auto" id=main_navbar>
 <ul class="navbar-nav mt-2 mt-lg-0">
 <li class="nav-item mr-4 mb-2 mb-lg-0">
-<a class="nav-link active" href=/docs/><span class=active>Documentation</span></a>
+<a class="nav-link active" href=/feroxbuster-docs/docs/><span class=active>Documentation</span></a>
 </li>
 </ul>
 </div>
@@ -69,105 +69,105 @@
 <div id=content-desktop></div>
 <nav class="collapse td-sidebar-nav" id=td-section-nav>
 <ul class="td-sidebar-nav__section pr-md-3 ul-0">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docs-li>
-<a href=/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-docs><span>Documentation</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-feroxbuster-docsdocs-li>
+<a href=/feroxbuster-docs/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-feroxbuster-docsdocs><span>Documentation</span></a>
 <ul class=ul-1>
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsoverview-li>
-<a href=/docs/overview/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsoverview><span>📖 Overview</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsinstallation-li>
-<a href=/docs/installation/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsinstallation><span>💿 Installation</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsoverview-li>
+<a href=/feroxbuster-docs/docs/overview/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsoverview><span>📖 Overview</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-feroxbuster-docsdocsinstallation-li>
+<a href=/feroxbuster-docs/docs/installation/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsinstallation><span>💿 Installation</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstallationinstall-apt-li>
-<a href=/docs/installation/install-apt/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstallationinstall-apt><span>apt Install</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstallationinstall-aur-li>
-<a href=/docs/installation/install-aur/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstallationinstall-aur><span>AUR Install</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstallationinstall-blackarch-li>
-<a href=/docs/installation/install-blackarch/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstallationinstall-blackarch><span>BlackArch Install</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstallationinstall-cargo-li>
-<a href=/docs/installation/install-cargo/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstallationinstall-cargo><span>Build from Source</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstallationinstall-docker-li>
-<a href=/docs/installation/install-docker/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstallationinstall-docker><span>Docker Install</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstallationinstall-release-li>
-<a href=/docs/installation/install-release/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstallationinstall-release><span>Download a Release</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstallationinstall-homebrew-li>
-<a href=/docs/installation/install-homebrew/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstallationinstall-homebrew><span>Homebrew Install</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstallationinstall-kali-li>
-<a href=/docs/installation/install-kali/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstallationinstall-kali><span>Kali Install</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinstallationinstall-snap-li>
-<a href=/docs/installation/install-snap/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsinstallationinstall-snap><span>Snap Install</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-apt-li>
+<a href=/feroxbuster-docs/docs/installation/install-apt/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-apt><span>apt Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-aur-li>
+<a href=/feroxbuster-docs/docs/installation/install-aur/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-aur><span>AUR Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-blackarch-li>
+<a href=/feroxbuster-docs/docs/installation/install-blackarch/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-blackarch><span>BlackArch Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-cargo-li>
+<a href=/feroxbuster-docs/docs/installation/install-cargo/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-cargo><span>Build from Source</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-docker-li>
+<a href=/feroxbuster-docs/docs/installation/install-docker/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-docker><span>Docker Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-release-li>
+<a href=/feroxbuster-docs/docs/installation/install-release/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-release><span>Download a Release</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-homebrew-li>
+<a href=/feroxbuster-docs/docs/installation/install-homebrew/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-homebrew><span>Homebrew Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-kali-li>
+<a href=/feroxbuster-docs/docs/installation/install-kali/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-kali><span>Kali Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-snap-li>
+<a href=/feroxbuster-docs/docs/installation/install-snap/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-snap><span>Snap Install</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsconfiguration-li>
-<a href=/docs/configuration/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsconfiguration><span>⚙ Configuration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-feroxbuster-docsdocsconfiguration-li>
+<a href=/feroxbuster-docs/docs/configuration/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsconfiguration><span>⚙ Configuration</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsconfigurationcommand-line-li>
-<a href=/docs/configuration/command-line/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsconfigurationcommand-line><span>Command Line Interface</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsconfigurationferox-config-toml-li>
-<a href=/docs/configuration/ferox-config-toml/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsconfigurationferox-config-toml><span>Configuration File</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsconfigurationdefault-values-li>
-<a href=/docs/configuration/default-values/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsconfigurationdefault-values><span>Default Values</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsconfigurationlimit-connections-li>
-<a href=/docs/configuration/limit-connections/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsconfigurationlimit-connections><span>Threads and Connection Limits</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsconfigurationcommand-line-li>
+<a href=/feroxbuster-docs/docs/configuration/command-line/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsconfigurationcommand-line><span>Command Line Interface</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsconfigurationferox-config-toml-li>
+<a href=/feroxbuster-docs/docs/configuration/ferox-config-toml/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsconfigurationferox-config-toml><span>Configuration File</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsconfigurationdefault-values-li>
+<a href=/feroxbuster-docs/docs/configuration/default-values/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsconfigurationdefault-values><span>Default Values</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsconfigurationlimit-connections-li>
+<a href=/feroxbuster-docs/docs/configuration/limit-connections/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsconfigurationlimit-connections><span>Threads and Connection Limits</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsinterpreting-results-li>
-<a href=/docs/interpreting-results/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsinterpreting-results><span>📊 Interpreting Results</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docsexamples-li>
-<a href=/docs/examples/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsexamples><span>🧰 Examples</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinterpreting-results-li>
+<a href=/feroxbuster-docs/docs/interpreting-results/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsinterpreting-results><span>📊 Interpreting Results</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-feroxbuster-docsdocsexamples-li>
+<a href=/feroxbuster-docs/docs/examples/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsexamples><span>🧰 Examples</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplescore-features-li>
-<a href=/docs/examples/core-features/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplescore-features><span>Core Features</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesextract-links-li>
-<a href=/docs/examples/extract-links/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesextract-links><span>Extract Links</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexampleslimit-scans-li>
-<a href=/docs/examples/limit-scans/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexampleslimit-scans><span>Limit Number of Scans</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesfilter-status-li>
-<a href=/docs/examples/filter-status/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesfilter-status><span>Filter by Status</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplespause-scan-li>
-<a href=/docs/examples/pause-scan/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplespause-scan><span>Pause a Scan</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesreplay-proxy-li>
-<a href=/docs/examples/replay-proxy/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesreplay-proxy><span>Replay Responses</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesfilter-word-line-li>
-<a href=/docs/examples/filter-word-line/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesfilter-word-line><span>Filter by Word/Line Count</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesfilter-regex-li>
-<a href=/docs/examples/filter-regex/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesfilter-regex><span>Filter by Regex</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesresume-scan-li>
-<a href=/docs/examples/resume-scan/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesresume-scan><span>Stop/Resume Scans</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplestime-limit-li>
-<a href=/docs/examples/time-limit/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplestime-limit><span>Enforce Time Limit</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesfilter-similar-li>
-<a href=/docs/examples/filter-similar/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesfilter-similar><span>Filter by Page Similarity</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplescancel-scan-li>
-<a href=/docs/examples/cancel-scan/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplescancel-scan><span>Scan Cancel Menu</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesrate-limit-li>
-<a href=/docs/examples/rate-limit/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesrate-limit><span>Rate Limiting</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesbe-quiet-li>
-<a href=/docs/examples/be-quiet/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesbe-quiet><span>Silent/Quiet Output</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesauto-tune-li>
-<a href=/docs/examples/auto-tune/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesauto-tune><span>Auto-tune / Auto-bail</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsexamplesparallel-scan-li>
-<a href=/docs/examples/parallel-scan/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsexamplesparallel-scan><span>Parallel Scans</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docsexamplesdeny-list-li>
-<a href=/docs/examples/deny-list/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docsexamplesdeny-list><span class=td-sidebar-nav-active-item>Deny List</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplescore-features-li>
+<a href=/feroxbuster-docs/docs/examples/core-features/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplescore-features><span>Core Features</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesextract-links-li>
+<a href=/feroxbuster-docs/docs/examples/extract-links/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesextract-links><span>Extract Links</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexampleslimit-scans-li>
+<a href=/feroxbuster-docs/docs/examples/limit-scans/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexampleslimit-scans><span>Limit Number of Scans</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesfilter-status-li>
+<a href=/feroxbuster-docs/docs/examples/filter-status/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesfilter-status><span>Filter by Status</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplespause-scan-li>
+<a href=/feroxbuster-docs/docs/examples/pause-scan/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplespause-scan><span>Pause a Scan</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesreplay-proxy-li>
+<a href=/feroxbuster-docs/docs/examples/replay-proxy/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesreplay-proxy><span>Replay Responses</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesfilter-word-line-li>
+<a href=/feroxbuster-docs/docs/examples/filter-word-line/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesfilter-word-line><span>Filter by Word/Line Count</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesfilter-regex-li>
+<a href=/feroxbuster-docs/docs/examples/filter-regex/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesfilter-regex><span>Filter by Regex</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesresume-scan-li>
+<a href=/feroxbuster-docs/docs/examples/resume-scan/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesresume-scan><span>Stop/Resume Scans</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplestime-limit-li>
+<a href=/feroxbuster-docs/docs/examples/time-limit/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplestime-limit><span>Enforce Time Limit</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesfilter-similar-li>
+<a href=/feroxbuster-docs/docs/examples/filter-similar/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesfilter-similar><span>Filter by Page Similarity</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplescancel-scan-li>
+<a href=/feroxbuster-docs/docs/examples/cancel-scan/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplescancel-scan><span>Scan Cancel Menu</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesrate-limit-li>
+<a href=/feroxbuster-docs/docs/examples/rate-limit/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesrate-limit><span>Rate Limiting</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesbe-quiet-li>
+<a href=/feroxbuster-docs/docs/examples/be-quiet/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesbe-quiet><span>Silent/Quiet Output</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesauto-tune-li>
+<a href=/feroxbuster-docs/docs/examples/auto-tune/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesauto-tune><span>Auto-tune / Auto-bail</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesparallel-scan-li>
+<a href=/feroxbuster-docs/docs/examples/parallel-scan/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesparallel-scan><span>Parallel Scans</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-feroxbuster-docsdocsexamplesdeny-list-li>
+<a href=/feroxbuster-docs/docs/examples/deny-list/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesdeny-list><span class=td-sidebar-nav-active-item>Deny List</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docstutorials-li>
-<a href=/docs/tutorials/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docstutorials><span>🧐 Comparison w/ Similar Tools</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsfaq-li>
-<a href=/docs/faq/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsfaq><span>🤯 Common Problems (FAQ)</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocstutorials-li>
+<a href=/feroxbuster-docs/docs/tutorials/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocstutorials><span>🧐 Comparison w/ Similar Tools</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-feroxbuster-docsdocsfaq-li>
+<a href=/feroxbuster-docs/docs/faq/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsfaq><span>🤯 Common Problems (FAQ)</span></a>
 <ul class="ul-2 foldable">
-<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsfaqconnection-closed-li>
-<a href=/docs/faq/connection-closed/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsfaqconnection-closed><span>Connection closed before message completed</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsfaqno-file-descriptors-li>
-<a href=/docs/faq/no-file-descriptors/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsfaqno-file-descriptors><span>No file descriptors available</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsfaqprogress-bars-li>
-<a href=/docs/faq/progress-bars/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsfaqprogress-bars><span>Progress bars print one line at a time</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsfaqself-signed-li>
-<a href=/docs/faq/self-signed/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsfaqself-signed><span>SSL Error ... verify failed</span></a>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsfaqconnection-closed-li>
+<a href=/feroxbuster-docs/docs/faq/connection-closed/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsfaqconnection-closed><span>Connection closed before message completed</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsfaqno-file-descriptors-li>
+<a href=/feroxbuster-docs/docs/faq/no-file-descriptors/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsfaqno-file-descriptors><span>No file descriptors available</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsfaqprogress-bars-li>
+<a href=/feroxbuster-docs/docs/faq/progress-bars/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsfaqprogress-bars><span>Progress bars print one line at a time</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsfaqself-signed-li>
+<a href=/feroxbuster-docs/docs/faq/self-signed/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsfaqself-signed><span>SSL Error ... verify failed</span></a>
 </li>
 </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docscontribution-guidelines-li>
-<a href=/docs/contribution-guidelines/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docscontribution-guidelines><span>Contribution Guidelines</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocscontribution-guidelines-li>
+<a href=/feroxbuster-docs/docs/contribution-guidelines/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocscontribution-guidelines><span>Contribution Guidelines</span></a>
 </li>
 </ul>
 </li>
@@ -191,71 +191,71 @@
 <div class="taxonomy taxonomy-terms-cloud taxo-categories">
 <h5 class=taxonomy-title>Categories</h5>
 <ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=/categories/configuration/ data-taxonomy-term=configuration><span class=taxonomy-label>configuration</span><span class=taxonomy-count>4</span></a></li>
-<li><a class=taxonomy-term href=/categories/examples/ data-taxonomy-term=examples><span class=taxonomy-label>examples</span><span class=taxonomy-count>17</span></a></li>
-<li><a class=taxonomy-term href=/categories/installation/ data-taxonomy-term=installation><span class=taxonomy-label>installation</span><span class=taxonomy-count>9</span></a></li>
-<li><a class=taxonomy-term href=/categories/interface/ data-taxonomy-term=interface><span class=taxonomy-label>interface</span><span class=taxonomy-count>2</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/categories/configuration/ data-taxonomy-term=configuration><span class=taxonomy-label>configuration</span><span class=taxonomy-count>4</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/categories/examples/ data-taxonomy-term=examples><span class=taxonomy-label>examples</span><span class=taxonomy-count>17</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/categories/installation/ data-taxonomy-term=installation><span class=taxonomy-label>installation</span><span class=taxonomy-count>9</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/categories/interface/ data-taxonomy-term=interface><span class=taxonomy-label>interface</span><span class=taxonomy-count>2</span></a></li>
 </ul>
 </div>
 <div class="taxonomy taxonomy-terms-cloud taxo-tags">
 <h5 class=taxonomy-title>Tag Cloud</h5>
 <ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=/tags/apt/ data-taxonomy-term=apt><span class=taxonomy-label>apt</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/arguments/ data-taxonomy-term=arguments><span class=taxonomy-label>arguments</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/arm/ data-taxonomy-term=arm><span class=taxonomy-label>arm</span><span class=taxonomy-count>2</span></a></li>
-<li><a class=taxonomy-term href=/tags/aur/ data-taxonomy-term=aur><span class=taxonomy-label>AUR</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/blackarch/ data-taxonomy-term=blackarch><span class=taxonomy-label>BlackArch</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/block/ data-taxonomy-term=block><span class=taxonomy-label>block</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/burp/ data-taxonomy-term=burp><span class=taxonomy-label>burp</span><span class=taxonomy-count>2</span></a></li>
-<li><a class=taxonomy-term href=/tags/cancel/ data-taxonomy-term=cancel><span class=taxonomy-label>cancel</span><span class=taxonomy-count>2</span></a></li>
-<li><a class=taxonomy-term href=/tags/cargo/ data-taxonomy-term=cargo><span class=taxonomy-label>cargo</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/cli/ data-taxonomy-term=cli><span class=taxonomy-label>cli</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/config/ data-taxonomy-term=config><span class=taxonomy-label>config</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/connections/ data-taxonomy-term=connections><span class=taxonomy-label>connections</span><span class=taxonomy-count>3</span></a></li>
-<li><a class=taxonomy-term href=/tags/deb/ data-taxonomy-term=deb><span class=taxonomy-label>deb</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/default/ data-taxonomy-term=default><span class=taxonomy-label>default</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/deny/ data-taxonomy-term=deny><span class=taxonomy-label>deny</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/docker/ data-taxonomy-term=docker><span class=taxonomy-label>docker</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/extract/ data-taxonomy-term=extract><span class=taxonomy-label>extract</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/feature/ data-taxonomy-term=feature><span class=taxonomy-label>feature</span><span class=taxonomy-count>17</span></a></li>
-<li><a class=taxonomy-term href=/tags/ferox-config/ data-taxonomy-term=ferox-config><span class=taxonomy-label>ferox-config</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/filter/ data-taxonomy-term=filter><span class=taxonomy-label>filter</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/filtering/ data-taxonomy-term=filtering><span class=taxonomy-label>filtering</span><span class=taxonomy-count>3</span></a></li>
-<li><a class=taxonomy-term href=/tags/fuzzy/ data-taxonomy-term=fuzzy><span class=taxonomy-label>fuzzy</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/headers/ data-taxonomy-term=headers><span class=taxonomy-label>headers</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/homebrew/ data-taxonomy-term=homebrew><span class=taxonomy-label>homebrew</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/interface/ data-taxonomy-term=interface><span class=taxonomy-label>interface</span><span class=taxonomy-count>2</span></a></li>
-<li><a class=taxonomy-term href=/tags/ipv6/ data-taxonomy-term=ipv6><span class=taxonomy-label>ipv6</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/kali/ data-taxonomy-term=kali><span class=taxonomy-label>kali</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/limit/ data-taxonomy-term=limit><span class=taxonomy-label>limit</span><span class=taxonomy-count>5</span></a></li>
-<li><a class=taxonomy-term href=/tags/links/ data-taxonomy-term=links><span class=taxonomy-label>links</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/linux/ data-taxonomy-term=linux><span class=taxonomy-label>linux</span><span class=taxonomy-count>9</span></a></li>
-<li><a class=taxonomy-term href=/tags/logging/ data-taxonomy-term=logging><span class=taxonomy-label>logging</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/mac/ data-taxonomy-term=mac><span class=taxonomy-label>mac</span><span class=taxonomy-count>4</span></a></li>
-<li><a class=taxonomy-term href=/tags/menu/ data-taxonomy-term=menu><span class=taxonomy-label>menu</span><span class=taxonomy-count>2</span></a></li>
-<li><a class=taxonomy-term href=/tags/options/ data-taxonomy-term=options><span class=taxonomy-label>options</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/pacman/ data-taxonomy-term=pacman><span class=taxonomy-label>pacman</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/parallel/ data-taxonomy-term=parallel><span class=taxonomy-label>parallel</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/parameter/ data-taxonomy-term=parameter><span class=taxonomy-label>parameter</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/pause/ data-taxonomy-term=pause><span class=taxonomy-label>pause</span><span class=taxonomy-count>2</span></a></li>
-<li><a class=taxonomy-term href=/tags/pre-built/ data-taxonomy-term=pre-built><span class=taxonomy-label>pre-built</span><span class=taxonomy-count>2</span></a></li>
-<li><a class=taxonomy-term href=/tags/proxy/ data-taxonomy-term=proxy><span class=taxonomy-label>proxy</span><span class=taxonomy-count>2</span></a></li>
-<li><a class=taxonomy-term href=/tags/quiet/ data-taxonomy-term=quiet><span class=taxonomy-label>quiet</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/rate/ data-taxonomy-term=rate><span class=taxonomy-label>rate</span><span class=taxonomy-count>3</span></a></li>
-<li><a class=taxonomy-term href=/tags/replay/ data-taxonomy-term=replay><span class=taxonomy-label>replay</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/resume/ data-taxonomy-term=resume><span class=taxonomy-label>resume</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/silent/ data-taxonomy-term=silent><span class=taxonomy-label>silent</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/similar/ data-taxonomy-term=similar><span class=taxonomy-label>similar</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/snap/ data-taxonomy-term=snap><span class=taxonomy-label>snap</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/socks/ data-taxonomy-term=socks><span class=taxonomy-label>socks</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/state/ data-taxonomy-term=state><span class=taxonomy-label>state</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/status/ data-taxonomy-term=status><span class=taxonomy-label>status</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/stdin/ data-taxonomy-term=stdin><span class=taxonomy-label>stdin</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/threads/ data-taxonomy-term=threads><span class=taxonomy-label>threads</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/time/ data-taxonomy-term=time><span class=taxonomy-label>time</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/toml/ data-taxonomy-term=toml><span class=taxonomy-label>toml</span><span class=taxonomy-count>1</span></a></li>
-<li><a class=taxonomy-term href=/tags/windows/ data-taxonomy-term=windows><span class=taxonomy-label>windows</span><span class=taxonomy-count>3</span></a></li>
-<li><a class=taxonomy-term href=/tags/yay/ data-taxonomy-term=yay><span class=taxonomy-label>yay</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/apt/ data-taxonomy-term=apt><span class=taxonomy-label>apt</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/arguments/ data-taxonomy-term=arguments><span class=taxonomy-label>arguments</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/arm/ data-taxonomy-term=arm><span class=taxonomy-label>arm</span><span class=taxonomy-count>2</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/aur/ data-taxonomy-term=aur><span class=taxonomy-label>AUR</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/blackarch/ data-taxonomy-term=blackarch><span class=taxonomy-label>BlackArch</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/block/ data-taxonomy-term=block><span class=taxonomy-label>block</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/burp/ data-taxonomy-term=burp><span class=taxonomy-label>burp</span><span class=taxonomy-count>2</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/cancel/ data-taxonomy-term=cancel><span class=taxonomy-label>cancel</span><span class=taxonomy-count>2</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/cargo/ data-taxonomy-term=cargo><span class=taxonomy-label>cargo</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/cli/ data-taxonomy-term=cli><span class=taxonomy-label>cli</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/config/ data-taxonomy-term=config><span class=taxonomy-label>config</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/connections/ data-taxonomy-term=connections><span class=taxonomy-label>connections</span><span class=taxonomy-count>3</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/deb/ data-taxonomy-term=deb><span class=taxonomy-label>deb</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/default/ data-taxonomy-term=default><span class=taxonomy-label>default</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/deny/ data-taxonomy-term=deny><span class=taxonomy-label>deny</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/docker/ data-taxonomy-term=docker><span class=taxonomy-label>docker</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/extract/ data-taxonomy-term=extract><span class=taxonomy-label>extract</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/feature/ data-taxonomy-term=feature><span class=taxonomy-label>feature</span><span class=taxonomy-count>17</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/ferox-config/ data-taxonomy-term=ferox-config><span class=taxonomy-label>ferox-config</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/filter/ data-taxonomy-term=filter><span class=taxonomy-label>filter</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/filtering/ data-taxonomy-term=filtering><span class=taxonomy-label>filtering</span><span class=taxonomy-count>3</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/fuzzy/ data-taxonomy-term=fuzzy><span class=taxonomy-label>fuzzy</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/headers/ data-taxonomy-term=headers><span class=taxonomy-label>headers</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/homebrew/ data-taxonomy-term=homebrew><span class=taxonomy-label>homebrew</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/interface/ data-taxonomy-term=interface><span class=taxonomy-label>interface</span><span class=taxonomy-count>2</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/ipv6/ data-taxonomy-term=ipv6><span class=taxonomy-label>ipv6</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/kali/ data-taxonomy-term=kali><span class=taxonomy-label>kali</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/limit/ data-taxonomy-term=limit><span class=taxonomy-label>limit</span><span class=taxonomy-count>5</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/links/ data-taxonomy-term=links><span class=taxonomy-label>links</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/linux/ data-taxonomy-term=linux><span class=taxonomy-label>linux</span><span class=taxonomy-count>9</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/logging/ data-taxonomy-term=logging><span class=taxonomy-label>logging</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/mac/ data-taxonomy-term=mac><span class=taxonomy-label>mac</span><span class=taxonomy-count>4</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/menu/ data-taxonomy-term=menu><span class=taxonomy-label>menu</span><span class=taxonomy-count>2</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/options/ data-taxonomy-term=options><span class=taxonomy-label>options</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/pacman/ data-taxonomy-term=pacman><span class=taxonomy-label>pacman</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/parallel/ data-taxonomy-term=parallel><span class=taxonomy-label>parallel</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/parameter/ data-taxonomy-term=parameter><span class=taxonomy-label>parameter</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/pause/ data-taxonomy-term=pause><span class=taxonomy-label>pause</span><span class=taxonomy-count>2</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/pre-built/ data-taxonomy-term=pre-built><span class=taxonomy-label>pre-built</span><span class=taxonomy-count>2</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/proxy/ data-taxonomy-term=proxy><span class=taxonomy-label>proxy</span><span class=taxonomy-count>2</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/quiet/ data-taxonomy-term=quiet><span class=taxonomy-label>quiet</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/rate/ data-taxonomy-term=rate><span class=taxonomy-label>rate</span><span class=taxonomy-count>3</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/replay/ data-taxonomy-term=replay><span class=taxonomy-label>replay</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/resume/ data-taxonomy-term=resume><span class=taxonomy-label>resume</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/silent/ data-taxonomy-term=silent><span class=taxonomy-label>silent</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/similar/ data-taxonomy-term=similar><span class=taxonomy-label>similar</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/snap/ data-taxonomy-term=snap><span class=taxonomy-label>snap</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/socks/ data-taxonomy-term=socks><span class=taxonomy-label>socks</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/state/ data-taxonomy-term=state><span class=taxonomy-label>state</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/status/ data-taxonomy-term=status><span class=taxonomy-label>status</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/stdin/ data-taxonomy-term=stdin><span class=taxonomy-label>stdin</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/threads/ data-taxonomy-term=threads><span class=taxonomy-label>threads</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/time/ data-taxonomy-term=time><span class=taxonomy-label>time</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/toml/ data-taxonomy-term=toml><span class=taxonomy-label>toml</span><span class=taxonomy-count>1</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/windows/ data-taxonomy-term=windows><span class=taxonomy-label>windows</span><span class=taxonomy-count>3</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/yay/ data-taxonomy-term=yay><span class=taxonomy-label>yay</span><span class=taxonomy-count>1</span></a></li>
 </ul>
 </div>
 </aside>
@@ -263,13 +263,13 @@
 <nav aria-label=breadcrumb class="d-none d-md-block d-print-none">
 <ol class="breadcrumb spb-1">
 <li class=breadcrumb-item>
-<a href=/docs/>Documentation</a>
+<a href=/feroxbuster-docs/docs/>Documentation</a>
 </li>
 <li class=breadcrumb-item>
-<a href=/docs/examples/>🧰 Examples</a>
+<a href=/feroxbuster-docs/docs/examples/>🧰 Examples</a>
 </li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=/docs/examples/deny-list/>Deny List</a>
+<a href=/feroxbuster-docs/docs/examples/deny-list/>Deny List</a>
 </li>
 </ol>
 </nav>
@@ -280,15 +280,15 @@
 <div class="taxonomy taxonomy-terms-article taxo-tags">
 <h5 class=taxonomy-title>Tags:</h5>
 <ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=/tags/feature/ data-taxonomy-term=feature><span class=taxonomy-label>feature</span></a></li>
-<li><a class=taxonomy-term href=/tags/deny/ data-taxonomy-term=deny><span class=taxonomy-label>deny</span></a></li>
-<li><a class=taxonomy-term href=/tags/block/ data-taxonomy-term=block><span class=taxonomy-label>block</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/feature/ data-taxonomy-term=feature><span class=taxonomy-label>feature</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/deny/ data-taxonomy-term=deny><span class=taxonomy-label>deny</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/block/ data-taxonomy-term=block><span class=taxonomy-label>block</span></a></li>
 </ul>
 </div>
 <div class="taxonomy taxonomy-terms-article taxo-categories">
 <h5 class=taxonomy-title>Categories:</h5>
 <ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=/categories/examples/ data-taxonomy-term=examples><span class=taxonomy-label>examples</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/categories/examples/ data-taxonomy-term=examples><span class=taxonomy-label>examples</span></a></li>
 </ul>
 </div>
 <p class=reading-time><i class="fa fa-clock" aria-hidden=true></i>&nbsp; less than a minute &nbsp;</p>
@@ -350,7 +350,7 @@ Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/
 </div>
 <script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script>
 <script src=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js integrity=sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF crossorigin=anonymous></script>
-<script src=/js/tabpane-persist.js></script>
-<script src=/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js integrity="sha256-XHS4cMaVOTGnBfOQpJx+TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin=anonymous></script>
+<script src=/feroxbuster-docs/js/tabpane-persist.js></script>
+<script src=/feroxbuster-docs/js/main.min.86191466fa6ad3defc82a905e1b0770d9d312c49523a4a4412ecc22923be8e06.js integrity="sha256-hhkUZvpq0978gqkF4bB3DZ0xLElSOkpEEuzCKSO+jgY=" crossorigin=anonymous></script>
 </body>
 </html>
