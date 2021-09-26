@@ -1,0 +1,80 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– faq</title><link>/feroxbuster-docs/categories/faq/</link><description>Recent content in faq on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/categories/faq/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Connection closed before message completed</title><link>/feroxbuster-docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/connection-closed/</guid><description>
+&lt;h3 id="connection-closed-before-message-completed">Connection closed before message completed&lt;/h3>
+&lt;p>The error in question can be boiled down to &amp;lsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
+uses &lt;a href="https://docs.rs/reqwest/latest/">reqwest&lt;/a> which uses &lt;a href="https://docs.rs/hyper/latest/hyper/">hyper&lt;/a> to make requests
+to the server. &lt;a href="https://github.com/hyperium/hyper/issues/2136#issuecomment-589345238">This issue report&lt;/a> to the hyper
+project explains what is happening (quoted below to save you a click). This isn&amp;rsquo;t a bug so much as it&amp;rsquo;s a
+target-specific tuning issue. When lowering the &lt;code>-t&lt;/code> value, the error doesn&amp;rsquo;t occur (or happens much less frequently).&lt;/p>
+&lt;p>This isn&amp;rsquo;t a bug. Simply slow down the scan. A &lt;code>-t&lt;/code> value of 50 was chosen as a sane default that&amp;rsquo;s still quite fast out
+of the box. However, network related errors may occur when the client and/or server become over-saturated.
+The &lt;a href="../../configuration/limit-connections/">Threads and Connection Limits At A High-Level&lt;/a> section details how
+to accomplish per-target tuning.&lt;/p>
+&lt;blockquote>
+&lt;p>This is just due to the racy nature of networking.&lt;/p>
+&lt;p>hyper has a connection pool of idle connections, and it selected one to send your request. Most of the time, hyper will receive the server&amp;rsquo;s FIN and drop the dead connection from its pool. But occasionally, a connection will be selected from the pool and written to at the same time the server is deciding to close the connection. Since hyper already wrote some of the request, it can&amp;rsquo;t really retry it automatically on a new connection, since the server may have acted already.&lt;/p>
+&lt;/blockquote></description></item><item><title>Docs: No file descriptors available</title><link>/feroxbuster-docs/docs/faq/no-file-descriptors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/no-file-descriptors/</guid><description>
+&lt;h2 id="no-file-descriptors-available">No file descriptors available&lt;/h2>
+&lt;p>Why do I get a bunch of &lt;code>No file descriptors available (os error 24)&lt;/code> errors?&lt;/p>
+&lt;hr>
+&lt;p>There are a few potential causes of this error. The simplest is that your operating system sets an open file limit that
+is aggressively low. Through personal testing, I&amp;rsquo;ve found that &lt;code>4096&lt;/code> is a reasonable open file limit (this will vary
+based on your exact setup).&lt;/p>
+&lt;p>There are quite a few options to solve this particular problem, of which a handful are shown below.&lt;/p>
+&lt;h3 id="increase-the-number-of-open-files">Increase the Number of Open Files&lt;/h3>
+&lt;p>We&amp;rsquo;ll start by increasing the number of open files the OS allows. On my Kali install, the default was &lt;code>1024&lt;/code>, and I know
+some MacOS installs use &lt;code>256&lt;/code> 😕.&lt;/p>
+&lt;h4 id="edit-etcsecuritylimitsconf">Edit &lt;code>/etc/security/limits.conf&lt;/code>&lt;/h4>
+&lt;p>One option to up the limit is to edit &lt;code>/etc/security/limits.conf&lt;/code> so that it includes the two lines below.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>*&lt;/code> represents all users&lt;/li>
+&lt;li>&lt;code>hard&lt;/code> and &lt;code>soft&lt;/code> indicate the hard and soft limits for the OS&lt;/li>
+&lt;li>&lt;code>nofile&lt;/code> is the number of open files option.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>/etc/security/limits.conf
+-------------------------
+...
+* soft nofile 4096
+* hard nofile 8192
+...
+&lt;/code>&lt;/pre>&lt;h4 id="use-ulimit-directly">Use &lt;code>ulimit&lt;/code> directly&lt;/h4>
+&lt;p>A faster option, that is &lt;strong>not&lt;/strong> persistent, is to simply use the &lt;code>ulimit&lt;/code> command to change the setting.&lt;/p>
+&lt;pre tabindex="0">&lt;code>ulimit -n 4096
+&lt;/code>&lt;/pre>&lt;h3 id="additional-tweaks-may-not-be-needed">Additional Tweaks (may not be needed)&lt;/h3>
+&lt;p>If you still find yourself hitting the file limit with the above changes, there are a few additional tweaks that may
+help.&lt;/p>
+&lt;blockquote>
+&lt;p>This section was shamelessly stolen from this &lt;a href="https://stackoverflow.com/a/3923785">stackoverflow answer&lt;/a>. More information is included in that post and is recommended reading if you end up needing to use this section.&lt;/p>
+&lt;/blockquote>
+&lt;p>✨ Special thanks to HTB user &lt;a href="https://www.hackthebox.eu/home/users/profile/221599">@sparkla&lt;/a> for their help with
+identifying these additional tweaks ✨&lt;/p>
+&lt;h4 id="increase-the-ephemeral-port-range-and-decrease-the-tcp_fin_timeout">Increase the ephemeral port range, and decrease the tcp_fin_timeout.&lt;/h4>
+&lt;p>The ephermal port range defines the maximum number of outbound sockets a host can create from a particular I.P. address.
+The fin_timeout defines the minimum time these sockets will stay in TIME_WAIT state (unusable after being used once).
+Usual system defaults are&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>net.ipv4.ip_local_port_range = 32768 61000&lt;/code>&lt;/li>
+&lt;li>&lt;code>net.ipv4.tcp_fin_timeout = 60&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>This basically means your system cannot consistently guarantee more than &lt;code>(61000 - 32768) / 60 = 470&lt;/code> sockets per
+second.&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.ip_local_port_range=&amp;quot;15000 61000&amp;quot;
+sudo sysctl net.ipv4.tcp_fin_timeout=30
+&lt;/code>&lt;/pre>&lt;h4 id="allow-socket-reuse-while-in-a-time_wait-status">Allow socket reuse while in a &lt;code>TIME_WAIT&lt;/code> status&lt;/h4>
+&lt;p>This allows fast cycling of sockets in time_wait state and re-using them. Make sure to read
+post &lt;a href="https://vincent.bernat.ch/en/blog/2014-tcp-time-wait-state-linux">Coping with the TCP TIME-WAIT&lt;/a> from Vincent
+Bernat to understand the implications.&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.tcp_tw_reuse=1
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Progress bars print one line at a time</title><link>/feroxbuster-docs/docs/faq/progress-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/progress-bars/</guid><description>
+&lt;h2 id="progress-bars-print-one-line-at-a-time">Progress bars print one line at a time&lt;/h2>
+&lt;p>&lt;code>feroxbuster&lt;/code> needs a terminal width of at least the size of what&amp;rsquo;s being printed in order to do progress bar printing
+correctly. If your width is too small, you may see output like what&amp;rsquo;s shown below.&lt;/p>
+&lt;p>&lt;img src="../small-term.png" alt="small-term">&lt;/p>
+&lt;p>If you can, simply make the terminal wider and rerun. If you&amp;rsquo;re unable to make your terminal wider consider using &lt;code>-q&lt;/code>
+to suppress the progress bars.&lt;/p></description></item><item><title>Docs: SSL Error ... verify failed</title><link>/feroxbuster-docs/docs/faq/self-signed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/self-signed/</guid><description>
+&lt;h2 id="ssl-error-routinestls_process_server_certificatecertificate-verify-failed">SSL Error routines:tls_process_server_certificate:certificate verify failed&lt;/h2>
+&lt;p>In the event you see an error similar to&lt;/p>
+&lt;p>&lt;img src="../insecure.png" alt="self-signed">&lt;/p>
+&lt;pre tabindex="0">&lt;code>error trying to connect: error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed:ssl/statem/statem_clnt.c:1913: (self signed certificate)
+&lt;/code>&lt;/pre>&lt;p>You just need to add the &lt;code>-k|--insecure&lt;/code> flag to your command.&lt;/p>
+&lt;p>&lt;code>feroxbuster&lt;/code> rejects self-signed certs and other &amp;ldquo;insecure&amp;rdquo; certificates/site configurations by default. You can choose
+to scan these services anyway by telling &lt;code>feroxbuster&lt;/code> to ignore insecure server certs.&lt;/p></description></item></channel></rss>

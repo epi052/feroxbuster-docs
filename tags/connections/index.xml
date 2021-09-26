@@ -18,7 +18,21 @@ Rate limiting is enforced on a &lt;strong>per-directory&lt;/strong> basis.
 limiting the number of requests per second overall)&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://localhost --rate-limit 100 --scan-limit 1
 &lt;/code>&lt;/pre>&lt;h2 id="demonstration">Demonstration&lt;/h2>
-&lt;p>&lt;img src="../rate-limit-demo.gif" alt="rate-limit">&lt;/p></description></item><item><title>Docs: Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>
+&lt;p>&lt;img src="../rate-limit-demo.gif" alt="rate-limit">&lt;/p></description></item><item><title>Docs: Connection closed before message completed</title><link>/feroxbuster-docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/connection-closed/</guid><description>
+&lt;h3 id="connection-closed-before-message-completed">Connection closed before message completed&lt;/h3>
+&lt;p>The error in question can be boiled down to &amp;lsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
+uses &lt;a href="https://docs.rs/reqwest/latest/">reqwest&lt;/a> which uses &lt;a href="https://docs.rs/hyper/latest/hyper/">hyper&lt;/a> to make requests
+to the server. &lt;a href="https://github.com/hyperium/hyper/issues/2136#issuecomment-589345238">This issue report&lt;/a> to the hyper
+project explains what is happening (quoted below to save you a click). This isn&amp;rsquo;t a bug so much as it&amp;rsquo;s a
+target-specific tuning issue. When lowering the &lt;code>-t&lt;/code> value, the error doesn&amp;rsquo;t occur (or happens much less frequently).&lt;/p>
+&lt;p>This isn&amp;rsquo;t a bug. Simply slow down the scan. A &lt;code>-t&lt;/code> value of 50 was chosen as a sane default that&amp;rsquo;s still quite fast out
+of the box. However, network related errors may occur when the client and/or server become over-saturated.
+The &lt;a href="../../configuration/limit-connections/">Threads and Connection Limits At A High-Level&lt;/a> section details how
+to accomplish per-target tuning.&lt;/p>
+&lt;blockquote>
+&lt;p>This is just due to the racy nature of networking.&lt;/p>
+&lt;p>hyper has a connection pool of idle connections, and it selected one to send your request. Most of the time, hyper will receive the server&amp;rsquo;s FIN and drop the dead connection from its pool. But occasionally, a connection will be selected from the pool and written to at the same time the server is deciding to close the connection. Since hyper already wrote some of the request, it can&amp;rsquo;t really retry it automatically on a new connection, since the server may have acted already.&lt;/p>
+&lt;/blockquote></description></item><item><title>Docs: Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>
 &lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
 &lt;p>This section explains how the &lt;code>-t&lt;/code> and &lt;code>-L&lt;/code> options work together to determine the overall aggressiveness of a scan. The
 combination of the two values set by these options determines how hard your target will get hit and to some extent also

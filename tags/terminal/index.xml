@@ -1,0 +1,7 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– terminal</title><link>/feroxbuster-docs/tags/terminal/</link><description>Recent content in terminal on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/terminal/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Progress bars print one line at a time</title><link>/feroxbuster-docs/docs/faq/progress-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/progress-bars/</guid><description>
+&lt;h2 id="progress-bars-print-one-line-at-a-time">Progress bars print one line at a time&lt;/h2>
+&lt;p>&lt;code>feroxbuster&lt;/code> needs a terminal width of at least the size of what&amp;rsquo;s being printed in order to do progress bar printing
+correctly. If your width is too small, you may see output like what&amp;rsquo;s shown below.&lt;/p>
+&lt;p>&lt;img src="../small-term.png" alt="small-term">&lt;/p>
+&lt;p>If you can, simply make the terminal wider and rerun. If you&amp;rsquo;re unable to make your terminal wider consider using &lt;code>-q&lt;/code>
+to suppress the progress bars.&lt;/p></description></item></channel></rss>
