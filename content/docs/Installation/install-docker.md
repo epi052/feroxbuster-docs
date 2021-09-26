@@ -29,7 +29,7 @@ cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdi
 
 ## Mount a volume to pass in `ferox-config.toml`
 
-You've got some options available if you want to pass in a config file.  [`ferox-buster.toml`](/docs/configuration/ferox-config-toml/) can
+You've got some options available if you want to pass in a config file.  [`ferox-buster.toml`](docs/configuration/ferox-config-toml/) can
 live in multiple locations and still be valid, so it's up to you how you'd like to pass it in. Below are a few valid
 examples:
 

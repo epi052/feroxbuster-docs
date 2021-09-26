@@ -15,7 +15,7 @@ output and what it means, this is the section for you!
 
 When `feroxbuster` finds a response that you haven't filtered out, it's reported above the progress bars and looks similar to what's pictured below.  
 
-The number of lines, words, and bytes shown here can be used to [filter those responses](/docs/examples/filter-word-line/)
+The number of lines, words, and bytes shown here can be used to [filter those responses](docs/examples/filter-word-line/)
 
 ![response-bar-explained](response-bar-explained.png)
 

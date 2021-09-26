@@ -34,6 +34,6 @@ I got you.
 
 Give your users next steps from the Overview. For example:
 
-* [Installation](/docs/installation/): Make with the scanning already
-* [Configuration](/docs/configuration/): Learn about the different tweaks you can make to your scans
+* [Installation](docs/installation/): Make with the scanning already
+* [Configuration](docs/configuration/): Learn about the different tweaks you can make to your scans
 
