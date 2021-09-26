@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/feroxbuster-docs/docs/installation/install-docker/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-25T20:09:22-05:00">
+<meta property="article:modified_time" content="2021-09-25T20:21:37-05:00">
 <meta itemprop=name content="Docker Install">
 <meta itemprop=description content="Install via Docker
 ">
-<meta itemprop=dateModified content="2021-09-25T20:09:22-05:00">
+<meta itemprop=dateModified content="2021-09-25T20:21:37-05:00">
 <meta itemprop=wordCount content="192"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
 <meta itemprop=keywords content="docker,linux,mac,windows,"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/feroxbuster-docs/images/profile.png">
@@ -307,7 +307,7 @@
 </code></pre><h2 id=piping-from-stdin-and-proxying-all-requests-through-socks5-proxy>Piping from stdin and proxying all requests through socks5 proxy</h2>
 <pre tabindex=0><code>cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdin -x js,html --proxy socks5://127.0.0.1:9050
 </code></pre><h2 id=mount-a-volume-to-pass-in-ferox-configtoml>Mount a volume to pass in <code>ferox-config.toml</code></h2>
-<p>You&rsquo;ve got some options available if you want to pass in a config file. <a href=docs/configuration/ferox-config-toml/><code>ferox-buster.toml</code></a> can
+<p>You&rsquo;ve got some options available if you want to pass in a config file. <a href=/docs/configuration/ferox-config-toml/><code>ferox-buster.toml</code></a> can
 live in multiple locations and still be valid, so it&rsquo;s up to you how you&rsquo;d like to pass it in. Below are a few valid
 examples:</p>
 <pre tabindex=0><code>sudo docker run --init -v $(pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml -it epi052/feroxbuster -u http://example.com
@@ -318,7 +318,7 @@ examples:</p>
 <pre tabindex=0><code>alias feroxbuster=&quot;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&quot;
 </code></pre>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/a78e905a1f311991f58bd8424db8cdfda468a45e>fixed docs links (a78e905)</a>
+Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/9c4e00afb9934129c8b1fb166393ed8efc0f42a5>refixed urls again (9c4e00a)</a>
 </div>
 </div>
 </main>

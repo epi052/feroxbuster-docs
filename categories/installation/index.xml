@@ -29,7 +29,7 @@ sudo apt install ./feroxbuster_*_amd64.deb
 &lt;/code>&lt;/pre>&lt;h2 id="piping-from-stdin-and-proxying-all-requests-through-socks5-proxy">Piping from stdin and proxying all requests through socks5 proxy&lt;/h2>
 &lt;pre tabindex="0">&lt;code>cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdin -x js,html --proxy socks5://127.0.0.1:9050
 &lt;/code>&lt;/pre>&lt;h2 id="mount-a-volume-to-pass-in-ferox-configtoml">Mount a volume to pass in &lt;code>ferox-config.toml&lt;/code>&lt;/h2>
-&lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="docs/configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
+&lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="/feroxbuster-docs/docs/configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
 live in multiple locations and still be valid, so it&amp;rsquo;s up to you how you&amp;rsquo;d like to pass it in. Below are a few valid
 examples:&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo docker run --init -v $(pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml -it epi052/feroxbuster -u http://example.com
@@ -64,7 +64,7 @@ brew install feroxbuster
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/feroxbuster-docs/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-kali/</guid><description>
 &lt;h2 id="kali-install">Kali Install&lt;/h2>
 &lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the official Kali Linux repos 🥳&lt;/p>
-&lt;p>If you&amp;rsquo;re using kali, this is the preferred install method. Installing from the repos adds a &lt;a href="docs/configuration/ferox-config-toml/">&lt;strong>ferox-config.toml&lt;/strong>&lt;/a> in &lt;code>/etc/feroxbuster/&lt;/code>, adds command completion for bash, fish, and zsh, includes a man page entry, and installs &lt;code>feroxbuster&lt;/code> itself.&lt;/p>
+&lt;p>If you&amp;rsquo;re using kali, this is the preferred install method. Installing from the repos adds a &lt;a href="/feroxbuster-docs/docs/configuration/ferox-config-toml/">&lt;strong>ferox-config.toml&lt;/strong>&lt;/a> in &lt;code>/etc/feroxbuster/&lt;/code>, adds command completion for bash, fish, and zsh, includes a man page entry, and installs &lt;code>feroxbuster&lt;/code> itself.&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo apt update &amp;amp;&amp;amp; sudo apt install -y feroxbuster
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Snap Install</title><link>/feroxbuster-docs/docs/installation/install-snap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-snap/</guid><description>
 &lt;h2 id="install-using-snap">Install using &lt;code>snap&lt;/code>&lt;/h2>
