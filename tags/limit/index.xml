@@ -61,7 +61,7 @@ additional light-weight processes associated with it as far as the kernel is con
 impact to process (&lt;code>nproc&lt;/code>) limits when specifying larger values for &lt;code>-t&lt;/code>. However, these threads will still consume
 file descriptors, so you will need to ensure that you have a suitable &lt;code>nlimit&lt;/code> set when scaling up the amount of
 threads. More detailed documentation on setting appropriate &lt;code>nlimit&lt;/code> values can be found in
-the &lt;a href="/feroxbuster-docs/docs/faq/no-file-descriptors/">No File Descriptors Available&lt;/a> section of the FAQ&lt;/p>
+the &lt;a href="../../faq/no-file-descriptors/">No File Descriptors Available&lt;/a> section of the FAQ&lt;/p>
 &lt;h2 id="the-implementation">The Implementation&lt;/h2>
 &lt;ul>
 &lt;li>&lt;strong>Threads&lt;/strong>: The &lt;code>-t&lt;/code> option specifies the maximum amount of active threads &lt;em>per-directory&lt;/em> during a scan&lt;/li>

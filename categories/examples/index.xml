@@ -62,13 +62,13 @@ is checked against a list of known filters and either displayed or not according
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Pause a Scan</title><link>/feroxbuster-docs/docs/examples/pause-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/pause-scan/</guid><description>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
-&lt;p>&lt;a href="/feroxbuster-docs/docs/examples/cancel-scan/">v1.12.0&lt;/a> added an interactive menu to the pause/resume
+&lt;p>&lt;a href="../cancel-scan/">v1.12.0&lt;/a> added an interactive menu to the pause/resume
 functionality.&lt;/p>
 &lt;p>Active scans can still be paused, however, you&amp;rsquo;ll be presented with the option to cancel a scan instead
 of simply seeing a spinner.&lt;/p>
 &lt;/div>
 &lt;h2 id="pause-an-active-scan">Pause an Active Scan&lt;/h2>
-&lt;p>Scans can be paused and resumed by pressing the &lt;code>ENTER&lt;/code> key (&lt;del>shown below&lt;/del>, please see &lt;a href="/feroxbuster-docs/docs/examples/cancel-scan/">v1.12.0&lt;/a>&amp;rsquo;s entry for the latest visual representation)&lt;/p></description></item><item><title>Docs: Replay Responses</title><link>/feroxbuster-docs/docs/examples/replay-proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/replay-proxy/</guid><description>
+&lt;p>Scans can be paused and resumed by pressing the &lt;code>ENTER&lt;/code> key (&lt;del>shown below&lt;/del>, please see &lt;a href="../cancel-scan/">v1.12.0&lt;/a>&amp;rsquo;s entry for the latest visual representation)&lt;/p></description></item><item><title>Docs: Replay Responses</title><link>/feroxbuster-docs/docs/examples/replay-proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/replay-proxy/</guid><description>
 &lt;h2 id="replay-responses-to-a-proxy-based-on-status-code">Replay Responses to a Proxy based on Status Code&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>
