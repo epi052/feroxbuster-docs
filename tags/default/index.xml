@@ -1,0 +1,18 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– default</title><link>/tags/default/</link><description>Recent content in default on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/default/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Default Values</title><link>/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/configuration/default-values/</guid><description>
+&lt;h2 id="default-values">Default Values&lt;/h2>
+&lt;p>Configuration begins with the following built-in default values baked into the binary:&lt;/p>
+&lt;ul>
+&lt;li>timeout: &lt;code>7&lt;/code> seconds&lt;/li>
+&lt;li>follow redirects: &lt;code>false&lt;/code>&lt;/li>
+&lt;li>wordlist: &lt;code>/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt&lt;/code>&lt;/li>
+&lt;li>threads: &lt;code>50&lt;/code>&lt;/li>
+&lt;li>verbosity: &lt;code>0&lt;/code> (no logging enabled)&lt;/li>
+&lt;li>scan_limit: &lt;code>0&lt;/code> (no limit imposed on concurrent scans)&lt;/li>
+&lt;li>rate_limit: &lt;code>0&lt;/code> (no limit imposed on requests per second)&lt;/li>
+&lt;li>status_codes: &lt;code>200 204 301 302 307 308 401 403 405 500&lt;/code>&lt;/li>
+&lt;li>user_agent: &lt;code>feroxbuster/VERSION&lt;/code>&lt;/li>
+&lt;li>recursion depth: &lt;code>4&lt;/code>&lt;/li>
+&lt;li>auto-filter wildcards - &lt;code>true&lt;/code>&lt;/li>
+&lt;li>output: &lt;code>stdout&lt;/code>&lt;/li>
+&lt;li>save_state: &lt;code>true&lt;/code> (create a state file in cwd when &lt;code>Ctrl+C&lt;/code> is received)&lt;/li>
+&lt;/ul></description></item></channel></rss>

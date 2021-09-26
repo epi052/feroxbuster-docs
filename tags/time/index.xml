@@ -1,0 +1,14 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– time</title><link>/tags/time/</link><description>Recent content in time on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/time/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Enforce Time Limit</title><link>/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/examples/time-limit/</guid><description>
+&lt;h2 id="enforce-a-time-limit-on-your-scan">Enforce a Time Limit on Your Scan&lt;/h2>
+&lt;p>Version 1.10.0 adds the ability to set a maximum runtime, or time limit, on your scan. The usage is pretty simple: a
+number followed directly by a single character representing seconds, minutes, hours, or days. &lt;code>feroxbuster&lt;/code> refers to
+this combination as a time_spec.&lt;/p>
+&lt;p>Examples of possible time_specs:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>30s&lt;/code> - 30 seconds&lt;/li>
+&lt;li>&lt;code>20m&lt;/code> - 20 minutes&lt;/li>
+&lt;li>&lt;code>1h&lt;/code> - 1 hour&lt;/li>
+&lt;li>&lt;code>1d&lt;/code> - 1 day (why??)&lt;/li>
+&lt;/ul>
+&lt;p>A valid time_spec can be passed to &lt;code>--time-limit&lt;/code> in order to force a shutdown after the given time has elapsed.&lt;/p>
+&lt;p>&lt;img src="../time-limit.gif" alt="time-limit">&lt;/p></description></item></channel></rss>

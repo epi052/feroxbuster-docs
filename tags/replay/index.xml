@@ -1,0 +1,14 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– replay</title><link>/tags/replay/</link><description>Recent content in replay on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/replay/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Replay Responses</title><link>/docs/examples/replay-proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/examples/replay-proxy/</guid><description>
+&lt;h2 id="replay-responses-to-a-proxy-based-on-status-code">Replay Responses to a Proxy based on Status Code&lt;/h2>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Heads up&lt;/h4>
+this means that for every response that matches your replay criteria, you&amp;rsquo;ll end up sending the request that
+generated that response a second time. Depending on the target and your engagement terms (if any), it may not make sense
+from a traffic generated perspective.
+&lt;/div>
+&lt;p>The &lt;code>--replay-proxy&lt;/code> and &lt;code>--replay-codes&lt;/code> options were added as a way to only send a select few responses to a proxy.
+This is in stark contrast to &lt;code>--proxy&lt;/code> which proxies EVERY request.&lt;/p>
+&lt;p>Imagine you only care about proxying responses that have either the status code &lt;code>200&lt;/code> or &lt;code>302&lt;/code> (or you just don&amp;rsquo;t want
+to clutter up your Burp history). These two options will allow you to fine-tune what gets proxied and what doesn&amp;rsquo;t.&lt;/p>
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --replay-proxy http://localhost:8080 --replay-codes 200 302 --insecure
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../replay-proxy-demo.gif" alt="replay-proxy-demo">&lt;/p></description></item></channel></rss>

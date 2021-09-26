@@ -1,0 +1,15 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– deb</title><link>/tags/deb/</link><description>Recent content in deb on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/deb/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Download a Release</title><link>/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-release/</guid><description>
+&lt;h2 id="download-a-release">Download a Release&lt;/h2>
+&lt;p>Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p>
+&lt;h2 id="linux-32-and-64-bit--macos">Linux (32 and 64-bit) &amp;amp; MacOS&lt;/h2>
+&lt;pre tabindex="0">&lt;code>curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/master/install-nix.sh | bash
+&lt;/code>&lt;/pre>&lt;h2 id="windows-x86">Windows x86&lt;/h2>
+&lt;pre tabindex="0">&lt;code>https://github.com/epi052/feroxbuster/releases/latest/download/x86-windows-feroxbuster.exe.zip
+Expand-Archive .\feroxbuster.zip
+.\feroxbuster\feroxbuster.exe -V
+&lt;/code>&lt;/pre>&lt;h2 id="windows-x86_64">Windows x86_64&lt;/h2>
+&lt;pre tabindex="0">&lt;code>Invoke-WebRequest https://github.com/epi052/feroxbuster/releases/latest/download/x86_64-windows-feroxbuster.exe.zip -OutFile feroxbuster.zip
+Expand-Archive .\feroxbuster.zip
+.\feroxbuster\feroxbuster.exe -V
+&lt;/code>&lt;/pre>&lt;h2 id="all-other-releases">All other releases&lt;/h2>
+&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– deny</title><link>/tags/deny/</link><description>Recent content in deny on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/deny/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Deny List</title><link>/docs/examples/deny-list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/examples/deny-list/</guid><description>
+&lt;h2 id="prevent-specific-domaindirectory-scans">Prevent Specific Domain/Directory Scans&lt;/h2>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Heads up&lt;/h4>
+This action is taken &lt;strong>BEFORE&lt;/strong> a request is sent to the target, which differs from the filter-* options that are applied to responses
+&lt;/div>
+&lt;p>Version 2.3.0 introduces the &lt;code>--dont-scan&lt;/code> option. The values passed to &lt;code>--dont-scan&lt;/code> act as a deny-list. The values
+can be an entire domain (&lt;code>http://some.domain&lt;/code>), a specific folder (&lt;code>http://some.domain/js&lt;/code>), or a specific file
+(&lt;code>http://some.domain/some-application/stupid-page.php&lt;/code>) If a folder/domain is used any sub-folder/sub-file of the
+url passed to &lt;code>--dont-scan&lt;/code> will be &lt;strong>blocked before it can be requested&lt;/strong>.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;p>Given the command&lt;/p>
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan http://some.domain/js
+&lt;/code>&lt;/pre>&lt;p>&lt;code>http://some.domain&lt;/code> will be scanned recursively, but any url path that begins with &lt;code>/js/&lt;/code> will not be requested at all.&lt;/p>
+&lt;h2 id="denying-a-parent-directory">Denying a Parent Directory&lt;/h2>
+&lt;p>A caveat to the sub-folder/sub-file rule is when the value passed to &lt;code>--dont-scan&lt;/code> is a parent of the scan you want to
+perform. When denying at a hierarchical level higher than your scan, only sub-files/sub-folders of your &lt;code>-u|--stdin&lt;/code>
+value(s) will be processed.&lt;/p>
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain/some-application --dont-scan http://some.domain/
+&lt;/code>&lt;/pre>&lt;p>In the command above, only &lt;code>http://some.domain/some-application&lt;/code> and children of that directory found via recursion will
+be scanned. Anything &lt;em>outside&lt;/em> of &lt;code>/some-application&lt;/code> will not be scanned.&lt;/p></description></item></channel></rss>

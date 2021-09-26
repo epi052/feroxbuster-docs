@@ -1,0 +1,22 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– docker</title><link>/tags/docker/</link><description>Recent content in docker on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Docker Install</title><link>/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/installation/install-docker/</guid><description>
+&lt;h2 id="docker-install">Docker Install&lt;/h2>
+&lt;blockquote>
+&lt;p>The following steps assume you have docker installed / setup&lt;/p>
+&lt;/blockquote>
+&lt;p>Thanks to github user &lt;strong>@EONRaider&lt;/strong>, we have an official docker image pushed to the docker hub with each new release.&lt;/p>
+&lt;p>You can simply jump right into usage with &lt;code>sudo docker run epi052/feroxbuster ...&lt;/code>!&lt;/p>
+&lt;h2 id="basic-usage">Basic usage&lt;/h2>
+&lt;pre tabindex="0">&lt;code>sudo docker run --init -it epi052/feroxbuster -u http://example.com -x js,html
+&lt;/code>&lt;/pre>&lt;h2 id="piping-from-stdin-and-proxying-all-requests-through-socks5-proxy">Piping from stdin and proxying all requests through socks5 proxy&lt;/h2>
+&lt;pre tabindex="0">&lt;code>cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdin -x js,html --proxy socks5://127.0.0.1:9050
+&lt;/code>&lt;/pre>&lt;h2 id="mount-a-volume-to-pass-in-ferox-configtoml">Mount a volume to pass in &lt;code>ferox-config.toml&lt;/code>&lt;/h2>
+&lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="/docs/configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
+live in multiple locations and still be valid, so it&amp;rsquo;s up to you how you&amp;rsquo;d like to pass it in. Below are a few valid
+examples:&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo docker run --init -v $(pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml -it epi052/feroxbuster -u http://example.com
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -it epi052/feroxbuster -u http://example.com
+&lt;/code>&lt;/pre>&lt;p>Note: If you are on a SELinux enforced system, you will need to pass the &lt;code>:Z&lt;/code> attribute also.&lt;/p>
+&lt;pre tabindex="0">&lt;code>docker run --init -v (pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml:Z -it epi052/feroxbuster -u http://example.com
+&lt;/code>&lt;/pre>&lt;h2 id="define-an-alias-for-simplicity">Define an alias for simplicity&lt;/h2>
+&lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;quot;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;quot;
+&lt;/code>&lt;/pre></description></item></channel></rss>

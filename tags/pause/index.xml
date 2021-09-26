@@ -1,0 +1,38 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– pause</title><link>/tags/pause/</link><description>Recent content in pause on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/tags/pause/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Pause a Scan</title><link>/docs/examples/pause-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/examples/pause-scan/</guid><description>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+&lt;p>&lt;a href="/docs/examples/cancel-scan/">v1.12.0&lt;/a> added an interactive menu to the pause/resume
+functionality.&lt;/p>
+&lt;p>Active scans can still be paused, however, you&amp;rsquo;ll be presented with the option to cancel a scan instead
+of simply seeing a spinner.&lt;/p>
+&lt;/div>
+&lt;h2 id="pause-an-active-scan">Pause an Active Scan&lt;/h2>
+&lt;p>Scans can be paused and resumed by pressing the &lt;code>ENTER&lt;/code> key (&lt;del>shown below&lt;/del>, please see &lt;a href="/docs/examples/cancel-scan/">v1.12.0&lt;/a>&amp;rsquo;s entry for the latest visual representation)&lt;/p></description></item><item><title>Docs: Scan Cancel Menu</title><link>/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/examples/cancel-scan/</guid><description>
+&lt;h2 id="cancel-a-recursive-scan-interactively">Cancel a Recursive Scan Interactively&lt;/h2>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+Scans that are started via &lt;code>-u&lt;/code> or passed in through &lt;code>--stdin&lt;/code> cannot be cancelled, only scans found via &lt;code>--extract-links&lt;/code> or recursion are eligible.
+&lt;/div>
+&lt;p>Version 1.12.0 expanded the pause/resume functionality introduced in &lt;a href="/docs/examples/pause-scan/">v1.4.0&lt;/a> by
+adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing &lt;code>ENTER&lt;/code>, however, the&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;p>Below is an example of the Scan Cancel Menu™.&lt;/p>
+&lt;p>&lt;img src="../cancel-menu.png" alt="cancel-menu">&lt;/p>
+&lt;h2 id="usage">Usage&lt;/h2>
+&lt;p>Using the menu is pretty simple:&lt;/p>
+&lt;ul>
+&lt;li>Press &lt;code>ENTER&lt;/code> to view the menu&lt;/li>
+&lt;li>Choose a scan to cancel by entering its scan index (&lt;code>1&lt;/code>)
+&lt;ul>
+&lt;li>more than one scan can be selected by using a comma-separated list of indexes and/or ranges (&lt;code>1-4,8,9-13&lt;/code> &amp;hellip; etc)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Confirm selections, after which all non-cancelled scans will resume
+&lt;ul>
+&lt;li>To skip confirmation, simply add a &lt;code>-f&lt;/code> somewhere in your input (&lt;code>3-5 -f&lt;/code>)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="demonstration">Demonstration&lt;/h2>
+&lt;p>Here is a short demonstration of force cancelling a range of scans followed by a single scan with interactive prompt.&lt;/p>
+&lt;p>&lt;img src="../cancel-scan.gif" alt="cancel-scan">&lt;/p></description></item></channel></rss>
