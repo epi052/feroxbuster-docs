@@ -32,8 +32,9 @@ I got you.
 
 ## 🚀 Where to next?
 
-Give your users next steps from the Overview. For example:
-
 * [Installation](../installation/): Make with the scanning already
 * [Configuration](../configuration/): Learn about the different tweaks you can make to your scans
-
+* [Interpret Results](../configuration/): Learn how to interpret the results displayed by feroxbuster
+* [Examples](../examples/): See examples and demos of feroxbuster's available features
+* [Frequently Asked Questions](../faq/): Get answers to common questions and issues
+* [Compare with Similar Tools](../compare/): Feature set comparison of similar scanning tools
