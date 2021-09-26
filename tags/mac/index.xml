@@ -14,7 +14,7 @@
 &lt;/code>&lt;/pre>&lt;h2 id="piping-from-stdin-and-proxying-all-requests-through-socks5-proxy">Piping from stdin and proxying all requests through socks5 proxy&lt;/h2>
 &lt;pre tabindex="0">&lt;code>cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdin -x js,html --proxy socks5://127.0.0.1:9050
 &lt;/code>&lt;/pre>&lt;h2 id="mount-a-volume-to-pass-in-ferox-configtoml">Mount a volume to pass in &lt;code>ferox-config.toml&lt;/code>&lt;/h2>
-&lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="/docs/configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
+&lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="docs/configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
 live in multiple locations and still be valid, so it&amp;rsquo;s up to you how you&amp;rsquo;d like to pass it in. Below are a few valid
 examples:&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo docker run --init -v $(pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml -it epi052/feroxbuster -u http://example.com

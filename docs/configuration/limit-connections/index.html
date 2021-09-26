@@ -21,11 +21,11 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/configuration/limit-connections/"><meta property="og:image" content="/images/profile.png"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-25T16:39:08-05:00">
+<meta property="article:modified_time" content="2021-09-25T20:09:22-05:00">
 <meta itemprop=name content="Threads and Connection Limits">
 <meta itemprop=description content="A brief overview of how to limit concurrent connections
 ">
-<meta itemprop=dateModified content="2021-09-25T16:39:08-05:00">
+<meta itemprop=dateModified content="2021-09-25T20:09:22-05:00">
 <meta itemprop=wordCount content="286"><meta itemprop=image content="/images/profile.png">
 <meta itemprop=keywords content="threads,limit,connections,rate,"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/images/profile.png">
@@ -307,7 +307,7 @@ additional light-weight processes associated with it as far as the kernel is con
 impact to process (<code>nproc</code>) limits when specifying larger values for <code>-t</code>. However, these threads will still consume
 file descriptors, so you will need to ensure that you have a suitable <code>nlimit</code> set when scaling up the amount of
 threads. More detailed documentation on setting appropriate <code>nlimit</code> values can be found in
-the <a href=/docs/faq/no-file-descriptors/>No File Descriptors Available</a> section of the FAQ</p>
+the <a href=docs/faq/no-file-descriptors/>No File Descriptors Available</a> section of the FAQ</p>
 <h2 id=the-implementation>The Implementation</h2>
 <ul>
 <li><strong>Threads</strong>: The <code>-t</code> option specifies the maximum amount of active threads <em>per-directory</em> during a scan</li>
@@ -319,7 +319,7 @@ result in a maximum of 60 total requests being processed at any given time for t
 on this, please see <a href=https://github.com/epi052/feroxbuster/issues/126>Issue #126</a> which may provide more (or less)
 clarity 😉</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/5e018724a8ea333f74bed07e1e32ac44411796f1>initial port of docs (5e01872)</a>
+Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/a78e905a1f311991f58bd8424db8cdfda468a45e>fixed docs links (a78e905)</a>
 </div>
 </div>
 </main>
