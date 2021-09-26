@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/feroxbuster-docs"
 title = "feroxbuster"
 
 enableRobotsTXT = true
