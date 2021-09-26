@@ -22,7 +22,7 @@ additional light-weight processes associated with it as far as the kernel is con
 impact to process (`nproc`) limits when specifying larger values for `-t`. However, these threads will still consume
 file descriptors, so you will need to ensure that you have a suitable `nlimit` set when scaling up the amount of
 threads. More detailed documentation on setting appropriate `nlimit` values can be found in
-the [No File Descriptors Available](docs/faq/no-file-descriptors/) section of the FAQ
+the [No File Descriptors Available](/docs/faq/no-file-descriptors/) section of the FAQ
 
 ## The Implementation
 
