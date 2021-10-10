@@ -85,6 +85,7 @@ A pre-made configuration file with examples of all available settings can be fou
 # extract_links = true
 # depth = 1
 # url_denylist = ["https://dont-scan-me.com/"]
+# regex_denylist = ["/deny.*"]
 # filter_size = [5174]
 # filter_regex = ["^ignore me$"]
 # filter_similar = ["https://somesite.com/soft404"]

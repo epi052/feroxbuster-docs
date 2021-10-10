@@ -137,7 +137,7 @@ OPTIONS:
             The target URL(s) (required, unless --stdin used)
 
         --dont-scan <URL>...                      
-            URL(s) to exclude from recursion/scans
+            URL(s) or Regex Pattern(s) to exclude from recursion/scans
 
     -a, --user-agent <USER_AGENT>                 
             Sets the User-Agent (default: feroxbuster/VERSION)
