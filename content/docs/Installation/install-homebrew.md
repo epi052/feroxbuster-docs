@@ -7,16 +7,15 @@ description: >
   Install via Homebrew
 ---
 
-## Homebrew on MacOS and Linux
+## Homebrew on MacOS 
 
-Install using Homebrew via tap
-
-🍏 [MacOS tap](https://github.com/TGotwig/homebrew-feroxbuster/blob/main/feroxbuster.rb)
+Install using Homebrew
 
 ```shell
-brew tap tgotwig/feroxbuster
 brew install feroxbuster
 ```
+
+## Homebrew on Linux via tap
 
 🐧 [Linux tap](https://github.com/TGotwig/homebrew-linux-feroxbuster/blob/main/feroxbuster.rb)
 
