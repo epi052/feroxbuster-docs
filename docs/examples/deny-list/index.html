@@ -21,19 +21,19 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/feroxbuster-docs/docs/examples/deny-list/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-25T16:39:08-05:00">
+<meta property="article:modified_time" content="2021-10-04T06:31:02-05:00">
 <meta itemprop=name content="Deny List">
 <meta itemprop=description content="Added in version **2.3.0**
 ">
-<meta itemprop=dateModified content="2021-09-25T16:39:08-05:00">
-<meta itemprop=wordCount content="186"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
+<meta itemprop=dateModified content="2021-10-04T06:31:02-05:00">
+<meta itemprop=wordCount content="399"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
 <meta itemprop=keywords content="feature,deny,block,"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/feroxbuster-docs/images/profile.png">
 <meta name=twitter:title content="Deny List">
 <meta name=twitter:description content="Added in version **2.3.0**
 ">
-<link rel=preload href=/feroxbuster-docs/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css as=style>
-<link href=/feroxbuster-docs/scss/main.min.650bdee92aa16b3ae39822dd8dfd62356c714a590c397f4abe76572440c62901.css rel=stylesheet integrity>
+<link rel=preload href=/feroxbuster-docs/scss/main.min.bd5285b713d3061549a6bfd34e5f4ec6775ede36672a3088260f0d420050647f.css as=style>
+<link href=/feroxbuster-docs/scss/main.min.bd5285b713d3061549a6bfd34e5f4ec6775ede36672a3088260f0d420050647f.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
 </head>
@@ -178,8 +178,16 @@
 <div class=td-toc><nav id=TableOfContents>
 <ul>
 <li><a href=#prevent-specific-domaindirectory-scans>Prevent Specific Domain/Directory Scans</a></li>
-<li><a href=#example>Example</a></li>
+<li><a href=#url-example>URL Example</a>
+<ul>
 <li><a href=#denying-a-parent-directory>Denying a Parent Directory</a></li>
+</ul>
+</li>
+<li><a href=#regular-expression-example>Regular Expression Example</a>
+<ul>
+<li><a href=#additional-examples>Additional Examples</a></li>
+</ul>
+</li>
 </ul>
 </nav></div>
 <div class="taxonomy taxonomy-terms-cloud taxo-categories">
@@ -294,30 +302,59 @@
 <li><a class=taxonomy-term href=/feroxbuster-docs/categories/examples/ data-taxonomy-term=examples><span class=taxonomy-label>examples</span></a></li>
 </ul>
 </div>
-<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i>&nbsp; less than a minute &nbsp;</p>
+<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i>&nbsp; 2 minute read &nbsp;</p>
 </header>
 <h2 id=prevent-specific-domaindirectory-scans>Prevent Specific Domain/Directory Scans</h2>
 <div class="alert alert-warning" role=alert>
 <h4 class=alert-heading>Heads up</h4>
 This action is taken <strong>BEFORE</strong> a request is sent to the target, which differs from the filter-* options that are applied to responses
 </div>
+<div class="alert alert-info" role=alert>
+<h4 class=alert-heading>Heads up</h4>
+Version 2.3.4 added the ability to pass <strong>regular expressions</strong> to <code>--dont-scan</code> (<code>/[jc]ss?</code>).
+</div>
 <p>Version 2.3.0 introduces the <code>--dont-scan</code> option. The values passed to <code>--dont-scan</code> act as a deny-list. The values
 can be an entire domain (<code>http://some.domain</code>), a specific folder (<code>http://some.domain/js</code>), or a specific file
-(<code>http://some.domain/some-application/stupid-page.php</code>) If a folder/domain is used any sub-folder/sub-file of the
+(<code>http://some.domain/some-application/stupid-page.php</code>). If a folder/domain is used any sub-folder/sub-file of the
 url passed to <code>--dont-scan</code> will be <strong>blocked before it can be requested</strong>.</p>
-<h2 id=example>Example</h2>
+<p>At the request of GitHub user <a href=https://github.com/mzpqnxow>@mzpqnxow</a>, support for regular expressions was added to
+feroxbuster in version 2.3.4. A given regular expression is applied to the <strong>entire url</strong>. This means you can prevent
+requests based on the url&rsquo;s scheme, domain, ip, port, path, etc&mldr;</p>
+<h2 id=url-example>URL Example</h2>
 <p>Given the command</p>
 <pre tabindex=0><code>./feroxbuster -u http://some.domain --dont-scan http://some.domain/js
 </code></pre><p><code>http://some.domain</code> will be scanned recursively, but any url path that begins with <code>/js/</code> will not be requested at all.</p>
-<h2 id=denying-a-parent-directory>Denying a Parent Directory</h2>
+<h3 id=denying-a-parent-directory>Denying a Parent Directory</h3>
+<div class="alert alert-warning" role=alert>
+<h4 class=alert-heading>Heads up</h4>
+This behavior is only available when passing an absolute url to <code>--dont-scan</code>
+</div>
 <p>A caveat to the sub-folder/sub-file rule is when the value passed to <code>--dont-scan</code> is a parent of the scan you want to
 perform. When denying at a hierarchical level higher than your scan, only sub-files/sub-folders of your <code>-u|--stdin</code>
 value(s) will be processed.</p>
 <pre tabindex=0><code>./feroxbuster -u http://some.domain/some-application --dont-scan http://some.domain/
 </code></pre><p>In the command above, only <code>http://some.domain/some-application</code> and children of that directory found via recursion will
 be scanned. Anything <em>outside</em> of <code>/some-application</code> will not be scanned.</p>
+<h2 id=regular-expression-example>Regular Expression Example</h2>
+<p>At its most basic, the regular expression can simply be a patten to a folder that you&rsquo;d like to avoid scanning. A prime
+target for this is the <code>css</code> directory.</p>
+<pre tabindex=0><code>./feroxbuster -u http://some.domain --dont-scan '/css'
+</code></pre><p><code>http://some.domain</code> will be scanned recursively, but any url path that contains <code>/css</code> will not be requested
+at all. Note that this will prevent requests to urls such as <code>http://some.domain/some/folder/css</code> and
+<code>http://some.domain/cssssssssssssssssssssssssss</code>. Without additional context to the regular expression, it&rsquo;s simply
+a naive match anywhere in the given url.</p>
+<h3 id=additional-examples>Additional Examples</h3>
+<p>Avoid falling into match/rewrite traps that some servers and reverse-proxies have, which can result in recursion loops
+like <code>/.bower-cache/.bower-registry/.bower-cache/</code></p>
+<pre tabindex=0><code>./feroxbuster -u http://some.domain --dont-scan '/\..*?/\.'
+</code></pre><p>Prevent requests to any <code>http</code> url</p>
+<pre tabindex=0><code>./feroxbuster -u http://some.domain --dont-scan http:
+</code></pre><p>Prevent multiple directories with a single regex</p>
+<pre tabindex=0><code>./feroxbuster -u http://some.domain --dont-scan '/[jc]ss?'
+</code></pre><pre tabindex=0><code>./feroxbuster -u http://some.domain --dont-scan '/(js|css|images|img)'
+</code></pre>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/5e018724a8ea333f74bed07e1e32ac44411796f1>initial port of docs (5e01872)</a>
+Last modified October 4, 2021: <a href=https://github.com/epi052/feroxbuster/commit/2094fae26221fdf4a4dee2d7fc59b7daf81484bb>updated docs for --dont-scan regex (2094fae)</a>
 </div>
 </div>
 </main>

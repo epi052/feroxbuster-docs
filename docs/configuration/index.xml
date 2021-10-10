@@ -86,7 +86,7 @@ Number of seconds before a request times out (default: 7)
 -u, --url &amp;lt;URL&amp;gt;...
 The target URL(s) (required, unless --stdin used)
 --dont-scan &amp;lt;URL&amp;gt;...
-URL(s) to exclude from recursion/scans
+URL(s) or Regex Pattern(s) to exclude from recursion/scans
 -a, --user-agent &amp;lt;USER_AGENT&amp;gt;
 Sets the User-Agent (default: feroxbuster/VERSION)
 -w, --wordlist &amp;lt;FILE&amp;gt;
@@ -162,6 +162,7 @@ the &lt;code>wordlist&lt;/code> value in the config file to override the baked-i
 &lt;span style="color:#8f5902;font-style:italic"># extract_links = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># depth = 1&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># url_denylist = [&amp;#34;https://dont-scan-me.com/&amp;#34;]&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># regex_denylist = [&amp;#34;/deny.*&amp;#34;]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># filter_size = [5174]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># filter_regex = [&amp;#34;^ignore me$&amp;#34;]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># filter_similar = [&amp;#34;https://somesite.com/soft404&amp;#34;]&lt;/span>

@@ -86,7 +86,7 @@ Number of seconds before a request times out (default: 7)
 -u, --url &amp;lt;URL&amp;gt;...
 The target URL(s) (required, unless --stdin used)
 --dont-scan &amp;lt;URL&amp;gt;...
-URL(s) to exclude from recursion/scans
+URL(s) or Regex Pattern(s) to exclude from recursion/scans
 -a, --user-agent &amp;lt;USER_AGENT&amp;gt;
 Sets the User-Agent (default: feroxbuster/VERSION)
 -w, --wordlist &amp;lt;FILE&amp;gt;
