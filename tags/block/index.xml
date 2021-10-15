@@ -13,7 +13,7 @@ can be an entire domain (&lt;code>http://some.domain&lt;/code>), a specific fold
 (&lt;code>http://some.domain/some-application/stupid-page.php&lt;/code>). If a folder/domain is used any sub-folder/sub-file of the
 url passed to &lt;code>--dont-scan&lt;/code> will be &lt;strong>blocked before it can be requested&lt;/strong>.&lt;/p>
 &lt;p>At the request of GitHub user &lt;a href="https://github.com/mzpqnxow">@mzpqnxow&lt;/a>, support for regular expressions was added to
-feroxbuster in version 2.3.4. A given regular expression is applied to the &lt;strong>entire url&lt;/strong>. This means you can prevent
+feroxbuster in version 2.4.0. A given regular expression is applied to the &lt;strong>entire url&lt;/strong>. This means you can prevent
 requests based on the url&amp;rsquo;s scheme, domain, ip, port, path, etc&amp;hellip;&lt;/p>
 &lt;h2 id="url-example">URL Example&lt;/h2>
 &lt;p>Given the command&lt;/p>

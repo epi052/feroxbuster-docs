@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-192x192.png sizes=192x192>
-<title>Kali Install | </title>
-<meta name=description content="Install on Kali Linux
+<title>Random User-Agents | </title>
+<meta name=description content="Added in version **2.4.0** by Daniel Saxton
 ">
-<meta property="og:title" content="Kali Install">
-<meta property="og:description" content="Install on Kali Linux
+<meta property="og:title" content="Random User-Agents">
+<meta property="og:description" content="Added in version **2.4.0** by Daniel Saxton
 ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/feroxbuster-docs/docs/installation/install-kali/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-25T20:36:27-05:00">
-<meta itemprop=name content="Kali Install">
-<meta itemprop=description content="Install on Kali Linux
+<meta property="og:url" content="/feroxbuster-docs/docs/examples/random-agent/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
+<meta property="article:modified_time" content="2021-10-15T16:58:23-05:00">
+<meta itemprop=name content="Random User-Agents">
+<meta itemprop=description content="Added in version **2.4.0** by Daniel Saxton
 ">
-<meta itemprop=dateModified content="2021-09-25T20:36:27-05:00">
-<meta itemprop=wordCount content="59"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
-<meta itemprop=keywords content="kali,linux,"><meta name=twitter:card content="summary_large_image">
+<meta itemprop=dateModified content="2021-10-15T16:58:23-05:00">
+<meta itemprop=wordCount content="169"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
+<meta itemprop=keywords content="feature,user-agent,headers,"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/feroxbuster-docs/images/profile.png">
-<meta name=twitter:title content="Kali Install">
-<meta name=twitter:description content="Install on Kali Linux
+<meta name=twitter:title content="Random User-Agents">
+<meta name=twitter:description content="Added in version **2.4.0** by Daniel Saxton
 ">
 <link rel=preload href=/feroxbuster-docs/scss/main.min.bd5285b713d3061549a6bfd34e5f4ec6775ede36672a3088260f0d420050647f.css as=style>
 <link href=/feroxbuster-docs/scss/main.min.bd5285b713d3061549a6bfd34e5f4ec6775ede36672a3088260f0d420050647f.css rel=stylesheet integrity>
@@ -75,7 +75,7 @@
 <ul class=ul-1>
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsoverview-li>
 <a href=/feroxbuster-docs/docs/overview/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsoverview><span>📖 Overview</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-feroxbuster-docsdocsinstallation-li>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-feroxbuster-docsdocsinstallation-li>
 <a href=/feroxbuster-docs/docs/installation/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsinstallation><span>💿 Installation</span></a>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-apt-li>
@@ -92,8 +92,8 @@
 <a href=/feroxbuster-docs/docs/installation/install-release/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-release><span>Download a Release</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-homebrew-li>
 <a href=/feroxbuster-docs/docs/installation/install-homebrew/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-homebrew><span>Homebrew Install</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-feroxbuster-docsdocsinstallationinstall-kali-li>
-<a href=/feroxbuster-docs/docs/installation/install-kali/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-kali><span class=td-sidebar-nav-active-item>Kali Install</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-kali-li>
+<a href=/feroxbuster-docs/docs/installation/install-kali/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-kali><span>Kali Install</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinstallationinstall-snap-li>
 <a href=/feroxbuster-docs/docs/installation/install-snap/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsinstallationinstall-snap><span>Snap Install</span></a>
 </li>
@@ -113,7 +113,7 @@
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsinterpreting-results-li>
 <a href=/feroxbuster-docs/docs/interpreting-results/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsinterpreting-results><span>📊 Interpreting Results</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-feroxbuster-docsdocsexamples-li>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-feroxbuster-docsdocsexamples-li>
 <a href=/feroxbuster-docs/docs/examples/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-feroxbuster-docsdocsexamples><span>🧰 Examples</span></a>
 <ul class="ul-2 foldable">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplescore-features-li>
@@ -150,8 +150,8 @@
 <a href=/feroxbuster-docs/docs/examples/parallel-scan/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesparallel-scan><span>Parallel Scans</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesdeny-list-li>
 <a href=/feroxbuster-docs/docs/examples/deny-list/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesdeny-list><span>Deny List</span></a>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesrandom-agent-li>
-<a href=/feroxbuster-docs/docs/examples/random-agent/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesrandom-agent><span>Random User-Agents</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-feroxbuster-docsdocsexamplesrandom-agent-li>
+<a href=/feroxbuster-docs/docs/examples/random-agent/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesrandom-agent><span class=td-sidebar-nav-active-item>Random User-Agents</span></a>
 </li>
 </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocscompare-li>
@@ -265,39 +265,55 @@
 <a href=/feroxbuster-docs/docs/>Documentation</a>
 </li>
 <li class=breadcrumb-item>
-<a href=/feroxbuster-docs/docs/installation/>💿 Installation</a>
+<a href=/feroxbuster-docs/docs/examples/>🧰 Examples</a>
 </li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=/feroxbuster-docs/docs/installation/install-kali/>Kali Install</a>
+<a href=/feroxbuster-docs/docs/examples/random-agent/>Random User-Agents</a>
 </li>
 </ol>
 </nav>
 <div class=td-content>
-<h1>Kali Install</h1>
-<div class=lead>Install on Kali Linux</div>
+<h1>Random User-Agents</h1>
+<div class=lead>Added in version <strong>2.4.0</strong> by Daniel Saxton</div>
 <header class=article-meta>
 <div class="taxonomy taxonomy-terms-article taxo-tags">
 <h5 class=taxonomy-title>Tags:</h5>
 <ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=/feroxbuster-docs/tags/kali/ data-taxonomy-term=kali><span class=taxonomy-label>kali</span></a></li>
-<li><a class=taxonomy-term href=/feroxbuster-docs/tags/linux/ data-taxonomy-term=linux><span class=taxonomy-label>linux</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/feature/ data-taxonomy-term=feature><span class=taxonomy-label>feature</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/user-agent/ data-taxonomy-term=user-agent><span class=taxonomy-label>user-agent</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/headers/ data-taxonomy-term=headers><span class=taxonomy-label>headers</span></a></li>
 </ul>
 </div>
 <div class="taxonomy taxonomy-terms-article taxo-categories">
 <h5 class=taxonomy-title>Categories:</h5>
 <ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=/feroxbuster-docs/categories/installation/ data-taxonomy-term=installation><span class=taxonomy-label>installation</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/categories/examples/ data-taxonomy-term=examples><span class=taxonomy-label>examples</span></a></li>
 </ul>
 </div>
 <p class=reading-time><i class="fa fa-clock" aria-hidden=true></i>&nbsp; less than a minute &nbsp;</p>
 </header>
-<h2 id=kali-install>Kali Install</h2>
-<p>🥳 <code>feroxbuster</code> was recently added to the official Kali Linux repos 🥳</p>
-<p>If you&rsquo;re using kali, this is the preferred install method. Installing from the repos adds a <a href=../..//configuration/ferox-config-toml/><strong>ferox-config.toml</strong></a> in <code>/etc/feroxbuster/</code>, adds command completion for bash, fish, and zsh, includes a man page entry, and installs <code>feroxbuster</code> itself.</p>
-<pre tabindex=0><code>sudo apt update &amp;&amp; sudo apt install -y feroxbuster
-</code></pre>
+<h2 id=randomize-user-agent-header>Randomize User-Agent Header</h2>
+<p>Version 2.4.0 introduces the <code>--random-agent</code> option. When used, <code>--random-agent</code> selects a User-Agent value from one of the values below and
+includes it in that particular request.</p>
+<ul>
+<li><code>Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36</code></li>
+<li><code>Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1</code></li>
+<li><code>Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Mobile Safari/537.36 Edge/15.15254</code></li>
+<li><code>Mozilla/5.0 (Linux; Android 7.0; Pixel C Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36</code></li>
+<li><code>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246</code></li>
+<li><code>Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36</code></li>
+<li><code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9</code></li>
+<li><code>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36</code></li>
+<li><code>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1</code></li>
+<li><code>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</code></li>
+<li><code>Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)</code></li>
+<li><code>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)</code></li>
+</ul>
+<h2 id=example>Example</h2>
+<pre tabindex=0><code>cargo run -- -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
+</code></pre><p><img src=../random-agent.gif alt=random-agent></p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/6dd746f0f31aa208afa53c0f058cf05d19b93c11>refixed urls again (6dd746f)</a>
+Last modified October 15, 2021: <a href=https://github.com/epi052/feroxbuster/commit/6c598628f8ff87d405cf165c75d7f1086b6ce356>added random-agent (6c59862)</a>
 </div>
 </div>
 </main>
