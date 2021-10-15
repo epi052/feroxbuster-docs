@@ -23,7 +23,7 @@ can be an entire domain (`http://some.domain`), a specific folder (`http://some.
 url passed to `--dont-scan` will be **blocked before it can be requested**.
 
 At the request of GitHub user [@mzpqnxow](https://github.com/mzpqnxow), support for regular expressions was added to 
-feroxbuster in version 2.3.4. A given regular expression is applied to the **entire url**. This means you can prevent 
+feroxbuster in version 2.4.0. A given regular expression is applied to the **entire url**. This means you can prevent 
 requests based on the url's scheme, domain, ip, port, path, etc...
 
 ## URL Example 
