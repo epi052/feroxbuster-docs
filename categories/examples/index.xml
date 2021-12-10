@@ -47,7 +47,11 @@ using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274">Feline&lt
 &lt;h2 id="extract-from-robotstxt-v1102">Extract from robots.txt (&lt;code>v1.10.2&lt;/code>)&lt;/h2>
 &lt;p>In addition to &lt;a href="#extract-links-from-response-body">extracting links from the response body&lt;/a>, using
 &lt;code>--extract-links&lt;/code> makes a request to &lt;code>/robots.txt&lt;/code> and examines all &lt;code>Allow&lt;/code> and &lt;code>Disallow&lt;/code> entries. Directory entries
-are added to the scan queue, while file entries are requested and then reported if appropriate.&lt;/p></description></item><item><title>Docs: Limit Number of Scans</title><link>/feroxbuster-docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-scans/</guid><description>
+are added to the scan queue, while file entries are requested and then reported if appropriate.&lt;/p>
+&lt;h2 id="using-extract-links-for-web-crawling">Using Extract Links for Web Crawling&lt;/h2>
+&lt;p>By supplying a single line word list containing only the root path &lt;code>feroxbuster&lt;/code> can also be used to simulate web
+crawling behavior. This appears to give results comparable to &lt;a href="https://github.com/hakluke/hakrawler">hakrawlwer&lt;/a>
+although &lt;code>feroxbuster&lt;/code> is not quite as fast.&lt;/p></description></item><item><title>Docs: Limit Number of Scans</title><link>/feroxbuster-docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-scans/</guid><description>
 &lt;h2 id="limit-total-number-of-concurrent-scans">Limit Total Number of Concurrent Scans&lt;/h2>
 &lt;p>Limit the number of scans permitted to run at any given time. Recursion will still identify new directories, but newly
 discovered directories can only begin scanning when the total number of active scans drops below the value passed to
@@ -119,7 +123,8 @@ disk.&lt;/p>
 &lt;h2 id="stop-the-scan">Stop the scan&lt;/h2>
 &lt;p>A simple &lt;code>Ctrl+C&lt;/code> during a scan will create a file that contains information about the scan that was cancelled.&lt;/p>
 &lt;p>&lt;img src="../save-state.png" alt="save-state">&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">&lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">example&lt;/span> &lt;span style="color:#a40000">snippet&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">state&lt;/span> &lt;span style="color:#a40000">file&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">&lt;span style="color:#8f5902;font-style:italic">// example snippet of state file
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>
 &lt;span style="color:#000;font-weight:bold">{&lt;/span>
 &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scans&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
 &lt;span style="color:#000;font-weight:bold">{&lt;/span>

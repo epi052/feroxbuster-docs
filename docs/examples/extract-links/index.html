@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.88.1"><meta name=ROBOTS content="INDEX, FOLLOW">
+<meta name=generator content="Hugo 0.90.0"><meta name=ROBOTS content="INDEX, FOLLOW">
 <link rel="shortcut icon" href=/feroxbuster-docs/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/feroxbuster-docs/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/favicon-16x16.png sizes=16x16>
@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/feroxbuster-docs/docs/examples/extract-links/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-25T16:39:08-05:00">
+<meta property="article:modified_time" content="2021-12-09T12:08:41-06:00">
 <meta itemprop=name content="Extract Links">
 <meta itemprop=description content="Added in version **1.1.0**
 ">
-<meta itemprop=dateModified content="2021-09-25T16:39:08-05:00">
-<meta itemprop=wordCount content="148"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
+<meta itemprop=dateModified content="2021-12-09T12:08:41-06:00">
+<meta itemprop=wordCount content="191"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
 <meta itemprop=keywords content="feature,extract,links,"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/feroxbuster-docs/images/profile.png">
 <meta name=twitter:title content="Extract Links">
@@ -187,6 +187,7 @@
 </ul>
 </li>
 <li><a href=#extract-from-robotstxt-v1102>Extract from robots.txt (<code>v1.10.2</code>)</a></li>
+<li><a href=#using-extract-links-for-web-crawling>Using Extract Links for Web Crawling</a></li>
 </ul>
 </nav></div>
 <div class="taxonomy taxonomy-terms-cloud taxo-categories">
@@ -334,8 +335,12 @@ using <a href=https://www.hackthebox.eu/home/machines/profile/274>Feline</a> fro
 <p>In addition to <a href=#extract-links-from-response-body>extracting links from the response body</a>, using
 <code>--extract-links</code> makes a request to <code>/robots.txt</code> and examines all <code>Allow</code> and <code>Disallow</code> entries. Directory entries
 are added to the scan queue, while file entries are requested and then reported if appropriate.</p>
+<h2 id=using-extract-links-for-web-crawling>Using Extract Links for Web Crawling</h2>
+<p>By supplying a single line word list containing only the root path <code>feroxbuster</code> can also be used to simulate web
+crawling behavior. This appears to give results comparable to <a href=https://github.com/hakluke/hakrawler>hakrawlwer</a>
+although <code>feroxbuster</code> is not quite as fast.</p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/5e018724a8ea333f74bed07e1e32ac44411796f1>initial port of docs (5e01872)</a>
+Last modified December 9, 2021: <a href=https://github.com/epi052/feroxbuster/commit/a6dd8c41bf65973eb8276eaee38e9df94fa61197>Add --extract-links note (a6dd8c4)</a>
 </div>
 </div>
 </main>

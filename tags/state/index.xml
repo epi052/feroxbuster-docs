@@ -5,7 +5,8 @@ disk.&lt;/p>
 &lt;h2 id="stop-the-scan">Stop the scan&lt;/h2>
 &lt;p>A simple &lt;code>Ctrl+C&lt;/code> during a scan will create a file that contains information about the scan that was cancelled.&lt;/p>
 &lt;p>&lt;img src="../save-state.png" alt="save-state">&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">&lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">example&lt;/span> &lt;span style="color:#a40000">snippet&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">state&lt;/span> &lt;span style="color:#a40000">file&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">&lt;span style="color:#8f5902;font-style:italic">// example snippet of state file
+&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>
 &lt;span style="color:#000;font-weight:bold">{&lt;/span>
 &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scans&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
 &lt;span style="color:#000;font-weight:bold">{&lt;/span>

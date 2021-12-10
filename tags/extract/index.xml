@@ -28,4 +28,8 @@ using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274">Feline&lt
 &lt;h2 id="extract-from-robotstxt-v1102">Extract from robots.txt (&lt;code>v1.10.2&lt;/code>)&lt;/h2>
 &lt;p>In addition to &lt;a href="#extract-links-from-response-body">extracting links from the response body&lt;/a>, using
 &lt;code>--extract-links&lt;/code> makes a request to &lt;code>/robots.txt&lt;/code> and examines all &lt;code>Allow&lt;/code> and &lt;code>Disallow&lt;/code> entries. Directory entries
-are added to the scan queue, while file entries are requested and then reported if appropriate.&lt;/p></description></item></channel></rss>
+are added to the scan queue, while file entries are requested and then reported if appropriate.&lt;/p>
+&lt;h2 id="using-extract-links-for-web-crawling">Using Extract Links for Web Crawling&lt;/h2>
+&lt;p>By supplying a single line word list containing only the root path &lt;code>feroxbuster&lt;/code> can also be used to simulate web
+crawling behavior. This appears to give results comparable to &lt;a href="https://github.com/hakluke/hakrawler">hakrawlwer&lt;/a>
+although &lt;code>feroxbuster&lt;/code> is not quite as fast.&lt;/p></description></item></channel></rss>
