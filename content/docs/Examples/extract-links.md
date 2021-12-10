@@ -46,3 +46,9 @@ using [Feline](https://www.hackthebox.eu/home/machines/profile/274) from Hack th
 In addition to [extracting links from the response body](#extract-links-from-response-body), using
 `--extract-links` makes a request to `/robots.txt` and examines all `Allow` and `Disallow` entries. Directory entries
 are added to the scan queue, while file entries are requested and then reported if appropriate.
+
+## Using Extract Links for Web Crawling
+
+By supplying a single line word list containing only the root path `feroxbuster` can also be used to simulate web
+crawling behavior. This appears to give results comparable to [hakrawlwer](https://github.com/hakluke/hakrawler)
+although `feroxbuster` is not quite as fast.
