@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.90.0"><meta name=ROBOTS content="INDEX, FOLLOW">
+<meta name=generator content="Hugo 0.91.0"><meta name=ROBOTS content="INDEX, FOLLOW">
 <link rel="shortcut icon" href=/feroxbuster-docs/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/feroxbuster-docs/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/favicon-16x16.png sizes=16x16>
@@ -13,24 +13,24 @@
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/android-192x192.png sizes=192x192>
-<title>Scan Cancel Menu | </title>
-<meta name=description content="Added in version **1.12.0**
+<title>Scan Management Menu | </title>
+<meta name=description content="Added in version **1.12.0**; Revised in version **2.4.1**
 ">
-<meta property="og:title" content="Scan Cancel Menu">
-<meta property="og:description" content="Added in version **1.12.0**
+<meta property="og:title" content="Scan Management Menu">
+<meta property="og:description" content="Added in version **1.12.0**; Revised in version **2.4.1**
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/feroxbuster-docs/docs/examples/cancel-scan/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-09-25T20:36:27-05:00">
-<meta itemprop=name content="Scan Cancel Menu">
-<meta itemprop=description content="Added in version **1.12.0**
+<meta property="article:modified_time" content="2021-12-19T13:29:13-06:00">
+<meta itemprop=name content="Scan Management Menu">
+<meta itemprop=description content="Added in version **1.12.0**; Revised in version **2.4.1**
 ">
-<meta itemprop=dateModified content="2021-09-25T20:36:27-05:00">
-<meta itemprop=wordCount content="164"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
-<meta itemprop=keywords content="feature,pause,cancel,menu,"><meta name=twitter:card content="summary_large_image">
+<meta itemprop=dateModified content="2021-12-19T13:29:13-06:00">
+<meta itemprop=wordCount content="226"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
+<meta itemprop=keywords content="feature,pause,cancel,add,menu,"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/feroxbuster-docs/images/profile.png">
-<meta name=twitter:title content="Scan Cancel Menu">
-<meta name=twitter:description content="Added in version **1.12.0**
+<meta name=twitter:title content="Scan Management Menu">
+<meta name=twitter:description content="Added in version **1.12.0**; Revised in version **2.4.1**
 ">
 <link rel=preload href=/feroxbuster-docs/scss/main.min.bd5285b713d3061549a6bfd34e5f4ec6775ede36672a3088260f0d420050647f.css as=style>
 <link href=/feroxbuster-docs/scss/main.min.bd5285b713d3061549a6bfd34e5f4ec6775ede36672a3088260f0d420050647f.css rel=stylesheet integrity>
@@ -139,7 +139,7 @@
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesfilter-similar-li>
 <a href=/feroxbuster-docs/docs/examples/filter-similar/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesfilter-similar><span>Filter by Page Similarity</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-feroxbuster-docsdocsexamplescancel-scan-li>
-<a href=/feroxbuster-docs/docs/examples/cancel-scan/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplescancel-scan><span class=td-sidebar-nav-active-item>Scan Cancel Menu</span></a>
+<a href=/feroxbuster-docs/docs/examples/cancel-scan/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplescancel-scan><span class=td-sidebar-nav-active-item>Scan Management Menu</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesrate-limit-li>
 <a href=/feroxbuster-docs/docs/examples/rate-limit/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-feroxbuster-docsdocsexamplesrate-limit><span>Rate Limiting</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-feroxbuster-docsdocsexamplesbe-quiet-li>
@@ -179,9 +179,14 @@
 <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class=td-toc><nav id=TableOfContents>
 <ul>
-<li><a href=#cancel-a-recursive-scan-interactively>Cancel a Recursive Scan Interactively</a></li>
+<li><a href=#add-or-cancel-a-recursive-scan-interactively>Add or Cancel a Recursive Scan Interactively</a></li>
 <li><a href=#example>Example</a></li>
-<li><a href=#usage>Usage</a></li>
+<li><a href=#usage>Usage</a>
+<ul>
+<li><a href=#cancel-a-scan>Cancel a Scan</a></li>
+<li><a href=#add-a-new-url-for-scanning>Add a New Url for Scanning</a></li>
+</ul>
+</li>
 <li><a href=#demonstration>Demonstration</a></li>
 </ul>
 </nav></div>
@@ -199,6 +204,7 @@
 <div class="taxonomy taxonomy-terms-cloud taxo-tags">
 <h5 class=taxonomy-title>Tag Cloud</h5>
 <ul class=taxonomy-terms>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/add/ data-taxonomy-term=add><span class=taxonomy-label>add</span><span class=taxonomy-count>1</span></a></li>
 <li><a class=taxonomy-term href=/feroxbuster-docs/tags/apt/ data-taxonomy-term=apt><span class=taxonomy-label>apt</span><span class=taxonomy-count>1</span></a></li>
 <li><a class=taxonomy-term href=/feroxbuster-docs/tags/arguments/ data-taxonomy-term=arguments><span class=taxonomy-label>arguments</span><span class=taxonomy-count>1</span></a></li>
 <li><a class=taxonomy-term href=/feroxbuster-docs/tags/arm/ data-taxonomy-term=arm><span class=taxonomy-label>arm</span><span class=taxonomy-count>2</span></a></li>
@@ -276,13 +282,13 @@
 <a href=/feroxbuster-docs/docs/examples/>🧰 Examples</a>
 </li>
 <li class="breadcrumb-item active" aria-current=page>
-<a href=/feroxbuster-docs/docs/examples/cancel-scan/>Scan Cancel Menu</a>
+<a href=/feroxbuster-docs/docs/examples/cancel-scan/>Scan Management Menu</a>
 </li>
 </ol>
 </nav>
 <div class=td-content>
-<h1>Scan Cancel Menu</h1>
-<div class=lead>Added in version <strong>1.12.0</strong></div>
+<h1>Scan Management Menu</h1>
+<div class=lead>Added in version <strong>1.12.0</strong>; Revised in version <strong>2.4.1</strong></div>
 <header class=article-meta>
 <div class="taxonomy taxonomy-terms-article taxo-tags">
 <h5 class=taxonomy-title>Tags:</h5>
@@ -290,6 +296,7 @@
 <li><a class=taxonomy-term href=/feroxbuster-docs/tags/feature/ data-taxonomy-term=feature><span class=taxonomy-label>feature</span></a></li>
 <li><a class=taxonomy-term href=/feroxbuster-docs/tags/pause/ data-taxonomy-term=pause><span class=taxonomy-label>pause</span></a></li>
 <li><a class=taxonomy-term href=/feroxbuster-docs/tags/cancel/ data-taxonomy-term=cancel><span class=taxonomy-label>cancel</span></a></li>
+<li><a class=taxonomy-term href=/feroxbuster-docs/tags/add/ data-taxonomy-term=add><span class=taxonomy-label>add</span></a></li>
 <li><a class=taxonomy-term href=/feroxbuster-docs/tags/menu/ data-taxonomy-term=menu><span class=taxonomy-label>menu</span></a></li>
 </ul>
 </div>
@@ -299,23 +306,25 @@
 <li><a class=taxonomy-term href=/feroxbuster-docs/categories/examples/ data-taxonomy-term=examples><span class=taxonomy-label>examples</span></a></li>
 </ul>
 </div>
-<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i>&nbsp; less than a minute &nbsp;</p>
+<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i>&nbsp; 2 minute read &nbsp;</p>
 </header>
-<h2 id=cancel-a-recursive-scan-interactively>Cancel a Recursive Scan Interactively</h2>
+<h2 id=add-or-cancel-a-recursive-scan-interactively>Add or Cancel a Recursive Scan Interactively</h2>
 <div class="alert alert-primary" role=alert>
 <h4 class=alert-heading>Note</h4>
 Scans that are started via <code>-u</code> or passed in through <code>--stdin</code> cannot be cancelled, only scans found via <code>--extract-links</code> or recursion are eligible.
 </div>
 <p>Version 1.12.0 expanded the pause/resume functionality introduced in <a href=../pause-scan/>v1.4.0</a> by
-adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing <code>ENTER</code>, however, the</p>
+adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing <code>ENTER</code>.</p>
+<p>Version 2.4.1 expanded functionality even further with the ability to add a brand-new scan. Now that cancelling is no
+longer the only action available to users, the name has been updated to the <strong>Scan Management Menu</strong>™.</p>
 <h2 id=example>Example</h2>
-<p>Below is an example of the Scan Cancel Menu™.</p>
+<p>Below is an example of the Scan <del>Cancel</del> Management Menu™.</p>
 <p><img src=../cancel-menu.png alt=cancel-menu></p>
 <h2 id=usage>Usage</h2>
-<p>Using the menu is pretty simple:</p>
+<p>Using the menu is pretty simple: from a running scan, press <code>ENTER</code> to view the menu</p>
+<h3 id=cancel-a-scan>Cancel a Scan</h3>
 <ul>
-<li>Press <code>ENTER</code> to view the menu</li>
-<li>Choose a scan to cancel by entering its scan index (<code>1</code>)
+<li>Choose a scan to cancel by entering <code>cancel</code> or <code>c</code> followed by its scan index (<code>1</code>)
 <ul>
 <li>more than one scan can be selected by using a comma-separated list of indexes and/or ranges (<code>1-4,8,9-13</code> &mldr; etc)</li>
 </ul>
@@ -326,11 +335,15 @@ adding an interactive menu from which currently running recursive scans can be c
 </ul>
 </li>
 </ul>
+<h3 id=add-a-new-url-for-scanning>Add a New Url for Scanning</h3>
+<ul>
+<li>Enter <code>add</code> or <code>a</code> followed by the new url you&rsquo;d liked you add to the current scan queue</li>
+</ul>
 <h2 id=demonstration>Demonstration</h2>
-<p>Here is a short demonstration of force cancelling a range of scans followed by a single scan with interactive prompt.</p>
+<p>Here is a short demonstration of the menu&rsquo;s capabilities.</p>
 <p><img src=../cancel-scan.gif alt=cancel-scan></p>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified September 25, 2021: <a href=https://github.com/epi052/feroxbuster/commit/6dd746f0f31aa208afa53c0f058cf05d19b93c11>refixed urls again (6dd746f)</a>
+Last modified December 19, 2021: <a href=https://github.com/epi052/feroxbuster/commit/b03195ad58181d2dede377e1099f625774654258>update (b03195a)</a>
 </div>
 </div>
 </main>

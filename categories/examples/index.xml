@@ -209,22 +209,24 @@ pages are hashed and compared to the original request&amp;rsquo;s hash. If the c
 percentage of similarity (currently 95%), then that request will be filtered out.&lt;/p>
 &lt;p>SSDeep was selected as it does a good job of identifying near-duplicate pages once content-length reaches a certain
 size, while remaining performant. Other algorithms were tested but resulted in huge performance hits (orders of
-magnitude slower on requests/second).&lt;/p></description></item><item><title>Docs: Scan Cancel Menu</title><link>/feroxbuster-docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cancel-scan/</guid><description>
-&lt;h2 id="cancel-a-recursive-scan-interactively">Cancel a Recursive Scan Interactively&lt;/h2>
+magnitude slower on requests/second).&lt;/p></description></item><item><title>Docs: Scan Management Menu</title><link>/feroxbuster-docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cancel-scan/</guid><description>
+&lt;h2 id="add-or-cancel-a-recursive-scan-interactively">Add or Cancel a Recursive Scan Interactively&lt;/h2>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
 Scans that are started via &lt;code>-u&lt;/code> or passed in through &lt;code>--stdin&lt;/code> cannot be cancelled, only scans found via &lt;code>--extract-links&lt;/code> or recursion are eligible.
 &lt;/div>
 &lt;p>Version 1.12.0 expanded the pause/resume functionality introduced in &lt;a href="../pause-scan/">v1.4.0&lt;/a> by
-adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing &lt;code>ENTER&lt;/code>, however, the&lt;/p>
+adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing &lt;code>ENTER&lt;/code>.&lt;/p>
+&lt;p>Version 2.4.1 expanded functionality even further with the ability to add a brand-new scan. Now that cancelling is no
+longer the only action available to users, the name has been updated to the &lt;strong>Scan Management Menu&lt;/strong>™.&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;p>Below is an example of the Scan Cancel Menu™.&lt;/p>
+&lt;p>Below is an example of the Scan &lt;del>Cancel&lt;/del> Management Menu™.&lt;/p>
 &lt;p>&lt;img src="../cancel-menu.png" alt="cancel-menu">&lt;/p>
 &lt;h2 id="usage">Usage&lt;/h2>
-&lt;p>Using the menu is pretty simple:&lt;/p>
+&lt;p>Using the menu is pretty simple: from a running scan, press &lt;code>ENTER&lt;/code> to view the menu&lt;/p>
+&lt;h3 id="cancel-a-scan">Cancel a Scan&lt;/h3>
 &lt;ul>
-&lt;li>Press &lt;code>ENTER&lt;/code> to view the menu&lt;/li>
-&lt;li>Choose a scan to cancel by entering its scan index (&lt;code>1&lt;/code>)
+&lt;li>Choose a scan to cancel by entering &lt;code>cancel&lt;/code> or &lt;code>c&lt;/code> followed by its scan index (&lt;code>1&lt;/code>)
 &lt;ul>
 &lt;li>more than one scan can be selected by using a comma-separated list of indexes and/or ranges (&lt;code>1-4,8,9-13&lt;/code> &amp;hellip; etc)&lt;/li>
 &lt;/ul>
@@ -235,8 +237,12 @@ adding an interactive menu from which currently running recursive scans can be c
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
+&lt;h3 id="add-a-new-url-for-scanning">Add a New Url for Scanning&lt;/h3>
+&lt;ul>
+&lt;li>Enter &lt;code>add&lt;/code> or &lt;code>a&lt;/code> followed by the new url you&amp;rsquo;d liked you add to the current scan queue&lt;/li>
+&lt;/ul>
 &lt;h2 id="demonstration">Demonstration&lt;/h2>
-&lt;p>Here is a short demonstration of force cancelling a range of scans followed by a single scan with interactive prompt.&lt;/p>
+&lt;p>Here is a short demonstration of the menu&amp;rsquo;s capabilities.&lt;/p>
 &lt;p>&lt;img src="../cancel-scan.gif" alt="cancel-scan">&lt;/p></description></item><item><title>Docs: Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>
 &lt;h2 id="limit-number-of-requests-per-second">Limit Number of Requests per Second&lt;/h2>
 &lt;div class="alert alert-primary" role="alert">
