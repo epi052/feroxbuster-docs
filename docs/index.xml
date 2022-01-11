@@ -443,6 +443,8 @@ Emit JSON logs to --output and --debug-log instead of normal text
 Do not scan recursively
 -q, --quiet
 Hide progress bars and banner (good for tmux windows w/ notifications)
+-A, --random-agent
+Use a random User-Agent
 -r, --redirects
 Follow redirects
 --silent
@@ -454,6 +456,8 @@ Prints version information
 -v, --verbosity
 Increase verbosity level (use -vv or more for greater effect. [CAUTION] 4 -v's is probably too much)
 OPTIONS:
+-b, --cookies &amp;lt;COOKIE&amp;gt;...
+Specify HTTP cookies (ex: -b stuff=things)
 --debug-log &amp;lt;FILE&amp;gt;
 Output file to write log entries (use w/ --json for JSON entries)
 -d, --depth &amp;lt;RECURSION_DEPTH&amp;gt;
@@ -493,7 +497,7 @@ State file from which to resume a partially complete scan (ex. --resume-from fer
 -L, --scan-limit &amp;lt;SCAN_LIMIT&amp;gt;
 Limit total number of concurrent scans (default: 0, i.e. no limit)
 -s, --status-codes &amp;lt;STATUS_CODE&amp;gt;...
-Status Codes to include (allow list) (default: 200 204 301 302 307 308 401 403 405 500)
+Status Codes to include (allow list) (default: 200 204 301 302 307 308 401 403 405)
 -t, --threads &amp;lt;THREADS&amp;gt;
 Number of concurrent threads (default: 50)
 --time-limit &amp;lt;TIME_SPEC&amp;gt;
