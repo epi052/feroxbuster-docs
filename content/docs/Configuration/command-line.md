@@ -47,6 +47,9 @@ FLAGS:
     -q, --quiet            
             Hide progress bars and banner (good for tmux windows w/ notifications)
 
+    -A, --random-agent     
+            Use a random User-Agent
+
     -r, --redirects        
             Follow redirects
 
@@ -64,6 +67,9 @@ FLAGS:
 
 
 OPTIONS:
+    -b, --cookies <COOKIE>...                     
+            Specify HTTP cookies (ex: -b stuff=things)
+
         --debug-log <FILE>                        
             Output file to write log entries (use w/ --json for JSON entries)
 
@@ -122,7 +128,7 @@ OPTIONS:
             Limit total number of concurrent scans (default: 0, i.e. no limit)
 
     -s, --status-codes <STATUS_CODE>...
-            Status Codes to include (allow list) (default: 200 204 301 302 307 308 401 403 405 500)
+            Status Codes to include (allow list) (default: 200 204 301 302 307 308 401 403 405)
 
     -t, --threads <THREADS>                       
             Number of concurrent threads (default: 50)
