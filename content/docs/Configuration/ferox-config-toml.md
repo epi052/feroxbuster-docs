@@ -45,7 +45,6 @@ wordlist = "/wordlists/jhaddix/all.txt"
 A pre-made configuration file with examples of all available settings can be found in `ferox-config.toml.example`.
 
 ```toml
-# ferox-config.toml
 # Example configuration for feroxbuster
 #
 # If you wish to provide persistent settings to feroxbuster, rename this file to ferox-config.toml and make sure
@@ -55,37 +54,40 @@ A pre-made configuration file with examples of all available settings can be fou
 #
 # Any setting used here can be overridden by the corresponding command line option/argument
 #
-# wordlist = "/wordlists/jhaddix/all.txt"
+# wordlist = "/wordlists/seclists/Discovery/Web-Content/raft-medium-directories.txt"
 # status_codes = [200, 500]
 # filter_status = [301]
 # threads = 1
-# parallel = 2
 # timeout = 5
-# auto_tune = true
-# auto_bail = true
 # proxy = "http://127.0.0.1:8080"
 # replay_proxy = "http://127.0.0.1:8081"
 # replay_codes = [200, 302]
 # verbosity = 1
+# parallel = 8
 # scan_limit = 6
 # rate_limit = 250
 # quiet = true
 # silent = true
+# auto_tune = true
+# auto_bail = true
 # json = true
 # output = "/targets/ellingson_mineral_company/gibson.txt"
 # debug_log = "/var/log/find-the-derp.log"
 # user_agent = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0"
+# random_agent = false
 # redirects = true
 # insecure = true
 # extensions = ["php", "html"]
+# methods = ["GET", "POST"]
+# data = [11, 12, 13, 14, 15]
+# url_denylist = ["http://dont-scan.me", "https://also-not.me"]
+# regex_denylist = ["/deny.*"]
 # no_recursion = true
 # add_slash = true
 # stdin = true
 # dont_filter = true
 # extract_links = true
 # depth = 1
-# url_denylist = ["https://dont-scan-me.com/"]
-# regex_denylist = ["/deny.*"]
 # filter_size = [5174]
 # filter_regex = ["^ignore me$"]
 # filter_similar = ["https://somesite.com/soft404"]
@@ -93,7 +95,7 @@ A pre-made configuration file with examples of all available settings can be fou
 # filter_line_count = [35, 36]
 # queries = [["name","value"], ["rick", "astley"]]
 # save_state = false
-# time_limit = 10m
+# time_limit = "10m"
 
 # headers can be specified on multiple lines or as an inline table
 #
