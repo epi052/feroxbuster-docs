@@ -223,7 +223,7 @@ few of the use-cases in which feroxbuster may be a better fit:&lt;/p>
 &lt;td>✔&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>auto-detect server&amp;rsquo;s with directory listing (&lt;code>v2.5.0&lt;/code>)&lt;/td>
+&lt;td>auto-detect servers with directory listing (&lt;code>v2.5.0&lt;/code>)&lt;/td>
 &lt;td>✔&lt;/td>
 &lt;td>&lt;/td>
 &lt;td>&lt;/td>
