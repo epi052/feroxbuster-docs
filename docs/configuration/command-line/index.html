@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.91.2"><meta name=ROBOTS content="INDEX, FOLLOW">
+<meta name=generator content="Hugo 0.92.0"><meta name=ROBOTS content="INDEX, FOLLOW">
 <link rel="shortcut icon" href=/feroxbuster-docs/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/feroxbuster-docs/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/favicon-16x16.png sizes=16x16>
@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/feroxbuster-docs/docs/configuration/command-line/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2022-01-10T20:17:24-06:00">
+<meta property="article:modified_time" content="2022-01-17T07:21:49-06:00">
 <meta itemprop=name content="Command Line Interface">
 <meta itemprop=description content="Configure feroxbuster settings using the command line 
 ">
-<meta itemprop=dateModified content="2022-01-10T20:17:24-06:00">
-<meta itemprop=wordCount content="564"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
+<meta itemprop=dateModified content="2022-01-17T07:21:49-06:00">
+<meta itemprop=wordCount content="627"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
 <meta itemprop=keywords content="cli,options,arguments,interface,"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/feroxbuster-docs/images/profile.png">
 <meta name=twitter:title content="Command Line Interface">
@@ -299,145 +299,74 @@
 <p>Finally, after parsing the available config file, any options/arguments given on the commandline will override any
 values that were set as a built-in or config-file value.</p>
 <pre tabindex=0><code>USAGE:
-    feroxbuster [FLAGS] [OPTIONS] --url &lt;URL&gt;...
-
-FLAGS:
-    -f, --add-slash        
-            Append / to each request
-
-        --auto-bail        
-            Automatically stop scanning when an excessive amount of errors are encountered
-
-        --auto-tune        
-            Automatically lower scan rate when an excessive amount of errors are encountered
-
-    -D, --dont-filter      
-            Don't auto-filter wildcard responses
-
-    -e, --extract-links    
-            Extract links from response body (html, javascript, etc...); make new requests based on findings (default:
-            false)
-    -h, --help             
-            Prints help information
-
-    -k, --insecure         
-            Disables TLS certificate validation
-
-        --json             
-            Emit JSON logs to --output and --debug-log instead of normal text
-
-    -n, --no-recursion     
-            Do not scan recursively
-
-    -q, --quiet            
-            Hide progress bars and banner (good for tmux windows w/ notifications)
-
-    -A, --random-agent     
-            Use a random User-Agent
-
-    -r, --redirects        
-            Follow redirects
-
-        --silent           
-            Only print URLs + turn off logging (good for piping a list of urls to other commands)
-
-        --stdin            
-            Read url(s) from STDIN
-
-    -V, --version          
-            Prints version information
-
-    -v, --verbosity        
-            Increase verbosity level (use -vv or more for greater effect. [CAUTION] 4 -v's is probably too much)
-
+    feroxbuster [OPTIONS]
 
 OPTIONS:
-    -b, --cookies &lt;COOKIE&gt;...                     
-            Specify HTTP cookies (ex: -b stuff=things)
+    -h, --help       Print help information
+    -V, --version    Print version information
 
-        --debug-log &lt;FILE&gt;                        
-            Output file to write log entries (use w/ --json for JSON entries)
+Target selection:
+        --resume-from &lt;STATE_FILE&gt;    State file from which to resume a partially complete scan (ex. --resume-from ferox-1606586780.state)
+        --stdin                       Read url(s) from STDIN
+    -u, --url &lt;URL&gt;                   The target URL (required, unless [--stdin || --resume-from] used)
 
-    -d, --depth &lt;RECURSION_DEPTH&gt;
-            Maximum recursion depth, a depth of 0 is infinite recursion (default: 4)
+Proxy settings:
+    -p, --proxy &lt;PROXY&gt;                    Proxy to use for requests (ex: http(s)://host:port, socks5(h)://host:port)
+    -P, --replay-proxy &lt;REPLAY_PROXY&gt;      Send only unfiltered requests through a Replay Proxy, instead of all requests
+    -R, --replay-codes &lt;REPLAY_CODE&gt;...    Status Codes to send through a Replay Proxy when found (default: --status-codes value)
 
-    -x, --extensions &lt;FILE_EXTENSION&gt;...          
-            File extension(s) to search for (ex: -x php -x pdf js)
+Request settings:
+    -a, --user-agent &lt;USER_AGENT&gt;           Sets the User-Agent (default: feroxbuster/2.5.0)
+    -A, --random-agent                      Use a random User-Agent
+    -b, --cookies &lt;COOKIE&gt;...               Specify HTTP cookies to be used in each request (ex: -b stuff=things)
+        --data &lt;DATA&gt;                       Request's Body; can read data from a file if input starts with an @ (ex: @post.bin)
+    -f, --add-slash                         Append / to each request's URL
+    -H, --headers &lt;HEADER&gt;...               Specify HTTP headers to be used in each request (ex: -H Header:val -H 'stuff: things')
+    -m, --methods &lt;HTTP_METHODS&gt;...         Which HTTP request method(s) should be sent (default: GET)
+    -Q, --query &lt;QUERY&gt;...                  Request's URL query parameters (ex: -Q token=stuff -Q secret=key)
+    -x, --extensions &lt;FILE_EXTENSION&gt;...    File extension(s) to search for (ex: -x php -x pdf js)
 
-    -N, --filter-lines &lt;LINES&gt;...                 
-            Filter out messages of a particular line count (ex: -N 20 -N 31,30)
+Request filters:
+        --dont-scan &lt;URL&gt;...    URL(s) or Regex Pattern(s) to exclude from recursion/scans
 
-    -X, --filter-regex &lt;REGEX&gt;...
-            Filter out messages via regular expression matching on the response's body (ex: -X '^ignore me$')
+Response filters:
+    -C, --filter-status &lt;STATUS_CODE&gt;...          Filter out status codes (deny list) (ex: -C 200 -C 401)
+        --filter-similar-to &lt;UNWANTED_PAGE&gt;...    Filter out pages that are similar to the given page (ex. --filter-similar-to http://site.xyz/soft404)
+    -N, --filter-lines &lt;LINES&gt;...                 Filter out messages of a particular line count (ex: -N 20 -N 31,30)
+    -s, --status-codes &lt;STATUS_CODE&gt;...           Status Codes to include (allow list) (default: 200 204 301 302 307 308 401 403 405)
+    -S, --filter-size &lt;SIZE&gt;...                   Filter out messages of a particular size (ex: -S 5120 -S 4927,1970)
+    -W, --filter-words &lt;WORDS&gt;...                 Filter out messages of a particular word count (ex: -W 312 -W 91,82)
+    -X, --filter-regex &lt;REGEX&gt;...                 Filter out messages via regular expression matching on the response's body (ex: -X '^ignore me$')
 
-        --filter-similar-to &lt;UNWANTED_PAGE&gt;...
-            Filter out pages that are similar to the given page (ex. --filter-similar-to http://site.xyz/soft404)
+Client settings:
+    -k, --insecure             Disables TLS certificate validation in the client
+    -r, --redirects            Allow client to follow redirects
+    -T, --timeout &lt;SECONDS&gt;    Number of seconds before a client's request times out (default: 7)
 
-    -S, --filter-size &lt;SIZE&gt;...                   
-            Filter out messages of a particular size (ex: -S 5120 -S 4927,1970)
+Scan settings:
+        --auto-bail                    Automatically stop scanning when an excessive amount of errors are encountered
+        --auto-tune                    Automatically lower scan rate when an excessive amount of errors are encountered
+    -d, --depth &lt;RECURSION_DEPTH&gt;      Maximum recursion depth, a depth of 0 is infinite recursion (default: 4)
+    -D, --dont-filter                  Don't auto-filter wildcard responses
+    -e, --extract-links                Extract links from response body (html, javascript, etc...); make new requests based on findings
+    -L, --scan-limit &lt;SCAN_LIMIT&gt;      Limit total number of concurrent scans (default: 0, i.e. no limit)
+    -n, --no-recursion                 Do not scan recursively
+        --parallel &lt;PARALLEL_SCANS&gt;    Run parallel feroxbuster instances (one child process per url passed via stdin)
+        --rate-limit &lt;RATE_LIMIT&gt;      Limit number of requests per second (per directory) (default: 0, i.e. no limit)
+    -t, --threads &lt;THREADS&gt;            Number of concurrent threads (default: 50)
+        --time-limit &lt;TIME_SPEC&gt;       Limit total run time of all scans (ex: --time-limit 10m)
+    -w, --wordlist &lt;FILE&gt;              Path to the wordlist
 
-    -C, --filter-status &lt;STATUS_CODE&gt;...          
-            Filter out status codes (deny list) (ex: -C 200 -C 401)
-
-    -W, --filter-words &lt;WORDS&gt;...                 
-            Filter out messages of a particular word count (ex: -W 312 -W 91,82)
-
-    -H, --headers &lt;HEADER&gt;...                     
-            Specify HTTP headers (ex: -H Header:val 'stuff: things')
-
-    -o, --output &lt;FILE&gt;                           
-            Output file to write results to (use w/ --json for JSON entries)
-
-        --parallel &lt;PARALLEL_SCANS&gt;
-            Run parallel feroxbuster instances (one child process per url passed via stdin)
-
-    -p, --proxy &lt;PROXY&gt;
-            Proxy to use for requests (ex: http(s)://host:port, socks5(h)://host:port)
-
-    -Q, --query &lt;QUERY&gt;...                        
-            Specify URL query parameters (ex: -Q token=stuff -Q secret=key)
-
-        --rate-limit &lt;RATE_LIMIT&gt;
-            Limit number of requests per second (per directory) (default: 0, i.e. no limit)
-
-    -R, --replay-codes &lt;REPLAY_CODE&gt;...
-            Status Codes to send through a Replay Proxy when found (default: --status-codes value)
-
-    -P, --replay-proxy &lt;REPLAY_PROXY&gt;
-            Send only unfiltered requests through a Replay Proxy, instead of all requests
-
-        --resume-from &lt;STATE_FILE&gt;
-            State file from which to resume a partially complete scan (ex. --resume-from ferox-1606586780.state)
-
-    -L, --scan-limit &lt;SCAN_LIMIT&gt;                 
-            Limit total number of concurrent scans (default: 0, i.e. no limit)
-
-    -s, --status-codes &lt;STATUS_CODE&gt;...
-            Status Codes to include (allow list) (default: 200 204 301 302 307 308 401 403 405)
-
-    -t, --threads &lt;THREADS&gt;                       
-            Number of concurrent threads (default: 50)
-
-        --time-limit &lt;TIME_SPEC&gt;                  
-            Limit total run time of all scans (ex: --time-limit 10m)
-
-    -T, --timeout &lt;SECONDS&gt;                       
-            Number of seconds before a request times out (default: 7)
-
-    -u, --url &lt;URL&gt;...                            
-            The target URL(s) (required, unless --stdin used)
-
-        --dont-scan &lt;URL&gt;...                      
-            URL(s) or Regex Pattern(s) to exclude from recursion/scans
-
-    -a, --user-agent &lt;USER_AGENT&gt;                 
-            Sets the User-Agent (default: feroxbuster/VERSION)
-
-    -w, --wordlist &lt;FILE&gt;                         
-            Path to the wordlist
+Output settings:
+        --debug-log &lt;FILE&gt;    Output file to write log entries (use w/ --json for JSON entries)
+        --json                Emit JSON logs to --output and --debug-log instead of normal text
+    -o, --output &lt;FILE&gt;       Output file to write results to (use w/ --json for JSON entries)
+    -q, --quiet               Hide progress bars and banner (good for tmux windows w/ notifications)
+        --silent              Only print URLs + turn off logging (good for piping a list of urls to other commands)
+    -v, --verbosity           Increase verbosity level (use -vv or more for greater effect. [CAUTION] 4 -v's is probably too much)
 </code></pre>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 10, 2022: <a href=https://github.com/epi052/feroxbuster/commit/4568d7ebdbc284f223e92d8fbfc6e7a76edc45a4>update help (4568d7e)</a>
+Last modified January 17, 2022: <a href=https://github.com/epi052/feroxbuster/commit/f74c70c70ce7be104f761c2859306893bf248615>update (f74c70c)</a>
 </div>
 </div>
 </main>

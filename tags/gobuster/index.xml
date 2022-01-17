@@ -210,6 +210,30 @@ few of the use-cases in which feroxbuster may be a better fit:&lt;/p>
 &lt;td>&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>send a random user-agent with each request (&lt;code>v2.4.0&lt;/code>)&lt;/td>
+&lt;td>✔&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>send arbitrary http methods (GET, POST, etc&amp;hellip;) (&lt;code>v2.5.0&lt;/code>)&lt;/td>
+&lt;td>✔&lt;/td>
+&lt;td>✔&lt;/td>
+&lt;td>✔&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>auto-detect server&amp;rsquo;s with directory listing (&lt;code>v2.5.0&lt;/code>)&lt;/td>
+&lt;td>✔&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>scrape html tags for additional content (&lt;code>v2.5.0&lt;/code>)&lt;/td>
+&lt;td>✔&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>Of note, there&amp;rsquo;s another written-in-rust content discovery tool, &lt;a href="https://github.com/phra/rustbuster">rustbuster&lt;/a>. I

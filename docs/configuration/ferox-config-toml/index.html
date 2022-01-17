@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.91.2"><meta name=ROBOTS content="INDEX, FOLLOW">
+<meta name=generator content="Hugo 0.92.0"><meta name=ROBOTS content="INDEX, FOLLOW">
 <link rel="shortcut icon" href=/feroxbuster-docs/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/feroxbuster-docs/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/feroxbuster-docs/favicons/favicon-16x16.png sizes=16x16>
@@ -21,12 +21,12 @@
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/feroxbuster-docs/docs/configuration/ferox-config-toml/"><meta property="og:image" content="/feroxbuster-docs/images/profile.png"><meta property="article:section" content="docs">
-<meta property="article:modified_time" content="2021-10-04T06:31:02-05:00">
+<meta property="article:modified_time" content="2022-01-17T07:21:49-06:00">
 <meta itemprop=name content="Configuration File">
 <meta itemprop=description content="Configure feroxbuster settings using a .toml file
 ">
-<meta itemprop=dateModified content="2021-10-04T06:31:02-05:00">
-<meta itemprop=wordCount content="488"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
+<meta itemprop=dateModified content="2022-01-17T07:21:49-06:00">
+<meta itemprop=wordCount content="504"><meta itemprop=image content="/feroxbuster-docs/images/profile.png">
 <meta itemprop=keywords content="ferox-config,toml,config,"><meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="/feroxbuster-docs/images/profile.png">
 <meta name=twitter:title content="Configuration File">
@@ -324,8 +324,7 @@ the <code>wordlist</code> value in the config file to override the baked-in defa
 
 <span style=color:#000>wordlist</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#4e9a06>&#34;/wordlists/jhaddix/all.txt&#34;</span>
 </code></pre></div><p>A pre-made configuration file with examples of all available settings can be found in <code>ferox-config.toml.example</code>.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#8f5902;font-style:italic># ferox-config.toml</span>
-<span style=color:#8f5902;font-style:italic># Example configuration for feroxbuster</span>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#8f5902;font-style:italic># Example configuration for feroxbuster</span>
 <span style=color:#8f5902;font-style:italic>#</span>
 <span style=color:#8f5902;font-style:italic># If you wish to provide persistent settings to feroxbuster, rename this file to ferox-config.toml and make sure</span>
 <span style=color:#8f5902;font-style:italic># it resides in the same directory as the feroxbuster binary.</span>
@@ -334,37 +333,40 @@ the <code>wordlist</code> value in the config file to override the baked-in defa
 <span style=color:#8f5902;font-style:italic>#</span>
 <span style=color:#8f5902;font-style:italic># Any setting used here can be overridden by the corresponding command line option/argument</span>
 <span style=color:#8f5902;font-style:italic>#</span>
-<span style=color:#8f5902;font-style:italic># wordlist = &#34;/wordlists/jhaddix/all.txt&#34;</span>
+<span style=color:#8f5902;font-style:italic># wordlist = &#34;/wordlists/seclists/Discovery/Web-Content/raft-medium-directories.txt&#34;</span>
 <span style=color:#8f5902;font-style:italic># status_codes = [200, 500]</span>
 <span style=color:#8f5902;font-style:italic># filter_status = [301]</span>
 <span style=color:#8f5902;font-style:italic># threads = 1</span>
-<span style=color:#8f5902;font-style:italic># parallel = 2</span>
 <span style=color:#8f5902;font-style:italic># timeout = 5</span>
-<span style=color:#8f5902;font-style:italic># auto_tune = true</span>
-<span style=color:#8f5902;font-style:italic># auto_bail = true</span>
 <span style=color:#8f5902;font-style:italic># proxy = &#34;http://127.0.0.1:8080&#34;</span>
 <span style=color:#8f5902;font-style:italic># replay_proxy = &#34;http://127.0.0.1:8081&#34;</span>
 <span style=color:#8f5902;font-style:italic># replay_codes = [200, 302]</span>
 <span style=color:#8f5902;font-style:italic># verbosity = 1</span>
+<span style=color:#8f5902;font-style:italic># parallel = 8</span>
 <span style=color:#8f5902;font-style:italic># scan_limit = 6</span>
 <span style=color:#8f5902;font-style:italic># rate_limit = 250</span>
 <span style=color:#8f5902;font-style:italic># quiet = true</span>
 <span style=color:#8f5902;font-style:italic># silent = true</span>
+<span style=color:#8f5902;font-style:italic># auto_tune = true</span>
+<span style=color:#8f5902;font-style:italic># auto_bail = true</span>
 <span style=color:#8f5902;font-style:italic># json = true</span>
 <span style=color:#8f5902;font-style:italic># output = &#34;/targets/ellingson_mineral_company/gibson.txt&#34;</span>
 <span style=color:#8f5902;font-style:italic># debug_log = &#34;/var/log/find-the-derp.log&#34;</span>
 <span style=color:#8f5902;font-style:italic># user_agent = &#34;Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0&#34;</span>
+<span style=color:#8f5902;font-style:italic># random_agent = false</span>
 <span style=color:#8f5902;font-style:italic># redirects = true</span>
 <span style=color:#8f5902;font-style:italic># insecure = true</span>
 <span style=color:#8f5902;font-style:italic># extensions = [&#34;php&#34;, &#34;html&#34;]</span>
+<span style=color:#8f5902;font-style:italic># methods = [&#34;GET&#34;, &#34;POST&#34;]</span>
+<span style=color:#8f5902;font-style:italic># data = [11, 12, 13, 14, 15]</span>
+<span style=color:#8f5902;font-style:italic># url_denylist = [&#34;http://dont-scan.me&#34;, &#34;https://also-not.me&#34;]</span>
+<span style=color:#8f5902;font-style:italic># regex_denylist = [&#34;/deny.*&#34;]</span>
 <span style=color:#8f5902;font-style:italic># no_recursion = true</span>
 <span style=color:#8f5902;font-style:italic># add_slash = true</span>
 <span style=color:#8f5902;font-style:italic># stdin = true</span>
 <span style=color:#8f5902;font-style:italic># dont_filter = true</span>
 <span style=color:#8f5902;font-style:italic># extract_links = true</span>
 <span style=color:#8f5902;font-style:italic># depth = 1</span>
-<span style=color:#8f5902;font-style:italic># url_denylist = [&#34;https://dont-scan-me.com/&#34;]</span>
-<span style=color:#8f5902;font-style:italic># regex_denylist = [&#34;/deny.*&#34;]</span>
 <span style=color:#8f5902;font-style:italic># filter_size = [5174]</span>
 <span style=color:#8f5902;font-style:italic># filter_regex = [&#34;^ignore me$&#34;]</span>
 <span style=color:#8f5902;font-style:italic># filter_similar = [&#34;https://somesite.com/soft404&#34;]</span>
@@ -372,7 +374,7 @@ the <code>wordlist</code> value in the config file to override the baked-in defa
 <span style=color:#8f5902;font-style:italic># filter_line_count = [35, 36]</span>
 <span style=color:#8f5902;font-style:italic># queries = [[&#34;name&#34;,&#34;value&#34;], [&#34;rick&#34;, &#34;astley&#34;]]</span>
 <span style=color:#8f5902;font-style:italic># save_state = false</span>
-<span style=color:#8f5902;font-style:italic># time_limit = 10m</span>
+<span style=color:#8f5902;font-style:italic># time_limit = &#34;10m&#34;</span>
 
 <span style=color:#8f5902;font-style:italic># headers can be specified on multiple lines or as an inline table</span>
 <span style=color:#8f5902;font-style:italic>#</span>
@@ -388,7 +390,7 @@ the <code>wordlist</code> value in the config file to override the baked-in defa
 <span style=color:#8f5902;font-style:italic># more = &#34;headers&#34;</span>
 </code></pre></div>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified October 4, 2021: <a href=https://github.com/epi052/feroxbuster/commit/2094fae26221fdf4a4dee2d7fc59b7daf81484bb>updated docs for --dont-scan regex (2094fae)</a>
+Last modified January 17, 2022: <a href=https://github.com/epi052/feroxbuster/commit/f74c70c70ce7be104f761c2859306893bf248615>update (f74c70c)</a>
 </div>
 </div>
 </main>

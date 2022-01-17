@@ -29,8 +29,7 @@ the &lt;code>wordlist&lt;/code> value in the config file to override the baked-i
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#8f5902;font-style:italic"># ferox-config.toml&lt;/span>
 &lt;span style="color:#000">wordlist&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/wordlists/jhaddix/all.txt&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>A pre-made configuration file with examples of all available settings can be found in &lt;code>ferox-config.toml.example&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#8f5902;font-style:italic"># ferox-config.toml&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># Example configuration for feroxbuster&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#8f5902;font-style:italic"># Example configuration for feroxbuster&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># If you wish to provide persistent settings to feroxbuster, rename this file to ferox-config.toml and make sure&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># it resides in the same directory as the feroxbuster binary.&lt;/span>
@@ -39,37 +38,40 @@ the &lt;code>wordlist&lt;/code> value in the config file to override the baked-i
 &lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># Any setting used here can be overridden by the corresponding command line option/argument&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># wordlist = &amp;#34;/wordlists/jhaddix/all.txt&amp;#34;&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># wordlist = &amp;#34;/wordlists/seclists/Discovery/Web-Content/raft-medium-directories.txt&amp;#34;&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># status_codes = [200, 500]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># filter_status = [301]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># threads = 1&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># parallel = 2&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># timeout = 5&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># auto_tune = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># auto_bail = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># proxy = &amp;#34;http://127.0.0.1:8080&amp;#34;&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># replay_proxy = &amp;#34;http://127.0.0.1:8081&amp;#34;&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># replay_codes = [200, 302]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># verbosity = 1&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># parallel = 8&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># scan_limit = 6&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># rate_limit = 250&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># quiet = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># silent = true&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># auto_tune = true&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># auto_bail = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># json = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># output = &amp;#34;/targets/ellingson_mineral_company/gibson.txt&amp;#34;&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># debug_log = &amp;#34;/var/log/find-the-derp.log&amp;#34;&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># user_agent = &amp;#34;Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0&amp;#34;&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># random_agent = false&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># redirects = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># insecure = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># extensions = [&amp;#34;php&amp;#34;, &amp;#34;html&amp;#34;]&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># methods = [&amp;#34;GET&amp;#34;, &amp;#34;POST&amp;#34;]&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># data = [11, 12, 13, 14, 15]&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># url_denylist = [&amp;#34;http://dont-scan.me&amp;#34;, &amp;#34;https://also-not.me&amp;#34;]&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># regex_denylist = [&amp;#34;/deny.*&amp;#34;]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># no_recursion = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># add_slash = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># stdin = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># dont_filter = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># extract_links = true&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># depth = 1&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># url_denylist = [&amp;#34;https://dont-scan-me.com/&amp;#34;]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># regex_denylist = [&amp;#34;/deny.*&amp;#34;]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># filter_size = [5174]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># filter_regex = [&amp;#34;^ignore me$&amp;#34;]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># filter_similar = [&amp;#34;https://somesite.com/soft404&amp;#34;]&lt;/span>
@@ -77,7 +79,7 @@ the &lt;code>wordlist&lt;/code> value in the config file to override the baked-i
 &lt;span style="color:#8f5902;font-style:italic"># filter_line_count = [35, 36]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># queries = [[&amp;#34;name&amp;#34;,&amp;#34;value&amp;#34;], [&amp;#34;rick&amp;#34;, &amp;#34;astley&amp;#34;]]&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># save_state = false&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># time_limit = 10m&lt;/span>
+&lt;span style="color:#8f5902;font-style:italic"># time_limit = &amp;#34;10m&amp;#34;&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># headers can be specified on multiple lines or as an inline table&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
 &lt;span style="color:#8f5902;font-style:italic"># inline example&lt;/span>
