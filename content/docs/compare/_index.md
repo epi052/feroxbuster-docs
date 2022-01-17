@@ -60,7 +60,7 @@ few of the use-cases in which feroxbuster may be a better fit:
 | prevent requests to given domain/folder/file (`v2.3.0`)                  | ✔ |   |   |
 | send a random user-agent with each request (`v2.4.0`)                    | ✔ |   |   |
 | send arbitrary http methods (GET, POST, etc...) (`v2.5.0`)               | ✔ | ✔ | ✔ |
-| auto-detect server's with directory listing (`v2.5.0`)                   | ✔ |   |   |
+| auto-detect servers with directory listing (`v2.5.0`)                    | ✔ |   |   |
 | scrape html tags for additional content (`v2.5.0`)                       | ✔ |   |   |
 
 Of note, there's another written-in-rust content discovery tool, [rustbuster](https://github.com/phra/rustbuster). I
