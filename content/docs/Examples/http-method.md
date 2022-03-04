@@ -7,7 +7,7 @@ description: >
   Added in version **2.5.0** by @MD-Levitan
 ---
 
-## Detect Directory Listing
+## Specify HTTP Request Method
 
 Version 2.5.0 introduces the ability to specify the HTTP request method sent in each request. Some additional info:
 
