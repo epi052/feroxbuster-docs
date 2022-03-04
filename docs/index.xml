@@ -424,7 +424,113 @@ includes it in that particular request.&lt;/p>
 syntactic sugar around &lt;code>-H, --headers&lt;/code>.&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -b sessionId=38afes7a8
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../session-cookie.png" alt="session-cookie">&lt;/p></description></item><item><title>Docs: apt Install</title><link>/feroxbuster-docs/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-apt/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../session-cookie.png" alt="session-cookie">&lt;/p></description></item><item><title>Docs: Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>
+&lt;h2 id="dynamic-collection-settings">Dynamic Collection Settings&lt;/h2>
+&lt;p>Version 2.6.0 added a whole category of features named &lt;strong>Dynamic Collection Settings&lt;/strong>. The general premise of each
+feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p>
+&lt;h2 id="collect-backups">Collect Backups&lt;/h2>
+&lt;p>Using &lt;code>--collect-backups&lt;/code> means that for every file found during a scan, &lt;code>feroxbuster&lt;/code> sends additional queries for the
+following extensions:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>~&lt;/code>&lt;/li>
+&lt;li>&lt;code>.bak&lt;/code>&lt;/li>
+&lt;li>&lt;code>.bak2&lt;/code>&lt;/li>
+&lt;li>&lt;code>.old&lt;/code>&lt;/li>
+&lt;li>&lt;code>.1&lt;/code>&lt;/li>
+&lt;li>&lt;code>.swp&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em>found&lt;/em>.&lt;/p>
+&lt;h2 id="collect-extensions">Collect Extensions&lt;/h2>
+&lt;p>Using &lt;code>--collect-extensions&lt;/code> means that any found url that has an extension will be added as an extension to try for
+all future requests.&lt;/p>
+&lt;p>There is a (large) &lt;a href="https://github.com/epi052/feroxbuster/blob/main/src/lib.rs#L60">default list&lt;/a> of extensions that
+are ignored by &lt;code>--collect-extensions&lt;/code>. If &lt;code>--dont-collect&lt;/code> is used, the default list isn&amp;rsquo;t used, and whatever values
+are passed to &lt;code>--dont-collect&lt;/code> are used instead.&lt;/p>
+&lt;h2 id="collect-words">Collect Words&lt;/h2>
+&lt;p>Using &lt;code>--collect-words&lt;/code> means that each valid response&amp;rsquo;s html is parsed, and words considered &lt;strong>important&lt;/strong> are added
+to the wordlist to be requested.&lt;/p>
+&lt;p>A word&amp;rsquo;s importance is determined via a Natural Language Processing model and is considered against the entire corpus
+of parsed html.&lt;/p>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;h3 id="collect-backups-1">Collect Backups&lt;/h3>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-backups
+&lt;/code>&lt;/pre>&lt;p>Assuming a found file of:&lt;/p>
+&lt;p>&lt;code>200 GET 127l 292w 4161c https://some-example-site.com/index.php&lt;/code>&lt;/p>
+&lt;p>The following &lt;strong>additional&lt;/strong> requests are made to &lt;code>some-example-site.com&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>index.php~&lt;/code> (append extension)&lt;/li>
+&lt;li>&lt;code>index.php.bak&lt;/code>&lt;/li>
+&lt;li>&lt;code>index.php.bak2&lt;/code>&lt;/li>
+&lt;li>&lt;code>index.php.old&lt;/code>&lt;/li>
+&lt;li>&lt;code>index.php.1&lt;/code>&lt;/li>
+&lt;li>&lt;code>index.bak&lt;/code> - (replace original extension)&lt;/li>
+&lt;li>&lt;code>.index.php.swp&lt;/code> - (vim swap, prefix &lt;code>.&lt;/code> and append &lt;code>.swp&lt;/code>)&lt;/li>
+&lt;/ul>
+&lt;h3 id="collect-extensions-1">Collect Extensions&lt;/h3>
+&lt;blockquote>
+&lt;p>most useful with &lt;code>--extract-links&lt;/code>; may cause number of expected requests to explode&lt;/p>
+&lt;/blockquote>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-extensions
+&lt;/code>&lt;/pre>&lt;p>Let&amp;rsquo;s say our wordlist contains five entries:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>index.php&lt;/code>&lt;/li>
+&lt;li>&lt;code>stuff&lt;/code>&lt;/li>
+&lt;li>&lt;code>things&lt;/code>&lt;/li>
+&lt;li>&lt;code>mostuff&lt;/code>&lt;/li>
+&lt;li>&lt;code>mothings&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>Assuming a found file of:&lt;/p>
+&lt;p>&lt;code>200 GET 127l 292w 4161c https://some-example-site.com/index.php&lt;/code>&lt;/p>
+&lt;p>&lt;code>--collect-extensions&lt;/code> would effectively add &lt;code>.php&lt;/code> to feroxbuster&amp;rsquo;s internal state, as though &lt;code>.php&lt;/code> were passed via
+&lt;code>--extensions|-x&lt;/code>. The result would be the following requests.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>stuff&lt;/code>&lt;/li>
+&lt;li>&lt;code>stuff.php&lt;/code>&lt;/li>
+&lt;li>&lt;code>things&lt;/code>&lt;/li>
+&lt;li>&lt;code>things.php&lt;/code>&lt;/li>
+&lt;li>&lt;code>mostuff&lt;/code>&lt;/li>
+&lt;li>&lt;code>mostuff.php&lt;/code>&lt;/li>
+&lt;li>&lt;code>mothings&lt;/code>&lt;/li>
+&lt;li>&lt;code>mothings.php&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>There are caveats to the requests that will be made, mostly due to timing of finding the extension vs. requests already
+in-flight, but conceptually, the above is true.&lt;/p>
+&lt;h3 id="collect-words-1">Collect Words&lt;/h3>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-words
+&lt;/code>&lt;/pre>&lt;p>Assume four pages were found:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>https://some-example-site.com/doc1&lt;/code>&lt;/li>
+&lt;li>&lt;code>https://some-example-site.com/doc2&lt;/code>&lt;/li>
+&lt;li>&lt;code>https://some-example-site.com/doc3&lt;/code>&lt;/li>
+&lt;li>&lt;code>https://some-example-site.com/doc4&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>And their contents were as follows:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>doc1&lt;/code> - &lt;code>Air quality in the sunny island improved gradually throughout Wednesday.&lt;/code>&lt;/li>
+&lt;li>&lt;code>doc2&lt;/code> - &lt;code>Air quality in Singapore on Wednesday continued to get worse as haze hit the island.&lt;/code>&lt;/li>
+&lt;li>&lt;code>doc3&lt;/code> - &lt;code>The air quality in Singapore is monitored through a network of air monitoring stations located in different parts of the island&lt;/code>&lt;/li>
+&lt;li>&lt;code>doc4&lt;/code> - &lt;code>The air quality in Singapore got worse on Wednesday.&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The following endpoints would be requested, in addition to whatever was in the normal wordlist.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>/gradually&lt;/code>&lt;/li>
+&lt;li>&lt;code>/network&lt;/code>&lt;/li>
+&lt;li>&lt;code>/hit&lt;/code>&lt;/li>
+&lt;li>&lt;code>/located&lt;/code>&lt;/li>
+&lt;li>&lt;code>/continued&lt;/code>&lt;/li>
+&lt;li>&lt;code>/island&lt;/code>&lt;/li>
+&lt;li>&lt;code>/worse&lt;/code>&lt;/li>
+&lt;li>&lt;code>/monitored&lt;/code>&lt;/li>
+&lt;li>&lt;code>/monitoring&lt;/code>&lt;/li>
+&lt;li>&lt;code>/haze&lt;/code>&lt;/li>
+&lt;li>&lt;code>/different&lt;/code>&lt;/li>
+&lt;li>&lt;code>/stations&lt;/code>&lt;/li>
+&lt;li>&lt;code>/sunny&lt;/code>&lt;/li>
+&lt;li>&lt;code>/singapore&lt;/code>&lt;/li>
+&lt;li>&lt;code>/improved&lt;/code>&lt;/li>
+&lt;li>&lt;code>/parts&lt;/code>&lt;/li>
+&lt;li>&lt;code>/wednesday&lt;/code>&lt;/li>
+&lt;/ul></description></item><item><title>Docs: apt Install</title><link>/feroxbuster-docs/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-apt/</guid><description>
 &lt;h2 id="apt-install">apt Install&lt;/h2>
 &lt;p>Download &lt;code>feroxbuster_amd64.deb&lt;/code> from the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section. After
 that, use your favorite package manager to install the &lt;code>.deb&lt;/code>.&lt;/p>
