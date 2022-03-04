@@ -2,7 +2,7 @@
 title: "Filter by Page Similarity"
 weight: 12
 categories: ["examples"]
-tags: ["feature", "filter", "similar", "fuzzy"]
+tags: ["feature", "filtering", "similar", "fuzzy"]
 description: >
   Added in version **1.11.0**
 ---

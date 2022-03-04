@@ -29,7 +29,7 @@ includes it in that particular request.
 ## Example 
 
 ```
-cargo run -- -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
+feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
 ```
 
 ![random-agent](../random-agent.gif)
