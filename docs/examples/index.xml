@@ -6,7 +6,7 @@
 &lt;p>All of the methods above (multiple flags, space separated, comma separated, etc&amp;hellip;) are valid and interchangeable. The
 same goes for urls, headers, status codes, queries, and size filters.&lt;/p>
 &lt;h3 id="include-headers">Include Headers&lt;/h3>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -H Accept:application/json &amp;quot;Authorization: Bearer {token}&amp;quot;
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -H Accept:application/json &amp;#34;Authorization: Bearer {token}&amp;#34;
 &lt;/code>&lt;/pre>&lt;h3 id="ipv6-non-recursive-scan-with-info-level-logging-enabled">IPv6, non-recursive scan with INFO-level logging enabled&lt;/h3>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://[::1] --no-recursion -vv
 &lt;/code>&lt;/pre>&lt;h3 id="read-urls-from-stdin-pipe-only-resulting-urls-out-to-another-tool">Read urls from STDIN; pipe only resulting urls out to another tool&lt;/h3>
@@ -92,11 +92,12 @@ number of lines and/or words contained within the response body. This change dro
 to the user as well. This section will detail the new information and how to make use of it with the new filters
 provided.&lt;/p>
 &lt;h2 id="relevant-cli-options">Relevant CLI options&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text"> -N, --filter-lines &amp;lt;LINES&amp;gt;...
-Filter out messages of a particular line count (ex: -N 20 -N 31,30)
--W, --filter-words &amp;lt;WORDS&amp;gt;...
-Filter out messages of a particular word count (ex: -W 312 -W 91,82)
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="how-output-relates-to-filters">How output relates to filters&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> -N, --filter-lines &amp;lt;LINES&amp;gt;...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Filter out messages of a particular line count (ex: -N 20 -N 31,30)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -W, --filter-words &amp;lt;WORDS&amp;gt;...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Filter out messages of a particular word count (ex: -W 312 -W 91,82)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="how-output-relates-to-filters">How output relates to filters&lt;/h2>
 &lt;p>&lt;img src="../../interpreting-results/response-bar-explained.png" alt="response-bar-explained">&lt;/p>
 &lt;p>Filters that correspond to the output above:&lt;/p>
 &lt;ul>
@@ -115,7 +116,7 @@ performance.
 minimal effort. The latest addition is a Regular Expression Filter. As responses come back from the scanned server,
 the &lt;strong>body&lt;/strong> of the response is checked against the filter&amp;rsquo;s regular expression. If the expression is found in the body,
 then that response is filtered out.&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-regex '[aA]ccess [dD]enied.?' --output results.txt --json
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-regex &amp;#39;[aA]ccess [dD]enied.?&amp;#39; --output results.txt --json
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Stop/Resume Scans</title><link>/feroxbuster-docs/docs/examples/resume-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/resume-scan/</guid><description>
 &lt;h2 id="stop-and-resume-scans">Stop and Resume Scans&lt;/h2>
 &lt;p>Version 1.9.0 adds a few features that allow for completely stopping a scan, and resuming that same scan from a file on
@@ -123,45 +124,45 @@ disk.&lt;/p>
 &lt;h2 id="stop-the-scan">Stop the scan&lt;/h2>
 &lt;p>A simple &lt;code>Ctrl+C&lt;/code> during a scan will create a file that contains information about the scan that was cancelled.&lt;/p>
 &lt;p>&lt;img src="../save-state.png" alt="save-state">&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">&lt;span style="color:#8f5902;font-style:italic">// example snippet of state file
-&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>
-&lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;scans&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
-&lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;057016a14769414aac9a7a62707598cb&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">true&lt;/span>
-&lt;span style="color:#000;font-weight:bold">},&lt;/span>
-&lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;400b2323a16f43468a04ffcbbeba34c6&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/css&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
-&lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;span style="color:#000;font-weight:bold">],&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;config&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;wordlist&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/wordlists/seclists/Discovery/Web-Content/common.txt&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;...&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;...&amp;#34;&lt;/span>
-&lt;span style="color:#000;font-weight:bold">},&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;responses&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
-&lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;response&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;wildcard&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">302&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;content_length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;line_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;word_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;headers&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;content-length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;server&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;nginx/1.16.1&amp;#34;&lt;/span>
-&lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;span style="color:#000;font-weight:bold">]&lt;/span>
-&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;span style="color:#a40000">,&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="resume-the-scan">Resume the scan&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// example snippet of state file
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scans&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;057016a14769414aac9a7a62707598cb&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;400b2323a16f43468a04ffcbbeba34c6&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/css&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;config&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;wordlist&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/wordlists/seclists/Discovery/Web-Content/common.txt&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;...&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;responses&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;response&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;wildcard&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">302&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;content_length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;line_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;word_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;headers&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;content-length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;server&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;nginx/1.16.1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;span style="color:#a40000">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="resume-the-scan">Resume the scan&lt;/h2>
 &lt;p>Based on the example image above, the same scan can be resumed by
 using &lt;code>feroxbuster --resume-from ferox-http_localhost-1606947491.state&lt;/code>. Directories that were already complete are not
 rescanned, however partially complete scans are started from the beginning.&lt;/p>
@@ -169,9 +170,10 @@ rescanned, however partially complete scans are started from the beginning.&lt;/
 &lt;h2 id="opt-out-of-saving-state">Opt-out of saving state&lt;/h2>
 &lt;p>In order to prevent state file creation when &lt;code>Ctrl+C&lt;/code> is pressed, you can simply add the entry below to
 your &lt;code>ferox-config.toml&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#8f5902;font-style:italic"># ferox-config.toml&lt;/span>
-&lt;span style="color:#000">save_state&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Enforce Time Limit</title><link>/feroxbuster-docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/time-limit/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># ferox-config.toml&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">save_state&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Enforce Time Limit</title><link>/feroxbuster-docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/time-limit/</guid><description>
 &lt;h2 id="enforce-a-time-limit-on-your-scan">Enforce a Time Limit on Your Scan&lt;/h2>
 &lt;p>Version 1.10.0 adds the ability to set a maximum runtime, or time limit, on your scan. The usage is pretty simple: a
 number followed directly by a single character representing seconds, minutes, hours, or days. &lt;code>feroxbuster&lt;/code> refers to
@@ -362,7 +364,7 @@ be scanned. Anything &lt;em>outside&lt;/em> of &lt;code>/some-application&lt;/co
 &lt;h2 id="regular-expression-example">Regular Expression Example&lt;/h2>
 &lt;p>At its most basic, the regular expression can simply be a patten to a folder that you&amp;rsquo;d like to avoid scanning. A prime
 target for this is the &lt;code>css&lt;/code> directory.&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/css'
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/css&amp;#39;
 &lt;/code>&lt;/pre>&lt;p>&lt;code>http://some.domain&lt;/code> will be scanned recursively, but any url path that contains &lt;code>/css&lt;/code> will not be requested
 at all. Note that this will prevent requests to urls such as &lt;code>http://some.domain/some/folder/css&lt;/code> and
 &lt;code>http://some.domain/cssssssssssssssssssssssssss&lt;/code>. Without additional context to the regular expression, it&amp;rsquo;s simply
@@ -370,12 +372,12 @@ a naive match anywhere in the given url.&lt;/p>
 &lt;h3 id="additional-examples">Additional Examples&lt;/h3>
 &lt;p>Avoid falling into match/rewrite traps that some servers and reverse-proxies have, which can result in recursion loops
 like &lt;code>/.bower-cache/.bower-registry/.bower-cache/&lt;/code>&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/\..*?/\.'
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/\..*?/\.&amp;#39;
 &lt;/code>&lt;/pre>&lt;p>Prevent requests to any &lt;code>http&lt;/code> url&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan http:
 &lt;/code>&lt;/pre>&lt;p>Prevent multiple directories with a single regex&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/[jc]ss?'
-&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/(js|css|images|img)'
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/[jc]ss?&amp;#39;
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/(js|css|images|img)&amp;#39;
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Random User-Agents</title><link>/feroxbuster-docs/docs/examples/random-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/random-agent/</guid><description>
 &lt;h2 id="randomize-user-agent-header">Randomize User-Agent Header&lt;/h2>
 &lt;p>Version 2.4.0 introduces the &lt;code>--random-agent&lt;/code> option. When used, &lt;code>--random-agent&lt;/code> selects a User-Agent value from one of the values below and
@@ -395,5 +397,25 @@ includes it in that particular request.&lt;/p>
 &lt;li>&lt;code>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>cargo run -- -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item></channel></rss>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item><item><title>Docs: Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>
+&lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
+&lt;p>Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code>feroxbuster&lt;/code> will either report, or report and scan, depending on whether or not &lt;code>--extract-links&lt;/code> was used.&lt;/p>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;h3 id="without---extract-links">Without &lt;code>--extract-links&lt;/code>&lt;/h3>
+&lt;p>When &lt;code>--extract-links&lt;/code> is &lt;strong>not&lt;/strong> used, directory listing is simply reported. No further actions are taken.&lt;/p>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-no-tack-e.png" alt="dir-list-no-tack-e">&lt;/p>
+&lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
+&lt;p>When &lt;code>--extract-links&lt;/code> is used, each link in the response is extracted and requested.&lt;/p>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --extract-links
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-with-tack-e.png" alt="dir-list-with-tack-e">&lt;/p></description></item><item><title>Docs: Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/http-method/</guid><description>
+&lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
+&lt;p>Version 2.5.0 introduces the ability to specify the HTTP request method sent in each request. Some additional info:&lt;/p>
+&lt;ul>
+&lt;li>multiple methods may be used (i.e. &lt;code>-m POST GET&lt;/code>)&lt;/li>
+&lt;li>anything can be specified, not just valid http verbs (i.e. &lt;code>-m derp&lt;/code>)&lt;/li>
+&lt;/ul>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -m POST GET dErP
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../http-method.gif" alt="http-method">&lt;/p></description></item></channel></rss>

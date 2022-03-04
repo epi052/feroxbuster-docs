@@ -6,7 +6,7 @@
 &lt;p>All of the methods above (multiple flags, space separated, comma separated, etc&amp;hellip;) are valid and interchangeable. The
 same goes for urls, headers, status codes, queries, and size filters.&lt;/p>
 &lt;h3 id="include-headers">Include Headers&lt;/h3>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -H Accept:application/json &amp;quot;Authorization: Bearer {token}&amp;quot;
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -H Accept:application/json &amp;#34;Authorization: Bearer {token}&amp;#34;
 &lt;/code>&lt;/pre>&lt;h3 id="ipv6-non-recursive-scan-with-info-level-logging-enabled">IPv6, non-recursive scan with INFO-level logging enabled&lt;/h3>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://[::1] --no-recursion -vv
 &lt;/code>&lt;/pre>&lt;h3 id="read-urls-from-stdin-pipe-only-resulting-urls-out-to-another-tool">Read urls from STDIN; pipe only resulting urls out to another tool&lt;/h3>

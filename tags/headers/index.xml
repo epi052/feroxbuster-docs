@@ -6,7 +6,7 @@
 &lt;p>All of the methods above (multiple flags, space separated, comma separated, etc&amp;hellip;) are valid and interchangeable. The
 same goes for urls, headers, status codes, queries, and size filters.&lt;/p>
 &lt;h3 id="include-headers">Include Headers&lt;/h3>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -H Accept:application/json &amp;quot;Authorization: Bearer {token}&amp;quot;
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -H Accept:application/json &amp;#34;Authorization: Bearer {token}&amp;#34;
 &lt;/code>&lt;/pre>&lt;h3 id="ipv6-non-recursive-scan-with-info-level-logging-enabled">IPv6, non-recursive scan with INFO-level logging enabled&lt;/h3>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://[::1] --no-recursion -vv
 &lt;/code>&lt;/pre>&lt;h3 id="read-urls-from-stdin-pipe-only-resulting-urls-out-to-another-tool">Read urls from STDIN; pipe only resulting urls out to another tool&lt;/h3>
@@ -36,5 +36,5 @@ includes it in that particular request.&lt;/p>
 &lt;li>&lt;code>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>cargo run -- -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
 &lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item></channel></rss>

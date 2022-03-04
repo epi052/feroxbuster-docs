@@ -37,7 +37,7 @@ examples:&lt;/p>
 &lt;/code>&lt;/pre>&lt;p>Note: If you are on a SELinux enforced system, you will need to pass the &lt;code>:Z&lt;/code> attribute also.&lt;/p>
 &lt;pre tabindex="0">&lt;code>docker run --init -v (pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml:Z -it epi052/feroxbuster -u http://example.com
 &lt;/code>&lt;/pre>&lt;h2 id="define-an-alias-for-simplicity">Define an alias for simplicity&lt;/h2>
-&lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;quot;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;quot;
+&lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;#34;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;#34;
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>
 &lt;h2 id="download-a-release">Download a Release&lt;/h2>
 &lt;p>Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p>
@@ -55,12 +55,12 @@ Expand-Archive .\feroxbuster.zip
 &lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Docs: Homebrew Install</title><link>/feroxbuster-docs/docs/installation/install-homebrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-homebrew/</guid><description>
 &lt;h2 id="homebrew-on-macos">Homebrew on MacOS&lt;/h2>
 &lt;p>Install using Homebrew&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">brew install feroxbuster
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="homebrew-on-linux-via-tap">Homebrew on Linux via tap&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew install feroxbuster
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="homebrew-on-linux-via-tap">Homebrew on Linux via tap&lt;/h2>
 &lt;p>🐧 &lt;a href="https://github.com/TGotwig/homebrew-linux-feroxbuster/blob/main/feroxbuster.rb">Linux tap&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">brew tap tgotwig/linux-feroxbuster
-brew install feroxbuster
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/feroxbuster-docs/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-kali/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew tap tgotwig/linux-feroxbuster
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install feroxbuster
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/feroxbuster-docs/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-kali/</guid><description>
 &lt;h2 id="kali-install">Kali Install&lt;/h2>
 &lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the official Kali Linux repos 🥳&lt;/p>
 &lt;p>If you&amp;rsquo;re using kali, this is the preferred install method. Installing from the repos adds a &lt;a href="../..//configuration/ferox-config-toml/">&lt;strong>ferox-config.toml&lt;/strong>&lt;/a> in &lt;code>/etc/feroxbuster/&lt;/code>, adds command completion for bash, fish, and zsh, includes a man page entry, and installs &lt;code>feroxbuster&lt;/code> itself.&lt;/p>
@@ -110,7 +110,7 @@ Usual system defaults are&lt;/p>
 &lt;/ul>
 &lt;p>This basically means your system cannot consistently guarantee more than &lt;code>(61000 - 32768) / 60 = 470&lt;/code> sockets per
 second.&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.ip_local_port_range=&amp;quot;15000 61000&amp;quot;
+&lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.ip_local_port_range=&amp;#34;15000 61000&amp;#34;
 sudo sysctl net.ipv4.tcp_fin_timeout=30
 &lt;/code>&lt;/pre>&lt;h4 id="allow-socket-reuse-while-in-a-time_wait-status">Allow socket reuse while in a &lt;code>TIME_WAIT&lt;/code> status&lt;/h4>
 &lt;p>This allows fast cycling of sockets in time_wait state and re-using them. Make sure to read

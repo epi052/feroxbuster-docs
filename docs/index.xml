@@ -6,7 +6,7 @@
 &lt;p>All of the methods above (multiple flags, space separated, comma separated, etc&amp;hellip;) are valid and interchangeable. The
 same goes for urls, headers, status codes, queries, and size filters.&lt;/p>
 &lt;h3 id="include-headers">Include Headers&lt;/h3>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -H Accept:application/json &amp;quot;Authorization: Bearer {token}&amp;quot;
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -H Accept:application/json &amp;#34;Authorization: Bearer {token}&amp;#34;
 &lt;/code>&lt;/pre>&lt;h3 id="ipv6-non-recursive-scan-with-info-level-logging-enabled">IPv6, non-recursive scan with INFO-level logging enabled&lt;/h3>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://[::1] --no-recursion -vv
 &lt;/code>&lt;/pre>&lt;h3 id="read-urls-from-stdin-pipe-only-resulting-urls-out-to-another-tool">Read urls from STDIN; pipe only resulting urls out to another tool&lt;/h3>
@@ -92,11 +92,12 @@ number of lines and/or words contained within the response body. This change dro
 to the user as well. This section will detail the new information and how to make use of it with the new filters
 provided.&lt;/p>
 &lt;h2 id="relevant-cli-options">Relevant CLI options&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-text" data-lang="text"> -N, --filter-lines &amp;lt;LINES&amp;gt;...
-Filter out messages of a particular line count (ex: -N 20 -N 31,30)
--W, --filter-words &amp;lt;WORDS&amp;gt;...
-Filter out messages of a particular word count (ex: -W 312 -W 91,82)
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="how-output-relates-to-filters">How output relates to filters&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> -N, --filter-lines &amp;lt;LINES&amp;gt;...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Filter out messages of a particular line count (ex: -N 20 -N 31,30)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -W, --filter-words &amp;lt;WORDS&amp;gt;...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Filter out messages of a particular word count (ex: -W 312 -W 91,82)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="how-output-relates-to-filters">How output relates to filters&lt;/h2>
 &lt;p>&lt;img src="../../interpreting-results/response-bar-explained.png" alt="response-bar-explained">&lt;/p>
 &lt;p>Filters that correspond to the output above:&lt;/p>
 &lt;ul>
@@ -115,7 +116,7 @@ performance.
 minimal effort. The latest addition is a Regular Expression Filter. As responses come back from the scanned server,
 the &lt;strong>body&lt;/strong> of the response is checked against the filter&amp;rsquo;s regular expression. If the expression is found in the body,
 then that response is filtered out.&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-regex '[aA]ccess [dD]enied.?' --output results.txt --json
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-regex &amp;#39;[aA]ccess [dD]enied.?&amp;#39; --output results.txt --json
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Stop/Resume Scans</title><link>/feroxbuster-docs/docs/examples/resume-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/resume-scan/</guid><description>
 &lt;h2 id="stop-and-resume-scans">Stop and Resume Scans&lt;/h2>
 &lt;p>Version 1.9.0 adds a few features that allow for completely stopping a scan, and resuming that same scan from a file on
@@ -123,45 +124,45 @@ disk.&lt;/p>
 &lt;h2 id="stop-the-scan">Stop the scan&lt;/h2>
 &lt;p>A simple &lt;code>Ctrl+C&lt;/code> during a scan will create a file that contains information about the scan that was cancelled.&lt;/p>
 &lt;p>&lt;img src="../save-state.png" alt="save-state">&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">&lt;span style="color:#8f5902;font-style:italic">// example snippet of state file
-&lt;/span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>
-&lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;scans&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
-&lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;057016a14769414aac9a7a62707598cb&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">true&lt;/span>
-&lt;span style="color:#000;font-weight:bold">},&lt;/span>
-&lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;400b2323a16f43468a04ffcbbeba34c6&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/css&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
-&lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;span style="color:#000;font-weight:bold">],&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;config&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;wordlist&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/wordlists/seclists/Discovery/Web-Content/common.txt&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;...&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;...&amp;#34;&lt;/span>
-&lt;span style="color:#000;font-weight:bold">},&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;responses&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
-&lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;response&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;wildcard&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">302&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;content_length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;line_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;word_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;headers&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;content-length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;span style="color:#204a87;font-weight:bold">&amp;#34;server&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;nginx/1.16.1&amp;#34;&lt;/span>
-&lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;span style="color:#000;font-weight:bold">]&lt;/span>
-&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;span style="color:#a40000">,&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="resume-the-scan">Resume the scan&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// example snippet of state file
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scans&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;057016a14769414aac9a7a62707598cb&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;400b2323a16f43468a04ffcbbeba34c6&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/css&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;config&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;wordlist&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/wordlists/seclists/Discovery/Web-Content/common.txt&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;...&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;responses&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;response&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;wildcard&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">302&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;content_length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;line_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;word_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;headers&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;content-length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;server&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;nginx/1.16.1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;span style="color:#a40000">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="resume-the-scan">Resume the scan&lt;/h2>
 &lt;p>Based on the example image above, the same scan can be resumed by
 using &lt;code>feroxbuster --resume-from ferox-http_localhost-1606947491.state&lt;/code>. Directories that were already complete are not
 rescanned, however partially complete scans are started from the beginning.&lt;/p>
@@ -169,9 +170,10 @@ rescanned, however partially complete scans are started from the beginning.&lt;/
 &lt;h2 id="opt-out-of-saving-state">Opt-out of saving state&lt;/h2>
 &lt;p>In order to prevent state file creation when &lt;code>Ctrl+C&lt;/code> is pressed, you can simply add the entry below to
 your &lt;code>ferox-config.toml&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#8f5902;font-style:italic"># ferox-config.toml&lt;/span>
-&lt;span style="color:#000">save_state&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Enforce Time Limit</title><link>/feroxbuster-docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/time-limit/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># ferox-config.toml&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">save_state&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Enforce Time Limit</title><link>/feroxbuster-docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/time-limit/</guid><description>
 &lt;h2 id="enforce-a-time-limit-on-your-scan">Enforce a Time Limit on Your Scan&lt;/h2>
 &lt;p>Version 1.10.0 adds the ability to set a maximum runtime, or time limit, on your scan. The usage is pretty simple: a
 number followed directly by a single character representing seconds, minutes, hours, or days. &lt;code>feroxbuster&lt;/code> refers to
@@ -362,7 +364,7 @@ be scanned. Anything &lt;em>outside&lt;/em> of &lt;code>/some-application&lt;/co
 &lt;h2 id="regular-expression-example">Regular Expression Example&lt;/h2>
 &lt;p>At its most basic, the regular expression can simply be a patten to a folder that you&amp;rsquo;d like to avoid scanning. A prime
 target for this is the &lt;code>css&lt;/code> directory.&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/css'
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/css&amp;#39;
 &lt;/code>&lt;/pre>&lt;p>&lt;code>http://some.domain&lt;/code> will be scanned recursively, but any url path that contains &lt;code>/css&lt;/code> will not be requested
 at all. Note that this will prevent requests to urls such as &lt;code>http://some.domain/some/folder/css&lt;/code> and
 &lt;code>http://some.domain/cssssssssssssssssssssssssss&lt;/code>. Without additional context to the regular expression, it&amp;rsquo;s simply
@@ -370,12 +372,12 @@ a naive match anywhere in the given url.&lt;/p>
 &lt;h3 id="additional-examples">Additional Examples&lt;/h3>
 &lt;p>Avoid falling into match/rewrite traps that some servers and reverse-proxies have, which can result in recursion loops
 like &lt;code>/.bower-cache/.bower-registry/.bower-cache/&lt;/code>&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/\..*?/\.'
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/\..*?/\.&amp;#39;
 &lt;/code>&lt;/pre>&lt;p>Prevent requests to any &lt;code>http&lt;/code> url&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan http:
 &lt;/code>&lt;/pre>&lt;p>Prevent multiple directories with a single regex&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/[jc]ss?'
-&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/(js|css|images|img)'
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/[jc]ss?&amp;#39;
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/(js|css|images|img)&amp;#39;
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Random User-Agents</title><link>/feroxbuster-docs/docs/examples/random-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/random-agent/</guid><description>
 &lt;h2 id="randomize-user-agent-header">Randomize User-Agent Header&lt;/h2>
 &lt;p>Version 2.4.0 introduces the &lt;code>--random-agent&lt;/code> option. When used, &lt;code>--random-agent&lt;/code> selects a User-Agent value from one of the values below and
@@ -395,8 +397,28 @@ includes it in that particular request.&lt;/p>
 &lt;li>&lt;code>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>cargo run -- -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item><item><title>Docs: apt Install</title><link>/feroxbuster-docs/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-apt/</guid><description>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item><item><title>Docs: Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>
+&lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
+&lt;p>Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code>feroxbuster&lt;/code> will either report, or report and scan, depending on whether or not &lt;code>--extract-links&lt;/code> was used.&lt;/p>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;h3 id="without---extract-links">Without &lt;code>--extract-links&lt;/code>&lt;/h3>
+&lt;p>When &lt;code>--extract-links&lt;/code> is &lt;strong>not&lt;/strong> used, directory listing is simply reported. No further actions are taken.&lt;/p>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-no-tack-e.png" alt="dir-list-no-tack-e">&lt;/p>
+&lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
+&lt;p>When &lt;code>--extract-links&lt;/code> is used, each link in the response is extracted and requested.&lt;/p>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --extract-links
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-with-tack-e.png" alt="dir-list-with-tack-e">&lt;/p></description></item><item><title>Docs: Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/http-method/</guid><description>
+&lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
+&lt;p>Version 2.5.0 introduces the ability to specify the HTTP request method sent in each request. Some additional info:&lt;/p>
+&lt;ul>
+&lt;li>multiple methods may be used (i.e. &lt;code>-m POST GET&lt;/code>)&lt;/li>
+&lt;li>anything can be specified, not just valid http verbs (i.e. &lt;code>-m derp&lt;/code>)&lt;/li>
+&lt;/ul>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -m POST GET dErP
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../http-method.gif" alt="http-method">&lt;/p></description></item><item><title>Docs: apt Install</title><link>/feroxbuster-docs/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-apt/</guid><description>
 &lt;h2 id="apt-install">apt Install&lt;/h2>
 &lt;p>Download &lt;code>feroxbuster_amd64.deb&lt;/code> from the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section. After
 that, use your favorite package manager to install the &lt;code>.deb&lt;/code>.&lt;/p>
@@ -436,11 +458,11 @@ Request settings:
 -a, --user-agent &amp;lt;USER_AGENT&amp;gt; Sets the User-Agent (default: feroxbuster/2.5.0)
 -A, --random-agent Use a random User-Agent
 -b, --cookies &amp;lt;COOKIE&amp;gt;... Specify HTTP cookies to be used in each request (ex: -b stuff=things)
---data &amp;lt;DATA&amp;gt; Request's Body; can read data from a file if input starts with an @ (ex: @post.bin)
--f, --add-slash Append / to each request's URL
--H, --headers &amp;lt;HEADER&amp;gt;... Specify HTTP headers to be used in each request (ex: -H Header:val -H 'stuff: things')
+--data &amp;lt;DATA&amp;gt; Request&amp;#39;s Body; can read data from a file if input starts with an @ (ex: @post.bin)
+-f, --add-slash Append / to each request&amp;#39;s URL
+-H, --headers &amp;lt;HEADER&amp;gt;... Specify HTTP headers to be used in each request (ex: -H Header:val -H &amp;#39;stuff: things&amp;#39;)
 -m, --methods &amp;lt;HTTP_METHODS&amp;gt;... Which HTTP request method(s) should be sent (default: GET)
--Q, --query &amp;lt;QUERY&amp;gt;... Request's URL query parameters (ex: -Q token=stuff -Q secret=key)
+-Q, --query &amp;lt;QUERY&amp;gt;... Request&amp;#39;s URL query parameters (ex: -Q token=stuff -Q secret=key)
 -x, --extensions &amp;lt;FILE_EXTENSION&amp;gt;... File extension(s) to search for (ex: -x php -x pdf js)
 Request filters:
 --dont-scan &amp;lt;URL&amp;gt;... URL(s) or Regex Pattern(s) to exclude from recursion/scans
@@ -451,16 +473,16 @@ Response filters:
 -s, --status-codes &amp;lt;STATUS_CODE&amp;gt;... Status Codes to include (allow list) (default: 200 204 301 302 307 308 401 403 405)
 -S, --filter-size &amp;lt;SIZE&amp;gt;... Filter out messages of a particular size (ex: -S 5120 -S 4927,1970)
 -W, --filter-words &amp;lt;WORDS&amp;gt;... Filter out messages of a particular word count (ex: -W 312 -W 91,82)
--X, --filter-regex &amp;lt;REGEX&amp;gt;... Filter out messages via regular expression matching on the response's body (ex: -X '^ignore me$')
+-X, --filter-regex &amp;lt;REGEX&amp;gt;... Filter out messages via regular expression matching on the response&amp;#39;s body (ex: -X &amp;#39;^ignore me$&amp;#39;)
 Client settings:
 -k, --insecure Disables TLS certificate validation in the client
 -r, --redirects Allow client to follow redirects
--T, --timeout &amp;lt;SECONDS&amp;gt; Number of seconds before a client's request times out (default: 7)
+-T, --timeout &amp;lt;SECONDS&amp;gt; Number of seconds before a client&amp;#39;s request times out (default: 7)
 Scan settings:
 --auto-bail Automatically stop scanning when an excessive amount of errors are encountered
 --auto-tune Automatically lower scan rate when an excessive amount of errors are encountered
 -d, --depth &amp;lt;RECURSION_DEPTH&amp;gt; Maximum recursion depth, a depth of 0 is infinite recursion (default: 4)
--D, --dont-filter Don't auto-filter wildcard responses
+-D, --dont-filter Don&amp;#39;t auto-filter wildcard responses
 -e, --extract-links Extract links from response body (html, javascript, etc...); make new requests based on findings
 -L, --scan-limit &amp;lt;SCAN_LIMIT&amp;gt; Limit total number of concurrent scans (default: 0, i.e. no limit)
 -n, --no-recursion Do not scan recursively
@@ -475,7 +497,7 @@ Output settings:
 -o, --output &amp;lt;FILE&amp;gt; Output file to write results to (use w/ --json for JSON entries)
 -q, --quiet Hide progress bars and banner (good for tmux windows w/ notifications)
 --silent Only print URLs + turn off logging (good for piping a list of urls to other commands)
--v, --verbosity Increase verbosity level (use -vv or more for greater effect. [CAUTION] 4 -v's is probably too much)
+-v, --verbosity Increase verbosity level (use -vv or more for greater effect. [CAUTION] 4 -v&amp;#39;s is probably too much)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Configuration File</title><link>/feroxbuster-docs/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/ferox-config-toml/</guid><description>
 &lt;h2 id="ferox-configtoml">ferox-config.toml&lt;/h2>
 &lt;p>After built-in default values are set, any values defined in a &lt;code>ferox-config.toml&lt;/code> config file will override the
@@ -504,75 +526,77 @@ the &lt;code>wordlist&lt;/code> value in the config file to override the baked-i
 &lt;li>it&amp;rsquo;s ok to only specify values you want to change without specifying anything else&lt;/li>
 &lt;li>variable names in &lt;code>ferox-config.toml&lt;/code> must match their command-line counterpart&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#8f5902;font-style:italic"># ferox-config.toml&lt;/span>
-&lt;span style="color:#000">wordlist&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/wordlists/jhaddix/all.txt&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>A pre-made configuration file with examples of all available settings can be found in &lt;code>ferox-config.toml.example&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-toml" data-lang="toml">&lt;span style="color:#8f5902;font-style:italic"># Example configuration for feroxbuster&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># If you wish to provide persistent settings to feroxbuster, rename this file to ferox-config.toml and make sure&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># it resides in the same directory as the feroxbuster binary.&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># After that, uncomment any line to override the default value provided by the binary itself.&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># Any setting used here can be overridden by the corresponding command line option/argument&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># wordlist = &amp;#34;/wordlists/seclists/Discovery/Web-Content/raft-medium-directories.txt&amp;#34;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># status_codes = [200, 500]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># filter_status = [301]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># threads = 1&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># timeout = 5&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># proxy = &amp;#34;http://127.0.0.1:8080&amp;#34;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># replay_proxy = &amp;#34;http://127.0.0.1:8081&amp;#34;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># replay_codes = [200, 302]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># verbosity = 1&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># parallel = 8&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># scan_limit = 6&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># rate_limit = 250&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># quiet = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># silent = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># auto_tune = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># auto_bail = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># json = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># output = &amp;#34;/targets/ellingson_mineral_company/gibson.txt&amp;#34;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># debug_log = &amp;#34;/var/log/find-the-derp.log&amp;#34;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># user_agent = &amp;#34;Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0&amp;#34;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># random_agent = false&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># redirects = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># insecure = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># extensions = [&amp;#34;php&amp;#34;, &amp;#34;html&amp;#34;]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># methods = [&amp;#34;GET&amp;#34;, &amp;#34;POST&amp;#34;]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># data = [11, 12, 13, 14, 15]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># url_denylist = [&amp;#34;http://dont-scan.me&amp;#34;, &amp;#34;https://also-not.me&amp;#34;]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># regex_denylist = [&amp;#34;/deny.*&amp;#34;]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># no_recursion = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># add_slash = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># stdin = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># dont_filter = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># extract_links = true&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># depth = 1&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># filter_size = [5174]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># filter_regex = [&amp;#34;^ignore me$&amp;#34;]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># filter_similar = [&amp;#34;https://somesite.com/soft404&amp;#34;]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># filter_word_count = [993]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># filter_line_count = [35, 36]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># queries = [[&amp;#34;name&amp;#34;,&amp;#34;value&amp;#34;], [&amp;#34;rick&amp;#34;, &amp;#34;astley&amp;#34;]]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># save_state = false&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># time_limit = &amp;#34;10m&amp;#34;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># headers can be specified on multiple lines or as an inline table&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># inline example&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># headers = {&amp;#34;stuff&amp;#34; = &amp;#34;things&amp;#34;}&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># multi-line example&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># note: if multi-line is used, all key/value pairs under it belong to the headers table until the next table&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># is found or the end of the file is reached&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># [headers]&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># stuff = &amp;#34;things&amp;#34;&lt;/span>
-&lt;span style="color:#8f5902;font-style:italic"># more = &amp;#34;headers&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Connection closed before message completed</title><link>/feroxbuster-docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/connection-closed/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># ferox-config.toml&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">wordlist&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/wordlists/jhaddix/all.txt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A pre-made configuration file with examples of all available settings can be found in &lt;code>ferox-config.toml.example&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Example configuration for feroxbuster&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># If you wish to provide persistent settings to feroxbuster, rename this file to ferox-config.toml and make sure&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># it resides in the same directory as the feroxbuster binary.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># After that, uncomment any line to override the default value provided by the binary itself.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Any setting used here can be overridden by the corresponding command line option/argument&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># wordlist = &amp;#34;/wordlists/seclists/Discovery/Web-Content/raft-medium-directories.txt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># status_codes = [200, 500]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># filter_status = [301]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># threads = 1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># timeout = 5&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># proxy = &amp;#34;http://127.0.0.1:8080&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># replay_proxy = &amp;#34;http://127.0.0.1:8081&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># replay_codes = [200, 302]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># verbosity = 1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># parallel = 8&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># scan_limit = 6&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># rate_limit = 250&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># quiet = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># silent = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># auto_tune = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># auto_bail = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># json = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># output = &amp;#34;/targets/ellingson_mineral_company/gibson.txt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># debug_log = &amp;#34;/var/log/find-the-derp.log&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># user_agent = &amp;#34;Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># random_agent = false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># redirects = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># insecure = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># extensions = [&amp;#34;php&amp;#34;, &amp;#34;html&amp;#34;]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># methods = [&amp;#34;GET&amp;#34;, &amp;#34;POST&amp;#34;]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># data = [11, 12, 13, 14, 15]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># url_denylist = [&amp;#34;http://dont-scan.me&amp;#34;, &amp;#34;https://also-not.me&amp;#34;]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># regex_denylist = [&amp;#34;/deny.*&amp;#34;]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># no_recursion = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># add_slash = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># stdin = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># dont_filter = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># extract_links = true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># depth = 1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># filter_size = [5174]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># filter_regex = [&amp;#34;^ignore me$&amp;#34;]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># filter_similar = [&amp;#34;https://somesite.com/soft404&amp;#34;]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># filter_word_count = [993]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># filter_line_count = [35, 36]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># queries = [[&amp;#34;name&amp;#34;,&amp;#34;value&amp;#34;], [&amp;#34;rick&amp;#34;, &amp;#34;astley&amp;#34;]]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># save_state = false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># time_limit = &amp;#34;10m&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># headers can be specified on multiple lines or as an inline table&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># inline example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># headers = {&amp;#34;stuff&amp;#34; = &amp;#34;things&amp;#34;}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># multi-line example&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># note: if multi-line is used, all key/value pairs under it belong to the headers table until the next table&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># is found or the end of the file is reached&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">#&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># [headers]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># stuff = &amp;#34;things&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># more = &amp;#34;headers&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Connection closed before message completed</title><link>/feroxbuster-docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/connection-closed/</guid><description>
 &lt;h3 id="connection-closed-before-message-completed">Connection closed before message completed&lt;/h3>
-&lt;p>The error in question can be boiled down to &amp;lsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
+&lt;p>The error in question can be boiled down to &amp;rsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
 uses &lt;a href="https://docs.rs/reqwest/latest/">reqwest&lt;/a> which uses &lt;a href="https://docs.rs/hyper/latest/hyper/">hyper&lt;/a> to make requests
 to the server. &lt;a href="https://github.com/hyperium/hyper/issues/2136#issuecomment-589345238">This issue report&lt;/a> to the hyper
 project explains what is happening (quoted below to save you a click). This isn&amp;rsquo;t a bug so much as it&amp;rsquo;s a
@@ -621,7 +645,7 @@ examples:&lt;/p>
 &lt;/code>&lt;/pre>&lt;p>Note: If you are on a SELinux enforced system, you will need to pass the &lt;code>:Z&lt;/code> attribute also.&lt;/p>
 &lt;pre tabindex="0">&lt;code>docker run --init -v (pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml:Z -it epi052/feroxbuster -u http://example.com
 &lt;/code>&lt;/pre>&lt;h2 id="define-an-alias-for-simplicity">Define an alias for simplicity&lt;/h2>
-&lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;quot;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;quot;
+&lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;#34;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;#34;
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>
 &lt;h2 id="download-a-release">Download a Release&lt;/h2>
 &lt;p>Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p>
@@ -639,12 +663,12 @@ Expand-Archive .\feroxbuster.zip
 &lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Docs: Homebrew Install</title><link>/feroxbuster-docs/docs/installation/install-homebrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-homebrew/</guid><description>
 &lt;h2 id="homebrew-on-macos">Homebrew on MacOS&lt;/h2>
 &lt;p>Install using Homebrew&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">brew install feroxbuster
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="homebrew-on-linux-via-tap">Homebrew on Linux via tap&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew install feroxbuster
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="homebrew-on-linux-via-tap">Homebrew on Linux via tap&lt;/h2>
 &lt;p>🐧 &lt;a href="https://github.com/TGotwig/homebrew-linux-feroxbuster/blob/main/feroxbuster.rb">Linux tap&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">brew tap tgotwig/linux-feroxbuster
-brew install feroxbuster
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/feroxbuster-docs/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-kali/</guid><description>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew tap tgotwig/linux-feroxbuster
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install feroxbuster
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/feroxbuster-docs/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-kali/</guid><description>
 &lt;h2 id="kali-install">Kali Install&lt;/h2>
 &lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the official Kali Linux repos 🥳&lt;/p>
 &lt;p>If you&amp;rsquo;re using kali, this is the preferred install method. Installing from the repos adds a &lt;a href="../..//configuration/ferox-config-toml/">&lt;strong>ferox-config.toml&lt;/strong>&lt;/a> in &lt;code>/etc/feroxbuster/&lt;/code>, adds command completion for bash, fish, and zsh, includes a man page entry, and installs &lt;code>feroxbuster&lt;/code> itself.&lt;/p>
@@ -694,7 +718,7 @@ Usual system defaults are&lt;/p>
 &lt;/ul>
 &lt;p>This basically means your system cannot consistently guarantee more than &lt;code>(61000 - 32768) / 60 = 470&lt;/code> sockets per
 second.&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.ip_local_port_range=&amp;quot;15000 61000&amp;quot;
+&lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.ip_local_port_range=&amp;#34;15000 61000&amp;#34;
 sudo sysctl net.ipv4.tcp_fin_timeout=30
 &lt;/code>&lt;/pre>&lt;h4 id="allow-socket-reuse-while-in-a-time_wait-status">Allow socket reuse while in a &lt;code>TIME_WAIT&lt;/code> status&lt;/h4>
 &lt;p>This allows fast cycling of sockets in time_wait state and re-using them. Make sure to read

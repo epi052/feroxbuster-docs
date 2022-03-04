@@ -17,5 +17,5 @@ includes it in that particular request.&lt;/p>
 &lt;li>&lt;code>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>cargo run -- -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
 &lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item></channel></rss>

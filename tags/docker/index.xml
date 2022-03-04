@@ -18,5 +18,5 @@ examples:&lt;/p>
 &lt;/code>&lt;/pre>&lt;p>Note: If you are on a SELinux enforced system, you will need to pass the &lt;code>:Z&lt;/code> attribute also.&lt;/p>
 &lt;pre tabindex="0">&lt;code>docker run --init -v (pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml:Z -it epi052/feroxbuster -u http://example.com
 &lt;/code>&lt;/pre>&lt;h2 id="define-an-alias-for-simplicity">Define an alias for simplicity&lt;/h2>
-&lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;quot;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;quot;
+&lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;#34;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;#34;
 &lt;/code>&lt;/pre></description></item></channel></rss>

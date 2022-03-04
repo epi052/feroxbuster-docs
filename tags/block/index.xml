@@ -33,7 +33,7 @@ be scanned. Anything &lt;em>outside&lt;/em> of &lt;code>/some-application&lt;/co
 &lt;h2 id="regular-expression-example">Regular Expression Example&lt;/h2>
 &lt;p>At its most basic, the regular expression can simply be a patten to a folder that you&amp;rsquo;d like to avoid scanning. A prime
 target for this is the &lt;code>css&lt;/code> directory.&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/css'
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/css&amp;#39;
 &lt;/code>&lt;/pre>&lt;p>&lt;code>http://some.domain&lt;/code> will be scanned recursively, but any url path that contains &lt;code>/css&lt;/code> will not be requested
 at all. Note that this will prevent requests to urls such as &lt;code>http://some.domain/some/folder/css&lt;/code> and
 &lt;code>http://some.domain/cssssssssssssssssssssssssss&lt;/code>. Without additional context to the regular expression, it&amp;rsquo;s simply
@@ -41,10 +41,10 @@ a naive match anywhere in the given url.&lt;/p>
 &lt;h3 id="additional-examples">Additional Examples&lt;/h3>
 &lt;p>Avoid falling into match/rewrite traps that some servers and reverse-proxies have, which can result in recursion loops
 like &lt;code>/.bower-cache/.bower-registry/.bower-cache/&lt;/code>&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/\..*?/\.'
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/\..*?/\.&amp;#39;
 &lt;/code>&lt;/pre>&lt;p>Prevent requests to any &lt;code>http&lt;/code> url&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan http:
 &lt;/code>&lt;/pre>&lt;p>Prevent multiple directories with a single regex&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/[jc]ss?'
-&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan '/(js|css|images|img)'
+&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/[jc]ss?&amp;#39;
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/(js|css|images|img)&amp;#39;
 &lt;/code>&lt;/pre></description></item></channel></rss>

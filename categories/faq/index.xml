@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– faq</title><link>/feroxbuster-docs/categories/faq/</link><description>Recent content in faq on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/categories/faq/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Connection closed before message completed</title><link>/feroxbuster-docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/connection-closed/</guid><description>
 &lt;h3 id="connection-closed-before-message-completed">Connection closed before message completed&lt;/h3>
-&lt;p>The error in question can be boiled down to &amp;lsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
+&lt;p>The error in question can be boiled down to &amp;rsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
 uses &lt;a href="https://docs.rs/reqwest/latest/">reqwest&lt;/a> which uses &lt;a href="https://docs.rs/hyper/latest/hyper/">hyper&lt;/a> to make requests
 to the server. &lt;a href="https://github.com/hyperium/hyper/issues/2136#issuecomment-589345238">This issue report&lt;/a> to the hyper
 project explains what is happening (quoted below to save you a click). This isn&amp;rsquo;t a bug so much as it&amp;rsquo;s a
@@ -57,7 +57,7 @@ Usual system defaults are&lt;/p>
 &lt;/ul>
 &lt;p>This basically means your system cannot consistently guarantee more than &lt;code>(61000 - 32768) / 60 = 470&lt;/code> sockets per
 second.&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.ip_local_port_range=&amp;quot;15000 61000&amp;quot;
+&lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.ip_local_port_range=&amp;#34;15000 61000&amp;#34;
 sudo sysctl net.ipv4.tcp_fin_timeout=30
 &lt;/code>&lt;/pre>&lt;h4 id="allow-socket-reuse-while-in-a-time_wait-status">Allow socket reuse while in a &lt;code>TIME_WAIT&lt;/code> status&lt;/h4>
 &lt;p>This allows fast cycling of sockets in time_wait state and re-using them. Make sure to read
