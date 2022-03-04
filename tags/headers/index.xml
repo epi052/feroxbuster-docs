@@ -37,4 +37,10 @@ includes it in that particular request.&lt;/p>
 &lt;/ul>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item><item><title>Docs: Specify Cookies</title><link>/feroxbuster-docs/docs/examples/cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cookies/</guid><description>
+&lt;h2 id="specify-cookies-directly">Specify Cookies Directly&lt;/h2>
+&lt;p>Version 2.5.0 gave http cookies their own flag, separate from &lt;code>-H, --headers&lt;/code>. The new &lt;code>-b, --cookies&lt;/code> is simply
+syntactic sugar around &lt;code>-H, --headers&lt;/code>.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -b sessionId=38afes7a8
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../session-cookie.png" alt="session-cookie">&lt;/p></description></item></channel></rss>

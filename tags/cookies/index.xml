@@ -1,0 +1,7 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– cookies</title><link>/feroxbuster-docs/tags/cookies/</link><description>Recent content in cookies on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/cookies/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Specify Cookies</title><link>/feroxbuster-docs/docs/examples/cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cookies/</guid><description>
+&lt;h2 id="specify-cookies-directly">Specify Cookies Directly&lt;/h2>
+&lt;p>Version 2.5.0 gave http cookies their own flag, separate from &lt;code>-H, --headers&lt;/code>. The new &lt;code>-b, --cookies&lt;/code> is simply
+syntactic sugar around &lt;code>-H, --headers&lt;/code>.&lt;/p>
+&lt;h2 id="example">Example&lt;/h2>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -b sessionId=38afes7a8
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../session-cookie.png" alt="session-cookie">&lt;/p></description></item></channel></rss>
