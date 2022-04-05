@@ -17,6 +17,8 @@ Scans that are started via &lt;code>-u&lt;/code> or passed in through &lt;code>-
 adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing &lt;code>ENTER&lt;/code>.&lt;/p>
 &lt;p>Version 2.4.1 expanded functionality even further with the ability to add a brand-new scan. Now that cancelling is no
 longer the only action available to users, the name has been updated to the &lt;strong>Scan Management Menu&lt;/strong>™.&lt;/p>
+&lt;p>Version 2.6.2 brought yet another capability: users can now add new filters to their current scan. Adding a new filter
+works the same as though you had specified &lt;code>--filter-*&lt;/code> on the command-line.&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;p>Below is an example of the Scan &lt;del>Cancel&lt;/del> Management Menu™.&lt;/p>
 &lt;p>&lt;img src="../cancel-menu.png" alt="cancel-menu">&lt;/p>
@@ -38,6 +40,28 @@ longer the only action available to users, the name has been updated to the &lt;
 &lt;h3 id="add-a-new-url-for-scanning">Add a New Url for Scanning&lt;/h3>
 &lt;ul>
 &lt;li>Enter &lt;code>add&lt;/code> or &lt;code>a&lt;/code> followed by the new url you&amp;rsquo;d liked you add to the current scan queue&lt;/li>
+&lt;/ul>
+&lt;h3 id="add-a-new-response-filter">Add a New Response Filter&lt;/h3>
+&lt;ul>
+&lt;li>Enter &lt;code>new-filter&lt;/code> or &lt;code>n&lt;/code>, then the type of filter you&amp;rsquo;d like to add, and the value to pass to the filter itself.&lt;/li>
+&lt;/ul>
+&lt;p>Valid filter types:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>status&lt;/code>&lt;/li>
+&lt;li>&lt;code>lines&lt;/code>&lt;/li>
+&lt;li>&lt;code>size&lt;/code>&lt;/li>
+&lt;li>&lt;code>words&lt;/code>&lt;/li>
+&lt;li>&lt;code>regex&lt;/code>&lt;/li>
+&lt;li>&lt;code>similarity&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>Examples:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>n status 301&lt;/code> - equivalent to command-line option &lt;code>--filter-status 301&lt;/code>&lt;/li>
+&lt;li>&lt;code>new-filter lines 1&lt;/code> - equivalent to command-line option &lt;code>--filter-lines 1&lt;/code>&lt;/li>
+&lt;li>&lt;code>new-filter words 7&lt;/code> - equivalent to command-line option &lt;code>--filter-words 7&lt;/code>&lt;/li>
+&lt;li>&lt;code>n regex token:[0-9a-zA-Z]+&lt;/code> - equivalent to command-line option &lt;code>--filter-regex 'token:[0-9a-zA-Z]+'&lt;/code>&lt;/li>
+&lt;li>&lt;code>n similarity https://target.url/page/with/csrf-token&lt;/code> - equivalent to command-line option &lt;code>--filter-similar-to https://target.url/page/with/csrf-token&lt;/code>&lt;/li>
+&lt;li>&lt;code>new-filter size 1337&lt;/code> - equivalent to command-line option &lt;code>--filter-size 1337&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="demonstration">Demonstration&lt;/h2>
 &lt;p>Here is a short demonstration of the menu&amp;rsquo;s capabilities.&lt;/p>
