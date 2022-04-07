@@ -68,6 +68,11 @@ Examples:
 
 ## Demonstration
 
-Here is a short demonstration of the menu's capabilities.
+Here is a short demonstration of the menu's `cancel` and `add` capabilities. They're shown on an older version of the 
+menu, but the functionality has not changed for these two commands.
 
 ![cancel-scan](../cancel-scan.gif)
+
+Another short demo, this time showcasing the menu's `new-filter` and `rm-filter` commands.
+
+![cancel-scan2](../cancel-scan2.gif)
