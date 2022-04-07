@@ -268,8 +268,11 @@ works the same as though you had specified &lt;code>--filter-*&lt;/code> on the 
 &lt;li>&lt;code>new-filter size 1337&lt;/code> - equivalent to command-line option &lt;code>--filter-size 1337&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="demonstration">Demonstration&lt;/h2>
-&lt;p>Here is a short demonstration of the menu&amp;rsquo;s capabilities.&lt;/p>
-&lt;p>&lt;img src="../cancel-scan.gif" alt="cancel-scan">&lt;/p></description></item><item><title>Docs: Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>
+&lt;p>Here is a short demonstration of the menu&amp;rsquo;s &lt;code>cancel&lt;/code> and &lt;code>add&lt;/code> capabilities. They&amp;rsquo;re shown on an older version of the
+menu, but the functionality has not changed for these two commands.&lt;/p>
+&lt;p>&lt;img src="../cancel-scan.gif" alt="cancel-scan">&lt;/p>
+&lt;p>Another short demo, this time showcasing the menu&amp;rsquo;s &lt;code>new-filter&lt;/code> and &lt;code>rm-filter&lt;/code> commands.&lt;/p>
+&lt;p>&lt;img src="../cancel-scan2.gif" alt="cancel-scan2">&lt;/p></description></item><item><title>Docs: Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>
 &lt;h2 id="limit-number-of-requests-per-second">Limit Number of Requests per Second&lt;/h2>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
