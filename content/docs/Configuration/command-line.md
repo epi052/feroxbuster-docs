@@ -25,13 +25,19 @@ Target selection:
         --stdin                       Read url(s) from STDIN
     -u, --url <URL>                   The target URL (required, unless [--stdin || --resume-from] used)
 
+Composite settings:
+        --burp           Set --proxy to http://127.0.0.1:8080 and set --insecure to true
+        --burp-replay    Set --replay-proxy to http://127.0.0.1:8080 and set --insecure to true
+        --smart          Set --extract-links, --auto-tune, --collect-words, and --collect-backups to true
+        --thorough       Use the same settings as --smart and set --collect-extensions to true
+
 Proxy settings:
     -p, --proxy <PROXY>                    Proxy to use for requests (ex: http(s)://host:port, socks5(h)://host:port)
     -P, --replay-proxy <REPLAY_PROXY>      Send only unfiltered requests through a Replay Proxy, instead of all requests
     -R, --replay-codes <REPLAY_CODE>...    Status Codes to send through a Replay Proxy when found (default: --status-codes value)
 
 Request settings:
-    -a, --user-agent <USER_AGENT>           Sets the User-Agent (default: feroxbuster/2.5.0)
+    -a, --user-agent <USER_AGENT>           Sets the User-Agent (default: feroxbuster/2.7.0)
     -A, --random-agent                      Use a random User-Agent
     -b, --cookies <COOKIE>...               Specify HTTP cookies to be used in each request (ex: -b stuff=things)
         --data <DATA>                       Request's Body; can read data from a file if input starts with an @ (ex: @post.bin)
@@ -64,6 +70,7 @@ Scan settings:
     -d, --depth <RECURSION_DEPTH>      Maximum recursion depth, a depth of 0 is infinite recursion (default: 4)
     -D, --dont-filter                  Don't auto-filter wildcard responses
     -e, --extract-links                Extract links from response body (html, javascript, etc...); make new requests based on findings
+        --force-recursion              Force recursion attempts on all 'found' endpoints (still respects recursion depth)
     -L, --scan-limit <SCAN_LIMIT>      Limit total number of concurrent scans (default: 0, i.e. no limit)
     -n, --no-recursion                 Do not scan recursively
         --parallel <PARALLEL_SCANS>    Run parallel feroxbuster instances (one child process per url passed via stdin)
@@ -72,9 +79,16 @@ Scan settings:
         --time-limit <TIME_SPEC>       Limit total run time of all scans (ex: --time-limit 10m)
     -w, --wordlist <FILE>              Path to the wordlist
 
+Dynamic collection settings:
+    -B, --collect-backups                     Automatically request likely backup extensions for "found" urls
+    -E, --collect-extensions                  Automatically discover extensions and add them to --extensions (unless they're in --dont-collect)
+    -g, --collect-words                       Automatically discover important words from within responses and add them to the wordlist
+    -I, --dont-collect <FILE_EXTENSION>...    File extension(s) to Ignore while collecting extensions (only used with --collect-extensions)
+
 Output settings:
         --debug-log <FILE>    Output file to write log entries (use w/ --json for JSON entries)
         --json                Emit JSON logs to --output and --debug-log instead of normal text
+        --no-state            Disable state output file (*.state)
     -o, --output <FILE>       Output file to write results to (use w/ --json for JSON entries)
     -q, --quiet               Hide progress bars and banner (good for tmux windows w/ notifications)
         --silent              Only print URLs + turn off logging (good for piping a list of urls to other commands)
