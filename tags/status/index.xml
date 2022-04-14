@@ -4,4 +4,23 @@
 minimal effort. The first such filter is a &lt;strong>Status Code&lt;/strong> Filter. As responses come back from the scanned server, each one
 is checked against a list of known filters and either displayed or not according to which filters are set.&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-status 301
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;h2 id="270-update">2.7.0 Update&lt;/h2>
+&lt;p>The &lt;code>--filter-status&lt;/code> behavior was updated in 2.7.0. &lt;code>--filter-status&lt;/code> is now a deny-list for the values provided, while
+every other status code will be allowed through.&lt;/p>
+&lt;h3 id="old-behavior-130---264">Old Behavior (1.3.0 - 2.6.4)&lt;/h3>
+&lt;p>There used to be two points at which a status code was checked for filtering, and both could be used in the same run. These
+were the values provided to &lt;code>--filter-status&lt;/code> and &lt;code>--status-codes&lt;/code> or &lt;code>-C&lt;/code> and &lt;code>-s&lt;/code> for short.&lt;/p>
+&lt;p>When a response came back, all &lt;code>--filter-*&lt;/code> options, including those passed to &lt;code>--filter-status&lt;/code>, were checked to see if the response
+should be filtered out. If the response had a status code that matched a filter, it wouldn&amp;rsquo;t proceed beyond this point. That
+meant that values passed to &lt;code>--status-codes&lt;/code> were never checked if a response was filtered out at this point in the process.&lt;/p>
+&lt;p>If a status code wasn&amp;rsquo;t explicitly filtered out, it moved along until it was checked against the values in &lt;code>--status-codes&lt;/code>.
+If it wasn&amp;rsquo;t explicitly allowed, then it was effectively filtered out at this second gate.&lt;/p>
+&lt;h3 id="new-behavior-270">New Behavior (2.7.0+)&lt;/h3>
+&lt;p>As of 2.7.0, &lt;code>--filter-status&lt;/code> and &lt;code>--status-codes&lt;/code> are mutually exclusive options. This means in choosing
+one or the other, the one not chosen is ignored. They no longer work in tandem.&lt;/p>
+&lt;p>&lt;code>--status-codes&lt;/code> works the same way it always has: by providing an allow-list for status codes. Any status
+code not included in &lt;code>--status-codes&lt;/code> will be filtered out.&lt;/p>
+&lt;p>&lt;code>--filter-status&lt;/code>, on the other hand, now operates wholly on its own. If a value is given to &lt;code>--filter-status&lt;/code>,
+that status code will be filtered out, while all other status codes are allowed to proceed. This is a much
+truer version of a deny-list for status codes. It allows you to see &amp;lsquo;all other&amp;rsquo; status code responses.&lt;/p>
+&lt;p>&lt;img src="../filter-status-demo.gif" alt="filter-status-demo">&lt;/p></description></item></channel></rss>
