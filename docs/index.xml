@@ -557,7 +557,26 @@ in-flight, but conceptually, the above is true.&lt;/p>
 &lt;li>&lt;code>/improved&lt;/code>&lt;/li>
 &lt;li>&lt;code>/parts&lt;/code>&lt;/li>
 &lt;li>&lt;code>/wednesday&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Docs: apt Install</title><link>/feroxbuster-docs/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-apt/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Forced Recursion</title><link>/feroxbuster-docs/docs/examples/force_recursion/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/force_recursion/</guid><description>
+&lt;h2 id="forced-recursion">Forced Recursion&lt;/h2>
+&lt;p>Version 2.7.0 added the ability to tell &lt;code>feroxbuster&lt;/code> to ignore its typical recursion logic in favor
+of recursing into any &amp;lsquo;found&amp;rsquo; asset. A &amp;lsquo;found&amp;rsquo; asset is an endpoint that was not filtered out by
+other scan settings (i.e. &amp;ndash;filter-status or similar).&lt;/p>
+&lt;h2 id="when-to-use-forced-recursion">When to use Forced Recursion&lt;/h2>
+&lt;p>In order to know when forced recursion is useful, it&amp;rsquo;s useful to know how &lt;code>feroxbuster&lt;/code> determines
+into what it should and should not recurse.&lt;/p>
+&lt;p>If a response&amp;rsquo;s status code is 300-399 and has &lt;code>Location&lt;/code> header, we check that header&amp;rsquo;s value. If the &lt;code>Location&lt;/code> header&amp;rsquo;s value is the same as the response&amp;rsquo;s url + &lt;code>/&lt;/code>, then we can recurse.&lt;/p>
+&lt;pre tabindex="0">&lt;code>example:
+http://localhost/assets =&amp;gt; http://localhost/assets/
+&lt;/code>&lt;/pre>&lt;p>Additionally, if the response&amp;rsquo;s status code is 200-299 or 403, and the url ends with a &lt;code>/&lt;/code>, we can also recurse.&lt;/p>
+&lt;p>The logic above works pretty well in most cases. In certain cases there may be a web server that strips all trailing slashes.&lt;/p>
+&lt;pre tabindex="0">&lt;code>example:
+http://localhost/assets/ =&amp;gt; http://localhost/assets
+&lt;/code>&lt;/pre>&lt;p>In such a case, the logic above will never recurse, even if there are endpoints underneath the discovered content. This is where &lt;code>--force-recursion&lt;/code> comes into play.&lt;/p>
+&lt;p>When &lt;code>--force-recursion&lt;/code> is used, any &amp;lsquo;found&amp;rsquo; endpoint (i.e. one that isn&amp;rsquo;t filtered out) will be recursed into. Effectively, the logic laid out above is ignored.&lt;/p>
+&lt;p>A simple sniff test to see if you need &lt;code>--force-recursion&lt;/code> is to add &lt;code>--add-slash&lt;/code> to your scan and see if your target returns this style of redirect.&lt;/p>
+&lt;pre tabindex="0">&lt;code>http://localhost/assets/ =&amp;gt; http://localhost/assets
+&lt;/code>&lt;/pre></description></item><item><title>Docs: apt Install</title><link>/feroxbuster-docs/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-apt/</guid><description>
 &lt;h2 id="apt-install">apt Install&lt;/h2>
 &lt;p>Download &lt;code>feroxbuster_amd64.deb&lt;/code> from the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section. After
 that, use your favorite package manager to install the &lt;code>.deb&lt;/code>.&lt;/p>
