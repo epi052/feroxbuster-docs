@@ -26,6 +26,8 @@ same goes for urls, headers, status codes, queries, and size filters.
 ./feroxbuster -u http://127.1 -H Accept:application/json "Authorization: Bearer {token}"
 ```
 
+Note: to include a header containing a comma, use [ferox-config.toml](../Configuration/ferox-config-toml.md) (related [discussion](https://github.com/epi052/feroxbuster/issues/653))
+
 ### IPv6, non-recursive scan with INFO-level logging enabled
 
 ```
