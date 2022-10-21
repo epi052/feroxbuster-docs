@@ -7,7 +7,7 @@
 same goes for urls, headers, status codes, queries, and size filters.&lt;/p>
 &lt;h3 id="include-headers">Include Headers&lt;/h3>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -H Accept:application/json &amp;#34;Authorization: Bearer {token}&amp;#34;
-&lt;/code>&lt;/pre>&lt;p>Note: to include a header containing a comma, use &lt;a href="../../Configuration/ferox-config-toml.md">ferox-config.toml&lt;/a> (related &lt;a href="https://github.com/epi052/feroxbuster/issues/653">discussion&lt;/a>)&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>Note&lt;/strong>: to include a header containing a comma, use &lt;a href="../../Configuration/ferox-config-toml.md">ferox-config.toml&lt;/a> (related &lt;a href="https://github.com/epi052/feroxbuster/issues/653">discussion&lt;/a>)&lt;/p>
 &lt;h3 id="ipv6-non-recursive-scan-with-info-level-logging-enabled">IPv6, non-recursive scan with INFO-level logging enabled&lt;/h3>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://[::1] --no-recursion -vv
 &lt;/code>&lt;/pre>&lt;h3 id="read-urls-from-stdin-pipe-only-resulting-urls-out-to-another-tool">Read urls from STDIN; pipe only resulting urls out to another tool&lt;/h3>
