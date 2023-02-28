@@ -4,7 +4,7 @@ weight: 10
 categories: ["examples"]
 tags: ["feature", "resume", "state"]
 description: >
-  Added in version **1.9.0**
+  Added in version **1.9.0** updated in **2.8.0**
 ---
 
 ## Stop and Resume Scans
@@ -24,16 +24,22 @@ A simple `Ctrl+C` during a scan will create a file that contains information abo
 {
   "scans": [
     {
-      "id": "057016a14769414aac9a7a62707598cb",
-      "url": "https://localhost.com",
+      "id": "ca21821164b44b3d8eaa76550577246c",
+      "url": "https://localhost.com/",
+      "normalized_url": "https://localhost.com/",
       "scan_type": "Directory",
-      "complete": true
+      "status": "Running",
+      "num_requests": 4714,
+      "requests_made_so_far": 3468
     },
     {
-      "id": "400b2323a16f43468a04ffcbbeba34c6",
-      "url": "https://localhost.com/css",
+      "id": "d65b59601117415abf9ce6c0aa69edc7",
+      "url": "https://localhost.com/api/",
+      "normalized_url": "https://localhost.com/api/",
       "scan_type": "Directory",
-      "complete": false
+      "status": "Running",
+      "num_requests": 4714,
+      "requests_made_so_far": 2774
     }
   ],
   "config": {
@@ -63,7 +69,16 @@ A simple `Ctrl+C` during a scan will create a file that contains information abo
 
 Based on the example image above, the same scan can be resumed by
 using `feroxbuster --resume-from ferox-http_localhost-1606947491.state`. Directories that were already complete are not
-rescanned, however partially complete scans are started from the beginning.
+rescanned. 
+
+(updated behavior for **2.8.0**) Partially complete scans are started from roughly where they left off. More specifically, 10% less than the number
+of requests that were made already (`requests_made_so_far`) becomes the starting offset into the wordlist. This is to
+help ensure that no responses were lost mid-flight when cancelling/resuming.
+
+formula in pseudocode
+```
+wordlist_offset = requests_made_so_far - (requests_made_so_far * 0.10)
+```
 
 ![resumed-scan](../resumed-scan.gif)
 

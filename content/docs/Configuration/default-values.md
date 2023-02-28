@@ -18,7 +18,7 @@ Configuration begins with the following built-in default values baked into the b
 - verbosity: `0` (no logging enabled)
 - scan_limit: `0` (no limit imposed on concurrent scans)
 - rate_limit: `0` (no limit imposed on requests per second)
-- status_codes: `200 204 301 302 307 308 401 403 405 500`
+- status_codes: All valid status codes
 - user_agent: `feroxbuster/VERSION`
 - recursion depth: `4`
 - auto-filter wildcards - `true`
