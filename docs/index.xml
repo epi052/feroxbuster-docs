@@ -149,16 +149,22 @@ disk.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scans&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;057016a14769414aac9a7a62707598cb&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;ca21821164b44b3d8eaa76550577246c&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;normalized_url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Running&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;num_requests&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">4714&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;requests_made_so_far&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">3468&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;400b2323a16f43468a04ffcbbeba34c6&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/css&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;d65b59601117415abf9ce6c0aa69edc7&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/api/&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;normalized_url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/api/&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;complete&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Running&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;num_requests&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">4714&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;requests_made_so_far&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">2774&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">],&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;config&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
@@ -185,8 +191,13 @@ disk.&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="resume-the-scan">Resume the scan&lt;/h2>
 &lt;p>Based on the example image above, the same scan can be resumed by
 using &lt;code>feroxbuster --resume-from ferox-http_localhost-1606947491.state&lt;/code>. Directories that were already complete are not
-rescanned, however partially complete scans are started from the beginning.&lt;/p>
-&lt;p>&lt;img src="../resumed-scan.gif" alt="resumed-scan">&lt;/p>
+rescanned.&lt;/p>
+&lt;p>(updated behavior for &lt;strong>2.8.0&lt;/strong>) Partially complete scans are started from roughly where they left off. More specifically, 10% less than the number
+of requests that were made already (&lt;code>requests_made_so_far&lt;/code>) becomes the starting offset into the wordlist. This is to
+help ensure that no responses were lost mid-flight when cancelling/resuming.&lt;/p>
+&lt;p>formula in pseudocode&lt;/p>
+&lt;pre tabindex="0">&lt;code>wordlist_offset = requests_made_so_far - (requests_made_so_far * 0.10)
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../resumed-scan.gif" alt="resumed-scan">&lt;/p>
 &lt;h2 id="opt-out-of-saving-state">Opt-out of saving state&lt;/h2>
 &lt;p>In order to prevent state file creation when &lt;code>Ctrl+C&lt;/code> is pressed, you can simply add the entry below to
 your &lt;code>ferox-config.toml&lt;/code>.&lt;/p>
@@ -211,26 +222,21 @@ this combination as a time_spec.&lt;/p>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>
 &lt;ul>
-&lt;li>SSDeep/&lt;code>--filter-similar-to&lt;/code> does not do well at detecting similarity of very small responses
-&lt;ul>
-&lt;li>The lack of accuracy with very small responses is considered a fair trade-off for not negatively impacting performance&lt;/li>
-&lt;/ul>
-&lt;/li>
 &lt;li>Using a bunch of &lt;code>--filter-similar-to&lt;/code> values &lt;strong>may&lt;/strong> negatively impact performance&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;p>Version 1.11.0 adds the ability to specify an example page for filtering pages that are similar to the given example.&lt;/p>
+&lt;p>Version 2.8.0 updated the underlying algorithm from SSDeep to Simhash.&lt;/p>
 &lt;p>For example, consider a site that attempts to redirect new users to a &lt;code>/register&lt;/code> endpoint. The &lt;code>/register&lt;/code> page has a
 CSRF token that alters the page&amp;rsquo;s response slightly with each new request (sometimes affecting overall length). This
 means that a simple line/word/char filter won&amp;rsquo;t be able to filter all responses. In order to filter those redirects out,
 one could use a command like this:&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u https://somesite.xyz --filter-similar-to https://somesite.xyz/register
 &lt;/code>&lt;/pre>&lt;p>&lt;code>--filter-similar-to&lt;/code> requests the page passed to it via CLI (&lt;code>https://somesite.xyz/register&lt;/code>), after which it hashes
-the response body using the &lt;a href="https://ssdeep-project.github.io/ssdeep/index.html">SSDeep algorithm&lt;/a>. All subsequent
+the response body using the &lt;a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/33026.pdf">Simhash algorithm&lt;/a>. All subsequent
 pages are hashed and compared to the original request&amp;rsquo;s hash. If the comparison of the two hashes meets a certain
-percentage of similarity (currently 95%), then that request will be filtered out.&lt;/p>
-&lt;p>SSDeep was selected as it does a good job of identifying near-duplicate pages once content-length reaches a certain
-size, while remaining performant. Other algorithms were tested but resulted in huge performance hits (orders of
+percentage of similarity (currently a hamming distance &amp;lt;= 3) then that request will be filtered out.&lt;/p>
+&lt;p>Simhash was selected as it does a good job of identifying near-duplicate pages while remaining performant. Other algorithms were tested but resulted in huge performance hits (orders of
 magnitude slower on requests/second).&lt;/p></description></item><item><title>Docs: Scan Management Menu</title><link>/feroxbuster-docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cancel-scan/</guid><description>
 &lt;h2 id="add-or-cancel-a-recursive-scan-interactively">Add or Cancel a Recursive Scan Interactively&lt;/h2>
 &lt;div class="alert alert-primary" role="alert">
@@ -619,75 +625,137 @@ sudo apt install ./feroxbuster_*_amd64.deb
 &lt;h3 id="command-line-parsing">Command Line Parsing&lt;/h3>
 &lt;p>Finally, after parsing the available config file, any options/arguments given on the commandline will override any
 values that were set as a built-in or config-file value.&lt;/p>
-&lt;pre tabindex="0">&lt;code>USAGE:
-feroxbuster [OPTIONS]
-OPTIONS:
--h, --help Print help information
--V, --version Print version information
+&lt;pre tabindex="0">&lt;code>Usage: feroxbuster [OPTIONS]
+Options:
+-h, --help
+Print help (see a summary with &amp;#39;-h&amp;#39;)
+-V, --version
+Print version
 Target selection:
---resume-from &amp;lt;STATE_FILE&amp;gt; State file from which to resume a partially complete scan (ex. --resume-from ferox-1606586780.state)
---stdin Read url(s) from STDIN
--u, --url &amp;lt;URL&amp;gt; The target URL (required, unless [--stdin || --resume-from] used)
+-u, --url &amp;lt;URL&amp;gt;
+The target URL (required, unless [--stdin || --resume-from] used)
+--stdin
+Read url(s) from STDIN
+--resume-from &amp;lt;STATE_FILE&amp;gt;
+State file from which to resume a partially complete scan (ex. --resume-from
+ferox-1606586780.state)
 Composite settings:
---burp Set --proxy to http://127.0.0.1:8080 and set --insecure to true
---burp-replay Set --replay-proxy to http://127.0.0.1:8080 and set --insecure to true
---smart Set --extract-links, --auto-tune, --collect-words, and --collect-backups to true
---thorough Use the same settings as --smart and set --collect-extensions to true
+--burp
+Set --proxy to http://127.0.0.1:8080 and set --insecure to true
+--burp-replay
+Set --replay-proxy to http://127.0.0.1:8080 and set --insecure to true
+--smart
+Set --extract-links, --auto-tune, --collect-words, and --collect-backups to true
+--thorough
+Use the same settings as --smart and set --collect-extensions to true
 Proxy settings:
--p, --proxy &amp;lt;PROXY&amp;gt; Proxy to use for requests (ex: http(s)://host:port, socks5(h)://host:port)
--P, --replay-proxy &amp;lt;REPLAY_PROXY&amp;gt; Send only unfiltered requests through a Replay Proxy, instead of all requests
--R, --replay-codes &amp;lt;REPLAY_CODE&amp;gt;... Status Codes to send through a Replay Proxy when found (default: --status-codes value)
+-p, --proxy &amp;lt;PROXY&amp;gt;
+Proxy to use for requests (ex: http(s)://host:port, socks5(h)://host:port)
+-P, --replay-proxy &amp;lt;REPLAY_PROXY&amp;gt;
+Send only unfiltered requests through a Replay Proxy, instead of all requests
+-R, --replay-codes &amp;lt;REPLAY_CODE&amp;gt;...
+Status Codes to send through a Replay Proxy when found (default: --status-codes value)
 Request settings:
--a, --user-agent &amp;lt;USER_AGENT&amp;gt; Sets the User-Agent (default: feroxbuster/2.7.0)
--A, --random-agent Use a random User-Agent
--b, --cookies &amp;lt;COOKIE&amp;gt;... Specify HTTP cookies to be used in each request (ex: -b stuff=things)
---data &amp;lt;DATA&amp;gt; Request&amp;#39;s Body; can read data from a file if input starts with an @ (ex: @post.bin)
--f, --add-slash Append / to each request&amp;#39;s URL
--H, --headers &amp;lt;HEADER&amp;gt;... Specify HTTP headers to be used in each request (ex: -H Header:val -H &amp;#39;stuff: things&amp;#39;)
--m, --methods &amp;lt;HTTP_METHODS&amp;gt;... Which HTTP request method(s) should be sent (default: GET)
--Q, --query &amp;lt;QUERY&amp;gt;... Request&amp;#39;s URL query parameters (ex: -Q token=stuff -Q secret=key)
--x, --extensions &amp;lt;FILE_EXTENSION&amp;gt;... File extension(s) to search for (ex: -x php -x pdf js)
+-a, --user-agent &amp;lt;USER_AGENT&amp;gt;
+Sets the User-Agent (default: feroxbuster/2.8.0)
+-A, --random-agent
+Use a random User-Agent
+-x, --extensions &amp;lt;FILE_EXTENSION&amp;gt;...
+File extension(s) to search for (ex: -x php -x pdf js)
+-m, --methods &amp;lt;HTTP_METHODS&amp;gt;...
+Which HTTP request method(s) should be sent (default: GET)
+--data &amp;lt;DATA&amp;gt;
+Request&amp;#39;s Body; can read data from a file if input starts with an @ (ex: @post.bin)
+-H, --headers &amp;lt;HEADER&amp;gt;...
+Specify HTTP headers to be used in each request (ex: -H Header:val -H &amp;#39;stuff: things&amp;#39;)
+-b, --cookies &amp;lt;COOKIE&amp;gt;...
+Specify HTTP cookies to be used in each request (ex: -b stuff=things)
+-Q, --query &amp;lt;QUERY&amp;gt;...
+Request&amp;#39;s URL query parameters (ex: -Q token=stuff -Q secret=key)
+-f, --add-slash
+Append / to each request&amp;#39;s URL
 Request filters:
---dont-scan &amp;lt;URL&amp;gt;... URL(s) or Regex Pattern(s) to exclude from recursion/scans
+--dont-scan &amp;lt;URL&amp;gt;...
+URL(s) or Regex Pattern(s) to exclude from recursion/scans
 Response filters:
--C, --filter-status &amp;lt;STATUS_CODE&amp;gt;... Filter out status codes (deny list) (ex: -C 200 -C 401)
---filter-similar-to &amp;lt;UNWANTED_PAGE&amp;gt;... Filter out pages that are similar to the given page (ex. --filter-similar-to http://site.xyz/soft404)
--N, --filter-lines &amp;lt;LINES&amp;gt;... Filter out messages of a particular line count (ex: -N 20 -N 31,30)
--s, --status-codes &amp;lt;STATUS_CODE&amp;gt;... Status Codes to include (allow list) (default: 200 204 301 302 307 308 401 403 405)
--S, --filter-size &amp;lt;SIZE&amp;gt;... Filter out messages of a particular size (ex: -S 5120 -S 4927,1970)
--W, --filter-words &amp;lt;WORDS&amp;gt;... Filter out messages of a particular word count (ex: -W 312 -W 91,82)
--X, --filter-regex &amp;lt;REGEX&amp;gt;... Filter out messages via regular expression matching on the response&amp;#39;s body (ex: -X &amp;#39;^ignore me$&amp;#39;)
+-S, --filter-size &amp;lt;SIZE&amp;gt;...
+Filter out messages of a particular size (ex: -S 5120 -S 4927,1970)
+-X, --filter-regex &amp;lt;REGEX&amp;gt;...
+Filter out messages via regular expression matching on the response&amp;#39;s body (ex: -X
+&amp;#39;^ignore me$&amp;#39;)
+-W, --filter-words &amp;lt;WORDS&amp;gt;...
+Filter out messages of a particular word count (ex: -W 312 -W 91,82)
+-N, --filter-lines &amp;lt;LINES&amp;gt;...
+Filter out messages of a particular line count (ex: -N 20 -N 31,30)
+-C, --filter-status &amp;lt;STATUS_CODE&amp;gt;...
+Filter out status codes (deny list) (ex: -C 200 -C 401)
+--filter-similar-to &amp;lt;UNWANTED_PAGE&amp;gt;...
+Filter out pages that are similar to the given page (ex. --filter-similar-to
+http://site.xyz/soft404)
+-s, --status-codes &amp;lt;STATUS_CODE&amp;gt;...
+Status Codes to include (allow list) (default: All Status Codes)
 Client settings:
--k, --insecure Disables TLS certificate validation in the client
--r, --redirects Allow client to follow redirects
--T, --timeout &amp;lt;SECONDS&amp;gt; Number of seconds before a client&amp;#39;s request times out (default: 7)
+-T, --timeout &amp;lt;SECONDS&amp;gt;
+Number of seconds before a client&amp;#39;s request times out (default: 7)
+-r, --redirects
+Allow client to follow redirects
+-k, --insecure
+Disables TLS certificate validation in the client
 Scan settings:
---auto-bail Automatically stop scanning when an excessive amount of errors are encountered
---auto-tune Automatically lower scan rate when an excessive amount of errors are encountered
--d, --depth &amp;lt;RECURSION_DEPTH&amp;gt; Maximum recursion depth, a depth of 0 is infinite recursion (default: 4)
--D, --dont-filter Don&amp;#39;t auto-filter wildcard responses
--e, --extract-links Extract links from response body (html, javascript, etc...); make new requests based on findings
---force-recursion Force recursion attempts on all &amp;#39;found&amp;#39; endpoints (still respects recursion depth)
--L, --scan-limit &amp;lt;SCAN_LIMIT&amp;gt; Limit total number of concurrent scans (default: 0, i.e. no limit)
--n, --no-recursion Do not scan recursively
---parallel &amp;lt;PARALLEL_SCANS&amp;gt; Run parallel feroxbuster instances (one child process per url passed via stdin)
---rate-limit &amp;lt;RATE_LIMIT&amp;gt; Limit number of requests per second (per directory) (default: 0, i.e. no limit)
--t, --threads &amp;lt;THREADS&amp;gt; Number of concurrent threads (default: 50)
---time-limit &amp;lt;TIME_SPEC&amp;gt; Limit total run time of all scans (ex: --time-limit 10m)
--w, --wordlist &amp;lt;FILE&amp;gt; Path to the wordlist
+-t, --threads &amp;lt;THREADS&amp;gt;
+Number of concurrent threads (default: 50)
+-n, --no-recursion
+Do not scan recursively
+-d, --depth &amp;lt;RECURSION_DEPTH&amp;gt;
+Maximum recursion depth, a depth of 0 is infinite recursion (default: 4)
+--force-recursion
+Force recursion attempts on all &amp;#39;found&amp;#39; endpoints (still respects recursion depth)
+-e, --extract-links
+Extract links from response body (html, javascript, etc...); make new requests based on
+findings
+-L, --scan-limit &amp;lt;SCAN_LIMIT&amp;gt;
+Limit total number of concurrent scans (default: 0, i.e. no limit)
+--parallel &amp;lt;PARALLEL_SCANS&amp;gt;
+Run parallel feroxbuster instances (one child process per url passed via stdin)
+--rate-limit &amp;lt;RATE_LIMIT&amp;gt;
+Limit number of requests per second (per directory) (default: 0, i.e. no limit)
+--time-limit &amp;lt;TIME_SPEC&amp;gt;
+Limit total run time of all scans (ex: --time-limit 10m)
+-w, --wordlist &amp;lt;FILE&amp;gt;
+Path to the wordlist
+--auto-tune
+Automatically lower scan rate when an excessive amount of errors are encountered
+--auto-bail
+Automatically stop scanning when an excessive amount of errors are encountered
+-D, --dont-filter
+Don&amp;#39;t auto-filter wildcard responses
 Dynamic collection settings:
--B, --collect-backups Automatically request likely backup extensions for &amp;#34;found&amp;#34; urls
--E, --collect-extensions Automatically discover extensions and add them to --extensions (unless they&amp;#39;re in --dont-collect)
--g, --collect-words Automatically discover important words from within responses and add them to the wordlist
--I, --dont-collect &amp;lt;FILE_EXTENSION&amp;gt;... File extension(s) to Ignore while collecting extensions (only used with --collect-extensions)
+-E, --collect-extensions
+Automatically discover extensions and add them to --extensions (unless they&amp;#39;re in
+--dont-collect)
+-B, --collect-backups
+Automatically request likely backup extensions for &amp;#34;found&amp;#34; urls
+-g, --collect-words
+Automatically discover important words from within responses and add them to the wordlist
+-I, --dont-collect &amp;lt;FILE_EXTENSION&amp;gt;...
+File extension(s) to Ignore while collecting extensions (only used with
+--collect-extensions)
 Output settings:
---debug-log &amp;lt;FILE&amp;gt; Output file to write log entries (use w/ --json for JSON entries)
---json Emit JSON logs to --output and --debug-log instead of normal text
---no-state Disable state output file (*.state)
--o, --output &amp;lt;FILE&amp;gt; Output file to write results to (use w/ --json for JSON entries)
--q, --quiet Hide progress bars and banner (good for tmux windows w/ notifications)
---silent Only print URLs + turn off logging (good for piping a list of urls to other commands)
--v, --verbosity Increase verbosity level (use -vv or more for greater effect. [CAUTION] 4 -v&amp;#39;s is probably too much)
+-v, --verbosity...
+Increase verbosity level (use -vv or more for greater effect. [CAUTION] 4 -v&amp;#39;s is probably
+too much)
+--silent
+Only print URLs + turn off logging (good for piping a list of urls to other commands)
+-q, --quiet
+Hide progress bars and banner (good for tmux windows w/ notifications)
+--json
+Emit JSON logs to --output and --debug-log instead of normal text
+-o, --output &amp;lt;FILE&amp;gt;
+Output file to write results to (use w/ --json for JSON entries)
+--debug-log &amp;lt;FILE&amp;gt;
+Output file to write log entries (use w/ --json for JSON entries)
+--no-state
+Disable state output file (*.state)
 &lt;/code>&lt;/pre></description></item><item><title>Docs: Configuration File</title><link>/feroxbuster-docs/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/ferox-config-toml/</guid><description>
 &lt;h2 id="ferox-configtoml">ferox-config.toml&lt;/h2>
 &lt;p>After built-in default values are set, any values defined in a &lt;code>ferox-config.toml&lt;/code> config file will override the
@@ -809,7 +877,7 @@ to accomplish per-target tuning.&lt;/p>
 &lt;li>verbosity: &lt;code>0&lt;/code> (no logging enabled)&lt;/li>
 &lt;li>scan_limit: &lt;code>0&lt;/code> (no limit imposed on concurrent scans)&lt;/li>
 &lt;li>rate_limit: &lt;code>0&lt;/code> (no limit imposed on requests per second)&lt;/li>
-&lt;li>status_codes: &lt;code>200 204 301 302 307 308 401 403 405 500&lt;/code>&lt;/li>
+&lt;li>status_codes: All valid status codes&lt;/li>
 &lt;li>user_agent: &lt;code>feroxbuster/VERSION&lt;/code>&lt;/li>
 &lt;li>recursion depth: &lt;code>4&lt;/code>&lt;/li>
 &lt;li>auto-filter wildcards - &lt;code>true&lt;/code>&lt;/li>

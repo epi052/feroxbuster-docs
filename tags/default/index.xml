@@ -9,7 +9,7 @@
 &lt;li>verbosity: &lt;code>0&lt;/code> (no logging enabled)&lt;/li>
 &lt;li>scan_limit: &lt;code>0&lt;/code> (no limit imposed on concurrent scans)&lt;/li>
 &lt;li>rate_limit: &lt;code>0&lt;/code> (no limit imposed on requests per second)&lt;/li>
-&lt;li>status_codes: &lt;code>200 204 301 302 307 308 401 403 405 500&lt;/code>&lt;/li>
+&lt;li>status_codes: All valid status codes&lt;/li>
 &lt;li>user_agent: &lt;code>feroxbuster/VERSION&lt;/code>&lt;/li>
 &lt;li>recursion depth: &lt;code>4&lt;/code>&lt;/li>
 &lt;li>auto-filter wildcards - &lt;code>true&lt;/code>&lt;/li>
