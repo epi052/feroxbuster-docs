@@ -993,7 +993,7 @@ Bernat to understand the implications.&lt;/p>
 correctly. If your width is too small, you may see output like what&amp;rsquo;s shown below.&lt;/p>
 &lt;p>&lt;img src="../small-term.png" alt="small-term">&lt;/p>
 &lt;p>If you can, simply make the terminal wider and rerun. If you&amp;rsquo;re unable to make your terminal wider consider using &lt;code>-q&lt;/code>
-to suppress the progress bars.&lt;/p></description></item><item><title>Docs: Snap Install</title><link>/feroxbuster-docs/docs/installation/install-snap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-snap/</guid><description>
+to suppress the progress bars.&lt;/p></description></item><item><title>: Search Results</title><link>/feroxbuster-docs/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/search/</guid><description/></item><item><title>Docs: Snap Install</title><link>/feroxbuster-docs/docs/installation/install-snap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-snap/</guid><description>
 &lt;h2 id="install-using-snap">Install using &lt;code>snap&lt;/code>&lt;/h2>
 &lt;pre tabindex="0">&lt;code>sudo snap install feroxbuster
 &lt;/code>&lt;/pre>&lt;h2 id="gotchas">Gotchas&lt;/h2>
