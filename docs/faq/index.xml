@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– 🤯 Common Problems (FAQ)</title><link>/docs/docs/faq/</link><description>Recent content in 🤯 Common Problems (FAQ) on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/docs/faq/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Connection closed before message completed</title><link>/docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/faq/connection-closed/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– 🤯 Common Problems (FAQ)</title><link>/feroxbuster-docs/docs/docs/faq/</link><description>Recent content in 🤯 Common Problems (FAQ) on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/docs/docs/faq/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Connection closed before message completed</title><link>/feroxbuster-docs/docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/faq/connection-closed/</guid><description>
 &lt;h3 id="connection-closed-before-message-completed">Connection closed before message completed&lt;/h3>
 &lt;p>The error in question can be boiled down to &amp;rsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
 uses &lt;a href="https://docs.rs/reqwest/latest/">reqwest&lt;/a> which uses &lt;a href="https://docs.rs/hyper/latest/hyper/">hyper&lt;/a> to make requests
@@ -12,7 +12,7 @@ to accomplish per-target tuning.&lt;/p>
 &lt;blockquote>
 &lt;p>This is just due to the racy nature of networking.&lt;/p>
 &lt;p>hyper has a connection pool of idle connections, and it selected one to send your request. Most of the time, hyper will receive the server&amp;rsquo;s FIN and drop the dead connection from its pool. But occasionally, a connection will be selected from the pool and written to at the same time the server is deciding to close the connection. Since hyper already wrote some of the request, it can&amp;rsquo;t really retry it automatically on a new connection, since the server may have acted already.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs: No file descriptors available</title><link>/docs/docs/faq/no-file-descriptors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/faq/no-file-descriptors/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs: No file descriptors available</title><link>/feroxbuster-docs/docs/docs/faq/no-file-descriptors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/faq/no-file-descriptors/</guid><description>
 &lt;h2 id="no-file-descriptors-available">No file descriptors available&lt;/h2>
 &lt;p>Why do I get a bunch of &lt;code>No file descriptors available (os error 24)&lt;/code> errors?&lt;/p>
 &lt;hr>
@@ -64,13 +64,13 @@ sudo sysctl net.ipv4.tcp_fin_timeout=30
 post &lt;a href="https://vincent.bernat.ch/en/blog/2014-tcp-time-wait-state-linux">Coping with the TCP TIME-WAIT&lt;/a> from Vincent
 Bernat to understand the implications.&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.tcp_tw_reuse=1
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Progress bars print one line at a time</title><link>/docs/docs/faq/progress-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/faq/progress-bars/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Progress bars print one line at a time</title><link>/feroxbuster-docs/docs/docs/faq/progress-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/faq/progress-bars/</guid><description>
 &lt;h2 id="progress-bars-print-one-line-at-a-time">Progress bars print one line at a time&lt;/h2>
 &lt;p>&lt;code>feroxbuster&lt;/code> needs a terminal width of at least the size of what&amp;rsquo;s being printed in order to do progress bar printing
 correctly. If your width is too small, you may see output like what&amp;rsquo;s shown below.&lt;/p>
 &lt;p>&lt;img src="../small-term.png" alt="small-term">&lt;/p>
 &lt;p>If you can, simply make the terminal wider and rerun. If you&amp;rsquo;re unable to make your terminal wider consider using &lt;code>-q&lt;/code>
-to suppress the progress bars.&lt;/p></description></item><item><title>Docs: SSL Error ... verify failed</title><link>/docs/docs/faq/self-signed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/faq/self-signed/</guid><description>
+to suppress the progress bars.&lt;/p></description></item><item><title>Docs: SSL Error ... verify failed</title><link>/feroxbuster-docs/docs/docs/faq/self-signed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/faq/self-signed/</guid><description>
 &lt;h2 id="ssl-error-routinestls_process_server_certificatecertificate-verify-failed">SSL Error routines:tls_process_server_certificate:certificate verify failed&lt;/h2>
 &lt;p>In the event you see an error similar to&lt;/p>
 &lt;p>&lt;img src="../insecure.png" alt="self-signed">&lt;/p>
