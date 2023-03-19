@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– filtering</title><link>/feroxbuster-docs/tags/filtering/</link><description>Recent content in filtering on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/filtering/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Filter by Status</title><link>/feroxbuster-docs/docs/examples/filter-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-status/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– filtering</title><link>/docs/tags/filtering/</link><description>Recent content in filtering on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/tags/filtering/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Filter by Status</title><link>/docs/docs/examples/filter-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/filter-status/</guid><description>
 &lt;h2 id="filter-response-by-status-code">Filter Response by Status Code&lt;/h2>
 &lt;p>Version 1.3.0 included an overhaul to the filtering system which will allow for a wide array of filters to be added with
 minimal effort. The first such filter is a &lt;strong>Status Code&lt;/strong> Filter. As responses come back from the scanned server, each one
@@ -23,7 +23,7 @@ code not included in &lt;code>--status-codes&lt;/code> will be filtered out.&lt;
 &lt;p>&lt;code>--filter-status&lt;/code>, on the other hand, now operates wholly on its own. If a value is given to &lt;code>--filter-status&lt;/code>,
 that status code will be filtered out, while all other status codes are allowed to proceed. This is a much
 truer version of a deny-list for status codes. It allows you to see &amp;lsquo;all other&amp;rsquo; status code responses.&lt;/p>
-&lt;p>&lt;img src="../filter-status-demo.gif" alt="filter-status-demo">&lt;/p></description></item><item><title>Docs: Filter by Word/Line Count</title><link>/feroxbuster-docs/docs/examples/filter-word-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-word-line/</guid><description>
+&lt;p>&lt;img src="../filter-status-demo.gif" alt="filter-status-demo">&lt;/p></description></item><item><title>Docs: Filter by Word/Line Count</title><link>/docs/docs/examples/filter-word-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/filter-word-line/</guid><description>
 &lt;h2 id="filter-response-by-word-count--line-count">Filter Response by Word Count &amp;amp; Line Count&lt;/h2>
 &lt;p>In addition to filtering on the size of a response, version 1.6.0 added the ability to filter out responses based on the
 number of lines and/or words contained within the response body. This change drove a change to the information displayed
@@ -43,7 +43,7 @@ provided.&lt;/p>
 &lt;li>&lt;strong># of lines&lt;/strong>: filtered with &lt;code>-N|--filter-lines&lt;/code>&lt;/li>
 &lt;li>&lt;strong># of words&lt;/strong>: filtered with &lt;code>-W|--filter-words&lt;/code>&lt;/li>
 &lt;li>&lt;strong># of chars (bytes)&lt;/strong>: filtered with &lt;code>-S|--filter-size&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Filter by Regex</title><link>/feroxbuster-docs/docs/examples/filter-regex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-regex/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Filter by Regex</title><link>/docs/docs/examples/filter-regex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/filter-regex/</guid><description>
 &lt;h2 id="filter-response-using-a-regular-expression">Filter Response Using a Regular Expression&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>
@@ -55,7 +55,7 @@ minimal effort. The latest addition is a Regular Expression Filter. As responses
 the &lt;strong>body&lt;/strong> of the response is checked against the filter&amp;rsquo;s regular expression. If the expression is found in the body,
 then that response is filtered out.&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-regex &amp;#39;[aA]ccess [dD]enied.?&amp;#39; --output results.txt --json
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Filter by Page Similarity</title><link>/feroxbuster-docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-similar/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Filter by Page Similarity</title><link>/docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/filter-similar/</guid><description>
 &lt;h2 id="filter-response-by-similarity-to-a-given-page">Filter Response by Similarity to A Given Page&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>

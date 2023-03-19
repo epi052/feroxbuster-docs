@@ -1,10 +1,10 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– limit</title><link>/feroxbuster-docs/tags/limit/</link><description>Recent content in limit on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/limit/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Limit Number of Scans</title><link>/feroxbuster-docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-scans/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– limit</title><link>/docs/tags/limit/</link><description>Recent content in limit on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/tags/limit/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Limit Number of Scans</title><link>/docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/limit-scans/</guid><description>
 &lt;h2 id="limit-total-number-of-concurrent-scans">Limit Total Number of Concurrent Scans&lt;/h2>
 &lt;p>Limit the number of scans permitted to run at any given time. Recursion will still identify new directories, but newly
 discovered directories can only begin scanning when the total number of active scans drops below the value passed to
 &lt;code>--scan-limit&lt;/code>.&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --scan-limit 2
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../limit-demo.gif" alt="limit-demo">&lt;/p></description></item><item><title>Docs: Enforce Time Limit</title><link>/feroxbuster-docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/time-limit/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../limit-demo.gif" alt="limit-demo">&lt;/p></description></item><item><title>Docs: Enforce Time Limit</title><link>/docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/time-limit/</guid><description>
 &lt;h2 id="enforce-a-time-limit-on-your-scan">Enforce a Time Limit on Your Scan&lt;/h2>
 &lt;p>Version 1.10.0 adds the ability to set a maximum runtime, or time limit, on your scan. The usage is pretty simple: a
 number followed directly by a single character representing seconds, minutes, hours, or days. &lt;code>feroxbuster&lt;/code> refers to
@@ -17,7 +17,7 @@ this combination as a time_spec.&lt;/p>
 &lt;li>&lt;code>1d&lt;/code> - 1 day (why??)&lt;/li>
 &lt;/ul>
 &lt;p>A valid time_spec can be passed to &lt;code>--time-limit&lt;/code> in order to force a shutdown after the given time has elapsed.&lt;/p>
-&lt;p>&lt;img src="../time-limit.gif" alt="time-limit">&lt;/p></description></item><item><title>Docs: Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>
+&lt;p>&lt;img src="../time-limit.gif" alt="time-limit">&lt;/p></description></item><item><title>Docs: Rate Limiting</title><link>/docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/rate-limit/</guid><description>
 &lt;h2 id="limit-number-of-requests-per-second">Limit Number of Requests per Second&lt;/h2>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
@@ -31,7 +31,7 @@ Rate limiting is enforced on a &lt;strong>per-directory&lt;/strong> basis.
 limiting the number of requests per second overall)&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://localhost --rate-limit 100 --scan-limit 1
 &lt;/code>&lt;/pre>&lt;h2 id="demonstration">Demonstration&lt;/h2>
-&lt;p>&lt;img src="../rate-limit-demo.gif" alt="rate-limit">&lt;/p></description></item><item><title>Docs: Auto-tune / Auto-bail</title><link>/feroxbuster-docs/docs/examples/auto-tune/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/auto-tune/</guid><description>
+&lt;p>&lt;img src="../rate-limit-demo.gif" alt="rate-limit">&lt;/p></description></item><item><title>Docs: Auto-tune / Auto-bail</title><link>/docs/docs/examples/auto-tune/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/auto-tune/</guid><description>
 &lt;h2 id="auto-tune-or-auto-bail-from-scans">Auto-tune or Auto-bail from scans&lt;/h2>
 &lt;p>Version 2.1.0 introduces the &lt;code>--auto-tune&lt;/code> and &lt;code>--auto-bail&lt;/code> flags. You can think of these flags as Policies. Both actions (tuning and bailing) are triggered by the same criteria (below). Policies are only enforced after at least 50 requests have been made (or # of threads, if that&amp;rsquo;s &amp;gt; 50).&lt;/p>
 &lt;p>Policy Enforcement Criteria:&lt;/p>
@@ -48,7 +48,7 @@ limiting the number of requests per second overall)&lt;/p>
 &lt;p>&lt;img src="../auto-tune-demo.gif" alt="auto-tune">&lt;/p>
 &lt;h4 id="--auto-bail">--auto-bail&lt;/h4>
 &lt;p>The AutoBail policy aborts individual directory scans when one of the criteria above is met. They just stop getting scanned, no muss, no fuss.&lt;/p>
-&lt;p>&lt;img src="../auto-bail-demo.gif" alt="auto-bail">&lt;/p></description></item><item><title>Docs: Connection closed before message completed</title><link>/feroxbuster-docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/connection-closed/</guid><description>
+&lt;p>&lt;img src="../auto-bail-demo.gif" alt="auto-bail">&lt;/p></description></item><item><title>Docs: Connection closed before message completed</title><link>/docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/faq/connection-closed/</guid><description>
 &lt;h3 id="connection-closed-before-message-completed">Connection closed before message completed&lt;/h3>
 &lt;p>The error in question can be boiled down to &amp;rsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
 uses &lt;a href="https://docs.rs/reqwest/latest/">reqwest&lt;/a> which uses &lt;a href="https://docs.rs/hyper/latest/hyper/">hyper&lt;/a> to make requests
@@ -62,7 +62,7 @@ to accomplish per-target tuning.&lt;/p>
 &lt;blockquote>
 &lt;p>This is just due to the racy nature of networking.&lt;/p>
 &lt;p>hyper has a connection pool of idle connections, and it selected one to send your request. Most of the time, hyper will receive the server&amp;rsquo;s FIN and drop the dead connection from its pool. But occasionally, a connection will be selected from the pool and written to at the same time the server is deciding to close the connection. Since hyper already wrote some of the request, it can&amp;rsquo;t really retry it automatically on a new connection, since the server may have acted already.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs: No file descriptors available</title><link>/feroxbuster-docs/docs/faq/no-file-descriptors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/no-file-descriptors/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs: No file descriptors available</title><link>/docs/docs/faq/no-file-descriptors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/faq/no-file-descriptors/</guid><description>
 &lt;h2 id="no-file-descriptors-available">No file descriptors available&lt;/h2>
 &lt;p>Why do I get a bunch of &lt;code>No file descriptors available (os error 24)&lt;/code> errors?&lt;/p>
 &lt;hr>
@@ -114,7 +114,7 @@ sudo sysctl net.ipv4.tcp_fin_timeout=30
 post &lt;a href="https://vincent.bernat.ch/en/blog/2014-tcp-time-wait-state-linux">Coping with the TCP TIME-WAIT&lt;/a> from Vincent
 Bernat to understand the implications.&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.tcp_tw_reuse=1
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Threads and Connection Limits</title><link>/docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/configuration/limit-connections/</guid><description>
 &lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
 &lt;p>This section explains how the &lt;code>-t&lt;/code> and &lt;code>-L&lt;/code> options work together to determine the overall aggressiveness of a scan. The
 combination of the two values set by these options determines how hard your target will get hit and to some extent also

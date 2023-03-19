@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– menu</title><link>/feroxbuster-docs/tags/menu/</link><description>Recent content in menu on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/menu/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Pause a Scan</title><link>/feroxbuster-docs/docs/examples/pause-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/pause-scan/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– menu</title><link>/docs/tags/menu/</link><description>Recent content in menu on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/docs/tags/menu/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Pause a Scan</title><link>/docs/docs/examples/pause-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/pause-scan/</guid><description>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
 &lt;p>&lt;a href="../cancel-scan/">v1.12.0&lt;/a> added an interactive menu to the pause/resume
@@ -7,7 +7,7 @@ functionality.&lt;/p>
 of simply seeing a spinner.&lt;/p>
 &lt;/div>
 &lt;h2 id="pause-an-active-scan">Pause an Active Scan&lt;/h2>
-&lt;p>Scans can be paused and resumed by pressing the &lt;code>ENTER&lt;/code> key (&lt;del>shown below&lt;/del>, please see &lt;a href="../cancel-scan/">v1.12.0&lt;/a>&amp;rsquo;s entry for the latest visual representation)&lt;/p></description></item><item><title>Docs: Scan Management Menu</title><link>/feroxbuster-docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cancel-scan/</guid><description>
+&lt;p>Scans can be paused and resumed by pressing the &lt;code>ENTER&lt;/code> key (&lt;del>shown below&lt;/del>, please see &lt;a href="../cancel-scan/">v1.12.0&lt;/a>&amp;rsquo;s entry for the latest visual representation)&lt;/p></description></item><item><title>Docs: Scan Management Menu</title><link>/docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/docs/examples/cancel-scan/</guid><description>
 &lt;h2 id="add-or-cancel-a-recursive-scan-interactively">Add or Cancel a Recursive Scan Interactively&lt;/h2>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
