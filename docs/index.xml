@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Documentation</title><link>/feroxbuster-docs/docs/docs/</link><description>Recent content in Documentation on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/docs/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Core Features</title><link>/feroxbuster-docs/docs/docs/examples/core-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/core-features/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– Documentation</title><link>/feroxbuster-docs/docs/</link><description>Recent content in Documentation on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Core Features</title><link>/feroxbuster-docs/docs/examples/core-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/core-features/</guid><description>
 &lt;h3 id="multiple-values">Multiple Values&lt;/h3>
 &lt;p>Options that take multiple values are very flexible. Consider the following ways of specifying extensions:&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -x pdf -x js,html -x php txt json,docx
@@ -18,7 +18,7 @@ same goes for urls, headers, status codes, queries, and size filters.&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --proxy socks5h://127.0.0.1:9050
 &lt;/code>&lt;/pre>&lt;h3 id="pass-auth-token-via-query-parameter">Pass auth token via query parameter&lt;/h3>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --query token=0123456789ABCDEF
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Extract Links</title><link>/feroxbuster-docs/docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/extract-links/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>
 &lt;h2 id="extract-links-from-response-body">Extract Links from Response Body&lt;/h2>
 &lt;p>Search through the body of valid responses (html, javascript, etc&amp;hellip;) for additional endpoints to scan. This turns
 &lt;code>feroxbuster&lt;/code> into a hybrid that looks for both linked and unlinked content.&lt;/p>
@@ -52,13 +52,13 @@ are added to the scan queue, while file entries are requested and then reported 
 &lt;h2 id="using-extract-links-for-web-crawling">Using Extract Links for Web Crawling&lt;/h2>
 &lt;p>By supplying a single line word list containing only the root path &lt;code>feroxbuster&lt;/code> can also be used to simulate web
 crawling behavior. This appears to give results comparable to &lt;a href="https://github.com/hakluke/hakrawler">hakrawlwer&lt;/a>
-although &lt;code>feroxbuster&lt;/code> is not quite as fast.&lt;/p></description></item><item><title>Docs: Limit Number of Scans</title><link>/feroxbuster-docs/docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/limit-scans/</guid><description>
+although &lt;code>feroxbuster&lt;/code> is not quite as fast.&lt;/p></description></item><item><title>Docs: Limit Number of Scans</title><link>/feroxbuster-docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-scans/</guid><description>
 &lt;h2 id="limit-total-number-of-concurrent-scans">Limit Total Number of Concurrent Scans&lt;/h2>
 &lt;p>Limit the number of scans permitted to run at any given time. Recursion will still identify new directories, but newly
 discovered directories can only begin scanning when the total number of active scans drops below the value passed to
 &lt;code>--scan-limit&lt;/code>.&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --scan-limit 2
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../limit-demo.gif" alt="limit-demo">&lt;/p></description></item><item><title>Docs: Filter by Status</title><link>/feroxbuster-docs/docs/docs/examples/filter-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/filter-status/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../limit-demo.gif" alt="limit-demo">&lt;/p></description></item><item><title>Docs: Filter by Status</title><link>/feroxbuster-docs/docs/examples/filter-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-status/</guid><description>
 &lt;h2 id="filter-response-by-status-code">Filter Response by Status Code&lt;/h2>
 &lt;p>Version 1.3.0 included an overhaul to the filtering system which will allow for a wide array of filters to be added with
 minimal effort. The first such filter is a &lt;strong>Status Code&lt;/strong> Filter. As responses come back from the scanned server, each one
@@ -83,7 +83,7 @@ code not included in &lt;code>--status-codes&lt;/code> will be filtered out.&lt;
 &lt;p>&lt;code>--filter-status&lt;/code>, on the other hand, now operates wholly on its own. If a value is given to &lt;code>--filter-status&lt;/code>,
 that status code will be filtered out, while all other status codes are allowed to proceed. This is a much
 truer version of a deny-list for status codes. It allows you to see &amp;lsquo;all other&amp;rsquo; status code responses.&lt;/p>
-&lt;p>&lt;img src="../filter-status-demo.gif" alt="filter-status-demo">&lt;/p></description></item><item><title>Docs: Pause a Scan</title><link>/feroxbuster-docs/docs/docs/examples/pause-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/pause-scan/</guid><description>
+&lt;p>&lt;img src="../filter-status-demo.gif" alt="filter-status-demo">&lt;/p></description></item><item><title>Docs: Pause a Scan</title><link>/feroxbuster-docs/docs/examples/pause-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/pause-scan/</guid><description>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
 &lt;p>&lt;a href="../cancel-scan/">v1.12.0&lt;/a> added an interactive menu to the pause/resume
@@ -92,7 +92,7 @@ functionality.&lt;/p>
 of simply seeing a spinner.&lt;/p>
 &lt;/div>
 &lt;h2 id="pause-an-active-scan">Pause an Active Scan&lt;/h2>
-&lt;p>Scans can be paused and resumed by pressing the &lt;code>ENTER&lt;/code> key (&lt;del>shown below&lt;/del>, please see &lt;a href="../cancel-scan/">v1.12.0&lt;/a>&amp;rsquo;s entry for the latest visual representation)&lt;/p></description></item><item><title>Docs: Replay Responses</title><link>/feroxbuster-docs/docs/docs/examples/replay-proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/replay-proxy/</guid><description>
+&lt;p>Scans can be paused and resumed by pressing the &lt;code>ENTER&lt;/code> key (&lt;del>shown below&lt;/del>, please see &lt;a href="../cancel-scan/">v1.12.0&lt;/a>&amp;rsquo;s entry for the latest visual representation)&lt;/p></description></item><item><title>Docs: Replay Responses</title><link>/feroxbuster-docs/docs/examples/replay-proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/replay-proxy/</guid><description>
 &lt;h2 id="replay-responses-to-a-proxy-based-on-status-code">Replay Responses to a Proxy based on Status Code&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>
@@ -105,7 +105,7 @@ This is in stark contrast to &lt;code>--proxy&lt;/code> which proxies EVERY requ
 &lt;p>Imagine you only care about proxying responses that have either the status code &lt;code>200&lt;/code> or &lt;code>302&lt;/code> (or you just don&amp;rsquo;t want
 to clutter up your Burp history). These two options will allow you to fine-tune what gets proxied and what doesn&amp;rsquo;t.&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --replay-proxy http://localhost:8080 --replay-codes 200 302 --insecure
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../replay-proxy-demo.gif" alt="replay-proxy-demo">&lt;/p></description></item><item><title>Docs: Filter by Word/Line Count</title><link>/feroxbuster-docs/docs/docs/examples/filter-word-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/filter-word-line/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../replay-proxy-demo.gif" alt="replay-proxy-demo">&lt;/p></description></item><item><title>Docs: Filter by Word/Line Count</title><link>/feroxbuster-docs/docs/examples/filter-word-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-word-line/</guid><description>
 &lt;h2 id="filter-response-by-word-count--line-count">Filter Response by Word Count &amp;amp; Line Count&lt;/h2>
 &lt;p>In addition to filtering on the size of a response, version 1.6.0 added the ability to filter out responses based on the
 number of lines and/or words contained within the response body. This change drove a change to the information displayed
@@ -125,7 +125,7 @@ provided.&lt;/p>
 &lt;li>&lt;strong># of lines&lt;/strong>: filtered with &lt;code>-N|--filter-lines&lt;/code>&lt;/li>
 &lt;li>&lt;strong># of words&lt;/strong>: filtered with &lt;code>-W|--filter-words&lt;/code>&lt;/li>
 &lt;li>&lt;strong># of chars (bytes)&lt;/strong>: filtered with &lt;code>-S|--filter-size&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Filter by Regex</title><link>/feroxbuster-docs/docs/docs/examples/filter-regex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/filter-regex/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Filter by Regex</title><link>/feroxbuster-docs/docs/examples/filter-regex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-regex/</guid><description>
 &lt;h2 id="filter-response-using-a-regular-expression">Filter Response Using a Regular Expression&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>
@@ -137,7 +137,7 @@ minimal effort. The latest addition is a Regular Expression Filter. As responses
 the &lt;strong>body&lt;/strong> of the response is checked against the filter&amp;rsquo;s regular expression. If the expression is found in the body,
 then that response is filtered out.&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-regex &amp;#39;[aA]ccess [dD]enied.?&amp;#39; --output results.txt --json
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Stop/Resume Scans</title><link>/feroxbuster-docs/docs/docs/examples/resume-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/resume-scan/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Stop/Resume Scans</title><link>/feroxbuster-docs/docs/examples/resume-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/resume-scan/</guid><description>
 &lt;h2 id="stop-and-resume-scans">Stop and Resume Scans&lt;/h2>
 &lt;p>Version 1.9.0 adds a few features that allow for completely stopping a scan, and resuming that same scan from a file on
 disk.&lt;/p>
@@ -204,7 +204,7 @@ your &lt;code>ferox-config.toml&lt;/code>.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-toml" data-lang="toml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># ferox-config.toml&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">save_state&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Enforce Time Limit</title><link>/feroxbuster-docs/docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/time-limit/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Enforce Time Limit</title><link>/feroxbuster-docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/time-limit/</guid><description>
 &lt;h2 id="enforce-a-time-limit-on-your-scan">Enforce a Time Limit on Your Scan&lt;/h2>
 &lt;p>Version 1.10.0 adds the ability to set a maximum runtime, or time limit, on your scan. The usage is pretty simple: a
 number followed directly by a single character representing seconds, minutes, hours, or days. &lt;code>feroxbuster&lt;/code> refers to
@@ -217,7 +217,7 @@ this combination as a time_spec.&lt;/p>
 &lt;li>&lt;code>1d&lt;/code> - 1 day (why??)&lt;/li>
 &lt;/ul>
 &lt;p>A valid time_spec can be passed to &lt;code>--time-limit&lt;/code> in order to force a shutdown after the given time has elapsed.&lt;/p>
-&lt;p>&lt;img src="../time-limit.gif" alt="time-limit">&lt;/p></description></item><item><title>Docs: Filter by Page Similarity</title><link>/feroxbuster-docs/docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/filter-similar/</guid><description>
+&lt;p>&lt;img src="../time-limit.gif" alt="time-limit">&lt;/p></description></item><item><title>Docs: Filter by Page Similarity</title><link>/feroxbuster-docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-similar/</guid><description>
 &lt;h2 id="filter-response-by-similarity-to-a-given-page">Filter Response by Similarity to A Given Page&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>
@@ -237,7 +237,7 @@ the response body using the &lt;a href="https://static.googleusercontent.com/med
 pages are hashed and compared to the original request&amp;rsquo;s hash. If the comparison of the two hashes meets a certain
 percentage of similarity (currently a hamming distance &amp;lt;= 3) then that request will be filtered out.&lt;/p>
 &lt;p>Simhash was selected as it does a good job of identifying near-duplicate pages while remaining performant. Other algorithms were tested but resulted in huge performance hits (orders of
-magnitude slower on requests/second).&lt;/p></description></item><item><title>Docs: Scan Management Menu</title><link>/feroxbuster-docs/docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/cancel-scan/</guid><description>
+magnitude slower on requests/second).&lt;/p></description></item><item><title>Docs: Scan Management Menu</title><link>/feroxbuster-docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cancel-scan/</guid><description>
 &lt;h2 id="add-or-cancel-a-recursive-scan-interactively">Add or Cancel a Recursive Scan Interactively&lt;/h2>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
@@ -298,7 +298,7 @@ works the same as though you had specified &lt;code>--filter-*&lt;/code> on the 
 menu, but the functionality has not changed for these two commands.&lt;/p>
 &lt;p>&lt;img src="../cancel-scan.gif" alt="cancel-scan">&lt;/p>
 &lt;p>Another short demo, this time showcasing the menu&amp;rsquo;s &lt;code>new-filter&lt;/code> and &lt;code>rm-filter&lt;/code> commands.&lt;/p>
-&lt;p>&lt;img src="../cancel-scan2.gif" alt="cancel-scan2">&lt;/p></description></item><item><title>Docs: Rate Limiting</title><link>/feroxbuster-docs/docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/rate-limit/</guid><description>
+&lt;p>&lt;img src="../cancel-scan2.gif" alt="cancel-scan2">&lt;/p></description></item><item><title>Docs: Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>
 &lt;h2 id="limit-number-of-requests-per-second">Limit Number of Requests per Second&lt;/h2>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note&lt;/h4>
@@ -312,7 +312,7 @@ Rate limiting is enforced on a &lt;strong>per-directory&lt;/strong> basis.
 limiting the number of requests per second overall)&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://localhost --rate-limit 100 --scan-limit 1
 &lt;/code>&lt;/pre>&lt;h2 id="demonstration">Demonstration&lt;/h2>
-&lt;p>&lt;img src="../rate-limit-demo.gif" alt="rate-limit">&lt;/p></description></item><item><title>Docs: Silent/Quiet Output</title><link>/feroxbuster-docs/docs/docs/examples/be-quiet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/be-quiet/</guid><description>
+&lt;p>&lt;img src="../rate-limit-demo.gif" alt="rate-limit">&lt;/p></description></item><item><title>Docs: Silent/Quiet Output</title><link>/feroxbuster-docs/docs/examples/be-quiet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/be-quiet/</guid><description>
 &lt;h2 id="silence-all-output-or-be-kinda-quiet">Silence all Output or Be Kinda Quiet&lt;/h2>
 &lt;p>Version 2.0.0 introduces &lt;code>--silent&lt;/code> which is almost equivalent to version 1.x.x&amp;rsquo;s &lt;code>--quiet&lt;/code>.&lt;/p>
 &lt;h3 id="--silent">&lt;code>--silent&lt;/code>&lt;/h3>
@@ -341,7 +341,7 @@ and new directories found that are suitable for recursion.&lt;/p>
 Scanning: https://localhost.com
 Scanning: https://localhost.com/homepage
 Scanning: https://localhost.com/api
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Auto-tune / Auto-bail</title><link>/feroxbuster-docs/docs/docs/examples/auto-tune/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/auto-tune/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Auto-tune / Auto-bail</title><link>/feroxbuster-docs/docs/examples/auto-tune/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/auto-tune/</guid><description>
 &lt;h2 id="auto-tune-or-auto-bail-from-scans">Auto-tune or Auto-bail from scans&lt;/h2>
 &lt;p>Version 2.1.0 introduces the &lt;code>--auto-tune&lt;/code> and &lt;code>--auto-bail&lt;/code> flags. You can think of these flags as Policies. Both actions (tuning and bailing) are triggered by the same criteria (below). Policies are only enforced after at least 50 requests have been made (or # of threads, if that&amp;rsquo;s &amp;gt; 50).&lt;/p>
 &lt;p>Policy Enforcement Criteria:&lt;/p>
@@ -358,7 +358,7 @@ Scanning: https://localhost.com/api
 &lt;p>&lt;img src="../auto-tune-demo.gif" alt="auto-tune">&lt;/p>
 &lt;h4 id="--auto-bail">--auto-bail&lt;/h4>
 &lt;p>The AutoBail policy aborts individual directory scans when one of the criteria above is met. They just stop getting scanned, no muss, no fuss.&lt;/p>
-&lt;p>&lt;img src="../auto-bail-demo.gif" alt="auto-bail">&lt;/p></description></item><item><title>Docs: Parallel Scans</title><link>/feroxbuster-docs/docs/docs/examples/parallel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/parallel-scan/</guid><description>
+&lt;p>&lt;img src="../auto-bail-demo.gif" alt="auto-bail">&lt;/p></description></item><item><title>Docs: Parallel Scans</title><link>/feroxbuster-docs/docs/examples/parallel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/parallel-scan/</guid><description>
 &lt;h2 id="run-scans-in-parallel">Run Scans in Parallel&lt;/h2>
 &lt;p>Version 2.2.0 introduces the &lt;code>--parallel&lt;/code> option. If you&amp;rsquo;re one of those people who use &lt;code>feroxbuster&lt;/code> to scan 100s of hosts at a time, this is the option for you! &lt;code>--parallel&lt;/code> spawns a child process per target passed in over stdin (recursive directories are still async within each child).&lt;/p>
 &lt;p>The number of parallel scans is limited to whatever you pass to &lt;code>--parallel&lt;/code>. When one child finishes its scan, the next child will be spawned.&lt;/p>
@@ -382,7 +382,7 @@ Scanning: https://localhost.com/api
 ├── ferox-https_target_one_com-1627865696.log
 ├── ...
 └── ferox-https_target_two_net-1627865696.log
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Deny List</title><link>/feroxbuster-docs/docs/docs/examples/deny-list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/deny-list/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Deny List</title><link>/feroxbuster-docs/docs/examples/deny-list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/deny-list/</guid><description>
 &lt;h2 id="prevent-specific-domaindirectory-scans">Prevent Specific Domain/Directory Scans&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>
@@ -431,7 +431,7 @@ like &lt;code>/.bower-cache/.bower-registry/.bower-cache/&lt;/code>&lt;/p>
 &lt;/code>&lt;/pre>&lt;p>Prevent multiple directories with a single regex&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/[jc]ss?&amp;#39;
 &lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://some.domain --dont-scan &amp;#39;/(js|css|images|img)&amp;#39;
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Random User-Agents</title><link>/feroxbuster-docs/docs/docs/examples/random-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/random-agent/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Random User-Agents</title><link>/feroxbuster-docs/docs/examples/random-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/random-agent/</guid><description>
 &lt;h2 id="randomize-user-agent-header">Randomize User-Agent Header&lt;/h2>
 &lt;p>Version 2.4.0 introduces the &lt;code>--random-agent&lt;/code> option. When used, &lt;code>--random-agent&lt;/code> selects a User-Agent value from one of the values below and
 includes it in that particular request.&lt;/p>
@@ -451,7 +451,7 @@ includes it in that particular request.&lt;/p>
 &lt;/ul>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item><item><title>Docs: Detect Directory Listing</title><link>/feroxbuster-docs/docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/detect-directory-listing/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item><item><title>Docs: Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>
 &lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
 &lt;p>Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code>feroxbuster&lt;/code> will either report, or report and scan, depending on whether or not &lt;code>--extract-links&lt;/code> was used.&lt;/p>
 &lt;h2 id="examples">Examples&lt;/h2>
@@ -462,7 +462,7 @@ includes it in that particular request.&lt;/p>
 &lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
 &lt;p>When &lt;code>--extract-links&lt;/code> is used, each link in the response is extracted and requested.&lt;/p>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --extract-links
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-with-tack-e.png" alt="dir-list-with-tack-e">&lt;/p></description></item><item><title>Docs: Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/http-method/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-with-tack-e.png" alt="dir-list-with-tack-e">&lt;/p></description></item><item><title>Docs: Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/http-method/</guid><description>
 &lt;h2 id="specify-http-request-method">Specify HTTP Request Method&lt;/h2>
 &lt;p>Version 2.5.0 introduces the ability to specify the HTTP request method sent in each request. Some additional info:&lt;/p>
 &lt;ul>
@@ -471,13 +471,13 @@ includes it in that particular request.&lt;/p>
 &lt;/ul>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -m POST GET dErP
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../http-method.gif" alt="http-method">&lt;/p></description></item><item><title>Docs: Specify Cookies</title><link>/feroxbuster-docs/docs/docs/examples/cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/cookies/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../http-method.gif" alt="http-method">&lt;/p></description></item><item><title>Docs: Specify Cookies</title><link>/feroxbuster-docs/docs/examples/cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cookies/</guid><description>
 &lt;h2 id="specify-cookies-directly">Specify Cookies Directly&lt;/h2>
 &lt;p>Version 2.5.0 gave http cookies their own flag, separate from &lt;code>-H, --headers&lt;/code>. The new &lt;code>-b, --cookies&lt;/code> is simply
 syntactic sugar around &lt;code>-H, --headers&lt;/code>.&lt;/p>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -b sessionId=38afes7a8
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../session-cookie.png" alt="session-cookie">&lt;/p></description></item><item><title>Docs: Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/dynamic-collections/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../session-cookie.png" alt="session-cookie">&lt;/p></description></item><item><title>Docs: Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>
 &lt;h2 id="dynamic-collection-settings">Dynamic Collection Settings&lt;/h2>
 &lt;p>Version 2.6.0 added a whole category of features named &lt;strong>Dynamic Collection Settings&lt;/strong>. The general premise of each
 feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p>
@@ -583,7 +583,7 @@ in-flight, but conceptually, the above is true.&lt;/p>
 &lt;li>&lt;code>/improved&lt;/code>&lt;/li>
 &lt;li>&lt;code>/parts&lt;/code>&lt;/li>
 &lt;li>&lt;code>/wednesday&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Forced Recursion</title><link>/feroxbuster-docs/docs/docs/examples/force_recursion/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/examples/force_recursion/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Forced Recursion</title><link>/feroxbuster-docs/docs/examples/force_recursion/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/force_recursion/</guid><description>
 &lt;h2 id="forced-recursion">Forced Recursion&lt;/h2>
 &lt;p>Version 2.7.0 added the ability to tell &lt;code>feroxbuster&lt;/code> to ignore its typical recursion logic in favor
 of recursing into any &amp;lsquo;found&amp;rsquo; asset. A &amp;lsquo;found&amp;rsquo; asset is an endpoint that was not filtered out by
@@ -602,30 +602,30 @@ http://localhost/assets/ =&amp;gt; http://localhost/assets
 &lt;p>When &lt;code>--force-recursion&lt;/code> is used, any &amp;lsquo;found&amp;rsquo; endpoint (i.e. one that isn&amp;rsquo;t filtered out) will be recursed into. Effectively, the logic laid out above is ignored.&lt;/p>
 &lt;p>A simple sniff test to see if you need &lt;code>--force-recursion&lt;/code> is to add &lt;code>--add-slash&lt;/code> to your scan and see if your target returns this style of redirect.&lt;/p>
 &lt;pre tabindex="0">&lt;code>http://localhost/assets/ =&amp;gt; http://localhost/assets
-&lt;/code>&lt;/pre></description></item><item><title>Docs: apt Install</title><link>/feroxbuster-docs/docs/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-apt/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: apt Install</title><link>/feroxbuster-docs/docs/installation/install-apt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-apt/</guid><description>
 &lt;h2 id="apt-install">apt Install&lt;/h2>
 &lt;p>Download &lt;code>feroxbuster_amd64.deb&lt;/code> from the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section. After
 that, use your favorite package manager to install the &lt;code>.deb&lt;/code>.&lt;/p>
 &lt;pre tabindex="0">&lt;code>curl -sLO https://github.com/epi052/feroxbuster/releases/latest/download/feroxbuster_amd64.deb.zip
 unzip feroxbuster_amd64.deb.zip
 sudo apt install ./feroxbuster_*_amd64.deb
-&lt;/code>&lt;/pre></description></item><item><title>Docs: AUR Install</title><link>/feroxbuster-docs/docs/docs/installation/install-aur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-aur/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: AUR Install</title><link>/feroxbuster-docs/docs/installation/install-aur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-aur/</guid><description>
 &lt;h2 id="aur-install">AUR Install&lt;/h2>
 &lt;p>Install &lt;code>feroxbuster-git&lt;/code> on Arch Linux with your AUR helper of choice:&lt;/p>
 &lt;pre tabindex="0">&lt;code>yay -S feroxbuster-git
-&lt;/code>&lt;/pre></description></item><item><title>Docs: BlackArch Install</title><link>/feroxbuster-docs/docs/docs/installation/install-blackarch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-blackarch/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: BlackArch Install</title><link>/feroxbuster-docs/docs/installation/install-blackarch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-blackarch/</guid><description>
 &lt;h2 id="blackarch-install">BlackArch install&lt;/h2>
 &lt;p>Install &lt;code>feroxbuster&lt;/code> on BlackArch Linux:&lt;/p>
 &lt;pre tabindex="0">&lt;code>pacman -S feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Build from Source</title><link>/feroxbuster-docs/docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-cargo/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Build from Source</title><link>/feroxbuster-docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-cargo/</guid><description>
 &lt;h2 id="cargo-install">Cargo Install&lt;/h2>
 &lt;p>&lt;code>feroxbuster&lt;/code> is published on crates.io, making it easy to install if you already have rust installed on your system.&lt;/p>
 &lt;pre tabindex="0">&lt;code>cargo install feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Chocolatey Install</title><link>/feroxbuster-docs/docs/docs/installation/install-choco/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-choco/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Chocolatey Install</title><link>/feroxbuster-docs/docs/installation/install-choco/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-choco/</guid><description>
 &lt;h2 id="chocolatey-install">Chocolatey Install&lt;/h2>
 &lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the Chocolatey community repos 🥳&lt;/p>
 &lt;pre tabindex="0">&lt;code>choco install feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Command Line Interface</title><link>/feroxbuster-docs/docs/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/configuration/command-line/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Command Line Interface</title><link>/feroxbuster-docs/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/command-line/</guid><description>
 &lt;h3 id="command-line-parsing">Command Line Parsing&lt;/h3>
 &lt;p>Finally, after parsing the available config file, any options/arguments given on the commandline will override any
 values that were set as a built-in or config-file value.&lt;/p>
@@ -760,7 +760,7 @@ Output file to write results to (use w/ --json for JSON entries)
 Output file to write log entries (use w/ --json for JSON entries)
 --no-state
 Disable state output file (*.state)
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Configuration File</title><link>/feroxbuster-docs/docs/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/configuration/ferox-config-toml/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Configuration File</title><link>/feroxbuster-docs/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/ferox-config-toml/</guid><description>
 &lt;h2 id="ferox-configtoml">ferox-config.toml&lt;/h2>
 &lt;p>After built-in default values are set, any values defined in a &lt;code>ferox-config.toml&lt;/code> config file will override the
 built-in defaults.&lt;/p>
@@ -856,7 +856,7 @@ the &lt;code>wordlist&lt;/code> value in the config file to override the baked-i
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># [headers]&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># stuff = &amp;#34;things&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># more = &amp;#34;headers&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Connection closed before message completed</title><link>/feroxbuster-docs/docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/faq/connection-closed/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Connection closed before message completed</title><link>/feroxbuster-docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/connection-closed/</guid><description>
 &lt;h3 id="connection-closed-before-message-completed">Connection closed before message completed&lt;/h3>
 &lt;p>The error in question can be boiled down to &amp;rsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
 uses &lt;a href="https://docs.rs/reqwest/latest/">reqwest&lt;/a> which uses &lt;a href="https://docs.rs/hyper/latest/hyper/">hyper&lt;/a> to make requests
@@ -870,7 +870,7 @@ to accomplish per-target tuning.&lt;/p>
 &lt;blockquote>
 &lt;p>This is just due to the racy nature of networking.&lt;/p>
 &lt;p>hyper has a connection pool of idle connections, and it selected one to send your request. Most of the time, hyper will receive the server&amp;rsquo;s FIN and drop the dead connection from its pool. But occasionally, a connection will be selected from the pool and written to at the same time the server is deciding to close the connection. Since hyper already wrote some of the request, it can&amp;rsquo;t really retry it automatically on a new connection, since the server may have acted already.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs: Default Values</title><link>/feroxbuster-docs/docs/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/configuration/default-values/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs: Default Values</title><link>/feroxbuster-docs/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/default-values/</guid><description>
 &lt;h2 id="default-values">Default Values&lt;/h2>
 &lt;p>Configuration begins with the following built-in default values baked into the binary:&lt;/p>
 &lt;ul>
@@ -887,7 +887,7 @@ to accomplish per-target tuning.&lt;/p>
 &lt;li>auto-filter wildcards - &lt;code>true&lt;/code>&lt;/li>
 &lt;li>output: &lt;code>stdout&lt;/code>&lt;/li>
 &lt;li>save_state: &lt;code>true&lt;/code> (create a state file in cwd when &lt;code>Ctrl+C&lt;/code> is received)&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Docker Install</title><link>/feroxbuster-docs/docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-docker/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Docker Install</title><link>/feroxbuster-docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-docker/</guid><description>
 &lt;h2 id="docker-install">Docker Install&lt;/h2>
 &lt;blockquote>
 &lt;p>The following steps assume you have docker installed / setup&lt;/p>
@@ -908,7 +908,7 @@ examples:&lt;/p>
 &lt;pre tabindex="0">&lt;code>docker run --init -v (pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml:Z -it epi052/feroxbuster -u http://example.com
 &lt;/code>&lt;/pre>&lt;h2 id="define-an-alias-for-simplicity">Define an alias for simplicity&lt;/h2>
 &lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;#34;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;#34;
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Download a Release</title><link>/feroxbuster-docs/docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-release/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>
 &lt;h2 id="download-a-release">Download a Release&lt;/h2>
 &lt;p>Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p>
 &lt;h2 id="linux-32-and-64-bit--macos">Linux (32 and 64-bit) &amp;amp; MacOS&lt;/h2>
@@ -922,7 +922,7 @@ Expand-Archive .\feroxbuster.zip
 Expand-Archive .\feroxbuster.zip
 .\feroxbuster\feroxbuster.exe -V
 &lt;/code>&lt;/pre>&lt;h2 id="all-other-releases">All other releases&lt;/h2>
-&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Docs: Homebrew Install</title><link>/feroxbuster-docs/docs/docs/installation/install-homebrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-homebrew/</guid><description>
+&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Docs: Homebrew Install</title><link>/feroxbuster-docs/docs/installation/install-homebrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-homebrew/</guid><description>
 &lt;h2 id="homebrew-on-macos">Homebrew on MacOS&lt;/h2>
 &lt;p>Install using Homebrew&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew install feroxbuster
@@ -930,12 +930,12 @@ Expand-Archive .\feroxbuster.zip
 &lt;p>🐧 &lt;a href="https://github.com/TGotwig/homebrew-linux-feroxbuster/blob/main/feroxbuster.rb">Linux tap&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>brew tap tgotwig/linux-feroxbuster
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>brew install feroxbuster
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/feroxbuster-docs/docs/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-kali/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Kali Install</title><link>/feroxbuster-docs/docs/installation/install-kali/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-kali/</guid><description>
 &lt;h2 id="kali-install">Kali Install&lt;/h2>
 &lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the official Kali Linux repos 🥳&lt;/p>
 &lt;p>If you&amp;rsquo;re using kali, this is the preferred install method. Installing from the repos adds a &lt;a href="../..//configuration/ferox-config-toml/">&lt;strong>ferox-config.toml&lt;/strong>&lt;/a> in &lt;code>/etc/feroxbuster/&lt;/code>, adds command completion for bash, fish, and zsh, includes a man page entry, and installs &lt;code>feroxbuster&lt;/code> itself.&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo apt update &amp;amp;&amp;amp; sudo apt install -y feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: No file descriptors available</title><link>/feroxbuster-docs/docs/docs/faq/no-file-descriptors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/faq/no-file-descriptors/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: No file descriptors available</title><link>/feroxbuster-docs/docs/faq/no-file-descriptors/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/no-file-descriptors/</guid><description>
 &lt;h2 id="no-file-descriptors-available">No file descriptors available&lt;/h2>
 &lt;p>Why do I get a bunch of &lt;code>No file descriptors available (os error 24)&lt;/code> errors?&lt;/p>
 &lt;hr>
@@ -987,13 +987,13 @@ sudo sysctl net.ipv4.tcp_fin_timeout=30
 post &lt;a href="https://vincent.bernat.ch/en/blog/2014-tcp-time-wait-state-linux">Coping with the TCP TIME-WAIT&lt;/a> from Vincent
 Bernat to understand the implications.&lt;/p>
 &lt;pre tabindex="0">&lt;code>sudo sysctl net.ipv4.tcp_tw_reuse=1
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Progress bars print one line at a time</title><link>/feroxbuster-docs/docs/docs/faq/progress-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/faq/progress-bars/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Progress bars print one line at a time</title><link>/feroxbuster-docs/docs/faq/progress-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/progress-bars/</guid><description>
 &lt;h2 id="progress-bars-print-one-line-at-a-time">Progress bars print one line at a time&lt;/h2>
 &lt;p>&lt;code>feroxbuster&lt;/code> needs a terminal width of at least the size of what&amp;rsquo;s being printed in order to do progress bar printing
 correctly. If your width is too small, you may see output like what&amp;rsquo;s shown below.&lt;/p>
 &lt;p>&lt;img src="../small-term.png" alt="small-term">&lt;/p>
 &lt;p>If you can, simply make the terminal wider and rerun. If you&amp;rsquo;re unable to make your terminal wider consider using &lt;code>-q&lt;/code>
-to suppress the progress bars.&lt;/p></description></item><item><title>: Search Results</title><link>/feroxbuster-docs/docs/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/search/</guid><description/></item><item><title>Docs: Snap Install</title><link>/feroxbuster-docs/docs/docs/installation/install-snap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/installation/install-snap/</guid><description>
+to suppress the progress bars.&lt;/p></description></item><item><title>: Search Results</title><link>/feroxbuster-docs/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/search/</guid><description/></item><item><title>Docs: Snap Install</title><link>/feroxbuster-docs/docs/installation/install-snap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-snap/</guid><description>
 &lt;h2 id="install-using-snap">Install using &lt;code>snap&lt;/code>&lt;/h2>
 &lt;pre tabindex="0">&lt;code>sudo snap install feroxbuster
 &lt;/code>&lt;/pre>&lt;h2 id="gotchas">Gotchas&lt;/h2>
@@ -1005,14 +1005,14 @@ possible solutions, of which two are shown below.&lt;/p>
 &lt;/code>&lt;/pre>&lt;p>If the wordlist is on a separate partition, hard-linking won&amp;rsquo;t work. You&amp;rsquo;ll need to copy it into the snap directory.&lt;/p>
 &lt;pre tabindex="0">&lt;code>cp /path/to/the/wordlist ~/snap/feroxbuster/common
 ./feroxbuster -u http://localhost -w ~/snap/feroxbuster/common/wordlist
-&lt;/code>&lt;/pre></description></item><item><title>Docs: SSL Error ... verify failed</title><link>/feroxbuster-docs/docs/docs/faq/self-signed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/faq/self-signed/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: SSL Error ... verify failed</title><link>/feroxbuster-docs/docs/faq/self-signed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/self-signed/</guid><description>
 &lt;h2 id="ssl-error-routinestls_process_server_certificatecertificate-verify-failed">SSL Error routines:tls_process_server_certificate:certificate verify failed&lt;/h2>
 &lt;p>In the event you see an error similar to&lt;/p>
 &lt;p>&lt;img src="../insecure.png" alt="self-signed">&lt;/p>
 &lt;pre tabindex="0">&lt;code>error trying to connect: error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed:ssl/statem/statem_clnt.c:1913: (self signed certificate)
 &lt;/code>&lt;/pre>&lt;p>You just need to add the &lt;code>-k|--insecure&lt;/code> flag to your command.&lt;/p>
 &lt;p>&lt;code>feroxbuster&lt;/code> rejects self-signed certs and other &amp;ldquo;insecure&amp;rdquo; certificates/site configurations by default. You can choose
-to scan these services anyway by telling &lt;code>feroxbuster&lt;/code> to ignore insecure server certs.&lt;/p></description></item><item><title>Docs: Threads and Connection Limits</title><link>/feroxbuster-docs/docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/configuration/limit-connections/</guid><description>
+to scan these services anyway by telling &lt;code>feroxbuster&lt;/code> to ignore insecure server certs.&lt;/p></description></item><item><title>Docs: Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>
 &lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
 &lt;p>This section explains how the &lt;code>-t&lt;/code> and &lt;code>-L&lt;/code> options work together to determine the overall aggressiveness of a scan. The
 combination of the two values set by these options determines how hard your target will get hit and to some extent also

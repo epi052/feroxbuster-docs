@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– interface</title><link>/feroxbuster-docs/docs/tags/interface/</link><description>Recent content in interface on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/docs/tags/interface/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 📊 Interpreting Results</title><link>/feroxbuster-docs/docs/docs/interpreting-results/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/interpreting-results/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– interface</title><link>/feroxbuster-docs/tags/interface/</link><description>Recent content in interface on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/interface/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: 📊 Interpreting Results</title><link>/feroxbuster-docs/docs/interpreting-results/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/interpreting-results/</guid><description>
 &lt;p>&lt;code>feroxbuster&lt;/code> attempts to be intuitive and easy to understand, however, if you are wondering about any of the scan&amp;rsquo;s
 output and what it means, this is the section for you!&lt;/p>
 &lt;h3 id="discovered-resource">Discovered Resource&lt;/h3>
@@ -10,7 +10,7 @@ output and what it means, this is the section for you!&lt;/p>
 &lt;p>&lt;img src="total-bar-explained.png" alt="total-bar-explained">&lt;/p>
 &lt;h3 id="directory-scan-progress-bar">Directory Scan Progress Bar&lt;/h3>
 &lt;p>All other progress bars, colored cyan, represent a scan of one particular directory and will look similar to what&amp;rsquo;s below.&lt;/p>
-&lt;p>&lt;img src="dir-scan-bar-explained.png" alt="dir-scan-bar-explained">&lt;/p></description></item><item><title>Docs: Command Line Interface</title><link>/feroxbuster-docs/docs/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/configuration/command-line/</guid><description>
+&lt;p>&lt;img src="dir-scan-bar-explained.png" alt="dir-scan-bar-explained">&lt;/p></description></item><item><title>Docs: Command Line Interface</title><link>/feroxbuster-docs/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/command-line/</guid><description>
 &lt;h3 id="command-line-parsing">Command Line Parsing&lt;/h3>
 &lt;p>Finally, after parsing the available config file, any options/arguments given on the commandline will override any
 values that were set as a built-in or config-file value.&lt;/p>
@@ -145,7 +145,7 @@ Output file to write results to (use w/ --json for JSON entries)
 Output file to write log entries (use w/ --json for JSON entries)
 --no-state
 Disable state output file (*.state)
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Progress bars print one line at a time</title><link>/feroxbuster-docs/docs/docs/faq/progress-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/docs/faq/progress-bars/</guid><description>
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Progress bars print one line at a time</title><link>/feroxbuster-docs/docs/faq/progress-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/progress-bars/</guid><description>
 &lt;h2 id="progress-bars-print-one-line-at-a-time">Progress bars print one line at a time&lt;/h2>
 &lt;p>&lt;code>feroxbuster&lt;/code> needs a terminal width of at least the size of what&amp;rsquo;s being printed in order to do progress bar printing
 correctly. If your width is too small, you may see output like what&amp;rsquo;s shown below.&lt;/p>
