@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– feature</title><link>/feroxbuster-docs/tags/feature/</link><description>Recent content in feature on</description><generator>Hugo -- gohugo.io</generator><atom:link href="/feroxbuster-docs/tags/feature/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Core Features</title><link>/feroxbuster-docs/docs/examples/core-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/core-features/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– feature</title><link>/feroxbuster-docs/tags/feature/</link><description>Recent content in feature on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/feature/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Core Features</title><link>/feroxbuster-docs/docs/examples/core-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/core-features/</guid><description>
 &lt;h3 id="multiple-values">Multiple Values&lt;/h3>
 &lt;p>Options that take multiple values are very flexible. Consider the following ways of specifying extensions:&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -x pdf -x js,html -x php txt json,docx
@@ -462,7 +462,31 @@ includes it in that particular request.&lt;/p>
 &lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
 &lt;p>When &lt;code>--extract-links&lt;/code> is used, each link in the response is extracted and requested.&lt;/p>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --extract-links
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-with-tack-e.png" alt="dir-list-with-tack-e">&lt;/p></description></item><item><title>Docs: Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/http-method/</guid><description>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-with-tack-e.png" alt="dir-list-with-tack-e">&lt;/p></description></item><item><title>Docs: Server and Client Certificate Management</title><link>/feroxbuster-docs/docs/examples/certificate-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/certificate-management/</guid><description>
+&lt;h1 id="server-and-client-certificate-management">Server and Client Certificate Management&lt;/h1>
+&lt;p>Version 2.10.0 introduces three flags:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>--server-certs&lt;/code>&lt;/li>
+&lt;li>&lt;code>--client-cert&lt;/code>&lt;/li>
+&lt;li>&lt;code>--client-key&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h1 id="when-to-use-certificate-management">When to use Certificate Management&lt;/h1>
+&lt;p>When a server requires mutual transport layer security (mTLS) authentication,
+the client upon verification of the server certificate, is required to send its
+own certificate to the server. The server subsequently checks its list of trusted
+CAs and verifies the client&amp;rsquo;s certificate.&lt;/p>
+&lt;p>In such a situation, the &lt;code>--client-key&lt;/code> flag needs to be supplied a &lt;code>.pem&lt;/code> file
+which has the PKCS #8 PEM encoded private key and the &lt;code>--client-cert&lt;/code> flag must
+be supplied a PEM encoded certificate for the client. Additional root CA
+certificates may need to be supplied through &lt;code>--server-certs&lt;/code> as a &lt;code>.pem&lt;/code> or &lt;code>.der&lt;/code> file
+if the server uses a self-signed certificate.&lt;/p>
+&lt;p>For example, if the server uses a root certificate called &lt;code>ca-crt.pem&lt;/code> and the client
+is issued a certificate &lt;code>client-crt.pem&lt;/code>and a key file &lt;code>client-key.pem&lt;/code>, we will run:&lt;/p>
+&lt;pre tabindex="0">&lt;code>feroxbuster --url https://localhost \
+--client-key client-key.pem \
+--client-cert client-crt.pem \
+--server-certs ca-crt.pem
+&lt;/code>&lt;/pre></description></item><item><title>Docs: Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/http-method/</guid><description>
 &lt;h2 id="specify-http-request-method">Specify HTTP Request Method&lt;/h2>
 &lt;p>Version 2.5.0 introduces the ability to specify the HTTP request method sent in each request. Some additional info:&lt;/p>
 &lt;ul>
