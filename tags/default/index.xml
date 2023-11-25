@@ -15,4 +15,5 @@
 &lt;li>auto-filter wildcards - &lt;code>true&lt;/code>&lt;/li>
 &lt;li>output: &lt;code>stdout&lt;/code>&lt;/li>
 &lt;li>save_state: &lt;code>true&lt;/code> (create a state file in cwd when &lt;code>Ctrl+C&lt;/code> is received)&lt;/li>
+&lt;li>backup_extensions: &lt;code>[&amp;quot;~&amp;quot;, &amp;quot;.bak&amp;quot;, &amp;quot;.bak2&amp;quot;, &amp;quot;.old&amp;quot;, &amp;quot;.1&amp;quot;]&lt;/code>&lt;/li>
 &lt;/ul></description></item></channel></rss>

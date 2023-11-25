@@ -3,8 +3,7 @@
 &lt;p>Version 2.6.0 added a whole category of features named &lt;strong>Dynamic Collection Settings&lt;/strong>. The general premise of each
 feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p>
 &lt;h2 id="collect-backups">Collect Backups&lt;/h2>
-&lt;p>Using &lt;code>--collect-backups&lt;/code> means that for every file found during a scan, &lt;code>feroxbuster&lt;/code> sends additional queries for the
-following extensions:&lt;/p>
+&lt;p>Using &lt;code>--collect-backups&lt;/code> means that for every file found during a scan, &lt;code>feroxbuster&lt;/code> sends additional queries for the following default extensions:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>~&lt;/code>&lt;/li>
 &lt;li>&lt;code>.bak&lt;/code>&lt;/li>
@@ -14,7 +13,9 @@ following extensions:&lt;/p>
 &lt;li>&lt;code>.swp&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;p>Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em>found&lt;/em>.&lt;/p>
-&lt;h2 id="collect-extensions">Collect Extensions&lt;/h2>
+&lt;p>Version 2.10.2 added the ability to specify a custom list of extensions to query:&lt;/p>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-backups .bak .save .save~
+&lt;/code>&lt;/pre>&lt;h2 id="collect-extensions">Collect Extensions&lt;/h2>
 &lt;p>Using &lt;code>--collect-extensions&lt;/code> means that any found url that has an extension will be added as an extension to try for
 all future requests.&lt;/p>
 &lt;p>There is a (large) &lt;a href="https://github.com/epi052/feroxbuster/blob/main/src/lib.rs#L60">default list&lt;/a> of extensions that
@@ -27,6 +28,7 @@ to the wordlist to be requested.&lt;/p>
 of parsed html.&lt;/p>
 &lt;h2 id="examples">Examples&lt;/h2>
 &lt;h3 id="collect-backups-1">Collect Backups&lt;/h3>
+&lt;h4 id="default-extensions">Default extensions&lt;/h4>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-backups
 &lt;/code>&lt;/pre>&lt;p>Assuming a found file of:&lt;/p>
 &lt;p>&lt;code>200 GET 127l 292w 4161c https://some-example-site.com/index.php&lt;/code>&lt;/p>
@@ -37,6 +39,17 @@ of parsed html.&lt;/p>
 &lt;li>&lt;code>index.php.bak2&lt;/code>&lt;/li>
 &lt;li>&lt;code>index.php.old&lt;/code>&lt;/li>
 &lt;li>&lt;code>index.php.1&lt;/code>&lt;/li>
+&lt;li>&lt;code>index.bak&lt;/code> - (replace original extension)&lt;/li>
+&lt;li>&lt;code>.index.php.swp&lt;/code> - (vim swap, prefix &lt;code>.&lt;/code> and append &lt;code>.swp&lt;/code>)&lt;/li>
+&lt;/ul>
+&lt;h4 id="custom-extension-list">Custom extension list&lt;/h4>
+&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-backups .save .save~
+&lt;/code>&lt;/pre>&lt;p>Assuming a found file of:&lt;/p>
+&lt;p>&lt;code>200 GET 127l 292w 4161c https://some-example-site.com/index.php&lt;/code>&lt;/p>
+&lt;p>The following &lt;strong>additional&lt;/strong> requests are made to &lt;code>some-example-site.com&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>index.php.save&lt;/code> (append extension)&lt;/li>
+&lt;li>&lt;code>index.php.save~&lt;/code>&lt;/li>
 &lt;li>&lt;code>index.bak&lt;/code> - (replace original extension)&lt;/li>
 &lt;li>&lt;code>.index.php.swp&lt;/code> - (vim swap, prefix &lt;code>.&lt;/code> and append &lt;code>.swp&lt;/code>)&lt;/li>
 &lt;/ul>
