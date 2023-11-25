@@ -14,8 +14,7 @@ feature is that additional requests are made based on the target site's observed
 
 ## Collect Backups
 
-Using `--collect-backups` means that for every file found during a scan, `feroxbuster` sends additional queries for the 
-following extensions:
+Using `--collect-backups` means that for every file found during a scan, `feroxbuster` sends additional queries for the following default extensions:
 
 - `~`
 - `.bak`
@@ -25,6 +24,12 @@ following extensions:
 - `.swp`
 
 Any url that wasn't filtered out via status code, size, similarity, etc... is considered _found_.
+
+Version 2.10.2 added the ability to specify a custom list of extensions to query:
+
+```
+feroxbuster -u https://some-example-site.com --collect-backups .bak .save .save~
+```
 
 ## Collect Extensions
 
@@ -47,6 +52,8 @@ of parsed html.
 
 ### Collect Backups
 
+#### Default extensions
+
 ```
 feroxbuster -u https://some-example-site.com --collect-backups
 ```
@@ -61,6 +68,23 @@ The following **additional** requests are made to `some-example-site.com`:
 - `index.php.bak2`
 - `index.php.old`
 - `index.php.1`
+- `index.bak` - (replace original extension)
+- `.index.php.swp` - (vim swap, prefix `.` and append `.swp`)
+
+
+#### Custom extension list
+
+```
+feroxbuster -u https://some-example-site.com --collect-backups .save .save~
+```
+
+Assuming a found file of:
+
+`200      GET      127l      292w     4161c https://some-example-site.com/index.php`
+
+The following **additional** requests are made to `some-example-site.com`:
+- `index.php.save` (append extension)
+- `index.php.save~`
 - `index.bak` - (replace original extension)
 - `.index.php.swp` - (vim swap, prefix `.` and append `.swp`)
 
