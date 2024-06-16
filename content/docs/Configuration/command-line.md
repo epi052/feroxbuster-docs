@@ -92,7 +92,7 @@ Response filters:
           Filter out messages of a particular size (ex: -S 5120 -S 4927,1970)
 
   -X, --filter-regex <REGEX>...
-          Filter out messages via regular expression matching on the response's body (ex: -X '^ignore me$')
+          Filter out messages via regular expression matching on the response's body/headers (ex: -X '^ignore me$')
 
   -W, --filter-words <WORDS>...
           Filter out messages of a particular word count (ex: -W 312 -W 91,82)
