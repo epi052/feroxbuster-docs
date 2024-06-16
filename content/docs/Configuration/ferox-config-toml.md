@@ -106,6 +106,7 @@ A pre-made configuration file with examples of all available settings can be fou
 #   note: if multi-line is used, all key/value pairs under it belong to the headers table until the next table
 #         is found or the end of the file is reached
 #
+# If you want to use [headers], UNCOMMENT the line below
 # [headers]
 # stuff = "things"
 # more = "headers"
