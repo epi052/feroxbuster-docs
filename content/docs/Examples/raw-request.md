@@ -5,6 +5,7 @@ categories: ["examples"]
 tags: ["feature", "raw", "config", "protocol", "request-file"]
 description: >
   Added in version **2.11.0**
+---
 
 ## Configure a scan from a raw request (e.g. burp or similar)
 
