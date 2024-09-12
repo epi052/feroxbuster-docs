@@ -25,3 +25,4 @@ Configuration begins with the following built-in default values baked into the b
 - output: `stdout`
 - save_state: `true` (create a state file in cwd when `Ctrl+C` is received)
 - backup_extensions: `["~", ".bak", ".bak2", ".old", ".1"]`
+- protocol: `https`

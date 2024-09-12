@@ -24,13 +24,16 @@ Options:
 
 Target selection:
   -u, --url <URL>
-          The target URL (required, unless [--stdin || --resume-from] used)
+          The target URL (required, unless [--stdin || --resume-from || --request-file] used)
 
       --stdin
           Read url(s) from STDIN
 
       --resume-from <STATE_FILE>
           State file from which to resume a partially complete scan (ex. --resume-from ferox-1606586780.state)
+
+      --request-file <REQUEST_FILE>
+          Raw HTTP request file to use as a template for all requests
 
 Composite settings:
       --burp
@@ -43,7 +46,7 @@ Composite settings:
           Set --auto-tune, --collect-words, and --collect-backups to true
 
       --thorough
-          Use the same settings as --smart and set --collect-extensions to true
+          Use the same settings as --smart and set --collect-extensions and --scan-dir-listings to true
 
 Proxy settings:
   -p, --proxy <PROXY>
@@ -57,13 +60,14 @@ Proxy settings:
 
 Request settings:
   -a, --user-agent <USER_AGENT>
-          Sets the User-Agent (default: feroxbuster/2.10.2)
+          Sets the User-Agent (default: feroxbuster/2.11.0)
 
   -A, --random-agent
           Use a random User-Agent
 
   -x, --extensions <FILE_EXTENSION>...
-          File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input starts with an @ (ex: @ext.txt)
+          File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input starts
+          with an @ (ex: @ext.txt)
 
   -m, --methods <HTTP_METHODS>...
           Which HTTP request method(s) should be sent (default: GET)
@@ -82,6 +86,9 @@ Request settings:
 
   -f, --add-slash
           Append / to each request's URL
+
+      --protocol <PROTOCOL>
+          Specify the protocol to use when targeting via --request-file or --url with domain only (default: https)
 
 Request filters:
       --dont-scan <URL>...
@@ -168,6 +175,9 @@ Scan settings:
   -D, --dont-filter
           Don't auto-filter wildcard responses
 
+      --scan-dir-listings
+          Force scans to recurse into directory listings
+
 Dynamic collection settings:
   -E, --collect-extensions
           Automatically discover extensions and add them to --extensions (unless they're in --dont-collect)
@@ -202,6 +212,9 @@ Output settings:
 
       --no-state
           Disable state output file (*.state)
+
+      --limit-bars <NUM_BARS_TO_SHOW>
+          Number of directory scan bars to show at any given time (default: no limit)
 
 Update settings:
   -U, --update
@@ -250,4 +263,5 @@ EXAMPLES:
         ./feroxbuster -u http://127.1 --auto-tune
         
     Examples and demonstrations of all features
-        https://epi052.github.io/feroxbuster-docs/docs/examples/```
+        https://epi052.github.io/feroxbuster-docs/docs/examples/
+```
