@@ -75,6 +75,7 @@ anchor = "smart"
 
 [languages]
 [languages.en]
+[languages.en.params]
 title = ""
 description = "A fast, simple, recursive content discovery tool written in Rust."
 #languageName ="English"
