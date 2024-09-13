@@ -137,13 +137,13 @@ github_branch = "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
 #gcs_engine_id = "d72aa9b2712488cc3"
+algolia_docsearch = true
 
 # Enable Algolia DocSearch
 [params.search]
 [params.search.algolia]
 docsearch = true
 
-algolia_docsearch = true
 
 # Enable Lunr.js offline search
 offlineSearch = false
