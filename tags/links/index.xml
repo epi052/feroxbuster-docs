@@ -1,5 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– links</title><link>/feroxbuster-docs/tags/links/</link><description>Recent content in links on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/links/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>
-&lt;h2 id="extract-links-from-response-body">Extract Links from Response Body&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Links on feroxbuster</title><link>/feroxbuster-docs/tags/links/</link><description>Recent content in Links on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/links/index.xml" rel="self" type="application/rss+xml"/><item><title>Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>&lt;h2 id="extract-links-from-response-body">Extract Links from Response Body&lt;/h2>
 &lt;p>Search through the body of valid responses (html, javascript, etc&amp;hellip;) for additional endpoints to scan. This turns
 &lt;code>feroxbuster&lt;/code> into a hybrid that looks for both linked and unlinked content.&lt;/p>
 &lt;p>Example request/response with &lt;code>--extract-links&lt;/code> enabled:&lt;/p>
@@ -20,16 +19,4 @@
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --extract-links
 &lt;/code>&lt;/pre>&lt;h2 id="comparison">Comparison&lt;/h2>
 &lt;p>Here&amp;rsquo;s a comparison of a wordlist-only scan vs &lt;code>--extract-links&lt;/code>
-using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274">Feline&lt;/a> from Hack the Box:&lt;/p>
-&lt;h3 id="wordlist-only">Wordlist only&lt;/h3>
-&lt;p>&lt;img src="../normal-scan-cmp-extract.gif" alt="normal-scan-cmp-extract">&lt;/p>
-&lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
-&lt;p>&lt;img src="../extract-scan-cmp-normal.gif" alt="extract-scan-cmp-normal">&lt;/p>
-&lt;h2 id="extract-from-robotstxt-v1102">Extract from robots.txt (&lt;code>v1.10.2&lt;/code>)&lt;/h2>
-&lt;p>In addition to &lt;a href="#extract-links-from-response-body">extracting links from the response body&lt;/a>, using
-&lt;code>--extract-links&lt;/code> makes a request to &lt;code>/robots.txt&lt;/code> and examines all &lt;code>Allow&lt;/code> and &lt;code>Disallow&lt;/code> entries. Directory entries
-are added to the scan queue, while file entries are requested and then reported if appropriate.&lt;/p>
-&lt;h2 id="using-extract-links-for-web-crawling">Using Extract Links for Web Crawling&lt;/h2>
-&lt;p>By supplying a single line word list containing only the root path &lt;code>feroxbuster&lt;/code> can also be used to simulate web
-crawling behavior. This appears to give results comparable to &lt;a href="https://github.com/hakluke/hakrawler">hakrawlwer&lt;/a>
-although &lt;code>feroxbuster&lt;/code> is not quite as fast.&lt;/p></description></item></channel></rss>
+using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274">Feline&lt;/a> from Hack the Box:&lt;/p></description></item></channel></rss>

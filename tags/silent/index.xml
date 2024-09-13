@@ -1,5 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– silent</title><link>/feroxbuster-docs/tags/silent/</link><description>Recent content in silent on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/silent/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Silent/Quiet Output</title><link>/feroxbuster-docs/docs/examples/be-quiet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/be-quiet/</guid><description>
-&lt;h2 id="silence-all-output-or-be-kinda-quiet">Silence all Output or Be Kinda Quiet&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Silent on feroxbuster</title><link>/feroxbuster-docs/tags/silent/</link><description>Recent content in Silent on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/silent/index.xml" rel="self" type="application/rss+xml"/><item><title>Silent/Quiet Output</title><link>/feroxbuster-docs/docs/examples/be-quiet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/be-quiet/</guid><description>&lt;h2 id="silence-all-output-or-be-kinda-quiet">Silence all Output or Be Kinda Quiet&lt;/h2>
 &lt;p>Version 2.0.0 introduces &lt;code>--silent&lt;/code> which is almost equivalent to version 1.x.x&amp;rsquo;s &lt;code>--quiet&lt;/code>.&lt;/p>
 &lt;h3 id="--silent">&lt;code>--silent&lt;/code>&lt;/h3>
 &lt;p>Good for piping a list of urls to other commands:&lt;/p>
@@ -14,17 +13,4 @@ https://localhost.com/about
 https://localhost.com/terms
 &lt;/code>&lt;/pre>&lt;h3 id="--quiet">&lt;code>--quiet&lt;/code>&lt;/h3>
 &lt;p>Good for tmux windows that have notifications enabled as the only updates shown by the scan are new valid responses
-and new directories found that are suitable for recursion.&lt;/p>
-&lt;ul>
-&lt;li>hide progress bars&lt;/li>
-&lt;li>don&amp;rsquo;t print banner&lt;/li>
-&lt;/ul>
-&lt;h4 id="example-output-1">example output&lt;/h4>
-&lt;pre tabindex="0">&lt;code>302 0l 0w 0c https://localhost.com/Login
-200 126l 281w 4091c https://localhost.com/maintenance
-200 126l 281w 4092c https://localhost.com/terms
-... more individual entries, followed by the directories being scanned ...
-Scanning: https://localhost.com
-Scanning: https://localhost.com/homepage
-Scanning: https://localhost.com/api
-&lt;/code>&lt;/pre></description></item></channel></rss>
+and new directories found that are suitable for recursion.&lt;/p></description></item></channel></rss>

@@ -1,5 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– threads</title><link>/feroxbuster-docs/tags/threads/</link><description>Recent content in threads on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/threads/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>
-&lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Threads on feroxbuster</title><link>/feroxbuster-docs/tags/threads/</link><description>Recent content in Threads on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/threads/index.xml" rel="self" type="application/rss+xml"/><item><title>Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>&lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
 &lt;p>This section explains how the &lt;code>-t&lt;/code> and &lt;code>-L&lt;/code> options work together to determine the overall aggressiveness of a scan. The
 combination of the two values set by these options determines how hard your target will get hit and to some extent also
 determines how many resources will be consumed on your local machine.&lt;/p>
@@ -11,14 +10,4 @@ additional light-weight processes associated with it as far as the kernel is con
 impact to process (&lt;code>nproc&lt;/code>) limits when specifying larger values for &lt;code>-t&lt;/code>. However, these threads will still consume
 file descriptors, so you will need to ensure that you have a suitable &lt;code>nlimit&lt;/code> set when scaling up the amount of
 threads. More detailed documentation on setting appropriate &lt;code>nlimit&lt;/code> values can be found in
-the &lt;a href="../../faq/no-file-descriptors/">No File Descriptors Available&lt;/a> section of the FAQ&lt;/p>
-&lt;h2 id="the-implementation">The Implementation&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Threads&lt;/strong>: The &lt;code>-t&lt;/code> option specifies the maximum amount of active threads &lt;em>per-directory&lt;/em> during a scan&lt;/li>
-&lt;li>&lt;strong>Connection Limits&lt;/strong>: The &lt;code>-L&lt;/code> option specifies the maximum amount of active connections per thread&lt;/li>
-&lt;/ul>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;p>To truly have only 30 active requests to a site at any given time, &lt;code>-t 30 -L 1&lt;/code> is necessary. Using &lt;code>-t 30 -L 2&lt;/code> will
-result in a maximum of 60 total requests being processed at any given time for that site. And so on. For a conversation
-on this, please see &lt;a href="https://github.com/epi052/feroxbuster/issues/126">Issue #126&lt;/a> which may provide more (or less)
-clarity 😉&lt;/p></description></item></channel></rss>
+the &lt;a href="../../faq/no-file-descriptors/">No File Descriptors Available&lt;/a> section of the FAQ&lt;/p></description></item></channel></rss>

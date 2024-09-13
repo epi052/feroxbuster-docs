@@ -1,78 +1,44 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– filtering</title><link>/feroxbuster-docs/tags/filtering/</link><description>Recent content in filtering on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/filtering/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Filter by Status</title><link>/feroxbuster-docs/docs/examples/filter-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-status/</guid><description>
-&lt;h2 id="filter-response-by-status-code">Filter Response by Status Code&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Filtering on feroxbuster</title><link>/feroxbuster-docs/tags/filtering/</link><description>Recent content in Filtering on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/filtering/index.xml" rel="self" type="application/rss+xml"/><item><title>Filter by Status</title><link>/feroxbuster-docs/docs/examples/filter-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-status/</guid><description>&lt;h2 id="filter-response-by-status-code">Filter Response by Status Code&lt;/h2>
 &lt;p>Version 1.3.0 included an overhaul to the filtering system which will allow for a wide array of filters to be added with
 minimal effort. The first such filter is a &lt;strong>Status Code&lt;/strong> Filter. As responses come back from the scanned server, each one
 is checked against a list of known filters and either displayed or not according to which filters are set.&lt;/p>
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-status 301
 &lt;/code>&lt;/pre>&lt;h2 id="270-update">2.7.0 Update&lt;/h2>
 &lt;p>The &lt;code>--filter-status&lt;/code> behavior was updated in 2.7.0. &lt;code>--filter-status&lt;/code> is now a deny-list for the values provided, while
-every other status code will be allowed through.&lt;/p>
-&lt;h3 id="old-behavior-130---264">Old Behavior (1.3.0 - 2.6.4)&lt;/h3>
-&lt;p>There used to be two points at which a status code was checked for filtering, and both could be used in the same run. These
-were the values provided to &lt;code>--filter-status&lt;/code> and &lt;code>--status-codes&lt;/code> or &lt;code>-C&lt;/code> and &lt;code>-s&lt;/code> for short.&lt;/p>
-&lt;p>When a response came back, all &lt;code>--filter-*&lt;/code> options, including those passed to &lt;code>--filter-status&lt;/code>, were checked to see if the response
-should be filtered out. If the response had a status code that matched a filter, it wouldn&amp;rsquo;t proceed beyond this point. That
-meant that values passed to &lt;code>--status-codes&lt;/code> were never checked if a response was filtered out at this point in the process.&lt;/p>
-&lt;p>If a status code wasn&amp;rsquo;t explicitly filtered out, it moved along until it was checked against the values in &lt;code>--status-codes&lt;/code>.
-If it wasn&amp;rsquo;t explicitly allowed, then it was effectively filtered out at this second gate.&lt;/p>
-&lt;h3 id="new-behavior-270">New Behavior (2.7.0+)&lt;/h3>
-&lt;p>As of 2.7.0, &lt;code>--filter-status&lt;/code> and &lt;code>--status-codes&lt;/code> are mutually exclusive options. This means in choosing
-one or the other, the one not chosen is ignored. They no longer work in tandem.&lt;/p>
-&lt;p>&lt;code>--status-codes&lt;/code> works the same way it always has: by providing an allow-list for status codes. Any status
-code not included in &lt;code>--status-codes&lt;/code> will be filtered out.&lt;/p>
-&lt;p>&lt;code>--filter-status&lt;/code>, on the other hand, now operates wholly on its own. If a value is given to &lt;code>--filter-status&lt;/code>,
-that status code will be filtered out, while all other status codes are allowed to proceed. This is a much
-truer version of a deny-list for status codes. It allows you to see &amp;lsquo;all other&amp;rsquo; status code responses.&lt;/p>
-&lt;p>&lt;img src="../filter-status-demo.gif" alt="filter-status-demo">&lt;/p></description></item><item><title>Docs: Filter by Word/Line Count</title><link>/feroxbuster-docs/docs/examples/filter-word-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-word-line/</guid><description>
-&lt;h2 id="filter-response-by-word-count--line-count">Filter Response by Word Count &amp;amp; Line Count&lt;/h2>
+every other status code will be allowed through.&lt;/p></description></item><item><title>Filter by Word/Line Count</title><link>/feroxbuster-docs/docs/examples/filter-word-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-word-line/</guid><description>&lt;h2 id="filter-response-by-word-count--line-count">Filter Response by Word Count &amp;amp; Line Count&lt;/h2>
 &lt;p>In addition to filtering on the size of a response, version 1.6.0 added the ability to filter out responses based on the
 number of lines and/or words contained within the response body. This change drove a change to the information displayed
 to the user as well. This section will detail the new information and how to make use of it with the new filters
-provided.&lt;/p>
-&lt;h2 id="relevant-cli-options">Relevant CLI options&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span> -N, --filter-lines &amp;lt;LINES&amp;gt;...
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Filter out messages of a particular line count (ex: -N 20 -N 31,30)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -W, --filter-words &amp;lt;WORDS&amp;gt;...
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Filter out messages of a particular word count (ex: -W 312 -W 91,82)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="how-output-relates-to-filters">How output relates to filters&lt;/h2>
-&lt;p>&lt;img src="../../interpreting-results/response-bar-explained.png" alt="response-bar-explained">&lt;/p>
-&lt;p>Filters that correspond to the output above:&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Response status code&lt;/strong>: filtered with &lt;code>-C|--filter-status&lt;/code>&lt;/li>
-&lt;li>&lt;strong># of lines&lt;/strong>: filtered with &lt;code>-N|--filter-lines&lt;/code>&lt;/li>
-&lt;li>&lt;strong># of words&lt;/strong>: filtered with &lt;code>-W|--filter-words&lt;/code>&lt;/li>
-&lt;li>&lt;strong># of chars (bytes)&lt;/strong>: filtered with &lt;code>-S|--filter-size&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Filter by Regex</title><link>/feroxbuster-docs/docs/examples/filter-regex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-regex/</guid><description>
-&lt;h2 id="filter-response-using-a-regular-expression">Filter Response Using a Regular Expression&lt;/h2>
+provided.&lt;/p></description></item><item><title>Filter by Regex</title><link>/feroxbuster-docs/docs/examples/filter-regex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-regex/</guid><description>&lt;h2 id="filter-response-using-a-regular-expression">Filter Response Using a Regular Expression&lt;/h2>
+
+
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>
-Using regular expressions to filter large responses or many regular expressions may negatively impact
+
+ Using regular expressions to filter large responses or many regular expressions may negatively impact
 performance.
+
 &lt;/div>
+
 &lt;p>Version 1.3.0 included an overhaul to the filtering system which allows for a wide array of filters to be added with
 minimal effort. The latest addition is a Regular Expression Filter. As responses come back from the scanned server,
-the &lt;strong>body&lt;/strong> of the response is checked against the filter&amp;rsquo;s regular expression. If the expression is found in the body,
-then that response is filtered out.&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-regex &amp;#39;[aA]ccess [dD]enied.?&amp;#39; --output results.txt --json
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Filter by Page Similarity</title><link>/feroxbuster-docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-similar/</guid><description>
-&lt;h2 id="filter-response-by-similarity-to-a-given-page">Filter Response by Similarity to A Given Page&lt;/h2>
+the &lt;strong>body&lt;/strong> and &lt;strong>headers&lt;/strong> of the response are checked against the filter&amp;rsquo;s regular expression. If the expression is found in the body,
+then that response is filtered out.&lt;/p></description></item><item><title>Filter by Page Similarity</title><link>/feroxbuster-docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-similar/</guid><description>&lt;h2 id="filter-response-by-similarity-to-a-given-page">Filter Response by Similarity to A Given Page&lt;/h2>
+
+
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Heads up&lt;/h4>
-&lt;ul>
+
+ &lt;ul>
 &lt;li>Using a bunch of &lt;code>--filter-similar-to&lt;/code> values &lt;strong>may&lt;/strong> negatively impact performance&lt;/li>
 &lt;/ul>
+
+
 &lt;/div>
+
 &lt;p>Version 1.11.0 adds the ability to specify an example page for filtering pages that are similar to the given example.&lt;/p>
 &lt;p>Version 2.8.0 updated the underlying algorithm from SSDeep to Simhash.&lt;/p>
 &lt;p>For example, consider a site that attempts to redirect new users to a &lt;code>/register&lt;/code> endpoint. The &lt;code>/register&lt;/code> page has a
 CSRF token that alters the page&amp;rsquo;s response slightly with each new request (sometimes affecting overall length). This
 means that a simple line/word/char filter won&amp;rsquo;t be able to filter all responses. In order to filter those redirects out,
-one could use a command like this:&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u https://somesite.xyz --filter-similar-to https://somesite.xyz/register
-&lt;/code>&lt;/pre>&lt;p>&lt;code>--filter-similar-to&lt;/code> requests the page passed to it via CLI (&lt;code>https://somesite.xyz/register&lt;/code>), after which it hashes
-the response body using the &lt;a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/33026.pdf">Simhash algorithm&lt;/a>. All subsequent
-pages are hashed and compared to the original request&amp;rsquo;s hash. If the comparison of the two hashes meets a certain
-percentage of similarity (currently a hamming distance &amp;lt;= 3) then that request will be filtered out.&lt;/p>
-&lt;p>Simhash was selected as it does a good job of identifying near-duplicate pages while remaining performant. Other algorithms were tested but resulted in huge performance hits (orders of
-magnitude slower on requests/second).&lt;/p></description></item></channel></rss>
+one could use a command like this:&lt;/p></description></item></channel></rss>

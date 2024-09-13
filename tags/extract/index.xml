@@ -1,5 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– extract</title><link>/feroxbuster-docs/tags/extract/</link><description>Recent content in extract on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/extract/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>
-&lt;h2 id="extract-links-from-response-body">Extract Links from Response Body&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Extract on feroxbuster</title><link>/feroxbuster-docs/tags/extract/</link><description>Recent content in Extract on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/extract/index.xml" rel="self" type="application/rss+xml"/><item><title>Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>&lt;h2 id="extract-links-from-response-body">Extract Links from Response Body&lt;/h2>
 &lt;p>Search through the body of valid responses (html, javascript, etc&amp;hellip;) for additional endpoints to scan. This turns
 &lt;code>feroxbuster&lt;/code> into a hybrid that looks for both linked and unlinked content.&lt;/p>
 &lt;p>Example request/response with &lt;code>--extract-links&lt;/code> enabled:&lt;/p>
@@ -20,31 +19,15 @@
 &lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --extract-links
 &lt;/code>&lt;/pre>&lt;h2 id="comparison">Comparison&lt;/h2>
 &lt;p>Here&amp;rsquo;s a comparison of a wordlist-only scan vs &lt;code>--extract-links&lt;/code>
-using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274">Feline&lt;/a> from Hack the Box:&lt;/p>
-&lt;h3 id="wordlist-only">Wordlist only&lt;/h3>
-&lt;p>&lt;img src="../normal-scan-cmp-extract.gif" alt="normal-scan-cmp-extract">&lt;/p>
-&lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
-&lt;p>&lt;img src="../extract-scan-cmp-normal.gif" alt="extract-scan-cmp-normal">&lt;/p>
-&lt;h2 id="extract-from-robotstxt-v1102">Extract from robots.txt (&lt;code>v1.10.2&lt;/code>)&lt;/h2>
-&lt;p>In addition to &lt;a href="#extract-links-from-response-body">extracting links from the response body&lt;/a>, using
-&lt;code>--extract-links&lt;/code> makes a request to &lt;code>/robots.txt&lt;/code> and examines all &lt;code>Allow&lt;/code> and &lt;code>Disallow&lt;/code> entries. Directory entries
-are added to the scan queue, while file entries are requested and then reported if appropriate.&lt;/p>
-&lt;h2 id="using-extract-links-for-web-crawling">Using Extract Links for Web Crawling&lt;/h2>
-&lt;p>By supplying a single line word list containing only the root path &lt;code>feroxbuster&lt;/code> can also be used to simulate web
-crawling behavior. This appears to give results comparable to &lt;a href="https://github.com/hakluke/hakrawler">hakrawlwer&lt;/a>
-although &lt;code>feroxbuster&lt;/code> is not quite as fast.&lt;/p></description></item><item><title>Docs: Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>
-&lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
+using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274">Feline&lt;/a> from Hack the Box:&lt;/p></description></item><item><title>Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>&lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
 &lt;p>Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code>feroxbuster&lt;/code> will either report, or report and scan, depending on whether or not &lt;code>--extract-links&lt;/code> was used.&lt;/p>
 &lt;h2 id="examples">Examples&lt;/h2>
 &lt;h3 id="without---extract-links">Without &lt;code>--extract-links&lt;/code>&lt;/h3>
 &lt;p>When &lt;code>--extract-links&lt;/code> is &lt;strong>not&lt;/strong> used, directory listing is simply reported. No further actions are taken.&lt;/p>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-no-tack-e.png" alt="dir-list-no-tack-e">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img alt="dir-list-no-tack-e" src="../dir-list-no-tack-e.png">&lt;/p>
 &lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
-&lt;p>When &lt;code>--extract-links&lt;/code> is used, each link in the response is extracted and requested.&lt;/p>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --extract-links
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../dir-list-with-tack-e.png" alt="dir-list-with-tack-e">&lt;/p></description></item><item><title>Docs: Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>
-&lt;h2 id="dynamic-collection-settings">Dynamic Collection Settings&lt;/h2>
+&lt;p>When &lt;code>--extract-links&lt;/code> is used, each link in the response is extracted and requested.&lt;/p></description></item><item><title>Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>&lt;h2 id="dynamic-collection-settings">Dynamic Collection Settings&lt;/h2>
 &lt;p>Version 2.6.0 added a whole category of features named &lt;strong>Dynamic Collection Settings&lt;/strong>. The general premise of each
 feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p>
 &lt;h2 id="collect-backups">Collect Backups&lt;/h2>
@@ -57,109 +40,4 @@ feature is that additional requests are made based on the target site&amp;rsquo;
 &lt;li>&lt;code>.1&lt;/code>&lt;/li>
 &lt;li>&lt;code>.swp&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;p>Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em>found&lt;/em>.&lt;/p>
-&lt;p>Version 2.10.2 added the ability to specify a custom list of extensions to query:&lt;/p>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-backups .bak .save .save~
-&lt;/code>&lt;/pre>&lt;h2 id="collect-extensions">Collect Extensions&lt;/h2>
-&lt;p>Using &lt;code>--collect-extensions&lt;/code> means that any found url that has an extension will be added as an extension to try for
-all future requests.&lt;/p>
-&lt;p>There is a (large) &lt;a href="https://github.com/epi052/feroxbuster/blob/main/src/lib.rs#L60">default list&lt;/a> of extensions that
-are ignored by &lt;code>--collect-extensions&lt;/code>. If &lt;code>--dont-collect&lt;/code> is used, the default list isn&amp;rsquo;t used, and whatever values
-are passed to &lt;code>--dont-collect&lt;/code> are used instead.&lt;/p>
-&lt;h2 id="collect-words">Collect Words&lt;/h2>
-&lt;p>Using &lt;code>--collect-words&lt;/code> means that each valid response&amp;rsquo;s html is parsed, and words considered &lt;strong>important&lt;/strong> are added
-to the wordlist to be requested.&lt;/p>
-&lt;p>A word&amp;rsquo;s importance is determined via a Natural Language Processing model and is considered against the entire corpus
-of parsed html.&lt;/p>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;h3 id="collect-backups-1">Collect Backups&lt;/h3>
-&lt;h4 id="default-extensions">Default extensions&lt;/h4>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-backups
-&lt;/code>&lt;/pre>&lt;p>Assuming a found file of:&lt;/p>
-&lt;p>&lt;code>200 GET 127l 292w 4161c https://some-example-site.com/index.php&lt;/code>&lt;/p>
-&lt;p>The following &lt;strong>additional&lt;/strong> requests are made to &lt;code>some-example-site.com&lt;/code>:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>index.php~&lt;/code> (append extension)&lt;/li>
-&lt;li>&lt;code>index.php.bak&lt;/code>&lt;/li>
-&lt;li>&lt;code>index.php.bak2&lt;/code>&lt;/li>
-&lt;li>&lt;code>index.php.old&lt;/code>&lt;/li>
-&lt;li>&lt;code>index.php.1&lt;/code>&lt;/li>
-&lt;li>&lt;code>index.bak&lt;/code> - (replace original extension)&lt;/li>
-&lt;li>&lt;code>.index.php.swp&lt;/code> - (vim swap, prefix &lt;code>.&lt;/code> and append &lt;code>.swp&lt;/code>)&lt;/li>
-&lt;/ul>
-&lt;h4 id="custom-extension-list">Custom extension list&lt;/h4>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-backups .save .save~
-&lt;/code>&lt;/pre>&lt;p>Assuming a found file of:&lt;/p>
-&lt;p>&lt;code>200 GET 127l 292w 4161c https://some-example-site.com/index.php&lt;/code>&lt;/p>
-&lt;p>The following &lt;strong>additional&lt;/strong> requests are made to &lt;code>some-example-site.com&lt;/code>:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>index.php.save&lt;/code> (append extension)&lt;/li>
-&lt;li>&lt;code>index.php.save~&lt;/code>&lt;/li>
-&lt;li>&lt;code>index.bak&lt;/code> - (replace original extension)&lt;/li>
-&lt;li>&lt;code>.index.php.swp&lt;/code> - (vim swap, prefix &lt;code>.&lt;/code> and append &lt;code>.swp&lt;/code>)&lt;/li>
-&lt;/ul>
-&lt;h3 id="collect-extensions-1">Collect Extensions&lt;/h3>
-&lt;blockquote>
-&lt;p>most useful with &lt;code>--extract-links&lt;/code>; may cause number of expected requests to explode&lt;/p>
-&lt;/blockquote>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-extensions
-&lt;/code>&lt;/pre>&lt;p>Let&amp;rsquo;s say our wordlist contains five entries:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>index.php&lt;/code>&lt;/li>
-&lt;li>&lt;code>stuff&lt;/code>&lt;/li>
-&lt;li>&lt;code>things&lt;/code>&lt;/li>
-&lt;li>&lt;code>mostuff&lt;/code>&lt;/li>
-&lt;li>&lt;code>mothings&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>Assuming a found file of:&lt;/p>
-&lt;p>&lt;code>200 GET 127l 292w 4161c https://some-example-site.com/index.php&lt;/code>&lt;/p>
-&lt;p>&lt;code>--collect-extensions&lt;/code> would effectively add &lt;code>.php&lt;/code> to feroxbuster&amp;rsquo;s internal state, as though &lt;code>.php&lt;/code> were passed via
-&lt;code>--extensions|-x&lt;/code>. The result would be the following requests.&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>stuff&lt;/code>&lt;/li>
-&lt;li>&lt;code>stuff.php&lt;/code>&lt;/li>
-&lt;li>&lt;code>things&lt;/code>&lt;/li>
-&lt;li>&lt;code>things.php&lt;/code>&lt;/li>
-&lt;li>&lt;code>mostuff&lt;/code>&lt;/li>
-&lt;li>&lt;code>mostuff.php&lt;/code>&lt;/li>
-&lt;li>&lt;code>mothings&lt;/code>&lt;/li>
-&lt;li>&lt;code>mothings.php&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>There are caveats to the requests that will be made, mostly due to timing of finding the extension vs. requests already
-in-flight, but conceptually, the above is true.&lt;/p>
-&lt;h3 id="collect-words-1">Collect Words&lt;/h3>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --collect-words
-&lt;/code>&lt;/pre>&lt;p>Assume four pages were found:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>https://some-example-site.com/doc1&lt;/code>&lt;/li>
-&lt;li>&lt;code>https://some-example-site.com/doc2&lt;/code>&lt;/li>
-&lt;li>&lt;code>https://some-example-site.com/doc3&lt;/code>&lt;/li>
-&lt;li>&lt;code>https://some-example-site.com/doc4&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>And their contents were as follows:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>doc1&lt;/code> - &lt;code>Air quality in the sunny island improved gradually throughout Wednesday.&lt;/code>&lt;/li>
-&lt;li>&lt;code>doc2&lt;/code> - &lt;code>Air quality in Singapore on Wednesday continued to get worse as haze hit the island.&lt;/code>&lt;/li>
-&lt;li>&lt;code>doc3&lt;/code> - &lt;code>The air quality in Singapore is monitored through a network of air monitoring stations located in different parts of the island&lt;/code>&lt;/li>
-&lt;li>&lt;code>doc4&lt;/code> - &lt;code>The air quality in Singapore got worse on Wednesday.&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>The following endpoints would be requested, in addition to whatever was in the normal wordlist.&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>/gradually&lt;/code>&lt;/li>
-&lt;li>&lt;code>/network&lt;/code>&lt;/li>
-&lt;li>&lt;code>/hit&lt;/code>&lt;/li>
-&lt;li>&lt;code>/located&lt;/code>&lt;/li>
-&lt;li>&lt;code>/continued&lt;/code>&lt;/li>
-&lt;li>&lt;code>/island&lt;/code>&lt;/li>
-&lt;li>&lt;code>/worse&lt;/code>&lt;/li>
-&lt;li>&lt;code>/monitored&lt;/code>&lt;/li>
-&lt;li>&lt;code>/monitoring&lt;/code>&lt;/li>
-&lt;li>&lt;code>/haze&lt;/code>&lt;/li>
-&lt;li>&lt;code>/different&lt;/code>&lt;/li>
-&lt;li>&lt;code>/stations&lt;/code>&lt;/li>
-&lt;li>&lt;code>/sunny&lt;/code>&lt;/li>
-&lt;li>&lt;code>/singapore&lt;/code>&lt;/li>
-&lt;li>&lt;code>/improved&lt;/code>&lt;/li>
-&lt;li>&lt;code>/parts&lt;/code>&lt;/li>
-&lt;li>&lt;code>/wednesday&lt;/code>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em>found&lt;/em>.&lt;/p></description></item></channel></rss>

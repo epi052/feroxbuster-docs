@@ -1,5 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– snap</title><link>/feroxbuster-docs/tags/snap/</link><description>Recent content in snap on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/snap/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Snap Install</title><link>/feroxbuster-docs/docs/installation/install-snap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-snap/</guid><description>
-&lt;h2 id="install-using-snap">Install using &lt;code>snap&lt;/code>&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Snap on feroxbuster</title><link>/feroxbuster-docs/tags/snap/</link><description>Recent content in Snap on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/snap/index.xml" rel="self" type="application/rss+xml"/><item><title>Snap Install</title><link>/feroxbuster-docs/docs/installation/install-snap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-snap/</guid><description>&lt;h2 id="install-using-snap">Install using &lt;code>snap&lt;/code>&lt;/h2>
 &lt;pre tabindex="0">&lt;code>sudo snap install feroxbuster
 &lt;/code>&lt;/pre>&lt;h2 id="gotchas">Gotchas&lt;/h2>
 &lt;p>The only gotcha here is that the snap package can only read wordlists from a few specific locations. There are a few
@@ -7,7 +6,4 @@ possible solutions, of which two are shown below.&lt;/p>
 &lt;p>If the wordlist is on the same partition as your home directory, it can be hard-linked into &lt;code>~/snap/feroxbuster/common&lt;/code>&lt;/p>
 &lt;pre tabindex="0">&lt;code>ln /path/to/the/wordlist ~/snap/feroxbuster/common
 ./feroxbuster -u http://localhost -w ~/snap/feroxbuster/common/wordlist
-&lt;/code>&lt;/pre>&lt;p>If the wordlist is on a separate partition, hard-linking won&amp;rsquo;t work. You&amp;rsquo;ll need to copy it into the snap directory.&lt;/p>
-&lt;pre tabindex="0">&lt;code>cp /path/to/the/wordlist ~/snap/feroxbuster/common
-./feroxbuster -u http://localhost -w ~/snap/feroxbuster/common/wordlist
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;p>If the wordlist is on a separate partition, hard-linking won&amp;rsquo;t work. You&amp;rsquo;ll need to copy it into the snap directory.&lt;/p></description></item></channel></rss>

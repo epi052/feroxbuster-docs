@@ -1,13 +1,10 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– windows</title><link>/feroxbuster-docs/tags/windows/</link><description>Recent content in windows on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Build from Source</title><link>/feroxbuster-docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-cargo/</guid><description>
-&lt;h2 id="cargo-install">Cargo Install&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on feroxbuster</title><link>/feroxbuster-docs/tags/windows/</link><description>Recent content in Windows on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Build from Source</title><link>/feroxbuster-docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-cargo/</guid><description>&lt;h2 id="cargo-install">Cargo Install&lt;/h2>
 &lt;p>&lt;code>feroxbuster&lt;/code> is published on crates.io, making it easy to install if you already have rust installed on your system.&lt;/p>
 &lt;pre tabindex="0">&lt;code>cargo install feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Chocolatey Install</title><link>/feroxbuster-docs/docs/installation/install-choco/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-choco/</guid><description>
-&lt;h2 id="chocolatey-install">Chocolatey Install&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>Chocolatey Install</title><link>/feroxbuster-docs/docs/installation/install-choco/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-choco/</guid><description>&lt;h2 id="chocolatey-install">Chocolatey Install&lt;/h2>
 &lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the Chocolatey community repos 🥳&lt;/p>
 &lt;pre tabindex="0">&lt;code>choco install feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Docker Install</title><link>/feroxbuster-docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-docker/</guid><description>
-&lt;h2 id="docker-install">Docker Install&lt;/h2>
+&lt;/code>&lt;/pre></description></item><item><title>Docker Install</title><link>/feroxbuster-docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-docker/</guid><description>&lt;h2 id="docker-install">Docker Install&lt;/h2>
 &lt;blockquote>
 &lt;p>The following steps assume you have docker installed / setup&lt;/p>
 &lt;/blockquote>
@@ -20,15 +17,7 @@
 &lt;/code>&lt;/pre>&lt;h2 id="mount-a-volume-to-pass-in-ferox-configtoml">Mount a volume to pass in &lt;code>ferox-config.toml&lt;/code>&lt;/h2>
 &lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="../../configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
 live in multiple locations and still be valid, so it&amp;rsquo;s up to you how you&amp;rsquo;d like to pass it in. Below are a few valid
-examples:&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo docker run --init -v $(pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml -it epi052/feroxbuster -u http://example.com
-&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -it epi052/feroxbuster -u http://example.com
-&lt;/code>&lt;/pre>&lt;p>Note: If you are on a SELinux enforced system, you will need to pass the &lt;code>:Z&lt;/code> attribute also.&lt;/p>
-&lt;pre tabindex="0">&lt;code>docker run --init -v (pwd)/ferox-config.toml:/etc/feroxbuster/ferox-config.toml:Z -it epi052/feroxbuster -u http://example.com
-&lt;/code>&lt;/pre>&lt;h2 id="define-an-alias-for-simplicity">Define an alias for simplicity&lt;/h2>
-&lt;pre tabindex="0">&lt;code>alias feroxbuster=&amp;#34;sudo docker run --init -v ~/.config/feroxbuster:/root/.config/feroxbuster -i epi052/feroxbuster&amp;#34;
-&lt;/code>&lt;/pre></description></item><item><title>Docs: Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>
-&lt;h2 id="download-a-release">Download a Release&lt;/h2>
+examples:&lt;/p></description></item><item><title>Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>&lt;h2 id="download-a-release">Download a Release&lt;/h2>
 &lt;p>Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p>
 &lt;h2 id="linux-32-and-64-bit--macos">Linux (32 and 64-bit) &amp;amp; MacOS&lt;/h2>
 &lt;pre tabindex="0">&lt;code>curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/master/install-nix.sh | bash
@@ -41,4 +30,7 @@ Expand-Archive .\feroxbuster.zip
 Expand-Archive .\feroxbuster.zip
 .\feroxbuster\feroxbuster.exe -V
 &lt;/code>&lt;/pre>&lt;h2 id="all-other-releases">All other releases&lt;/h2>
-&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item></channel></rss>
+&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Winget Install</title><link>/feroxbuster-docs/docs/installation/install-winget/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-winget/</guid><description>&lt;h2 id="chocolatey-install">Chocolatey Install&lt;/h2>
+&lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the winget-pkgs 🥳&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget install epi052.feroxbuster
+&lt;/code>&lt;/pre></description></item></channel></rss>

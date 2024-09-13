@@ -1,25 +1,3 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– parallel</title><link>/feroxbuster-docs/tags/parallel/</link><description>Recent content in parallel on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/parallel/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Parallel Scans</title><link>/feroxbuster-docs/docs/examples/parallel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/parallel-scan/</guid><description>
-&lt;h2 id="run-scans-in-parallel">Run Scans in Parallel&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Parallel on feroxbuster</title><link>/feroxbuster-docs/tags/parallel/</link><description>Recent content in Parallel on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/parallel/index.xml" rel="self" type="application/rss+xml"/><item><title>Parallel Scans</title><link>/feroxbuster-docs/docs/examples/parallel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/parallel-scan/</guid><description>&lt;h2 id="run-scans-in-parallel">Run Scans in Parallel&lt;/h2>
 &lt;p>Version 2.2.0 introduces the &lt;code>--parallel&lt;/code> option. If you&amp;rsquo;re one of those people who use &lt;code>feroxbuster&lt;/code> to scan 100s of hosts at a time, this is the option for you! &lt;code>--parallel&lt;/code> spawns a child process per target passed in over stdin (recursive directories are still async within each child).&lt;/p>
-&lt;p>The number of parallel scans is limited to whatever you pass to &lt;code>--parallel&lt;/code>. When one child finishes its scan, the next child will be spawned.&lt;/p>
-&lt;h2 id="output">Output&lt;/h2>
-&lt;p>Unfortunately, using &lt;code>--parallel&lt;/code> limits terminal output such that only discovered URLs are shown. No amount of &lt;code>-v&lt;/code>&amp;rsquo;s will help you here. I imagine this isn&amp;rsquo;t too big of a deal, as folks that need &lt;code>--parallel&lt;/code> probably aren&amp;rsquo;t sitting there watching the output&amp;hellip; 🙃&lt;/p>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>cat large-target-list | ./feroxbuster --stdin --parallel 10 --extract-links --auto-bail
-&lt;/code>&lt;/pre>&lt;p>Resulting Process List (illustrative):&lt;/p>
-&lt;pre tabindex="0">&lt;code>feroxbuster --stdin --parallel 10
-\_ feroxbuster --silent --extract-links --auto-bail -u https://target-one
-\_ feroxbuster --silent --extract-links --auto-bail -u https://target-two
-\_ feroxbuster --silent --extract-links --auto-bail -u https://target-three
-\_ ...
-\_ feroxbuster --silent --extract-links --auto-bail -u https://target-ten
-&lt;/code>&lt;/pre>&lt;h2 id="logging-parallel-scans">Logging Parallel Scans&lt;/h2>
-&lt;p>As of &lt;code>v2.3.2&lt;/code>, logging while using &lt;code>--parallel&lt;/code> uses the value of &lt;code>-o&lt;/code>|&lt;code>--output&lt;/code> as a seed to create a directory named &lt;code>OUTPUT_VALUE-TIMESTAMP.logs/&lt;/code>. Within the directory, an individual log file is created for each target passed over stdin.&lt;/p>
-&lt;h3 id="example-1">Example&lt;/h3>
-&lt;pre tabindex="0">&lt;code>cat large-target-list | ./feroxbuster --stdin --parallel 10 --output super-cool-mega-scan
-&lt;/code>&lt;/pre>&lt;p>Resulting directory structure (illustrative):&lt;/p>
-&lt;pre tabindex="0">&lt;code>super-cool-mega-scan-1627865696.logs/
-├── ferox-https_target_one_com-1627865696.log
-├── ...
-└── ferox-https_target_two_net-1627865696.log
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;p>The number of parallel scans is limited to whatever you pass to &lt;code>--parallel&lt;/code>. When one child finishes its scan, the next child will be spawned.&lt;/p></description></item></channel></rss>

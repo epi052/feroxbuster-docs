@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Protocol on feroxbuster</title><link>/feroxbuster-docs/tags/protocol/</link><description>Recent content in Protocol on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/protocol/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure scan from raw request</title><link>/feroxbuster-docs/docs/examples/raw-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/raw-request/</guid><description>&lt;h2 id="configure-a-scan-from-a-raw-request-eg-burp-or-similar">Configure a scan from a raw request (e.g. burp or similar)&lt;/h2>
+&lt;p>Version 2.11.0 introduces the ability to begin a scan by passing in a raw request file.&lt;/p>
+&lt;p>The following table outlines the behavior of raw request and cli interactions. See the &amp;lsquo;with cli parameters&amp;rsquo; example below for further details.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">&lt;/th>
+ &lt;th style="text-align: left">unique&lt;/th>
+ &lt;th style="text-align: left">not unique&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">headers&lt;/td>
+ &lt;td style="text-align: left">appended&lt;/td>
+ &lt;td style="text-align: left">overridden by cli&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">methods&lt;/td>
+ &lt;td style="text-align: left">appended&lt;/td>
+ &lt;td style="text-align: left">ignored&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">user-agent&lt;/td>
+ &lt;td style="text-align: left">n/a&lt;/td>
+ &lt;td style="text-align: left">overridden by cli&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">cookies&lt;/td>
+ &lt;td style="text-align: left">appended&lt;/td>
+ &lt;td style="text-align: left">overridden by cli&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">query parameters&lt;/td>
+ &lt;td style="text-align: left">appended&lt;/td>
+ &lt;td style="text-align: left">overridden by cli&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="example-no-additional-parameters">Example: no additional parameters&lt;/h2>
+&lt;p>Given the following command and raw request file&lt;/p></description></item></channel></rss>

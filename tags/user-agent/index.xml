@@ -1,5 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– user-agent</title><link>/feroxbuster-docs/tags/user-agent/</link><description>Recent content in user-agent on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/user-agent/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Random User-Agents</title><link>/feroxbuster-docs/docs/examples/random-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/random-agent/</guid><description>
-&lt;h2 id="randomize-user-agent-header">Randomize User-Agent Header&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>User-Agent on feroxbuster</title><link>/feroxbuster-docs/tags/user-agent/</link><description>Recent content in User-Agent on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/user-agent/index.xml" rel="self" type="application/rss+xml"/><item><title>Random User-Agents</title><link>/feroxbuster-docs/docs/examples/random-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/random-agent/</guid><description>&lt;h2 id="randomize-user-agent-header">Randomize User-Agent Header&lt;/h2>
 &lt;p>Version 2.4.0 introduces the &lt;code>--random-agent&lt;/code> option. When used, &lt;code>--random-agent&lt;/code> selects a User-Agent value from one of the values below and
 includes it in that particular request.&lt;/p>
 &lt;ul>
@@ -18,4 +17,4 @@ includes it in that particular request.&lt;/p>
 &lt;/ul>
 &lt;h2 id="example">Example&lt;/h2>
 &lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="../random-agent.gif" alt="random-agent">&lt;/p></description></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;p>&lt;img alt="random-agent" src="../random-agent.gif">&lt;/p></description></item></channel></rss>

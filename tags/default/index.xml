@@ -1,5 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>– default</title><link>/feroxbuster-docs/tags/default/</link><description>Recent content in default on</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/default/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Default Values</title><link>/feroxbuster-docs/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/default-values/</guid><description>
-&lt;h2 id="default-values">Default Values&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Default on feroxbuster</title><link>/feroxbuster-docs/tags/default/</link><description>Recent content in Default on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/default/index.xml" rel="self" type="application/rss+xml"/><item><title>Default Values</title><link>/feroxbuster-docs/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/default-values/</guid><description>&lt;h2 id="default-values">Default Values&lt;/h2>
 &lt;p>Configuration begins with the following built-in default values baked into the binary:&lt;/p>
 &lt;ul>
 &lt;li>timeout: &lt;code>7&lt;/code> seconds&lt;/li>
@@ -16,4 +15,5 @@
 &lt;li>output: &lt;code>stdout&lt;/code>&lt;/li>
 &lt;li>save_state: &lt;code>true&lt;/code> (create a state file in cwd when &lt;code>Ctrl+C&lt;/code> is received)&lt;/li>
 &lt;li>backup_extensions: &lt;code>[&amp;quot;~&amp;quot;, &amp;quot;.bak&amp;quot;, &amp;quot;.bak2&amp;quot;, &amp;quot;.old&amp;quot;, &amp;quot;.1&amp;quot;]&lt;/code>&lt;/li>
+&lt;li>protocol: &lt;code>https&lt;/code>&lt;/li>
 &lt;/ul></description></item></channel></rss>
