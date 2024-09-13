@@ -140,7 +140,7 @@ github_branch = "main"
 [params.search.algolia]
 appId = "RHDX50IYZJ"
 apiKey = "85be150986a3c297d83209a14350331a"
-indexName = "docsearch"
+indexName = "feroxbuster"
 
 
 # Enable Lunr.js offline search
