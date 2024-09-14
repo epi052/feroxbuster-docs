@@ -19,7 +19,7 @@ Not scanning directory listings makes sense, generally, but web servers can be c
 feroxbuster -u https://some-example-site.com --scan-dir-listings
 ```
 
-## Example (--thorough)
+## Example (`--thorough`)
 
 The `--thorough` meta-option also sets `--scan-dir-listings`
 
