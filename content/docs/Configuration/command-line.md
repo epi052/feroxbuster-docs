@@ -42,6 +42,13 @@ Composite settings:
       --burp-replay
           Set --replay-proxy to http://127.0.0.1:8080 and set --insecure to true
 
+      --data-urlencoded <DATA>
+          Set -H 'Content-Type: application/x-www-form-urlencoded', --data to <data-urlencoded> (supports @file) and
+          -m to POST
+
+      --data-json <DATA>
+          Set -H 'Content-Type: application/json', --data to <data-json> (supports @file) and -m to POST
+
       --smart
           Set --auto-tune, --collect-words, and --collect-backups to true
 
@@ -60,14 +67,14 @@ Proxy settings:
 
 Request settings:
   -a, --user-agent <USER_AGENT>
-          Sets the User-Agent (default: feroxbuster/2.11.0)
+          Sets the User-Agent (default: feroxbuster/2.12.0)
 
   -A, --random-agent
           Use a random User-Agent
 
   -x, --extensions <FILE_EXTENSION>...
-          File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input starts
-          with an @ (ex: @ext.txt)
+          File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input
+          starts with an @ (ex: @ext.txt)
 
   -m, --methods <HTTP_METHODS>...
           Which HTTP request method(s) should be sent (default: GET)
@@ -116,6 +123,9 @@ Response filters:
   -s, --status-codes <STATUS_CODE>...
           Status Codes to include (allow list) (default: All Status Codes)
 
+      --unique
+          Only show unique responses
+
 Client settings:
   -T, --timeout <SECONDS>
           Number of seconds before a client's request times out (default: 7)
@@ -159,6 +169,9 @@ Scan settings:
 
       --rate-limit <RATE_LIMIT>
           Limit number of requests per second (per directory) (default: 0, i.e. no limit)
+
+      --response-size-limit <BYTES>
+          Limit size of response body to read in bytes (default: 4MB)
 
       --time-limit <TIME_SPEC>
           Limit total run time of all scans (ex: --time-limit 10m)

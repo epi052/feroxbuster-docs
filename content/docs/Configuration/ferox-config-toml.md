@@ -108,6 +108,8 @@ A pre-made configuration file with examples of all available settings can be fou
 # request_file = "/some/raw/request/file"
 # protocol = "http"
 # scan_dir_listings = true
+# unique = true
+# response_size_limit = 4194304
 
 # headers can be specified on multiple lines or as an inline table
 #
