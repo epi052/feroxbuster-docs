@@ -1,6 +1,6 @@
 ---
 title: "Response Size Limit"
-weight: 27
+weight: 30
 categories: ["examples"]
 tags: ["feature", "limit", "memory", "size", "performance"]
 description: >

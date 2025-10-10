@@ -1,6 +1,6 @@
 ---
 title: "Server and Client Certificate Management"
-weight: 20
+weight: 25
 categories: ["examples"]
 tags: ["feature", "certificate", "mtls", "ssl"]
 description: >

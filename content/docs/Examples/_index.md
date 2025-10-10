@@ -1,7 +1,7 @@
 ---
 title: "🧰 Examples"
 linkTitle: "🧰 Examples"
-weight: 6
+weight: 1
 description: >
   Byte-size demos of feroxbuster features
 ---

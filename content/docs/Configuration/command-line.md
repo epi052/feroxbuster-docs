@@ -43,8 +43,7 @@ Composite settings:
           Set --replay-proxy to http://127.0.0.1:8080 and set --insecure to true
 
       --data-urlencoded <DATA>
-          Set -H 'Content-Type: application/x-www-form-urlencoded', --data to <data-urlencoded> (supports @file) and
-          -m to POST
+          Set -H 'Content-Type: application/x-www-form-urlencoded', --data to <data-urlencoded> (supports @file) and -m to POST
 
       --data-json <DATA>
           Set -H 'Content-Type: application/json', --data to <data-json> (supports @file) and -m to POST
@@ -67,14 +66,14 @@ Proxy settings:
 
 Request settings:
   -a, --user-agent <USER_AGENT>
-          Sets the User-Agent (default: feroxbuster/2.12.0)
+          Sets the User-Agent (default: feroxbuster/2.13.0)
 
   -A, --random-agent
           Use a random User-Agent
 
   -x, --extensions <FILE_EXTENSION>...
-          File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input
-          starts with an @ (ex: @ext.txt)
+          File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input starts with an @ (ex:
+          @ext.txt)
 
   -m, --methods <HTTP_METHODS>...
           Which HTTP request method(s) should be sent (default: GET)
@@ -100,6 +99,9 @@ Request settings:
 Request filters:
       --dont-scan <URL>...
           URL(s) or Regex Pattern(s) to exclude from recursion/scans
+
+      --scope <URL>...
+          Additional domains/URLs to consider in-scope for scanning (in addition to current domain)
 
 Response filters:
   -S, --filter-size <SIZE>...

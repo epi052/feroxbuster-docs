@@ -1,6 +1,6 @@
 ---
 title: "Limit Number of Progress Bars"
-weight: 27
+weight: 28
 categories: ["examples"]
 tags: ["feature", "bars", "progress", "limit"]
 description: >

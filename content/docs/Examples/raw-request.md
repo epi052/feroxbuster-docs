@@ -1,6 +1,6 @@
 ---
 title: "Configure scan from raw request"
-weight: 25
+weight: 26
 categories: ["examples"]
 tags: ["feature", "raw", "config", "protocol", "request-file"]
 description: >
