@@ -96,7 +96,7 @@ save_state = false
 
 ## Configure name of the state file
 
-To override the naming convention with something custom pass the enviroment variable `STATE_FILENAME` with it's value having the name you want to use for the state file. You can even define a path where the state file will be saved instead of the same directory.
+To override the naming convention with something custom, pass the environment variable `STATE_FILENAME` with its value having the name you want to use for the state file. You can even define a path where the state file will be saved instead of the same directory.
 
 ### Windows example
 
