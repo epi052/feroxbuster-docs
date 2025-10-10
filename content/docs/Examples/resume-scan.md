@@ -82,6 +82,14 @@ wordlist_offset = requests_made_so_far - (requests_made_so_far * 0.10)
 
 ![resumed-scan](../resumed-scan.gif)
 
+## Control the state file's name/path
+
+The ability to control the name and location of the state file was introduced in version 2.13.0. The method is a simple environment variable `STATE_FILENAME`.
+
+```
+STATE_FILENAME=/some/path/to/a/file.state feroxbuster -u ...
+```
+
 ## Opt-out of saving state 
 
 In order to prevent state file creation when `Ctrl+C` is pressed, you can simply add the entry below to
