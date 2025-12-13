@@ -20,7 +20,9 @@ Policy Enforcement Criteria:
 
 #### -\-auto-tune
 
-The AutoTune policy enforces a rate limit on individual directory scans when one of the criteria above is met.  The rate limit self-adjusts every (`timeout / 2`) seconds. If the number of errors have increased during that time, the allowed rate of requests is lowered.  On the other hand, if the number of errors hasn't moved, the allowed rate of requests is increased.  If no additional errors are found after a certain number of checks, the rate limit will be removed completely. 
+The auto-tune policy enforces a rate limit on individual directory scans when one of the criteria above is met.  The rate limit self-adjusts every (`timeout / 2`) seconds. If the number of errors have increased during that time, the allowed rate of requests is lowered.  On the other hand, if the number of errors hasn't moved, the allowed rate of requests is increased. After three consecutive upward rate adjustments without new errors, the rate limit increases back to the original request rate and is then removed. 
+
+**Interaction with --rate-limit:** As of version 2.13.1, when both `--auto-tune` and `--rate-limit` are used together, `--rate-limit` serves as a hard cap on auto-tune's adjustments. auto-tune will never exceed the specified rate limit, and when it would normally remove the rate limit entirely (after successful recovery), it will instead reset to the `--rate-limit` value. See the [Rate Limiting](../rate-limit) page for more details and examples.
 
 ![auto-tune](../auto-tune-demo.gif)
 
