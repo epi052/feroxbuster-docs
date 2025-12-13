@@ -1,17 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arm on feroxbuster</title><link>/feroxbuster-docs/tags/arm/</link><description>Recent content in Arm on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/arm/index.xml" rel="self" type="application/rss+xml"/><item><title>Build from Source</title><link>/feroxbuster-docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-cargo/</guid><description>&lt;h2 id="cargo-install">Cargo Install&lt;/h2>
-&lt;p>&lt;code>feroxbuster&lt;/code> is published on crates.io, making it easy to install if you already have rust installed on your system.&lt;/p>
-&lt;pre tabindex="0">&lt;code>cargo install feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>&lt;h2 id="download-a-release">Download a Release&lt;/h2>
-&lt;p>Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p>
-&lt;h2 id="linux-32-and-64-bit--macos">Linux (32 and 64-bit) &amp;amp; MacOS&lt;/h2>
-&lt;pre tabindex="0">&lt;code>curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/master/install-nix.sh | bash
-&lt;/code>&lt;/pre>&lt;h2 id="windows-x86">Windows x86&lt;/h2>
-&lt;pre tabindex="0">&lt;code>https://github.com/epi052/feroxbuster/releases/latest/download/x86-windows-feroxbuster.exe.zip
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arm on feroxbuster</title><link>/feroxbuster-docs/tags/arm/</link><description>Recent content in Arm on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/arm/index.xml" rel="self" type="application/rss+xml"/><item><title>Android/Termux Install</title><link>/feroxbuster-docs/docs/installation/install-android/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-android/</guid><description>&lt;h2 id="androidtermux-install"&gt;Android/Termux Install&lt;/h2&gt;
+&lt;p&gt;This guide covers building &lt;code&gt;feroxbuster&lt;/code&gt; from source on Android using Termux, particularly for 32-bit ARM devices (armeabi-v7a) where prebuilt binaries are not available.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tested on armeabi-v7a (ARM32) architecture using Rust from the Termux repository&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="install-dependencies"&gt;Install Dependencies&lt;/h2&gt;
+&lt;p&gt;Update Termux packages and install required build dependencies:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pkg update &lt;span style="color:#ce5c00;font-weight:bold"&gt;&amp;amp;&amp;amp;&lt;/span&gt; pkg upgrade -y
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pkg install git clang make cmake pkg-config python rust -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="clone-and-build"&gt;Clone and Build&lt;/h2&gt;
+&lt;p&gt;Clone the repository and build from source:&lt;/p&gt;</description></item><item><title>Build from Source</title><link>/feroxbuster-docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-cargo/</guid><description>&lt;h2 id="cargo-install"&gt;Cargo Install&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; is published on crates.io, making it easy to install if you already have rust installed on your system.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;cargo install feroxbuster
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>&lt;h2 id="download-a-release"&gt;Download a Release&lt;/h2&gt;
+&lt;p&gt;Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p&gt;
+&lt;h2 id="linux-32-and-64-bit--macos"&gt;Linux (32 and 64-bit) &amp;amp; MacOS&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/master/install-nix.sh | bash
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="windows-x86"&gt;Windows x86&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;https://github.com/epi052/feroxbuster/releases/latest/download/x86-windows-feroxbuster.exe.zip
 Expand-Archive .\feroxbuster.zip
 .\feroxbuster\feroxbuster.exe -V
-&lt;/code>&lt;/pre>&lt;h2 id="windows-x86_64">Windows x86_64&lt;/h2>
-&lt;pre tabindex="0">&lt;code>Invoke-WebRequest https://github.com/epi052/feroxbuster/releases/latest/download/x86_64-windows-feroxbuster.exe.zip -OutFile feroxbuster.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="windows-x86_64"&gt;Windows x86_64&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Invoke-WebRequest https://github.com/epi052/feroxbuster/releases/latest/download/x86_64-windows-feroxbuster.exe.zip -OutFile feroxbuster.zip
 Expand-Archive .\feroxbuster.zip
 .\feroxbuster\feroxbuster.exe -V
-&lt;/code>&lt;/pre>&lt;h2 id="all-other-releases">All other releases&lt;/h2>
-&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="all-other-releases"&gt;All other releases&lt;/h2&gt;
+&lt;p&gt;Releases for &lt;code&gt;armv7&lt;/code&gt;, &lt;code&gt;aarch64&lt;/code&gt;, and an &lt;code&gt;x86_64 .deb&lt;/code&gt; can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases"&gt;Releases&lt;/a&gt; section.&lt;/p&gt;</description></item></channel></rss>

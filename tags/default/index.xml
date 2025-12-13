@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Default on feroxbuster</title><link>/feroxbuster-docs/tags/default/</link><description>Recent content in Default on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/default/index.xml" rel="self" type="application/rss+xml"/><item><title>Default Values</title><link>/feroxbuster-docs/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/default-values/</guid><description>&lt;h2 id="default-values">Default Values&lt;/h2>
-&lt;p>Configuration begins with the following built-in default values baked into the binary:&lt;/p>
-&lt;ul>
-&lt;li>timeout: &lt;code>7&lt;/code> seconds&lt;/li>
-&lt;li>follow redirects: &lt;code>false&lt;/code>&lt;/li>
-&lt;li>wordlist: &lt;code>/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt&lt;/code>&lt;/li>
-&lt;li>threads: &lt;code>50&lt;/code>&lt;/li>
-&lt;li>verbosity: &lt;code>0&lt;/code> (no logging enabled)&lt;/li>
-&lt;li>scan_limit: &lt;code>0&lt;/code> (no limit imposed on concurrent scans)&lt;/li>
-&lt;li>rate_limit: &lt;code>0&lt;/code> (no limit imposed on requests per second)&lt;/li>
-&lt;li>status_codes: All valid status codes&lt;/li>
-&lt;li>user_agent: &lt;code>feroxbuster/VERSION&lt;/code>&lt;/li>
-&lt;li>recursion depth: &lt;code>4&lt;/code>&lt;/li>
-&lt;li>auto-filter wildcards - &lt;code>true&lt;/code>&lt;/li>
-&lt;li>output: &lt;code>stdout&lt;/code>&lt;/li>
-&lt;li>save_state: &lt;code>true&lt;/code> (create a state file in cwd when &lt;code>Ctrl+C&lt;/code> is received)&lt;/li>
-&lt;li>backup_extensions: &lt;code>[&amp;quot;~&amp;quot;, &amp;quot;.bak&amp;quot;, &amp;quot;.bak2&amp;quot;, &amp;quot;.old&amp;quot;, &amp;quot;.1&amp;quot;]&lt;/code>&lt;/li>
-&lt;li>protocol: &lt;code>https&lt;/code>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Default on feroxbuster</title><link>/feroxbuster-docs/tags/default/</link><description>Recent content in Default on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/default/index.xml" rel="self" type="application/rss+xml"/><item><title>Default Values</title><link>/feroxbuster-docs/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/default-values/</guid><description>&lt;h2 id="default-values"&gt;Default Values&lt;/h2&gt;
+&lt;p&gt;Configuration begins with the following built-in default values baked into the binary:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;timeout: &lt;code&gt;7&lt;/code&gt; seconds&lt;/li&gt;
+&lt;li&gt;follow redirects: &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;wordlist: &lt;code&gt;/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;threads: &lt;code&gt;50&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;verbosity: &lt;code&gt;0&lt;/code&gt; (no logging enabled)&lt;/li&gt;
+&lt;li&gt;scan_limit: &lt;code&gt;0&lt;/code&gt; (no limit imposed on concurrent scans)&lt;/li&gt;
+&lt;li&gt;rate_limit: &lt;code&gt;0&lt;/code&gt; (no limit imposed on requests per second)&lt;/li&gt;
+&lt;li&gt;status_codes: All valid status codes&lt;/li&gt;
+&lt;li&gt;user_agent: &lt;code&gt;feroxbuster/VERSION&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;recursion depth: &lt;code&gt;4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;auto-filter wildcards - &lt;code&gt;true&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;output: &lt;code&gt;stdout&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;save_state: &lt;code&gt;true&lt;/code&gt; (create a state file in cwd when &lt;code&gt;Ctrl+C&lt;/code&gt; is received)&lt;/li&gt;
+&lt;li&gt;backup_extensions: &lt;code&gt;[&amp;quot;~&amp;quot;, &amp;quot;.bak&amp;quot;, &amp;quot;.bak2&amp;quot;, &amp;quot;.old&amp;quot;, &amp;quot;.1&amp;quot;]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;protocol: &lt;code&gt;https&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

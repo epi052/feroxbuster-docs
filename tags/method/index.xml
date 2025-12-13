@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Method on feroxbuster</title><link>/feroxbuster-docs/tags/method/</link><description>Recent content in Method on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/method/index.xml" rel="self" type="application/rss+xml"/><item><title>Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/http-method/</guid><description>&lt;h2 id="specify-http-request-method">Specify HTTP Request Method&lt;/h2>
-&lt;p>Version 2.5.0 introduces the ability to specify the HTTP request method sent in each request. Some additional info:&lt;/p>
-&lt;ul>
-&lt;li>multiple methods may be used (i.e. &lt;code>-m POST GET&lt;/code>)&lt;/li>
-&lt;li>anything can be specified, not just valid http verbs (i.e. &lt;code>-m derp&lt;/code>)&lt;/li>
-&lt;/ul>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -m POST GET dErP
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="http-method" src="../http-method.gif">&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Method on feroxbuster</title><link>/feroxbuster-docs/tags/method/</link><description>Recent content in Method on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/method/index.xml" rel="self" type="application/rss+xml"/><item><title>Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/http-method/</guid><description>&lt;h2 id="specify-http-request-method"&gt;Specify HTTP Request Method&lt;/h2&gt;
+&lt;p&gt;Version 2.5.0 introduces the ability to specify the HTTP request method sent in each request. Some additional info:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;multiple methods may be used (i.e. &lt;code&gt;-m POST GET&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;anything can be specified, not just valid http verbs (i.e. &lt;code&gt;-m derp&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;feroxbuster -u https://some-example-site.com -m POST GET dErP
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src="../http-method.gif" alt="http-method"&gt;&lt;/p&gt;</description></item></channel></rss>

@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Certificate on feroxbuster</title><link>/feroxbuster-docs/tags/certificate/</link><description>Recent content in Certificate on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/certificate/index.xml" rel="self" type="application/rss+xml"/><item><title>Server and Client Certificate Management</title><link>/feroxbuster-docs/docs/examples/certificate-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/certificate-management/</guid><description>&lt;h1 id="server-and-client-certificate-management">Server and Client Certificate Management&lt;/h1>
-&lt;p>Version 2.10.0 introduces three flags:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>--server-certs&lt;/code>&lt;/li>
-&lt;li>&lt;code>--client-cert&lt;/code>&lt;/li>
-&lt;li>&lt;code>--client-key&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h1 id="when-to-use-certificate-management">When to use Certificate Management&lt;/h1>
-&lt;p>When a server requires mutual transport layer security (mTLS) authentication,
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Certificate on feroxbuster</title><link>/feroxbuster-docs/tags/certificate/</link><description>Recent content in Certificate on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/certificate/index.xml" rel="self" type="application/rss+xml"/><item><title>Server and Client Certificate Management</title><link>/feroxbuster-docs/docs/examples/certificate-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/certificate-management/</guid><description>&lt;h1 id="server-and-client-certificate-management"&gt;Server and Client Certificate Management&lt;/h1&gt;
+&lt;p&gt;Version 2.10.0 introduces three flags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--server-certs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--client-cert&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--client-key&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="when-to-use-certificate-management"&gt;When to use Certificate Management&lt;/h1&gt;
+&lt;p&gt;When a server requires mutual transport layer security (mTLS) authentication,
 the client upon verification of the server certificate, is required to send its
 own certificate to the server. The server subsequently checks its list of trusted
-CAs and verifies the client&amp;rsquo;s certificate.&lt;/p>
-&lt;p>In such a situation, the &lt;code>--client-key&lt;/code> flag needs to be supplied a &lt;code>.pem&lt;/code> file
-which has the PKCS #8 PEM encoded private key and the &lt;code>--client-cert&lt;/code> flag must
+CAs and verifies the client&amp;rsquo;s certificate.&lt;/p&gt;
+&lt;p&gt;In such a situation, the &lt;code&gt;--client-key&lt;/code&gt; flag needs to be supplied a &lt;code&gt;.pem&lt;/code&gt; file
+which has the PKCS #8 PEM encoded private key and the &lt;code&gt;--client-cert&lt;/code&gt; flag must
 be supplied a PEM encoded certificate for the client. Additional root CA
-certificates may need to be supplied through &lt;code>--server-certs&lt;/code> as a &lt;code>.pem&lt;/code> or &lt;code>.der&lt;/code> file
-if the server uses a self-signed certificate.&lt;/p></description></item></channel></rss>
+certificates may need to be supplied through &lt;code&gt;--server-certs&lt;/code&gt; as a &lt;code&gt;.pem&lt;/code&gt; or &lt;code&gt;.der&lt;/code&gt; file
+if the server uses a self-signed certificate.&lt;/p&gt;</description></item></channel></rss>

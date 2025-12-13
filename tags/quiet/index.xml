@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quiet on feroxbuster</title><link>/feroxbuster-docs/tags/quiet/</link><description>Recent content in Quiet on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/quiet/index.xml" rel="self" type="application/rss+xml"/><item><title>Silent/Quiet Output</title><link>/feroxbuster-docs/docs/examples/be-quiet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/be-quiet/</guid><description>&lt;h2 id="silence-all-output-or-be-kinda-quiet">Silence all Output or Be Kinda Quiet&lt;/h2>
-&lt;p>Version 2.0.0 introduces &lt;code>--silent&lt;/code> which is almost equivalent to version 1.x.x&amp;rsquo;s &lt;code>--quiet&lt;/code>.&lt;/p>
-&lt;h3 id="--silent">&lt;code>--silent&lt;/code>&lt;/h3>
-&lt;p>Good for piping a list of urls to other commands:&lt;/p>
-&lt;ul>
-&lt;li>disables logging (no error messages to screen)&lt;/li>
-&lt;li>don&amp;rsquo;t print banner&lt;/li>
-&lt;li>only display urls during scan&lt;/li>
-&lt;/ul>
-&lt;h4 id="example-output">example output&lt;/h4>
-&lt;pre tabindex="0">&lt;code>https://localhost.com/contact
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Quiet on feroxbuster</title><link>/feroxbuster-docs/tags/quiet/</link><description>Recent content in Quiet on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/quiet/index.xml" rel="self" type="application/rss+xml"/><item><title>Silent/Quiet Output</title><link>/feroxbuster-docs/docs/examples/be-quiet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/be-quiet/</guid><description>&lt;h2 id="silence-all-output-or-be-kinda-quiet"&gt;Silence all Output or Be Kinda Quiet&lt;/h2&gt;
+&lt;p&gt;Version 2.0.0 introduces &lt;code&gt;--silent&lt;/code&gt; which is almost equivalent to version 1.x.x&amp;rsquo;s &lt;code&gt;--quiet&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="--silent"&gt;&lt;code&gt;--silent&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Good for piping a list of urls to other commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;disables logging (no error messages to screen)&lt;/li&gt;
+&lt;li&gt;don&amp;rsquo;t print banner&lt;/li&gt;
+&lt;li&gt;only display urls during scan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="example-output"&gt;example output&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;https://localhost.com/contact
 https://localhost.com/about
 https://localhost.com/terms
-&lt;/code>&lt;/pre>&lt;h3 id="--quiet">&lt;code>--quiet&lt;/code>&lt;/h3>
-&lt;p>Good for tmux windows that have notifications enabled as the only updates shown by the scan are new valid responses
-and new directories found that are suitable for recursion.&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="--quiet"&gt;&lt;code&gt;--quiet&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Good for tmux windows that have notifications enabled as the only updates shown by the scan are new valid responses
+and new directories found that are suitable for recursion.&lt;/p&gt;</description></item></channel></rss>

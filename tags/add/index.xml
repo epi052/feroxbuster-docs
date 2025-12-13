@@ -1,14 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Add on feroxbuster</title><link>/feroxbuster-docs/tags/add/</link><description>Recent content in Add on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/add/index.xml" rel="self" type="application/rss+xml"/><item><title>Scan Management Menu</title><link>/feroxbuster-docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cancel-scan/</guid><description>&lt;h2 id="add-or-cancel-a-recursive-scan-interactively">Add or Cancel a Recursive Scan Interactively&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Add on feroxbuster</title><link>/feroxbuster-docs/tags/add/</link><description>Recent content in Add on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/add/index.xml" rel="self" type="application/rss+xml"/><item><title>Scan Management Menu</title><link>/feroxbuster-docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cancel-scan/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
 
-
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
-
- Scans that are started via &lt;code>-u&lt;/code> or passed in through &lt;code>--stdin&lt;/code> cannot be cancelled, only scans found via &lt;code>--extract-links&lt;/code> or recursion are eligible.
-
-&lt;/div>
-
-&lt;p>Version 1.12.0 expanded the pause/resume functionality introduced in &lt;a href="../pause-scan/">v1.4.0&lt;/a> by
-adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing &lt;code>ENTER&lt;/code>.&lt;/p>
-&lt;p>Version 2.4.1 expanded functionality even further with the ability to add a brand-new scan. Now that cancelling is no
-longer the only action available to users, the name has been updated to the &lt;strong>Scan Management Menu&lt;/strong>™.&lt;/p></description></item></channel></rss>
+ &lt;p&gt;Interactively changing the scan limit follows the rules below&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Setting the limit to a number &lt;strong&gt;higher&lt;/strong&gt; than the current number of directory scans allows new/waiting scans to immediately start&lt;/li&gt;
+&lt;li&gt;Setting the limit to a number &lt;strong&gt;lower&lt;/strong&gt; than the current number of directory scans does not affect scans already running. It will take effect as soon as the number of active scans drops to/below the new limit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Consider the following example:&lt;/p&gt;</description></item></channel></rss>

@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ferox-Config on feroxbuster</title><link>/feroxbuster-docs/tags/ferox-config/</link><description>Recent content in Ferox-Config on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/ferox-config/index.xml" rel="self" type="application/rss+xml"/><item><title>Configuration File</title><link>/feroxbuster-docs/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/ferox-config-toml/</guid><description>&lt;h2 id="ferox-configtoml">ferox-config.toml&lt;/h2>
-&lt;p>After built-in default values are set, any values defined in a &lt;code>ferox-config.toml&lt;/code> config file will override the
-built-in defaults.&lt;/p>
-&lt;p>&lt;code>feroxbuster&lt;/code> searches for &lt;code>ferox-config.toml&lt;/code> in the following locations (in the order shown):&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>/etc/feroxbuster/&lt;/code> (global)&lt;/li>
-&lt;li>&lt;code>CONFIG_DIR/feroxbuster/&lt;/code> (per-user)&lt;/li>
-&lt;li>The same directory as the &lt;code>feroxbuster&lt;/code> executable (per-user)&lt;/li>
-&lt;li>The user&amp;rsquo;s current working directory (per-target)&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>&lt;code>CONFIG_DIR&lt;/code> is defined as the following:&lt;/p>
-&lt;ul>
-&lt;li>Linux: &lt;code>$XDG_CONFIG_HOME&lt;/code> or &lt;code>$HOME/.config&lt;/code> i.e. &lt;code>/home/bob/.config&lt;/code>&lt;/li>
-&lt;li>MacOs: &lt;code>$HOME/Library/Application Support&lt;/code> i.e. &lt;code>/Users/bob/Library/Application Support&lt;/code>&lt;/li>
-&lt;li>Windows: &lt;code>{FOLDERID_RoamingAppData}&lt;/code> i.e. &lt;code>C:\Users\Bob\AppData\Roaming&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;p>If more than one valid configuration file is found, each one overwrites the values found previously.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ferox-Config on feroxbuster</title><link>/feroxbuster-docs/tags/ferox-config/</link><description>Recent content in Ferox-Config on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/ferox-config/index.xml" rel="self" type="application/rss+xml"/><item><title>Configuration File</title><link>/feroxbuster-docs/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/ferox-config-toml/</guid><description>&lt;h2 id="ferox-configtoml"&gt;ferox-config.toml&lt;/h2&gt;
+&lt;p&gt;After built-in default values are set, any values defined in a &lt;code&gt;ferox-config.toml&lt;/code&gt; config file will override the
+built-in defaults.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; searches for &lt;code&gt;ferox-config.toml&lt;/code&gt; in the following locations (in the order shown):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/feroxbuster/&lt;/code&gt; (global)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CONFIG_DIR/feroxbuster/&lt;/code&gt; (per-user)&lt;/li&gt;
+&lt;li&gt;The same directory as the &lt;code&gt;feroxbuster&lt;/code&gt; executable (per-user)&lt;/li&gt;
+&lt;li&gt;The user&amp;rsquo;s current working directory (per-target)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;CONFIG_DIR&lt;/code&gt; is defined as the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux: &lt;code&gt;$XDG_CONFIG_HOME&lt;/code&gt; or &lt;code&gt;$HOME/.config&lt;/code&gt; i.e. &lt;code&gt;/home/bob/.config&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;MacOs: &lt;code&gt;$HOME/Library/Application Support&lt;/code&gt; i.e. &lt;code&gt;/Users/bob/Library/Application Support&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Windows: &lt;code&gt;{FOLDERID_RoamingAppData}&lt;/code&gt; i.e. &lt;code&gt;C:\Users\Bob\AppData\Roaming&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If more than one valid configuration file is found, each one overwrites the values found previously.&lt;/p&gt;</description></item></channel></rss>

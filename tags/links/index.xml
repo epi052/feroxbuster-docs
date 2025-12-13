@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Links on feroxbuster</title><link>/feroxbuster-docs/tags/links/</link><description>Recent content in Links on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/links/index.xml" rel="self" type="application/rss+xml"/><item><title>Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>&lt;h2 id="extract-links-from-response-body">Extract Links from Response Body&lt;/h2>
-&lt;p>Search through the body of valid responses (html, javascript, etc&amp;hellip;) for additional endpoints to scan. This turns
-&lt;code>feroxbuster&lt;/code> into a hybrid that looks for both linked and unlinked content.&lt;/p>
-&lt;p>Example request/response with &lt;code>--extract-links&lt;/code> enabled:&lt;/p>
-&lt;ul>
-&lt;li>Make request to &lt;code>http://example.com/index.html&lt;/code>&lt;/li>
-&lt;li>Receive, and read in, the &lt;code>body&lt;/code> of the response&lt;/li>
-&lt;li>Search the &lt;code>body&lt;/code> for absolute and relative links (i.e. &lt;code>homepage/assets/img/icons/handshake.svg&lt;/code>)&lt;/li>
-&lt;li>Add the following directories for recursive scanning:
-&lt;ul>
-&lt;li>&lt;code>http://example.com/homepage&lt;/code>&lt;/li>
-&lt;li>&lt;code>http://example.com/homepage/assets&lt;/code>&lt;/li>
-&lt;li>&lt;code>http://example.com/homepage/assets/img&lt;/code>&lt;/li>
-&lt;li>&lt;code>http://example.com/homepage/assets/img/icons&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Make a single request to &lt;code>http://example.com/homepage/assets/img/icons/handshake.svg&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --extract-links
-&lt;/code>&lt;/pre>&lt;h2 id="comparison">Comparison&lt;/h2>
-&lt;p>Here&amp;rsquo;s a comparison of a wordlist-only scan vs &lt;code>--extract-links&lt;/code>
-using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274">Feline&lt;/a> from Hack the Box:&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Links on feroxbuster</title><link>/feroxbuster-docs/tags/links/</link><description>Recent content in Links on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/links/index.xml" rel="self" type="application/rss+xml"/><item><title>Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>&lt;h2 id="extract-links-from-response-body"&gt;Extract Links from Response Body&lt;/h2&gt;
+&lt;p&gt;Search through the body of valid responses (html, javascript, etc&amp;hellip;) for additional endpoints to scan. This turns
+&lt;code&gt;feroxbuster&lt;/code&gt; into a hybrid that looks for both linked and unlinked content.&lt;/p&gt;
+&lt;p&gt;Example request/response with &lt;code&gt;--extract-links&lt;/code&gt; enabled:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make request to &lt;code&gt;http://example.com/index.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Receive, and read in, the &lt;code&gt;body&lt;/code&gt; of the response&lt;/li&gt;
+&lt;li&gt;Search the &lt;code&gt;body&lt;/code&gt; for absolute and relative links (i.e. &lt;code&gt;homepage/assets/img/icons/handshake.svg&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Add the following directories for recursive scanning:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage/assets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage/assets/img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage/assets/img/icons&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make a single request to &lt;code&gt;http://example.com/homepage/assets/img/icons/handshake.svg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;./feroxbuster -u http://127.1 --extract-links
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="comparison"&gt;Comparison&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a comparison of a wordlist-only scan vs &lt;code&gt;--extract-links&lt;/code&gt;
+using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274"&gt;Feline&lt;/a&gt; from Hack the Box:&lt;/p&gt;</description></item></channel></rss>

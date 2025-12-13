@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Android on feroxbuster</title><link>/feroxbuster-docs/tags/android/</link><description>Recent content in Android on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/android/index.xml" rel="self" type="application/rss+xml"/><item><title>Android/Termux Install</title><link>/feroxbuster-docs/docs/installation/install-android/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-android/</guid><description>&lt;h2 id="androidtermux-install"&gt;Android/Termux Install&lt;/h2&gt;
+&lt;p&gt;This guide covers building &lt;code&gt;feroxbuster&lt;/code&gt; from source on Android using Termux, particularly for 32-bit ARM devices (armeabi-v7a) where prebuilt binaries are not available.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tested on armeabi-v7a (ARM32) architecture using Rust from the Termux repository&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="install-dependencies"&gt;Install Dependencies&lt;/h2&gt;
+&lt;p&gt;Update Termux packages and install required build dependencies:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pkg update &lt;span style="color:#ce5c00;font-weight:bold"&gt;&amp;amp;&amp;amp;&lt;/span&gt; pkg upgrade -y
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pkg install git clang make cmake pkg-config python rust -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="clone-and-build"&gt;Clone and Build&lt;/h2&gt;
+&lt;p&gt;Clone the repository and build from source:&lt;/p&gt;</description></item></channel></rss>

@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Block on feroxbuster</title><link>/feroxbuster-docs/tags/block/</link><description>Recent content in Block on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/block/index.xml" rel="self" type="application/rss+xml"/><item><title>Deny List</title><link>/feroxbuster-docs/docs/examples/deny-list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/deny-list/</guid><description>&lt;h2 id="prevent-specific-domaindirectory-scans">Prevent Specific Domain/Directory Scans&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Block on feroxbuster</title><link>/feroxbuster-docs/tags/block/</link><description>Recent content in Block on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/block/index.xml" rel="self" type="application/rss+xml"/><item><title>Deny List</title><link>/feroxbuster-docs/docs/examples/deny-list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/deny-list/</guid><description>&lt;h2 id="prevent-specific-domaindirectory-scans"&gt;Prevent Specific Domain/Directory Scans&lt;/h2&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Heads up&lt;/h4>
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Heads up&lt;/h4&gt;
 
- This action is taken &lt;strong>BEFORE&lt;/strong> a request is sent to the target, which differs from the filter-* options that are applied to responses
+ This action is taken &lt;strong&gt;BEFORE&lt;/strong&gt; a request is sent to the target, which differs from the filter-* options that are applied to responses
 
-&lt;/div>
+&lt;/div&gt;
 
 
 
-&lt;div class="alert alert-info" role="alert">
-&lt;h4 class="alert-heading">Heads up&lt;/h4>
+&lt;div class="alert alert-info" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Heads up&lt;/h4&gt;
 
- Version 2.3.4 added the ability to pass &lt;strong>regular expressions&lt;/strong> to &lt;code>--dont-scan&lt;/code> (&lt;code>/[jc]ss?&lt;/code>).
+ Version 2.3.4 added the ability to pass &lt;strong&gt;regular expressions&lt;/strong&gt; to &lt;code&gt;--dont-scan&lt;/code&gt; (&lt;code&gt;/[jc]ss?&lt;/code&gt;).
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>Version 2.3.0 introduces the &lt;code>--dont-scan&lt;/code> option. The values passed to &lt;code>--dont-scan&lt;/code> act as a deny-list. The values
-can be an entire domain (&lt;code>http://some.domain&lt;/code>), a specific folder (&lt;code>http://some.domain/js&lt;/code>), or a specific file
-(&lt;code>http://some.domain/some-application/stupid-page.php&lt;/code>). If a folder/domain is used any sub-folder/sub-file of the
-url passed to &lt;code>--dont-scan&lt;/code> will be &lt;strong>blocked before it can be requested&lt;/strong>.&lt;/p></description></item></channel></rss>
+&lt;p&gt;Version 2.3.0 introduces the &lt;code&gt;--dont-scan&lt;/code&gt; option. The values passed to &lt;code&gt;--dont-scan&lt;/code&gt; act as a deny-list. The values
+can be an entire domain (&lt;code&gt;http://some.domain&lt;/code&gt;), a specific folder (&lt;code&gt;http://some.domain/js&lt;/code&gt;), or a specific file
+(&lt;code&gt;http://some.domain/some-application/stupid-page.php&lt;/code&gt;). If a folder/domain is used any sub-folder/sub-file of the
+url passed to &lt;code&gt;--dont-scan&lt;/code&gt; will be &lt;strong&gt;blocked before it can be requested&lt;/strong&gt;.&lt;/p&gt;</description></item></channel></rss>

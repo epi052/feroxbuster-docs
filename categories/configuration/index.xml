@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Configuration on feroxbuster</title><link>/feroxbuster-docs/categories/configuration/</link><description>Recent content in Configuration on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/categories/configuration/index.xml" rel="self" type="application/rss+xml"/><item><title>Command Line Interface</title><link>/feroxbuster-docs/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/command-line/</guid><description>&lt;h3 id="command-line-parsing">Command Line Parsing&lt;/h3>
-&lt;p>Finally, after parsing the available config file, any options/arguments given on the commandline will override any
-values that were set as a built-in or config-file value.&lt;/p>
-&lt;pre tabindex="0">&lt;code>Usage: feroxbuster [OPTIONS]
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Configuration on feroxbuster</title><link>/feroxbuster-docs/categories/configuration/</link><description>Recent content in Configuration on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/categories/configuration/index.xml" rel="self" type="application/rss+xml"/><item><title>Command Line Interface</title><link>/feroxbuster-docs/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/command-line/</guid><description>&lt;h3 id="command-line-parsing"&gt;Command Line Parsing&lt;/h3&gt;
+&lt;p&gt;Finally, after parsing the available config file, any options/arguments given on the commandline will override any
+values that were set as a built-in or config-file value.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Usage: feroxbuster [OPTIONS]
 
 Options:
  -h, --help
@@ -30,6 +30,12 @@ Composite settings:
  --burp-replay
  Set --replay-proxy to http://127.0.0.1:8080 and set --insecure to true
 
+ --data-urlencoded &amp;lt;DATA&amp;gt;
+ Set -H &amp;#39;Content-Type: application/x-www-form-urlencoded&amp;#39;, --data to &amp;lt;data-urlencoded&amp;gt; (supports @file) and -m to POST
+
+ --data-json &amp;lt;DATA&amp;gt;
+ Set -H &amp;#39;Content-Type: application/json&amp;#39;, --data to &amp;lt;data-json&amp;gt; (supports @file) and -m to POST
+
  --smart
  Set --auto-tune, --collect-words, and --collect-backups to true
 
@@ -48,14 +54,14 @@ Proxy settings:
 
 Request settings:
  -a, --user-agent &amp;lt;USER_AGENT&amp;gt;
- Sets the User-Agent (default: feroxbuster/2.11.0)
+ Sets the User-Agent (default: feroxbuster/2.13.0)
 
  -A, --random-agent
  Use a random User-Agent
 
  -x, --extensions &amp;lt;FILE_EXTENSION&amp;gt;...
- File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input starts
- with an @ (ex: @ext.txt)
+ File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input starts with an @ (ex:
+ @ext.txt)
 
  -m, --methods &amp;lt;HTTP_METHODS&amp;gt;...
  Which HTTP request method(s) should be sent (default: GET)
@@ -82,6 +88,9 @@ Request filters:
  --dont-scan &amp;lt;URL&amp;gt;...
  URL(s) or Regex Pattern(s) to exclude from recursion/scans
 
+ --scope &amp;lt;URL&amp;gt;...
+ Additional domains/URLs to consider in-scope for scanning (in addition to current domain)
+
 Response filters:
  -S, --filter-size &amp;lt;SIZE&amp;gt;...
  Filter out messages of a particular size (ex: -S 5120 -S 4927,1970)
@@ -103,6 +112,9 @@ Response filters:
 
  -s, --status-codes &amp;lt;STATUS_CODE&amp;gt;...
  Status Codes to include (allow list) (default: All Status Codes)
+
+ --unique
+ Only show unique responses
 
 Client settings:
  -T, --timeout &amp;lt;SECONDS&amp;gt;
@@ -147,6 +159,9 @@ Scan settings:
 
  --rate-limit &amp;lt;RATE_LIMIT&amp;gt;
  Limit number of requests per second (per directory) (default: 0, i.e. no limit)
+
+ --response-size-limit &amp;lt;BYTES&amp;gt;
+ Limit size of response body to read in bytes (default: 4MB)
 
  --time-limit &amp;lt;TIME_SPEC&amp;gt;
  Limit total run time of all scans (ex: --time-limit 10m)
@@ -252,52 +267,52 @@ EXAMPLES:
  
  Examples and demonstrations of all features
  https://epi052.github.io/feroxbuster-docs/docs/examples/
-&lt;/code>&lt;/pre></description></item><item><title>Configuration File</title><link>/feroxbuster-docs/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/ferox-config-toml/</guid><description>&lt;h2 id="ferox-configtoml">ferox-config.toml&lt;/h2>
-&lt;p>After built-in default values are set, any values defined in a &lt;code>ferox-config.toml&lt;/code> config file will override the
-built-in defaults.&lt;/p>
-&lt;p>&lt;code>feroxbuster&lt;/code> searches for &lt;code>ferox-config.toml&lt;/code> in the following locations (in the order shown):&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>/etc/feroxbuster/&lt;/code> (global)&lt;/li>
-&lt;li>&lt;code>CONFIG_DIR/feroxbuster/&lt;/code> (per-user)&lt;/li>
-&lt;li>The same directory as the &lt;code>feroxbuster&lt;/code> executable (per-user)&lt;/li>
-&lt;li>The user&amp;rsquo;s current working directory (per-target)&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>&lt;code>CONFIG_DIR&lt;/code> is defined as the following:&lt;/p>
-&lt;ul>
-&lt;li>Linux: &lt;code>$XDG_CONFIG_HOME&lt;/code> or &lt;code>$HOME/.config&lt;/code> i.e. &lt;code>/home/bob/.config&lt;/code>&lt;/li>
-&lt;li>MacOs: &lt;code>$HOME/Library/Application Support&lt;/code> i.e. &lt;code>/Users/bob/Library/Application Support&lt;/code>&lt;/li>
-&lt;li>Windows: &lt;code>{FOLDERID_RoamingAppData}&lt;/code> i.e. &lt;code>C:\Users\Bob\AppData\Roaming&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;p>If more than one valid configuration file is found, each one overwrites the values found previously.&lt;/p></description></item><item><title>Default Values</title><link>/feroxbuster-docs/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/default-values/</guid><description>&lt;h2 id="default-values">Default Values&lt;/h2>
-&lt;p>Configuration begins with the following built-in default values baked into the binary:&lt;/p>
-&lt;ul>
-&lt;li>timeout: &lt;code>7&lt;/code> seconds&lt;/li>
-&lt;li>follow redirects: &lt;code>false&lt;/code>&lt;/li>
-&lt;li>wordlist: &lt;code>/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt&lt;/code>&lt;/li>
-&lt;li>threads: &lt;code>50&lt;/code>&lt;/li>
-&lt;li>verbosity: &lt;code>0&lt;/code> (no logging enabled)&lt;/li>
-&lt;li>scan_limit: &lt;code>0&lt;/code> (no limit imposed on concurrent scans)&lt;/li>
-&lt;li>rate_limit: &lt;code>0&lt;/code> (no limit imposed on requests per second)&lt;/li>
-&lt;li>status_codes: All valid status codes&lt;/li>
-&lt;li>user_agent: &lt;code>feroxbuster/VERSION&lt;/code>&lt;/li>
-&lt;li>recursion depth: &lt;code>4&lt;/code>&lt;/li>
-&lt;li>auto-filter wildcards - &lt;code>true&lt;/code>&lt;/li>
-&lt;li>output: &lt;code>stdout&lt;/code>&lt;/li>
-&lt;li>save_state: &lt;code>true&lt;/code> (create a state file in cwd when &lt;code>Ctrl+C&lt;/code> is received)&lt;/li>
-&lt;li>backup_extensions: &lt;code>[&amp;quot;~&amp;quot;, &amp;quot;.bak&amp;quot;, &amp;quot;.bak2&amp;quot;, &amp;quot;.old&amp;quot;, &amp;quot;.1&amp;quot;]&lt;/code>&lt;/li>
-&lt;li>protocol: &lt;code>https&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>&lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
-&lt;p>This section explains how the &lt;code>-t&lt;/code> and &lt;code>-L&lt;/code> options work together to determine the overall aggressiveness of a scan. The
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Configuration File</title><link>/feroxbuster-docs/docs/configuration/ferox-config-toml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/ferox-config-toml/</guid><description>&lt;h2 id="ferox-configtoml"&gt;ferox-config.toml&lt;/h2&gt;
+&lt;p&gt;After built-in default values are set, any values defined in a &lt;code&gt;ferox-config.toml&lt;/code&gt; config file will override the
+built-in defaults.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; searches for &lt;code&gt;ferox-config.toml&lt;/code&gt; in the following locations (in the order shown):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/etc/feroxbuster/&lt;/code&gt; (global)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CONFIG_DIR/feroxbuster/&lt;/code&gt; (per-user)&lt;/li&gt;
+&lt;li&gt;The same directory as the &lt;code&gt;feroxbuster&lt;/code&gt; executable (per-user)&lt;/li&gt;
+&lt;li&gt;The user&amp;rsquo;s current working directory (per-target)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;CONFIG_DIR&lt;/code&gt; is defined as the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux: &lt;code&gt;$XDG_CONFIG_HOME&lt;/code&gt; or &lt;code&gt;$HOME/.config&lt;/code&gt; i.e. &lt;code&gt;/home/bob/.config&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;MacOs: &lt;code&gt;$HOME/Library/Application Support&lt;/code&gt; i.e. &lt;code&gt;/Users/bob/Library/Application Support&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Windows: &lt;code&gt;{FOLDERID_RoamingAppData}&lt;/code&gt; i.e. &lt;code&gt;C:\Users\Bob\AppData\Roaming&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If more than one valid configuration file is found, each one overwrites the values found previously.&lt;/p&gt;</description></item><item><title>Default Values</title><link>/feroxbuster-docs/docs/configuration/default-values/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/default-values/</guid><description>&lt;h2 id="default-values"&gt;Default Values&lt;/h2&gt;
+&lt;p&gt;Configuration begins with the following built-in default values baked into the binary:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;timeout: &lt;code&gt;7&lt;/code&gt; seconds&lt;/li&gt;
+&lt;li&gt;follow redirects: &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;wordlist: &lt;code&gt;/usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;threads: &lt;code&gt;50&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;verbosity: &lt;code&gt;0&lt;/code&gt; (no logging enabled)&lt;/li&gt;
+&lt;li&gt;scan_limit: &lt;code&gt;0&lt;/code&gt; (no limit imposed on concurrent scans)&lt;/li&gt;
+&lt;li&gt;rate_limit: &lt;code&gt;0&lt;/code&gt; (no limit imposed on requests per second)&lt;/li&gt;
+&lt;li&gt;status_codes: All valid status codes&lt;/li&gt;
+&lt;li&gt;user_agent: &lt;code&gt;feroxbuster/VERSION&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;recursion depth: &lt;code&gt;4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;auto-filter wildcards - &lt;code&gt;true&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;output: &lt;code&gt;stdout&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;save_state: &lt;code&gt;true&lt;/code&gt; (create a state file in cwd when &lt;code&gt;Ctrl+C&lt;/code&gt; is received)&lt;/li&gt;
+&lt;li&gt;backup_extensions: &lt;code&gt;[&amp;quot;~&amp;quot;, &amp;quot;.bak&amp;quot;, &amp;quot;.bak2&amp;quot;, &amp;quot;.old&amp;quot;, &amp;quot;.1&amp;quot;]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;protocol: &lt;code&gt;https&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>&lt;h2 id="a-high-level-overview"&gt;A High-Level Overview&lt;/h2&gt;
+&lt;p&gt;This section explains how the &lt;code&gt;-t&lt;/code&gt; and &lt;code&gt;-L&lt;/code&gt; options work together to determine the overall aggressiveness of a scan. The
 combination of the two values set by these options determines how hard your target will get hit and to some extent also
-determines how many resources will be consumed on your local machine.&lt;/p>
-&lt;h2 id="a-note-on-green-threads">A Note on Green Threads&lt;/h2>
-&lt;p>&lt;code>feroxbuster&lt;/code> uses so-called &lt;a href="https://en.wikipedia.org/wiki/Green_threads">green threads&lt;/a> as opposed to traditional
+determines how many resources will be consumed on your local machine.&lt;/p&gt;
+&lt;h2 id="a-note-on-green-threads"&gt;A Note on Green Threads&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; uses so-called &lt;a href="https://en.wikipedia.org/wiki/Green_threads"&gt;green threads&lt;/a&gt; as opposed to traditional
 kernel/OS threads. This means (at a high-level) that the threads are implemented entirely in userspace, within a single
 running process. As a result, a scan with 30 green threads will appear to the OS to be a single process with no
 additional light-weight processes associated with it as far as the kernel is concerned. As such, there will not be any
-impact to process (&lt;code>nproc&lt;/code>) limits when specifying larger values for &lt;code>-t&lt;/code>. However, these threads will still consume
-file descriptors, so you will need to ensure that you have a suitable &lt;code>nlimit&lt;/code> set when scaling up the amount of
-threads. More detailed documentation on setting appropriate &lt;code>nlimit&lt;/code> values can be found in
-the &lt;a href="../../faq/no-file-descriptors/">No File Descriptors Available&lt;/a> section of the FAQ&lt;/p></description></item></channel></rss>
+impact to process (&lt;code&gt;nproc&lt;/code&gt;) limits when specifying larger values for &lt;code&gt;-t&lt;/code&gt;. However, these threads will still consume
+file descriptors, so you will need to ensure that you have a suitable &lt;code&gt;nlimit&lt;/code&gt; set when scaling up the amount of
+threads. More detailed documentation on setting appropriate &lt;code&gt;nlimit&lt;/code&gt; values can be found in
+the &lt;a href="../../faq/no-file-descriptors/"&gt;No File Descriptors Available&lt;/a&gt; section of the FAQ&lt;/p&gt;</description></item></channel></rss>

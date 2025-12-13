@@ -1,43 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Extract on feroxbuster</title><link>/feroxbuster-docs/tags/extract/</link><description>Recent content in Extract on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/extract/index.xml" rel="self" type="application/rss+xml"/><item><title>Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>&lt;h2 id="extract-links-from-response-body">Extract Links from Response Body&lt;/h2>
-&lt;p>Search through the body of valid responses (html, javascript, etc&amp;hellip;) for additional endpoints to scan. This turns
-&lt;code>feroxbuster&lt;/code> into a hybrid that looks for both linked and unlinked content.&lt;/p>
-&lt;p>Example request/response with &lt;code>--extract-links&lt;/code> enabled:&lt;/p>
-&lt;ul>
-&lt;li>Make request to &lt;code>http://example.com/index.html&lt;/code>&lt;/li>
-&lt;li>Receive, and read in, the &lt;code>body&lt;/code> of the response&lt;/li>
-&lt;li>Search the &lt;code>body&lt;/code> for absolute and relative links (i.e. &lt;code>homepage/assets/img/icons/handshake.svg&lt;/code>)&lt;/li>
-&lt;li>Add the following directories for recursive scanning:
-&lt;ul>
-&lt;li>&lt;code>http://example.com/homepage&lt;/code>&lt;/li>
-&lt;li>&lt;code>http://example.com/homepage/assets&lt;/code>&lt;/li>
-&lt;li>&lt;code>http://example.com/homepage/assets/img&lt;/code>&lt;/li>
-&lt;li>&lt;code>http://example.com/homepage/assets/img/icons&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Make a single request to &lt;code>http://example.com/homepage/assets/img/icons/handshake.svg&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --extract-links
-&lt;/code>&lt;/pre>&lt;h2 id="comparison">Comparison&lt;/h2>
-&lt;p>Here&amp;rsquo;s a comparison of a wordlist-only scan vs &lt;code>--extract-links&lt;/code>
-using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274">Feline&lt;/a> from Hack the Box:&lt;/p></description></item><item><title>Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>&lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
-&lt;p>Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code>feroxbuster&lt;/code> will either report, or report and scan, depending on whether or not &lt;code>--extract-links&lt;/code> was used.&lt;/p>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;h3 id="without---extract-links">Without &lt;code>--extract-links&lt;/code>&lt;/h3>
-&lt;p>When &lt;code>--extract-links&lt;/code> is &lt;strong>not&lt;/strong> used, directory listing is simply reported. No further actions are taken.&lt;/p>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="dir-list-no-tack-e" src="../dir-list-no-tack-e.png">&lt;/p>
-&lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
-&lt;p>When &lt;code>--extract-links&lt;/code> is used, each link in the response is extracted and requested.&lt;/p></description></item><item><title>Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>&lt;h2 id="dynamic-collection-settings">Dynamic Collection Settings&lt;/h2>
-&lt;p>Version 2.6.0 added a whole category of features named &lt;strong>Dynamic Collection Settings&lt;/strong>. The general premise of each
-feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p>
-&lt;h2 id="collect-backups">Collect Backups&lt;/h2>
-&lt;p>Using &lt;code>--collect-backups&lt;/code> means that for every file found during a scan, &lt;code>feroxbuster&lt;/code> sends additional queries for the following default extensions:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>~&lt;/code>&lt;/li>
-&lt;li>&lt;code>.bak&lt;/code>&lt;/li>
-&lt;li>&lt;code>.bak2&lt;/code>&lt;/li>
-&lt;li>&lt;code>.old&lt;/code>&lt;/li>
-&lt;li>&lt;code>.1&lt;/code>&lt;/li>
-&lt;li>&lt;code>.swp&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em>found&lt;/em>.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Extract on feroxbuster</title><link>/feroxbuster-docs/tags/extract/</link><description>Recent content in Extract on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/extract/index.xml" rel="self" type="application/rss+xml"/><item><title>Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>&lt;h2 id="extract-links-from-response-body"&gt;Extract Links from Response Body&lt;/h2&gt;
+&lt;p&gt;Search through the body of valid responses (html, javascript, etc&amp;hellip;) for additional endpoints to scan. This turns
+&lt;code&gt;feroxbuster&lt;/code&gt; into a hybrid that looks for both linked and unlinked content.&lt;/p&gt;
+&lt;p&gt;Example request/response with &lt;code&gt;--extract-links&lt;/code&gt; enabled:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make request to &lt;code&gt;http://example.com/index.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Receive, and read in, the &lt;code&gt;body&lt;/code&gt; of the response&lt;/li&gt;
+&lt;li&gt;Search the &lt;code&gt;body&lt;/code&gt; for absolute and relative links (i.e. &lt;code&gt;homepage/assets/img/icons/handshake.svg&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Add the following directories for recursive scanning:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage/assets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage/assets/img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage/assets/img/icons&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make a single request to &lt;code&gt;http://example.com/homepage/assets/img/icons/handshake.svg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;./feroxbuster -u http://127.1 --extract-links
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="comparison"&gt;Comparison&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a comparison of a wordlist-only scan vs &lt;code&gt;--extract-links&lt;/code&gt;
+using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274"&gt;Feline&lt;/a&gt; from Hack the Box:&lt;/p&gt;</description></item><item><title>Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>&lt;h2 id="detect-directory-listing"&gt;Detect Directory Listing&lt;/h2&gt;
+&lt;p&gt;Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code&gt;feroxbuster&lt;/code&gt; will either report, or report and scan, depending on whether or not &lt;code&gt;--extract-links&lt;/code&gt; was used.&lt;/p&gt;
+&lt;h2 id="detection-methods"&gt;Detection Methods&lt;/h2&gt;
+&lt;h3 id="standard-detection-v250"&gt;Standard Detection (v2.5.0+)&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; can detect directory listings from common web servers by analyzing the page title:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Apache/Python/Tomcat&lt;/strong&gt;: &lt;code&gt;Index of /&lt;/code&gt; or &lt;code&gt;Directory Listing for /&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ASP.NET&lt;/strong&gt;: &lt;code&gt;Directory Listing -- /&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="enhanced-heuristic-detection-v2131"&gt;Enhanced Heuristic Detection (v2.13.1+)&lt;/h3&gt;
+&lt;p&gt;For custom or non-standard directory listings that don&amp;rsquo;t use recognizable titles, &lt;code&gt;feroxbuster&lt;/code&gt; now employs advanced heuristics. It looks for multiple signals that indicate directory listing behavior:&lt;/p&gt;</description></item><item><title>Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>&lt;h2 id="dynamic-collection-settings"&gt;Dynamic Collection Settings&lt;/h2&gt;
+&lt;p&gt;Version 2.6.0 added a whole category of features named &lt;strong&gt;Dynamic Collection Settings&lt;/strong&gt;. The general premise of each
+feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p&gt;
+&lt;h2 id="collect-backups"&gt;Collect Backups&lt;/h2&gt;
+&lt;p&gt;Using &lt;code&gt;--collect-backups&lt;/code&gt; means that for every file found during a scan, &lt;code&gt;feroxbuster&lt;/code&gt; sends additional queries for the following default extensions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.bak&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.bak2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.old&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.swp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em&gt;found&lt;/em&gt;.&lt;/p&gt;</description></item></channel></rss>

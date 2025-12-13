@@ -1,42 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Connections on feroxbuster</title><link>/feroxbuster-docs/tags/connections/</link><description>Recent content in Connections on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/connections/index.xml" rel="self" type="application/rss+xml"/><item><title>Limit Number of Scans</title><link>/feroxbuster-docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-scans/</guid><description>&lt;h2 id="limit-total-number-of-concurrent-scans">Limit Total Number of Concurrent Scans&lt;/h2>
-&lt;p>Limit the number of scans permitted to run at any given time. Recursion will still identify new directories, but newly
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Connections on feroxbuster</title><link>/feroxbuster-docs/tags/connections/</link><description>Recent content in Connections on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/connections/index.xml" rel="self" type="application/rss+xml"/><item><title>Limit Number of Scans</title><link>/feroxbuster-docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-scans/</guid><description>&lt;h2 id="limit-total-number-of-concurrent-scans"&gt;Limit Total Number of Concurrent Scans&lt;/h2&gt;
+&lt;p&gt;Limit the number of scans permitted to run at any given time. Recursion will still identify new directories, but newly
 discovered directories can only begin scanning when the total number of active scans drops below the value passed to
-&lt;code>--scan-limit&lt;/code>.&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --scan-limit 2
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="limit-demo" src="../limit-demo.gif">&lt;/p></description></item><item><title>Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>&lt;h2 id="limit-number-of-requests-per-second">Limit Number of Requests per Second&lt;/h2>
+&lt;code&gt;--scan-limit&lt;/code&gt;.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;./feroxbuster -u http://127.1 --scan-limit 2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src="../limit-demo.gif" alt="limit-demo"&gt;&lt;/p&gt;</description></item><item><title>Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>&lt;h2 id="limit-number-of-requests-per-second"&gt;Limit Number of Requests per Second&lt;/h2&gt;
 
 
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
+&lt;div class="alert alert-primary" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
 
- Rate limiting is enforced on a &lt;strong>per-directory&lt;/strong> basis.
+ Rate limiting is enforced on a &lt;strong&gt;per-directory&lt;/strong&gt; basis.
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>Version 2.0.0 added the ability to limit the number of requests per second.&lt;/p>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;p>Limit number of requests per second, per directory, to 100 (requests per second will increase by 100 for each active directory found during recursion)&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://localhost --rate-limit 100
-&lt;/code>&lt;/pre>&lt;p>Limit number of requests per second to 100 to the target as a whole (only one directory at a time will be scanned, thus
-limiting the number of requests per second overall)&lt;/p></description></item><item><title>Connection closed before message completed</title><link>/feroxbuster-docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/connection-closed/</guid><description>&lt;h3 id="connection-closed-before-message-completed">Connection closed before message completed&lt;/h3>
-&lt;p>The error in question can be boiled down to &amp;rsquo;networking stuff&amp;rsquo;. &lt;code>feroxbuster&lt;/code>
-uses &lt;a href="https://docs.rs/reqwest/latest/">reqwest&lt;/a> which uses &lt;a href="https://docs.rs/hyper/latest/hyper/">hyper&lt;/a> to make requests
-to the server. &lt;a href="https://github.com/hyperium/hyper/issues/2136#issuecomment-589345238">This issue report&lt;/a> to the hyper
+&lt;p&gt;Version 2.0.0 added the ability to limit the number of requests per second.&lt;/p&gt;
+&lt;h2 id="interaction-with-auto-tune"&gt;Interaction with Auto-Tune&lt;/h2&gt;
+&lt;p&gt;As of version 2.13.1, &lt;code&gt;--rate-limit&lt;/code&gt; can be used together with &lt;code&gt;--auto-tune&lt;/code&gt;. When both flags are provided:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--rate-limit&lt;/code&gt; serves as a &lt;strong&gt;hard cap&lt;/strong&gt; on the maximum request rate&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--auto-tune&lt;/code&gt; will dynamically adjust the rate limit downward when errors occur&lt;/li&gt;
+&lt;li&gt;Auto-tune adjustments will &lt;strong&gt;never exceed&lt;/strong&gt; the value specified by &lt;code&gt;--rate-limit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;When auto-tune attempts to remove the rate limit (after successful recovery), it will instead reset to the &lt;code&gt;--rate-limit&lt;/code&gt; cap rather than removing it entirely&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This combination is useful when you want adaptive rate limiting with a guaranteed maximum to ensure you never exceed a specific request rate.&lt;/p&gt;</description></item><item><title>Connection closed before message completed</title><link>/feroxbuster-docs/docs/faq/connection-closed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/connection-closed/</guid><description>&lt;h3 id="connection-closed-before-message-completed"&gt;Connection closed before message completed&lt;/h3&gt;
+&lt;p&gt;The error in question can be boiled down to &amp;rsquo;networking stuff&amp;rsquo;. &lt;code&gt;feroxbuster&lt;/code&gt;
+uses &lt;a href="https://docs.rs/reqwest/latest/"&gt;reqwest&lt;/a&gt; which uses &lt;a href="https://docs.rs/hyper/latest/hyper/"&gt;hyper&lt;/a&gt; to make requests
+to the server. &lt;a href="https://github.com/hyperium/hyper/issues/2136#issuecomment-589345238"&gt;This issue report&lt;/a&gt; to the hyper
 project explains what is happening (quoted below to save you a click). This isn&amp;rsquo;t a bug so much as it&amp;rsquo;s a
-target-specific tuning issue. When lowering the &lt;code>-t&lt;/code> value, the error doesn&amp;rsquo;t occur (or happens much less frequently).&lt;/p>
-&lt;p>This isn&amp;rsquo;t a bug. Simply slow down the scan. A &lt;code>-t&lt;/code> value of 50 was chosen as a sane default that&amp;rsquo;s still quite fast out
+target-specific tuning issue. When lowering the &lt;code&gt;-t&lt;/code&gt; value, the error doesn&amp;rsquo;t occur (or happens much less frequently).&lt;/p&gt;
+&lt;p&gt;This isn&amp;rsquo;t a bug. Simply slow down the scan. A &lt;code&gt;-t&lt;/code&gt; value of 50 was chosen as a sane default that&amp;rsquo;s still quite fast out
 of the box. However, network related errors may occur when the client and/or server become over-saturated.
-The &lt;a href="../../configuration/limit-connections/">Threads and Connection Limits At A High-Level&lt;/a> section details how
-to accomplish per-target tuning.&lt;/p></description></item><item><title>Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>&lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
-&lt;p>This section explains how the &lt;code>-t&lt;/code> and &lt;code>-L&lt;/code> options work together to determine the overall aggressiveness of a scan. The
+The &lt;a href="../../configuration/limit-connections/"&gt;Threads and Connection Limits At A High-Level&lt;/a&gt; section details how
+to accomplish per-target tuning.&lt;/p&gt;</description></item><item><title>Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>&lt;h2 id="a-high-level-overview"&gt;A High-Level Overview&lt;/h2&gt;
+&lt;p&gt;This section explains how the &lt;code&gt;-t&lt;/code&gt; and &lt;code&gt;-L&lt;/code&gt; options work together to determine the overall aggressiveness of a scan. The
 combination of the two values set by these options determines how hard your target will get hit and to some extent also
-determines how many resources will be consumed on your local machine.&lt;/p>
-&lt;h2 id="a-note-on-green-threads">A Note on Green Threads&lt;/h2>
-&lt;p>&lt;code>feroxbuster&lt;/code> uses so-called &lt;a href="https://en.wikipedia.org/wiki/Green_threads">green threads&lt;/a> as opposed to traditional
+determines how many resources will be consumed on your local machine.&lt;/p&gt;
+&lt;h2 id="a-note-on-green-threads"&gt;A Note on Green Threads&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; uses so-called &lt;a href="https://en.wikipedia.org/wiki/Green_threads"&gt;green threads&lt;/a&gt; as opposed to traditional
 kernel/OS threads. This means (at a high-level) that the threads are implemented entirely in userspace, within a single
 running process. As a result, a scan with 30 green threads will appear to the OS to be a single process with no
 additional light-weight processes associated with it as far as the kernel is concerned. As such, there will not be any
-impact to process (&lt;code>nproc&lt;/code>) limits when specifying larger values for &lt;code>-t&lt;/code>. However, these threads will still consume
-file descriptors, so you will need to ensure that you have a suitable &lt;code>nlimit&lt;/code> set when scaling up the amount of
-threads. More detailed documentation on setting appropriate &lt;code>nlimit&lt;/code> values can be found in
-the &lt;a href="../../faq/no-file-descriptors/">No File Descriptors Available&lt;/a> section of the FAQ&lt;/p></description></item></channel></rss>
+impact to process (&lt;code&gt;nproc&lt;/code&gt;) limits when specifying larger values for &lt;code&gt;-t&lt;/code&gt;. However, these threads will still consume
+file descriptors, so you will need to ensure that you have a suitable &lt;code&gt;nlimit&lt;/code&gt; set when scaling up the amount of
+threads. More detailed documentation on setting appropriate &lt;code&gt;nlimit&lt;/code&gt; values can be found in
+the &lt;a href="../../faq/no-file-descriptors/"&gt;No File Descriptors Available&lt;/a&gt; section of the FAQ&lt;/p&gt;</description></item></channel></rss>

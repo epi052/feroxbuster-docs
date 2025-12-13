@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ssl on feroxbuster</title><link>/feroxbuster-docs/tags/ssl/</link><description>Recent content in Ssl on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/ssl/index.xml" rel="self" type="application/rss+xml"/><item><title>Server and Client Certificate Management</title><link>/feroxbuster-docs/docs/examples/certificate-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/certificate-management/</guid><description>&lt;h1 id="server-and-client-certificate-management">Server and Client Certificate Management&lt;/h1>
-&lt;p>Version 2.10.0 introduces three flags:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>--server-certs&lt;/code>&lt;/li>
-&lt;li>&lt;code>--client-cert&lt;/code>&lt;/li>
-&lt;li>&lt;code>--client-key&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h1 id="when-to-use-certificate-management">When to use Certificate Management&lt;/h1>
-&lt;p>When a server requires mutual transport layer security (mTLS) authentication,
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ssl on feroxbuster</title><link>/feroxbuster-docs/tags/ssl/</link><description>Recent content in Ssl on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/ssl/index.xml" rel="self" type="application/rss+xml"/><item><title>Server and Client Certificate Management</title><link>/feroxbuster-docs/docs/examples/certificate-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/certificate-management/</guid><description>&lt;h1 id="server-and-client-certificate-management"&gt;Server and Client Certificate Management&lt;/h1&gt;
+&lt;p&gt;Version 2.10.0 introduces three flags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--server-certs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--client-cert&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--client-key&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="when-to-use-certificate-management"&gt;When to use Certificate Management&lt;/h1&gt;
+&lt;p&gt;When a server requires mutual transport layer security (mTLS) authentication,
 the client upon verification of the server certificate, is required to send its
 own certificate to the server. The server subsequently checks its list of trusted
-CAs and verifies the client&amp;rsquo;s certificate.&lt;/p>
-&lt;p>In such a situation, the &lt;code>--client-key&lt;/code> flag needs to be supplied a &lt;code>.pem&lt;/code> file
-which has the PKCS #8 PEM encoded private key and the &lt;code>--client-cert&lt;/code> flag must
+CAs and verifies the client&amp;rsquo;s certificate.&lt;/p&gt;
+&lt;p&gt;In such a situation, the &lt;code&gt;--client-key&lt;/code&gt; flag needs to be supplied a &lt;code&gt;.pem&lt;/code&gt; file
+which has the PKCS #8 PEM encoded private key and the &lt;code&gt;--client-cert&lt;/code&gt; flag must
 be supplied a PEM encoded certificate for the client. Additional root CA
-certificates may need to be supplied through &lt;code>--server-certs&lt;/code> as a &lt;code>.pem&lt;/code> or &lt;code>.der&lt;/code> file
-if the server uses a self-signed certificate.&lt;/p></description></item><item><title>SSL Error ... verify failed</title><link>/feroxbuster-docs/docs/faq/self-signed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/self-signed/</guid><description>&lt;h2 id="ssl-error-routinestls_process_server_certificatecertificate-verify-failed">SSL Error routines:tls_process_server_certificate:certificate verify failed&lt;/h2>
-&lt;p>In the event you see an error similar to&lt;/p>
-&lt;p>&lt;img alt="self-signed" src="../insecure.png">&lt;/p>
-&lt;pre tabindex="0">&lt;code>error trying to connect: error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed:ssl/statem/statem_clnt.c:1913: (self signed certificate)
-&lt;/code>&lt;/pre>&lt;p>You just need to add the &lt;code>-k|--insecure&lt;/code> flag to your command.&lt;/p>
-&lt;p>&lt;code>feroxbuster&lt;/code> rejects self-signed certs and other &amp;ldquo;insecure&amp;rdquo; certificates/site configurations by default. You can choose
-to scan these services anyway by telling &lt;code>feroxbuster&lt;/code> to ignore insecure server certs.&lt;/p></description></item></channel></rss>
+certificates may need to be supplied through &lt;code&gt;--server-certs&lt;/code&gt; as a &lt;code&gt;.pem&lt;/code&gt; or &lt;code&gt;.der&lt;/code&gt; file
+if the server uses a self-signed certificate.&lt;/p&gt;</description></item><item><title>SSL Error ... verify failed</title><link>/feroxbuster-docs/docs/faq/self-signed/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/faq/self-signed/</guid><description>&lt;h2 id="ssl-error-routinestls_process_server_certificatecertificate-verify-failed"&gt;SSL Error routines:tls_process_server_certificate:certificate verify failed&lt;/h2&gt;
+&lt;p&gt;In the event you see an error similar to&lt;/p&gt;
+&lt;p&gt;&lt;img src="../insecure.png" alt="self-signed"&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;error trying to connect: error:1416F086:SSL routines:tls_process_server_certificate:certificate verify failed:ssl/statem/statem_clnt.c:1913: (self signed certificate)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You just need to add the &lt;code&gt;-k|--insecure&lt;/code&gt; flag to your command.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; rejects self-signed certs and other &amp;ldquo;insecure&amp;rdquo; certificates/site configurations by default. You can choose
+to scan these services anyway by telling &lt;code&gt;feroxbuster&lt;/code&gt; to ignore insecure server certs.&lt;/p&gt;</description></item></channel></rss>

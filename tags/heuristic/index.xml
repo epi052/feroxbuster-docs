@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heuristic on feroxbuster</title><link>/feroxbuster-docs/tags/heuristic/</link><description>Recent content in Heuristic on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/heuristic/index.xml" rel="self" type="application/rss+xml"/><item><title>Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>&lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
-&lt;p>Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code>feroxbuster&lt;/code> will either report, or report and scan, depending on whether or not &lt;code>--extract-links&lt;/code> was used.&lt;/p>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;h3 id="without---extract-links">Without &lt;code>--extract-links&lt;/code>&lt;/h3>
-&lt;p>When &lt;code>--extract-links&lt;/code> is &lt;strong>not&lt;/strong> used, directory listing is simply reported. No further actions are taken.&lt;/p>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="dir-list-no-tack-e" src="../dir-list-no-tack-e.png">&lt;/p>
-&lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
-&lt;p>When &lt;code>--extract-links&lt;/code> is used, each link in the response is extracted and requested.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Heuristic on feroxbuster</title><link>/feroxbuster-docs/tags/heuristic/</link><description>Recent content in Heuristic on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/heuristic/index.xml" rel="self" type="application/rss+xml"/><item><title>Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>&lt;h2 id="detect-directory-listing"&gt;Detect Directory Listing&lt;/h2&gt;
+&lt;p&gt;Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code&gt;feroxbuster&lt;/code&gt; will either report, or report and scan, depending on whether or not &lt;code&gt;--extract-links&lt;/code&gt; was used.&lt;/p&gt;
+&lt;h2 id="detection-methods"&gt;Detection Methods&lt;/h2&gt;
+&lt;h3 id="standard-detection-v250"&gt;Standard Detection (v2.5.0+)&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; can detect directory listings from common web servers by analyzing the page title:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Apache/Python/Tomcat&lt;/strong&gt;: &lt;code&gt;Index of /&lt;/code&gt; or &lt;code&gt;Directory Listing for /&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ASP.NET&lt;/strong&gt;: &lt;code&gt;Directory Listing -- /&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="enhanced-heuristic-detection-v2131"&gt;Enhanced Heuristic Detection (v2.13.1+)&lt;/h3&gt;
+&lt;p&gt;For custom or non-standard directory listings that don&amp;rsquo;t use recognizable titles, &lt;code&gt;feroxbuster&lt;/code&gt; now employs advanced heuristics. It looks for multiple signals that indicate directory listing behavior:&lt;/p&gt;</description></item></channel></rss>

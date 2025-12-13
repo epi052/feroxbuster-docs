@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fuzzy on feroxbuster</title><link>/feroxbuster-docs/tags/fuzzy/</link><description>Recent content in Fuzzy on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/fuzzy/index.xml" rel="self" type="application/rss+xml"/><item><title>Filter by Page Similarity</title><link>/feroxbuster-docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-similar/</guid><description>&lt;h2 id="filter-response-by-similarity-to-a-given-page">Filter Response by Similarity to A Given Page&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fuzzy on feroxbuster</title><link>/feroxbuster-docs/tags/fuzzy/</link><description>Recent content in Fuzzy on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/fuzzy/index.xml" rel="self" type="application/rss+xml"/><item><title>Filter by Page Similarity</title><link>/feroxbuster-docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-similar/</guid><description>&lt;h2 id="filter-response-by-similarity-to-a-given-page"&gt;Filter Response by Similarity to A Given Page&lt;/h2&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Heads up&lt;/h4>
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Heads up&lt;/h4&gt;
 
- &lt;ul>
-&lt;li>Using a bunch of &lt;code>--filter-similar-to&lt;/code> values &lt;strong>may&lt;/strong> negatively impact performance&lt;/li>
-&lt;/ul>
+ &lt;ul&gt;
+&lt;li&gt;Using a bunch of &lt;code&gt;--filter-similar-to&lt;/code&gt; values &lt;strong&gt;may&lt;/strong&gt; negatively impact performance&lt;/li&gt;
+&lt;/ul&gt;
 
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>Version 1.11.0 adds the ability to specify an example page for filtering pages that are similar to the given example.&lt;/p>
-&lt;p>Version 2.8.0 updated the underlying algorithm from SSDeep to Simhash.&lt;/p>
-&lt;p>For example, consider a site that attempts to redirect new users to a &lt;code>/register&lt;/code> endpoint. The &lt;code>/register&lt;/code> page has a
+&lt;p&gt;Version 1.11.0 adds the ability to specify an example page for filtering pages that are similar to the given example.&lt;/p&gt;
+&lt;p&gt;Version 2.8.0 updated the underlying algorithm from SSDeep to Simhash.&lt;/p&gt;
+&lt;p&gt;For example, consider a site that attempts to redirect new users to a &lt;code&gt;/register&lt;/code&gt; endpoint. The &lt;code&gt;/register&lt;/code&gt; page has a
 CSRF token that alters the page&amp;rsquo;s response slightly with each new request (sometimes affecting overall length). This
 means that a simple line/word/char filter won&amp;rsquo;t be able to filter all responses. In order to filter those redirects out,
-one could use a command like this:&lt;/p></description></item></channel></rss>
+one could use a command like this:&lt;/p&gt;</description></item></channel></rss>

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interface on feroxbuster</title><link>/feroxbuster-docs/categories/interface/</link><description>Recent content in Interface on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/categories/interface/index.xml" rel="self" type="application/rss+xml"/><item><title>📊 Interpreting Results</title><link>/feroxbuster-docs/docs/interpreting-results/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/interpreting-results/</guid><description>&lt;p>&lt;code>feroxbuster&lt;/code> attempts to be intuitive and easy to understand, however, if you are wondering about any of the scan&amp;rsquo;s
-output and what it means, this is the section for you!&lt;/p>
-&lt;h3 id="discovered-resource">Discovered Resource&lt;/h3>
-&lt;p>When &lt;code>feroxbuster&lt;/code> finds a response that you haven&amp;rsquo;t filtered out, it&amp;rsquo;s reported above the progress bars and looks similar to what&amp;rsquo;s pictured below.&lt;/p>
-&lt;p>The number of lines, words, and bytes shown here can be used to &lt;a href="/feroxbuster-docs/feroxbuster-docs/docs/examples/filter-word-line/">filter those responses&lt;/a>&lt;/p></description></item><item><title>Command Line Interface</title><link>/feroxbuster-docs/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/command-line/</guid><description>&lt;h3 id="command-line-parsing">Command Line Parsing&lt;/h3>
-&lt;p>Finally, after parsing the available config file, any options/arguments given on the commandline will override any
-values that were set as a built-in or config-file value.&lt;/p>
-&lt;pre tabindex="0">&lt;code>Usage: feroxbuster [OPTIONS]
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interface on feroxbuster</title><link>/feroxbuster-docs/categories/interface/</link><description>Recent content in Interface on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/categories/interface/index.xml" rel="self" type="application/rss+xml"/><item><title>📊 Interpreting Results</title><link>/feroxbuster-docs/docs/interpreting-results/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/interpreting-results/</guid><description>&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; attempts to be intuitive and easy to understand, however, if you are wondering about any of the scan&amp;rsquo;s
+output and what it means, this is the section for you!&lt;/p&gt;
+&lt;h3 id="discovered-resource"&gt;Discovered Resource&lt;/h3&gt;
+&lt;p&gt;When &lt;code&gt;feroxbuster&lt;/code&gt; finds a response that you haven&amp;rsquo;t filtered out, it&amp;rsquo;s reported above the progress bars and looks similar to what&amp;rsquo;s pictured below.&lt;/p&gt;
+&lt;p&gt;The number of lines, words, and bytes shown here can be used to &lt;a href="/feroxbuster-docs/docs/examples/filter-word-line/"&gt;filter those responses&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Command Line Interface</title><link>/feroxbuster-docs/docs/configuration/command-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/command-line/</guid><description>&lt;h3 id="command-line-parsing"&gt;Command Line Parsing&lt;/h3&gt;
+&lt;p&gt;Finally, after parsing the available config file, any options/arguments given on the commandline will override any
+values that were set as a built-in or config-file value.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Usage: feroxbuster [OPTIONS]
 
 Options:
  -h, --help
@@ -34,6 +34,12 @@ Composite settings:
  --burp-replay
  Set --replay-proxy to http://127.0.0.1:8080 and set --insecure to true
 
+ --data-urlencoded &amp;lt;DATA&amp;gt;
+ Set -H &amp;#39;Content-Type: application/x-www-form-urlencoded&amp;#39;, --data to &amp;lt;data-urlencoded&amp;gt; (supports @file) and -m to POST
+
+ --data-json &amp;lt;DATA&amp;gt;
+ Set -H &amp;#39;Content-Type: application/json&amp;#39;, --data to &amp;lt;data-json&amp;gt; (supports @file) and -m to POST
+
  --smart
  Set --auto-tune, --collect-words, and --collect-backups to true
 
@@ -52,14 +58,14 @@ Proxy settings:
 
 Request settings:
  -a, --user-agent &amp;lt;USER_AGENT&amp;gt;
- Sets the User-Agent (default: feroxbuster/2.11.0)
+ Sets the User-Agent (default: feroxbuster/2.13.0)
 
  -A, --random-agent
  Use a random User-Agent
 
  -x, --extensions &amp;lt;FILE_EXTENSION&amp;gt;...
- File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input starts
- with an @ (ex: @ext.txt)
+ File extension(s) to search for (ex: -x php -x pdf js); reads values (newline-separated) from file if input starts with an @ (ex:
+ @ext.txt)
 
  -m, --methods &amp;lt;HTTP_METHODS&amp;gt;...
  Which HTTP request method(s) should be sent (default: GET)
@@ -86,6 +92,9 @@ Request filters:
  --dont-scan &amp;lt;URL&amp;gt;...
  URL(s) or Regex Pattern(s) to exclude from recursion/scans
 
+ --scope &amp;lt;URL&amp;gt;...
+ Additional domains/URLs to consider in-scope for scanning (in addition to current domain)
+
 Response filters:
  -S, --filter-size &amp;lt;SIZE&amp;gt;...
  Filter out messages of a particular size (ex: -S 5120 -S 4927,1970)
@@ -107,6 +116,9 @@ Response filters:
 
  -s, --status-codes &amp;lt;STATUS_CODE&amp;gt;...
  Status Codes to include (allow list) (default: All Status Codes)
+
+ --unique
+ Only show unique responses
 
 Client settings:
  -T, --timeout &amp;lt;SECONDS&amp;gt;
@@ -151,6 +163,9 @@ Scan settings:
 
  --rate-limit &amp;lt;RATE_LIMIT&amp;gt;
  Limit number of requests per second (per directory) (default: 0, i.e. no limit)
+
+ --response-size-limit &amp;lt;BYTES&amp;gt;
+ Limit size of response body to read in bytes (default: 4MB)
 
  --time-limit &amp;lt;TIME_SPEC&amp;gt;
  Limit total run time of all scans (ex: --time-limit 10m)
@@ -256,4 +271,4 @@ EXAMPLES:
  
  Examples and demonstrations of all features
  https://epi052.github.io/feroxbuster-docs/docs/examples/
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>

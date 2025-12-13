@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on feroxbuster</title><link>/feroxbuster-docs/tags/windows/</link><description>Recent content in Windows on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Build from Source</title><link>/feroxbuster-docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-cargo/</guid><description>&lt;h2 id="cargo-install">Cargo Install&lt;/h2>
-&lt;p>&lt;code>feroxbuster&lt;/code> is published on crates.io, making it easy to install if you already have rust installed on your system.&lt;/p>
-&lt;pre tabindex="0">&lt;code>cargo install feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Chocolatey Install</title><link>/feroxbuster-docs/docs/installation/install-choco/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-choco/</guid><description>&lt;h2 id="chocolatey-install">Chocolatey Install&lt;/h2>
-&lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the Chocolatey community repos 🥳&lt;/p>
-&lt;pre tabindex="0">&lt;code>choco install feroxbuster
-&lt;/code>&lt;/pre></description></item><item><title>Docker Install</title><link>/feroxbuster-docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-docker/</guid><description>&lt;h2 id="docker-install">Docker Install&lt;/h2>
-&lt;blockquote>
-&lt;p>The following steps assume you have docker installed / setup&lt;/p>
-&lt;/blockquote>
-&lt;p>Thanks to github user &lt;strong>@EONRaider&lt;/strong>, we have an official docker image pushed to the docker hub with each new release.&lt;/p>
-&lt;p>You can simply jump right into usage with &lt;code>sudo docker run epi052/feroxbuster ...&lt;/code>!&lt;/p>
-&lt;h2 id="basic-usage">Basic usage&lt;/h2>
-&lt;pre tabindex="0">&lt;code>sudo docker run --init -it epi052/feroxbuster -u http://example.com -x js,html
-&lt;/code>&lt;/pre>&lt;h2 id="piping-from-stdin-and-proxying-all-requests-through-socks5-proxy">Piping from stdin and proxying all requests through socks5 proxy&lt;/h2>
-&lt;pre tabindex="0">&lt;code>cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdin -x js,html --proxy socks5://127.0.0.1:9050
-&lt;/code>&lt;/pre>&lt;h2 id="mount-a-volume-to-pass-in-ferox-configtoml">Mount a volume to pass in &lt;code>ferox-config.toml&lt;/code>&lt;/h2>
-&lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="../../configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on feroxbuster</title><link>/feroxbuster-docs/tags/windows/</link><description>Recent content in Windows on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Build from Source</title><link>/feroxbuster-docs/docs/installation/install-cargo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-cargo/</guid><description>&lt;h2 id="cargo-install"&gt;Cargo Install&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; is published on crates.io, making it easy to install if you already have rust installed on your system.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;cargo install feroxbuster
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Chocolatey Install</title><link>/feroxbuster-docs/docs/installation/install-choco/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-choco/</guid><description>&lt;h2 id="chocolatey-install"&gt;Chocolatey Install&lt;/h2&gt;
+&lt;p&gt;🥳 &lt;code&gt;feroxbuster&lt;/code&gt; was recently added to the Chocolatey community repos 🥳&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;choco install feroxbuster
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Docker Install</title><link>/feroxbuster-docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-docker/</guid><description>&lt;h2 id="docker-install"&gt;Docker Install&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The following steps assume you have docker installed / setup&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Thanks to github user &lt;strong&gt;@EONRaider&lt;/strong&gt;, we have an official docker image pushed to the docker hub with each new release.&lt;/p&gt;
+&lt;p&gt;You can simply jump right into usage with &lt;code&gt;sudo docker run epi052/feroxbuster ...&lt;/code&gt;!&lt;/p&gt;
+&lt;h2 id="basic-usage"&gt;Basic usage&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;sudo docker run --init -it epi052/feroxbuster -u http://example.com -x js,html
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="piping-from-stdin-and-proxying-all-requests-through-socks5-proxy"&gt;Piping from stdin and proxying all requests through socks5 proxy&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdin -x js,html --proxy socks5://127.0.0.1:9050
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="mount-a-volume-to-pass-in-ferox-configtoml"&gt;Mount a volume to pass in &lt;code&gt;ferox-config.toml&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="../../configuration/ferox-config-toml/"&gt;&lt;code&gt;ferox-buster.toml&lt;/code&gt;&lt;/a&gt; can
 live in multiple locations and still be valid, so it&amp;rsquo;s up to you how you&amp;rsquo;d like to pass it in. Below are a few valid
-examples:&lt;/p></description></item><item><title>Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>&lt;h2 id="download-a-release">Download a Release&lt;/h2>
-&lt;p>Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p>
-&lt;h2 id="linux-32-and-64-bit--macos">Linux (32 and 64-bit) &amp;amp; MacOS&lt;/h2>
-&lt;pre tabindex="0">&lt;code>curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/master/install-nix.sh | bash
-&lt;/code>&lt;/pre>&lt;h2 id="windows-x86">Windows x86&lt;/h2>
-&lt;pre tabindex="0">&lt;code>https://github.com/epi052/feroxbuster/releases/latest/download/x86-windows-feroxbuster.exe.zip
+examples:&lt;/p&gt;</description></item><item><title>Download a Release</title><link>/feroxbuster-docs/docs/installation/install-release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-release/</guid><description>&lt;h2 id="download-a-release"&gt;Download a Release&lt;/h2&gt;
+&lt;p&gt;Most OS/architecture combinations can be installed dynamically using one of the methods shown below.&lt;/p&gt;
+&lt;h2 id="linux-32-and-64-bit--macos"&gt;Linux (32 and 64-bit) &amp;amp; MacOS&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/master/install-nix.sh | bash
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="windows-x86"&gt;Windows x86&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;https://github.com/epi052/feroxbuster/releases/latest/download/x86-windows-feroxbuster.exe.zip
 Expand-Archive .\feroxbuster.zip
 .\feroxbuster\feroxbuster.exe -V
-&lt;/code>&lt;/pre>&lt;h2 id="windows-x86_64">Windows x86_64&lt;/h2>
-&lt;pre tabindex="0">&lt;code>Invoke-WebRequest https://github.com/epi052/feroxbuster/releases/latest/download/x86_64-windows-feroxbuster.exe.zip -OutFile feroxbuster.zip
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="windows-x86_64"&gt;Windows x86_64&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Invoke-WebRequest https://github.com/epi052/feroxbuster/releases/latest/download/x86_64-windows-feroxbuster.exe.zip -OutFile feroxbuster.zip
 Expand-Archive .\feroxbuster.zip
 .\feroxbuster\feroxbuster.exe -V
-&lt;/code>&lt;/pre>&lt;h2 id="all-other-releases">All other releases&lt;/h2>
-&lt;p>Releases for &lt;code>armv7&lt;/code>, &lt;code>aarch64&lt;/code>, and an &lt;code>x86_64 .deb&lt;/code> can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases">Releases&lt;/a> section.&lt;/p></description></item><item><title>Winget Install</title><link>/feroxbuster-docs/docs/installation/install-winget/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-winget/</guid><description>&lt;h2 id="chocolatey-install">Chocolatey Install&lt;/h2>
-&lt;p>🥳 &lt;code>feroxbuster&lt;/code> was recently added to the winget-pkgs 🥳&lt;/p>
-&lt;pre tabindex="0">&lt;code>winget install epi052.feroxbuster
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="all-other-releases"&gt;All other releases&lt;/h2&gt;
+&lt;p&gt;Releases for &lt;code&gt;armv7&lt;/code&gt;, &lt;code&gt;aarch64&lt;/code&gt;, and an &lt;code&gt;x86_64 .deb&lt;/code&gt; can be found in the &lt;a href="https://github.com/epi052/feroxbuster/releases"&gt;Releases&lt;/a&gt; section.&lt;/p&gt;</description></item><item><title>Winget Install</title><link>/feroxbuster-docs/docs/installation/install-winget/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-winget/</guid><description>&lt;h2 id="chocolatey-install"&gt;Chocolatey Install&lt;/h2&gt;
+&lt;p&gt;🥳 &lt;code&gt;feroxbuster&lt;/code&gt; was recently added to the winget-pkgs 🥳&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;winget install epi052.feroxbuster
+&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>

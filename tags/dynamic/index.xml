@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dynamic on feroxbuster</title><link>/feroxbuster-docs/tags/dynamic/</link><description>Recent content in Dynamic on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/dynamic/index.xml" rel="self" type="application/rss+xml"/><item><title>Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>&lt;h2 id="dynamic-collection-settings">Dynamic Collection Settings&lt;/h2>
-&lt;p>Version 2.6.0 added a whole category of features named &lt;strong>Dynamic Collection Settings&lt;/strong>. The general premise of each
-feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p>
-&lt;h2 id="collect-backups">Collect Backups&lt;/h2>
-&lt;p>Using &lt;code>--collect-backups&lt;/code> means that for every file found during a scan, &lt;code>feroxbuster&lt;/code> sends additional queries for the following default extensions:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>~&lt;/code>&lt;/li>
-&lt;li>&lt;code>.bak&lt;/code>&lt;/li>
-&lt;li>&lt;code>.bak2&lt;/code>&lt;/li>
-&lt;li>&lt;code>.old&lt;/code>&lt;/li>
-&lt;li>&lt;code>.1&lt;/code>&lt;/li>
-&lt;li>&lt;code>.swp&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em>found&lt;/em>.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dynamic on feroxbuster</title><link>/feroxbuster-docs/tags/dynamic/</link><description>Recent content in Dynamic on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/dynamic/index.xml" rel="self" type="application/rss+xml"/><item><title>Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>&lt;h2 id="dynamic-collection-settings"&gt;Dynamic Collection Settings&lt;/h2&gt;
+&lt;p&gt;Version 2.6.0 added a whole category of features named &lt;strong&gt;Dynamic Collection Settings&lt;/strong&gt;. The general premise of each
+feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p&gt;
+&lt;h2 id="collect-backups"&gt;Collect Backups&lt;/h2&gt;
+&lt;p&gt;Using &lt;code&gt;--collect-backups&lt;/code&gt; means that for every file found during a scan, &lt;code&gt;feroxbuster&lt;/code&gt; sends additional queries for the following default extensions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.bak&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.bak2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.old&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.swp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em&gt;found&lt;/em&gt;.&lt;/p&gt;</description></item></channel></rss>

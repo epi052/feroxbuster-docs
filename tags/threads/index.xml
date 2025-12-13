@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Threads on feroxbuster</title><link>/feroxbuster-docs/tags/threads/</link><description>Recent content in Threads on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/threads/index.xml" rel="self" type="application/rss+xml"/><item><title>Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>&lt;h2 id="a-high-level-overview">A High-Level Overview&lt;/h2>
-&lt;p>This section explains how the &lt;code>-t&lt;/code> and &lt;code>-L&lt;/code> options work together to determine the overall aggressiveness of a scan. The
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Threads on feroxbuster</title><link>/feroxbuster-docs/tags/threads/</link><description>Recent content in Threads on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/threads/index.xml" rel="self" type="application/rss+xml"/><item><title>Threads and Connection Limits</title><link>/feroxbuster-docs/docs/configuration/limit-connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/configuration/limit-connections/</guid><description>&lt;h2 id="a-high-level-overview"&gt;A High-Level Overview&lt;/h2&gt;
+&lt;p&gt;This section explains how the &lt;code&gt;-t&lt;/code&gt; and &lt;code&gt;-L&lt;/code&gt; options work together to determine the overall aggressiveness of a scan. The
 combination of the two values set by these options determines how hard your target will get hit and to some extent also
-determines how many resources will be consumed on your local machine.&lt;/p>
-&lt;h2 id="a-note-on-green-threads">A Note on Green Threads&lt;/h2>
-&lt;p>&lt;code>feroxbuster&lt;/code> uses so-called &lt;a href="https://en.wikipedia.org/wiki/Green_threads">green threads&lt;/a> as opposed to traditional
+determines how many resources will be consumed on your local machine.&lt;/p&gt;
+&lt;h2 id="a-note-on-green-threads"&gt;A Note on Green Threads&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; uses so-called &lt;a href="https://en.wikipedia.org/wiki/Green_threads"&gt;green threads&lt;/a&gt; as opposed to traditional
 kernel/OS threads. This means (at a high-level) that the threads are implemented entirely in userspace, within a single
 running process. As a result, a scan with 30 green threads will appear to the OS to be a single process with no
 additional light-weight processes associated with it as far as the kernel is concerned. As such, there will not be any
-impact to process (&lt;code>nproc&lt;/code>) limits when specifying larger values for &lt;code>-t&lt;/code>. However, these threads will still consume
-file descriptors, so you will need to ensure that you have a suitable &lt;code>nlimit&lt;/code> set when scaling up the amount of
-threads. More detailed documentation on setting appropriate &lt;code>nlimit&lt;/code> values can be found in
-the &lt;a href="../../faq/no-file-descriptors/">No File Descriptors Available&lt;/a> section of the FAQ&lt;/p></description></item></channel></rss>
+impact to process (&lt;code&gt;nproc&lt;/code&gt;) limits when specifying larger values for &lt;code&gt;-t&lt;/code&gt;. However, these threads will still consume
+file descriptors, so you will need to ensure that you have a suitable &lt;code&gt;nlimit&lt;/code&gt; set when scaling up the amount of
+threads. More detailed documentation on setting appropriate &lt;code&gt;nlimit&lt;/code&gt; values can be found in
+the &lt;a href="../../faq/no-file-descriptors/"&gt;No File Descriptors Available&lt;/a&gt; section of the FAQ&lt;/p&gt;</description></item></channel></rss>

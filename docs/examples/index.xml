@@ -1,361 +1,372 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🧰 Examples on feroxbuster</title><link>/feroxbuster-docs/docs/examples/</link><description>Recent content in 🧰 Examples on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/docs/examples/index.xml" rel="self" type="application/rss+xml"/><item><title>Core Features</title><link>/feroxbuster-docs/docs/examples/core-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/core-features/</guid><description>&lt;h3 id="multiple-values">Multiple Values&lt;/h3>
-&lt;p>Options that take multiple values are very flexible. Consider the following ways of specifying extensions:&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -x pdf -x js,html -x php txt json,docx
-&lt;/code>&lt;/pre>&lt;p>The command above adds .pdf, .js, .html, .php, .txt, .json, and .docx to each url&lt;/p>
-&lt;p>All of the methods above (multiple flags, space separated, comma separated, etc&amp;hellip;) are valid and interchangeable. The
-same goes for urls, headers, status codes, queries, and size filters.&lt;/p></description></item><item><title>Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>&lt;h2 id="extract-links-from-response-body">Extract Links from Response Body&lt;/h2>
-&lt;p>Search through the body of valid responses (html, javascript, etc&amp;hellip;) for additional endpoints to scan. This turns
-&lt;code>feroxbuster&lt;/code> into a hybrid that looks for both linked and unlinked content.&lt;/p>
-&lt;p>Example request/response with &lt;code>--extract-links&lt;/code> enabled:&lt;/p>
-&lt;ul>
-&lt;li>Make request to &lt;code>http://example.com/index.html&lt;/code>&lt;/li>
-&lt;li>Receive, and read in, the &lt;code>body&lt;/code> of the response&lt;/li>
-&lt;li>Search the &lt;code>body&lt;/code> for absolute and relative links (i.e. &lt;code>homepage/assets/img/icons/handshake.svg&lt;/code>)&lt;/li>
-&lt;li>Add the following directories for recursive scanning:
-&lt;ul>
-&lt;li>&lt;code>http://example.com/homepage&lt;/code>&lt;/li>
-&lt;li>&lt;code>http://example.com/homepage/assets&lt;/code>&lt;/li>
-&lt;li>&lt;code>http://example.com/homepage/assets/img&lt;/code>&lt;/li>
-&lt;li>&lt;code>http://example.com/homepage/assets/img/icons&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Make a single request to &lt;code>http://example.com/homepage/assets/img/icons/handshake.svg&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --extract-links
-&lt;/code>&lt;/pre>&lt;h2 id="comparison">Comparison&lt;/h2>
-&lt;p>Here&amp;rsquo;s a comparison of a wordlist-only scan vs &lt;code>--extract-links&lt;/code>
-using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274">Feline&lt;/a> from Hack the Box:&lt;/p></description></item><item><title>Limit Number of Scans</title><link>/feroxbuster-docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-scans/</guid><description>&lt;h2 id="limit-total-number-of-concurrent-scans">Limit Total Number of Concurrent Scans&lt;/h2>
-&lt;p>Limit the number of scans permitted to run at any given time. Recursion will still identify new directories, but newly
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🧰 Examples on feroxbuster</title><link>/feroxbuster-docs/docs/examples/</link><description>Recent content in 🧰 Examples on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/docs/examples/index.xml" rel="self" type="application/rss+xml"/><item><title>Core Features</title><link>/feroxbuster-docs/docs/examples/core-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/core-features/</guid><description>&lt;h3 id="multiple-values"&gt;Multiple Values&lt;/h3&gt;
+&lt;p&gt;Options that take multiple values are very flexible. Consider the following ways of specifying extensions:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;./feroxbuster -u http://127.1 -x pdf -x js,html -x php txt json,docx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command above adds .pdf, .js, .html, .php, .txt, .json, and .docx to each url&lt;/p&gt;
+&lt;p&gt;All of the methods above (multiple flags, space separated, comma separated, etc&amp;hellip;) are valid and interchangeable. The
+same goes for urls, headers, status codes, queries, and size filters.&lt;/p&gt;</description></item><item><title>Extract Links</title><link>/feroxbuster-docs/docs/examples/extract-links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/extract-links/</guid><description>&lt;h2 id="extract-links-from-response-body"&gt;Extract Links from Response Body&lt;/h2&gt;
+&lt;p&gt;Search through the body of valid responses (html, javascript, etc&amp;hellip;) for additional endpoints to scan. This turns
+&lt;code&gt;feroxbuster&lt;/code&gt; into a hybrid that looks for both linked and unlinked content.&lt;/p&gt;
+&lt;p&gt;Example request/response with &lt;code&gt;--extract-links&lt;/code&gt; enabled:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make request to &lt;code&gt;http://example.com/index.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Receive, and read in, the &lt;code&gt;body&lt;/code&gt; of the response&lt;/li&gt;
+&lt;li&gt;Search the &lt;code&gt;body&lt;/code&gt; for absolute and relative links (i.e. &lt;code&gt;homepage/assets/img/icons/handshake.svg&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Add the following directories for recursive scanning:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage/assets&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage/assets/img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://example.com/homepage/assets/img/icons&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make a single request to &lt;code&gt;http://example.com/homepage/assets/img/icons/handshake.svg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;./feroxbuster -u http://127.1 --extract-links
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="comparison"&gt;Comparison&lt;/h2&gt;
+&lt;p&gt;Here&amp;rsquo;s a comparison of a wordlist-only scan vs &lt;code&gt;--extract-links&lt;/code&gt;
+using &lt;a href="https://www.hackthebox.eu/home/machines/profile/274"&gt;Feline&lt;/a&gt; from Hack the Box:&lt;/p&gt;</description></item><item><title>Limit Number of Scans</title><link>/feroxbuster-docs/docs/examples/limit-scans/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-scans/</guid><description>&lt;h2 id="limit-total-number-of-concurrent-scans"&gt;Limit Total Number of Concurrent Scans&lt;/h2&gt;
+&lt;p&gt;Limit the number of scans permitted to run at any given time. Recursion will still identify new directories, but newly
 discovered directories can only begin scanning when the total number of active scans drops below the value passed to
-&lt;code>--scan-limit&lt;/code>.&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --scan-limit 2
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="limit-demo" src="../limit-demo.gif">&lt;/p></description></item><item><title>Filter by Status</title><link>/feroxbuster-docs/docs/examples/filter-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-status/</guid><description>&lt;h2 id="filter-response-by-status-code">Filter Response by Status Code&lt;/h2>
-&lt;p>Version 1.3.0 included an overhaul to the filtering system which will allow for a wide array of filters to be added with
-minimal effort. The first such filter is a &lt;strong>Status Code&lt;/strong> Filter. As responses come back from the scanned server, each one
-is checked against a list of known filters and either displayed or not according to which filters are set.&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 --filter-status 301
-&lt;/code>&lt;/pre>&lt;h2 id="270-update">2.7.0 Update&lt;/h2>
-&lt;p>The &lt;code>--filter-status&lt;/code> behavior was updated in 2.7.0. &lt;code>--filter-status&lt;/code> is now a deny-list for the values provided, while
-every other status code will be allowed through.&lt;/p></description></item><item><title>Pause a Scan</title><link>/feroxbuster-docs/docs/examples/pause-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/pause-scan/</guid><description>&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
+&lt;code&gt;--scan-limit&lt;/code&gt;.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;./feroxbuster -u http://127.1 --scan-limit 2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src="../limit-demo.gif" alt="limit-demo"&gt;&lt;/p&gt;</description></item><item><title>Filter by Status</title><link>/feroxbuster-docs/docs/examples/filter-status/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-status/</guid><description>&lt;h2 id="filter-response-by-status-code"&gt;Filter Response by Status Code&lt;/h2&gt;
+&lt;p&gt;Version 1.3.0 included an overhaul to the filtering system which will allow for a wide array of filters to be added with
+minimal effort. The first such filter is a &lt;strong&gt;Status Code&lt;/strong&gt; Filter. As responses come back from the scanned server, each one
+is checked against a list of known filters and either displayed or not according to which filters are set.&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;./feroxbuster -u http://127.1 --filter-status 301
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="270-update"&gt;2.7.0 Update&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;--filter-status&lt;/code&gt; behavior was updated in 2.7.0. &lt;code&gt;--filter-status&lt;/code&gt; is now a deny-list for the values provided, while
+every other status code will be allowed through.&lt;/p&gt;</description></item><item><title>Pause a Scan</title><link>/feroxbuster-docs/docs/examples/pause-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/pause-scan/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
 
- &lt;p>&lt;a href="../cancel-scan/">v1.12.0&lt;/a> added an interactive menu to the pause/resume
-functionality.&lt;/p>
-&lt;p>Active scans can still be paused, however, you&amp;rsquo;ll be presented with the option to cancel a scan instead
-of simply seeing a spinner.&lt;/p>
-
-
-&lt;/div>
-
-&lt;h2 id="pause-an-active-scan">Pause an Active Scan&lt;/h2>
-&lt;p>Scans can be paused and resumed by pressing the &lt;code>ENTER&lt;/code> key (&lt;del>shown below&lt;/del>, please see &lt;a href="../cancel-scan/">v1.12.0&lt;/a>&amp;rsquo;s entry for the latest visual representation)&lt;/p></description></item><item><title>Replay Responses</title><link>/feroxbuster-docs/docs/examples/replay-proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/replay-proxy/</guid><description>&lt;h2 id="replay-responses-to-a-proxy-based-on-status-code">Replay Responses to a Proxy based on Status Code&lt;/h2>
+ &lt;p&gt;&lt;a href="../cancel-scan/"&gt;v1.12.0&lt;/a&gt; added an interactive menu to the pause/resume
+functionality.&lt;/p&gt;
+&lt;p&gt;Active scans can still be paused, however, you&amp;rsquo;ll be presented with the option to cancel a scan instead
+of simply seeing a spinner.&lt;/p&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Heads up&lt;/h4>
+&lt;/div&gt;
+
+&lt;h2 id="pause-an-active-scan"&gt;Pause an Active Scan&lt;/h2&gt;
+&lt;p&gt;Scans can be paused and resumed by pressing the &lt;code&gt;ENTER&lt;/code&gt; key (&lt;del&gt;shown below&lt;/del&gt;, please see &lt;a href="../cancel-scan/"&gt;v1.12.0&lt;/a&gt;&amp;rsquo;s entry for the latest visual representation)&lt;/p&gt;</description></item><item><title>Replay Responses</title><link>/feroxbuster-docs/docs/examples/replay-proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/replay-proxy/</guid><description>&lt;h2 id="replay-responses-to-a-proxy-based-on-status-code"&gt;Replay Responses to a Proxy based on Status Code&lt;/h2&gt;
+
+
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Heads up&lt;/h4&gt;
 
  this means that for every response that matches your replay criteria, you&amp;rsquo;ll end up sending the request that
 generated that response a second time. Depending on the target and your engagement terms (if any), it may not make sense
 from a traffic generated perspective.
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>The &lt;code>--replay-proxy&lt;/code> and &lt;code>--replay-codes&lt;/code> options were added as a way to only send a select few responses to a proxy.
-This is in stark contrast to &lt;code>--proxy&lt;/code> which proxies EVERY request.&lt;/p></description></item><item><title>Filter by Word/Line Count</title><link>/feroxbuster-docs/docs/examples/filter-word-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-word-line/</guid><description>&lt;h2 id="filter-response-by-word-count--line-count">Filter Response by Word Count &amp;amp; Line Count&lt;/h2>
-&lt;p>In addition to filtering on the size of a response, version 1.6.0 added the ability to filter out responses based on the
+&lt;p&gt;The &lt;code&gt;--replay-proxy&lt;/code&gt; and &lt;code&gt;--replay-codes&lt;/code&gt; options were added as a way to only send a select few responses to a proxy.
+This is in stark contrast to &lt;code&gt;--proxy&lt;/code&gt; which proxies EVERY request.&lt;/p&gt;</description></item><item><title>Filter by Word/Line Count</title><link>/feroxbuster-docs/docs/examples/filter-word-line/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-word-line/</guid><description>&lt;h2 id="filter-response-by-word-count--line-count"&gt;Filter Response by Word Count &amp;amp; Line Count&lt;/h2&gt;
+&lt;p&gt;In addition to filtering on the size of a response, version 1.6.0 added the ability to filter out responses based on the
 number of lines and/or words contained within the response body. This change drove a change to the information displayed
 to the user as well. This section will detail the new information and how to make use of it with the new filters
-provided.&lt;/p></description></item><item><title>Filter by Regex</title><link>/feroxbuster-docs/docs/examples/filter-regex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-regex/</guid><description>&lt;h2 id="filter-response-using-a-regular-expression">Filter Response Using a Regular Expression&lt;/h2>
+provided.&lt;/p&gt;</description></item><item><title>Filter by Regex</title><link>/feroxbuster-docs/docs/examples/filter-regex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-regex/</guid><description>&lt;h2 id="filter-response-using-a-regular-expression"&gt;Filter Response Using a Regular Expression&lt;/h2&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Heads up&lt;/h4>
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Heads up&lt;/h4&gt;
 
  Using regular expressions to filter large responses or many regular expressions may negatively impact
 performance.
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>Version 1.3.0 included an overhaul to the filtering system which allows for a wide array of filters to be added with
+&lt;p&gt;Version 1.3.0 included an overhaul to the filtering system which allows for a wide array of filters to be added with
 minimal effort. The latest addition is a Regular Expression Filter. As responses come back from the scanned server,
-the &lt;strong>body&lt;/strong> and &lt;strong>headers&lt;/strong> of the response are checked against the filter&amp;rsquo;s regular expression. If the expression is found in the body,
-then that response is filtered out.&lt;/p></description></item><item><title>Stop/Resume Scans</title><link>/feroxbuster-docs/docs/examples/resume-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/resume-scan/</guid><description>&lt;h2 id="stop-and-resume-scans">Stop and Resume Scans&lt;/h2>
-&lt;p>Version 1.9.0 adds a few features that allow for completely stopping a scan, and resuming that same scan from a file on
-disk.&lt;/p>
-&lt;h2 id="stop-the-scan">Stop the scan&lt;/h2>
-&lt;p>A simple &lt;code>Ctrl+C&lt;/code> during a scan will create a file that contains information about the scan that was cancelled.&lt;/p>
-&lt;p>&lt;img alt="save-state" src="../save-state.png">&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">// example snippet of state file
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scans&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;ca21821164b44b3d8eaa76550577246c&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;normalized_url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Running&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;num_requests&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">4714&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;requests_made_so_far&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">3468&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;id&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;d65b59601117415abf9ce6c0aa69edc7&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/api/&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;normalized_url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/api/&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;scan_type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Directory&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Running&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;num_requests&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">4714&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;requests_made_so_far&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">2774&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">],&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;config&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;wordlist&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/wordlists/seclists/Discovery/Web-Content/common.txt&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;...&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;...&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;responses&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;type&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;response&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;https://localhost.com/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;/Login&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;wildcard&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">302&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;content_length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;line_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;word_count&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;headers&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;content-length&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;server&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;nginx/1.16.1&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>&lt;span style="color:#a40000">,&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="resume-the-scan">Resume the scan&lt;/h2>
-&lt;p>Based on the example image above, the same scan can be resumed by
-using &lt;code>feroxbuster --resume-from ferox-http_localhost-1606947491.state&lt;/code>. Directories that were already complete are not
-rescanned.&lt;/p></description></item><item><title>Enforce Time Limit</title><link>/feroxbuster-docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/time-limit/</guid><description>&lt;h2 id="enforce-a-time-limit-on-your-scan">Enforce a Time Limit on Your Scan&lt;/h2>
-&lt;p>Version 1.10.0 adds the ability to set a maximum runtime, or time limit, on your scan. The usage is pretty simple: a
-number followed directly by a single character representing seconds, minutes, hours, or days. &lt;code>feroxbuster&lt;/code> refers to
-this combination as a time_spec.&lt;/p>
-&lt;p>Examples of possible time_specs:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>30s&lt;/code> - 30 seconds&lt;/li>
-&lt;li>&lt;code>20m&lt;/code> - 20 minutes&lt;/li>
-&lt;li>&lt;code>1h&lt;/code> - 1 hour&lt;/li>
-&lt;li>&lt;code>1d&lt;/code> - 1 day (why??)&lt;/li>
-&lt;/ul>
-&lt;p>A valid time_spec can be passed to &lt;code>--time-limit&lt;/code> in order to force a shutdown after the given time has elapsed.&lt;/p></description></item><item><title>Filter by Page Similarity</title><link>/feroxbuster-docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-similar/</guid><description>&lt;h2 id="filter-response-by-similarity-to-a-given-page">Filter Response by Similarity to A Given Page&lt;/h2>
+the &lt;strong&gt;body&lt;/strong&gt; and &lt;strong&gt;headers&lt;/strong&gt; of the response are checked against the filter&amp;rsquo;s regular expression. If the expression is found in the body,
+then that response is filtered out.&lt;/p&gt;</description></item><item><title>Stop/Resume Scans</title><link>/feroxbuster-docs/docs/examples/resume-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/resume-scan/</guid><description>&lt;h2 id="stop-and-resume-scans"&gt;Stop and Resume Scans&lt;/h2&gt;
+&lt;p&gt;Version 1.9.0 adds a few features that allow for completely stopping a scan, and resuming that same scan from a file on
+disk.&lt;/p&gt;
+&lt;h2 id="stop-the-scan"&gt;Stop the scan&lt;/h2&gt;
+&lt;p&gt;A simple &lt;code&gt;Ctrl+C&lt;/code&gt; during a scan will create a file that contains information about the scan that was cancelled.&lt;/p&gt;
+&lt;p&gt;&lt;img src="../save-state.png" alt="save-state"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;// example snippet of state file
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;scans&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;ca21821164b44b3d8eaa76550577246c&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;https://localhost.com/&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;normalized_url&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;https://localhost.com/&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;scan_type&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;Directory&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;Running&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;num_requests&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;4714&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;requests_made_so_far&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;3468&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;d65b59601117415abf9ce6c0aa69edc7&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;https://localhost.com/api/&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;normalized_url&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;https://localhost.com/api/&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;scan_type&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;Directory&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;Running&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;num_requests&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;4714&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;requests_made_so_far&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;2774&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;],&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;config&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;wordlist&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;/wordlists/seclists/Discovery/Web-Content/common.txt&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;...&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;},&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;responses&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;response&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;url&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;https://localhost.com/Login&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;path&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;/Login&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;wildcard&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;false&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;302&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;content_length&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;0&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;line_count&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;0&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;word_count&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;0&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;content-length&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;server&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;nginx/1.16.1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;&lt;span style="color:#a40000"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="resume-the-scan"&gt;Resume the scan&lt;/h2&gt;
+&lt;p&gt;Based on the example image above, the same scan can be resumed by
+using &lt;code&gt;feroxbuster --resume-from ferox-http_localhost-1606947491.state&lt;/code&gt;. Directories that were already complete are not
+rescanned.&lt;/p&gt;</description></item><item><title>Enforce Time Limit</title><link>/feroxbuster-docs/docs/examples/time-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/time-limit/</guid><description>&lt;h2 id="enforce-a-time-limit-on-your-scan"&gt;Enforce a Time Limit on Your Scan&lt;/h2&gt;
+&lt;p&gt;Version 1.10.0 adds the ability to set a maximum runtime, or time limit, on your scan. The usage is pretty simple: a
+number followed directly by a single character representing seconds, minutes, hours, or days. &lt;code&gt;feroxbuster&lt;/code&gt; refers to
+this combination as a time_spec.&lt;/p&gt;
+&lt;p&gt;Examples of possible time_specs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;30s&lt;/code&gt; - 30 seconds&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;20m&lt;/code&gt; - 20 minutes&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1h&lt;/code&gt; - 1 hour&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1d&lt;/code&gt; - 1 day (why??)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A valid time_spec can be passed to &lt;code&gt;--time-limit&lt;/code&gt; in order to force a shutdown after the given time has elapsed.&lt;/p&gt;</description></item><item><title>Filter by Page Similarity</title><link>/feroxbuster-docs/docs/examples/filter-similar/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/filter-similar/</guid><description>&lt;h2 id="filter-response-by-similarity-to-a-given-page"&gt;Filter Response by Similarity to A Given Page&lt;/h2&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Heads up&lt;/h4>
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Heads up&lt;/h4&gt;
 
- &lt;ul>
-&lt;li>Using a bunch of &lt;code>--filter-similar-to&lt;/code> values &lt;strong>may&lt;/strong> negatively impact performance&lt;/li>
-&lt;/ul>
+ &lt;ul&gt;
+&lt;li&gt;Using a bunch of &lt;code&gt;--filter-similar-to&lt;/code&gt; values &lt;strong&gt;may&lt;/strong&gt; negatively impact performance&lt;/li&gt;
+&lt;/ul&gt;
 
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>Version 1.11.0 adds the ability to specify an example page for filtering pages that are similar to the given example.&lt;/p>
-&lt;p>Version 2.8.0 updated the underlying algorithm from SSDeep to Simhash.&lt;/p>
-&lt;p>For example, consider a site that attempts to redirect new users to a &lt;code>/register&lt;/code> endpoint. The &lt;code>/register&lt;/code> page has a
+&lt;p&gt;Version 1.11.0 adds the ability to specify an example page for filtering pages that are similar to the given example.&lt;/p&gt;
+&lt;p&gt;Version 2.8.0 updated the underlying algorithm from SSDeep to Simhash.&lt;/p&gt;
+&lt;p&gt;For example, consider a site that attempts to redirect new users to a &lt;code&gt;/register&lt;/code&gt; endpoint. The &lt;code&gt;/register&lt;/code&gt; page has a
 CSRF token that alters the page&amp;rsquo;s response slightly with each new request (sometimes affecting overall length). This
 means that a simple line/word/char filter won&amp;rsquo;t be able to filter all responses. In order to filter those redirects out,
-one could use a command like this:&lt;/p></description></item><item><title>Scan Management Menu</title><link>/feroxbuster-docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cancel-scan/</guid><description>&lt;h2 id="add-or-cancel-a-recursive-scan-interactively">Add or Cancel a Recursive Scan Interactively&lt;/h2>
+one could use a command like this:&lt;/p&gt;</description></item><item><title>Scan Management Menu</title><link>/feroxbuster-docs/docs/examples/cancel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cancel-scan/</guid><description>&lt;div class="alert alert-primary" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
+
+ &lt;p&gt;Interactively changing the scan limit follows the rules below&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Setting the limit to a number &lt;strong&gt;higher&lt;/strong&gt; than the current number of directory scans allows new/waiting scans to immediately start&lt;/li&gt;
+&lt;li&gt;Setting the limit to a number &lt;strong&gt;lower&lt;/strong&gt; than the current number of directory scans does not affect scans already running. It will take effect as soon as the number of active scans drops to/below the new limit.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Consider the following example:&lt;/p&gt;</description></item><item><title>Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>&lt;h2 id="limit-number-of-requests-per-second"&gt;Limit Number of Requests per Second&lt;/h2&gt;
 
 
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
+&lt;div class="alert alert-primary" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Note&lt;/h4&gt;
 
- Scans that are started via &lt;code>-u&lt;/code> or passed in through &lt;code>--stdin&lt;/code> cannot be cancelled, only scans found via &lt;code>--extract-links&lt;/code> or recursion are eligible.
+ Rate limiting is enforced on a &lt;strong&gt;per-directory&lt;/strong&gt; basis.
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>Version 1.12.0 expanded the pause/resume functionality introduced in &lt;a href="../pause-scan/">v1.4.0&lt;/a> by
-adding an interactive menu from which currently running recursive scans can be cancelled, without affecting the overall scan. Scans can still be paused indefinitely by pressing &lt;code>ENTER&lt;/code>.&lt;/p>
-&lt;p>Version 2.4.1 expanded functionality even further with the ability to add a brand-new scan. Now that cancelling is no
-longer the only action available to users, the name has been updated to the &lt;strong>Scan Management Menu&lt;/strong>™.&lt;/p></description></item><item><title>Rate Limiting</title><link>/feroxbuster-docs/docs/examples/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/rate-limit/</guid><description>&lt;h2 id="limit-number-of-requests-per-second">Limit Number of Requests per Second&lt;/h2>
-
-
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note&lt;/h4>
-
- Rate limiting is enforced on a &lt;strong>per-directory&lt;/strong> basis.
-
-&lt;/div>
-
-&lt;p>Version 2.0.0 added the ability to limit the number of requests per second.&lt;/p>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;p>Limit number of requests per second, per directory, to 100 (requests per second will increase by 100 for each active directory found during recursion)&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://localhost --rate-limit 100
-&lt;/code>&lt;/pre>&lt;p>Limit number of requests per second to 100 to the target as a whole (only one directory at a time will be scanned, thus
-limiting the number of requests per second overall)&lt;/p></description></item><item><title>Silent/Quiet Output</title><link>/feroxbuster-docs/docs/examples/be-quiet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/be-quiet/</guid><description>&lt;h2 id="silence-all-output-or-be-kinda-quiet">Silence all Output or Be Kinda Quiet&lt;/h2>
-&lt;p>Version 2.0.0 introduces &lt;code>--silent&lt;/code> which is almost equivalent to version 1.x.x&amp;rsquo;s &lt;code>--quiet&lt;/code>.&lt;/p>
-&lt;h3 id="--silent">&lt;code>--silent&lt;/code>&lt;/h3>
-&lt;p>Good for piping a list of urls to other commands:&lt;/p>
-&lt;ul>
-&lt;li>disables logging (no error messages to screen)&lt;/li>
-&lt;li>don&amp;rsquo;t print banner&lt;/li>
-&lt;li>only display urls during scan&lt;/li>
-&lt;/ul>
-&lt;h4 id="example-output">example output&lt;/h4>
-&lt;pre tabindex="0">&lt;code>https://localhost.com/contact
+&lt;p&gt;Version 2.0.0 added the ability to limit the number of requests per second.&lt;/p&gt;
+&lt;h2 id="interaction-with-auto-tune"&gt;Interaction with Auto-Tune&lt;/h2&gt;
+&lt;p&gt;As of version 2.13.1, &lt;code&gt;--rate-limit&lt;/code&gt; can be used together with &lt;code&gt;--auto-tune&lt;/code&gt;. When both flags are provided:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--rate-limit&lt;/code&gt; serves as a &lt;strong&gt;hard cap&lt;/strong&gt; on the maximum request rate&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--auto-tune&lt;/code&gt; will dynamically adjust the rate limit downward when errors occur&lt;/li&gt;
+&lt;li&gt;Auto-tune adjustments will &lt;strong&gt;never exceed&lt;/strong&gt; the value specified by &lt;code&gt;--rate-limit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;When auto-tune attempts to remove the rate limit (after successful recovery), it will instead reset to the &lt;code&gt;--rate-limit&lt;/code&gt; cap rather than removing it entirely&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This combination is useful when you want adaptive rate limiting with a guaranteed maximum to ensure you never exceed a specific request rate.&lt;/p&gt;</description></item><item><title>Silent/Quiet Output</title><link>/feroxbuster-docs/docs/examples/be-quiet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/be-quiet/</guid><description>&lt;h2 id="silence-all-output-or-be-kinda-quiet"&gt;Silence all Output or Be Kinda Quiet&lt;/h2&gt;
+&lt;p&gt;Version 2.0.0 introduces &lt;code&gt;--silent&lt;/code&gt; which is almost equivalent to version 1.x.x&amp;rsquo;s &lt;code&gt;--quiet&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="--silent"&gt;&lt;code&gt;--silent&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Good for piping a list of urls to other commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;disables logging (no error messages to screen)&lt;/li&gt;
+&lt;li&gt;don&amp;rsquo;t print banner&lt;/li&gt;
+&lt;li&gt;only display urls during scan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="example-output"&gt;example output&lt;/h4&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;https://localhost.com/contact
 https://localhost.com/about
 https://localhost.com/terms
-&lt;/code>&lt;/pre>&lt;h3 id="--quiet">&lt;code>--quiet&lt;/code>&lt;/h3>
-&lt;p>Good for tmux windows that have notifications enabled as the only updates shown by the scan are new valid responses
-and new directories found that are suitable for recursion.&lt;/p></description></item><item><title>Auto-tune / Auto-bail</title><link>/feroxbuster-docs/docs/examples/auto-tune/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/auto-tune/</guid><description>&lt;h2 id="auto-tune-or-auto-bail-from-scans">Auto-tune or Auto-bail from scans&lt;/h2>
-&lt;p>Version 2.1.0 introduces the &lt;code>--auto-tune&lt;/code> and &lt;code>--auto-bail&lt;/code> flags. You can think of these flags as Policies. Both actions (tuning and bailing) are triggered by the same criteria (below). Policies are only enforced after at least 50 requests have been made (or # of threads, if that&amp;rsquo;s &amp;gt; 50).&lt;/p>
-&lt;p>Policy Enforcement Criteria:&lt;/p>
-&lt;ul>
-&lt;li>number of general errors (timeouts, etc) is higher than half the number of threads (or at least 25 if threads are lower) (per directory scanned)&lt;/li>
-&lt;li>90% of responses are &lt;code>403|Forbidden&lt;/code> (per directory scanned)&lt;/li>
-&lt;li>30% of requests are &lt;code>429|Too Many Requests&lt;/code> (per directory scanned)&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>both demo gifs below use &amp;ndash;timeout to overload a single-threaded python web server and elicit timeouts&lt;/p></description></item><item><title>Parallel Scans</title><link>/feroxbuster-docs/docs/examples/parallel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/parallel-scan/</guid><description>&lt;h2 id="run-scans-in-parallel">Run Scans in Parallel&lt;/h2>
-&lt;p>Version 2.2.0 introduces the &lt;code>--parallel&lt;/code> option. If you&amp;rsquo;re one of those people who use &lt;code>feroxbuster&lt;/code> to scan 100s of hosts at a time, this is the option for you! &lt;code>--parallel&lt;/code> spawns a child process per target passed in over stdin (recursive directories are still async within each child).&lt;/p>
-&lt;p>The number of parallel scans is limited to whatever you pass to &lt;code>--parallel&lt;/code>. When one child finishes its scan, the next child will be spawned.&lt;/p></description></item><item><title>Deny List</title><link>/feroxbuster-docs/docs/examples/deny-list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/deny-list/</guid><description>&lt;h2 id="prevent-specific-domaindirectory-scans">Prevent Specific Domain/Directory Scans&lt;/h2>
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="--quiet"&gt;&lt;code&gt;--quiet&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Good for tmux windows that have notifications enabled as the only updates shown by the scan are new valid responses
+and new directories found that are suitable for recursion.&lt;/p&gt;</description></item><item><title>Auto-tune / Auto-bail</title><link>/feroxbuster-docs/docs/examples/auto-tune/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/auto-tune/</guid><description>&lt;h2 id="auto-tune-or-auto-bail-from-scans"&gt;Auto-tune or Auto-bail from scans&lt;/h2&gt;
+&lt;p&gt;Version 2.1.0 introduces the &lt;code&gt;--auto-tune&lt;/code&gt; and &lt;code&gt;--auto-bail&lt;/code&gt; flags. You can think of these flags as Policies. Both actions (tuning and bailing) are triggered by the same criteria (below). Policies are only enforced after at least 50 requests have been made (or # of threads, if that&amp;rsquo;s &amp;gt; 50).&lt;/p&gt;
+&lt;p&gt;Policy Enforcement Criteria:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;number of general errors (timeouts, etc) is higher than half the number of threads (or at least 25 if threads are lower) (per directory scanned)&lt;/li&gt;
+&lt;li&gt;90% of responses are &lt;code&gt;403|Forbidden&lt;/code&gt; (per directory scanned)&lt;/li&gt;
+&lt;li&gt;30% of requests are &lt;code&gt;429|Too Many Requests&lt;/code&gt; (per directory scanned)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;both demo gifs below use &amp;ndash;timeout to overload a single-threaded python web server and elicit timeouts&lt;/p&gt;</description></item><item><title>Parallel Scans</title><link>/feroxbuster-docs/docs/examples/parallel-scan/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/parallel-scan/</guid><description>&lt;h2 id="run-scans-in-parallel"&gt;Run Scans in Parallel&lt;/h2&gt;
+&lt;p&gt;Version 2.2.0 introduces the &lt;code&gt;--parallel&lt;/code&gt; option. If you&amp;rsquo;re one of those people who use &lt;code&gt;feroxbuster&lt;/code&gt; to scan 100s of hosts at a time, this is the option for you! &lt;code&gt;--parallel&lt;/code&gt; spawns a child process per target passed in over stdin (recursive directories are still async within each child).&lt;/p&gt;
+&lt;p&gt;The number of parallel scans is limited to whatever you pass to &lt;code&gt;--parallel&lt;/code&gt;. When one child finishes its scan, the next child will be spawned.&lt;/p&gt;</description></item><item><title>Deny List</title><link>/feroxbuster-docs/docs/examples/deny-list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/deny-list/</guid><description>&lt;h2 id="prevent-specific-domaindirectory-scans"&gt;Prevent Specific Domain/Directory Scans&lt;/h2&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Heads up&lt;/h4>
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Heads up&lt;/h4&gt;
 
- This action is taken &lt;strong>BEFORE&lt;/strong> a request is sent to the target, which differs from the filter-* options that are applied to responses
+ This action is taken &lt;strong&gt;BEFORE&lt;/strong&gt; a request is sent to the target, which differs from the filter-* options that are applied to responses
 
-&lt;/div>
+&lt;/div&gt;
 
 
 
-&lt;div class="alert alert-info" role="alert">
-&lt;h4 class="alert-heading">Heads up&lt;/h4>
+&lt;div class="alert alert-info" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Heads up&lt;/h4&gt;
 
- Version 2.3.4 added the ability to pass &lt;strong>regular expressions&lt;/strong> to &lt;code>--dont-scan&lt;/code> (&lt;code>/[jc]ss?&lt;/code>).
+ Version 2.3.4 added the ability to pass &lt;strong&gt;regular expressions&lt;/strong&gt; to &lt;code&gt;--dont-scan&lt;/code&gt; (&lt;code&gt;/[jc]ss?&lt;/code&gt;).
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>Version 2.3.0 introduces the &lt;code>--dont-scan&lt;/code> option. The values passed to &lt;code>--dont-scan&lt;/code> act as a deny-list. The values
-can be an entire domain (&lt;code>http://some.domain&lt;/code>), a specific folder (&lt;code>http://some.domain/js&lt;/code>), or a specific file
-(&lt;code>http://some.domain/some-application/stupid-page.php&lt;/code>). If a folder/domain is used any sub-folder/sub-file of the
-url passed to &lt;code>--dont-scan&lt;/code> will be &lt;strong>blocked before it can be requested&lt;/strong>.&lt;/p></description></item><item><title>Random User-Agents</title><link>/feroxbuster-docs/docs/examples/random-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/random-agent/</guid><description>&lt;h2 id="randomize-user-agent-header">Randomize User-Agent Header&lt;/h2>
-&lt;p>Version 2.4.0 introduces the &lt;code>--random-agent&lt;/code> option. When used, &lt;code>--random-agent&lt;/code> selects a User-Agent value from one of the values below and
-includes it in that particular request.&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Mobile Safari/537.36 Edge/15.15254&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (Linux; Android 7.0; Pixel C Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)&lt;/code>&lt;/li>
-&lt;li>&lt;code>Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="random-agent" src="../random-agent.gif">&lt;/p></description></item><item><title>Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>&lt;h2 id="detect-directory-listing">Detect Directory Listing&lt;/h2>
-&lt;p>Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code>feroxbuster&lt;/code> will either report, or report and scan, depending on whether or not &lt;code>--extract-links&lt;/code> was used.&lt;/p>
-&lt;h2 id="examples">Examples&lt;/h2>
-&lt;h3 id="without---extract-links">Without &lt;code>--extract-links&lt;/code>&lt;/h3>
-&lt;p>When &lt;code>--extract-links&lt;/code> is &lt;strong>not&lt;/strong> used, directory listing is simply reported. No further actions are taken.&lt;/p>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="dir-list-no-tack-e" src="../dir-list-no-tack-e.png">&lt;/p>
-&lt;h3 id="with---extract-links">With &lt;code>--extract-links&lt;/code>&lt;/h3>
-&lt;p>When &lt;code>--extract-links&lt;/code> is used, each link in the response is extracted and requested.&lt;/p></description></item><item><title>Server and Client Certificate Management</title><link>/feroxbuster-docs/docs/examples/certificate-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/certificate-management/</guid><description>&lt;h1 id="server-and-client-certificate-management">Server and Client Certificate Management&lt;/h1>
-&lt;p>Version 2.10.0 introduces three flags:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>--server-certs&lt;/code>&lt;/li>
-&lt;li>&lt;code>--client-cert&lt;/code>&lt;/li>
-&lt;li>&lt;code>--client-key&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h1 id="when-to-use-certificate-management">When to use Certificate Management&lt;/h1>
-&lt;p>When a server requires mutual transport layer security (mTLS) authentication,
+&lt;p&gt;Version 2.3.0 introduces the &lt;code&gt;--dont-scan&lt;/code&gt; option. The values passed to &lt;code&gt;--dont-scan&lt;/code&gt; act as a deny-list. The values
+can be an entire domain (&lt;code&gt;http://some.domain&lt;/code&gt;), a specific folder (&lt;code&gt;http://some.domain/js&lt;/code&gt;), or a specific file
+(&lt;code&gt;http://some.domain/some-application/stupid-page.php&lt;/code&gt;). If a folder/domain is used any sub-folder/sub-file of the
+url passed to &lt;code&gt;--dont-scan&lt;/code&gt; will be &lt;strong&gt;blocked before it can be requested&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Random User-Agents</title><link>/feroxbuster-docs/docs/examples/random-agent/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/random-agent/</guid><description>&lt;h2 id="randomize-user-agent-header"&gt;Randomize User-Agent Header&lt;/h2&gt;
+&lt;p&gt;Version 2.4.0 introduces the &lt;code&gt;--random-agent&lt;/code&gt; option. When used, &lt;code&gt;--random-agent&lt;/code&gt; selects a User-Agent value from one of the values below and
+includes it in that particular request.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (Linux; Android 8.0.0; SM-G960F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Microsoft; RM-1152) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Mobile Safari/537.36 Edge/15.15254&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (Linux; Android 7.0; Pixel C Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/52.0.2743.98 Safari/537.36&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.64 Safari/537.36&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;feroxbuster -u https://some-example-site.com -k --proxy http://127.0.0.1:8080 --random-agent
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src="../random-agent.gif" alt="random-agent"&gt;&lt;/p&gt;</description></item><item><title>Detect Directory Listing</title><link>/feroxbuster-docs/docs/examples/detect-directory-listing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/detect-directory-listing/</guid><description>&lt;h2 id="detect-directory-listing"&gt;Detect Directory Listing&lt;/h2&gt;
+&lt;p&gt;Version 2.5.0 introduces the ability to detect when a server has directory listing enabled. When such a directory is found, &lt;code&gt;feroxbuster&lt;/code&gt; will either report, or report and scan, depending on whether or not &lt;code&gt;--extract-links&lt;/code&gt; was used.&lt;/p&gt;
+&lt;h2 id="detection-methods"&gt;Detection Methods&lt;/h2&gt;
+&lt;h3 id="standard-detection-v250"&gt;Standard Detection (v2.5.0+)&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;feroxbuster&lt;/code&gt; can detect directory listings from common web servers by analyzing the page title:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Apache/Python/Tomcat&lt;/strong&gt;: &lt;code&gt;Index of /&lt;/code&gt; or &lt;code&gt;Directory Listing for /&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ASP.NET&lt;/strong&gt;: &lt;code&gt;Directory Listing -- /&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="enhanced-heuristic-detection-v2131"&gt;Enhanced Heuristic Detection (v2.13.1+)&lt;/h3&gt;
+&lt;p&gt;For custom or non-standard directory listings that don&amp;rsquo;t use recognizable titles, &lt;code&gt;feroxbuster&lt;/code&gt; now employs advanced heuristics. It looks for multiple signals that indicate directory listing behavior:&lt;/p&gt;</description></item><item><title>Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/http-method/</guid><description>&lt;h2 id="specify-http-request-method"&gt;Specify HTTP Request Method&lt;/h2&gt;
+&lt;p&gt;Version 2.5.0 introduces the ability to specify the HTTP request method sent in each request. Some additional info:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;multiple methods may be used (i.e. &lt;code&gt;-m POST GET&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;anything can be specified, not just valid http verbs (i.e. &lt;code&gt;-m derp&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;feroxbuster -u https://some-example-site.com -m POST GET dErP
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src="../http-method.gif" alt="http-method"&gt;&lt;/p&gt;</description></item><item><title>Specify Cookies</title><link>/feroxbuster-docs/docs/examples/cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cookies/</guid><description>&lt;h2 id="specify-cookies-directly"&gt;Specify Cookies Directly&lt;/h2&gt;
+&lt;p&gt;Version 2.5.0 gave http cookies their own flag, separate from &lt;code&gt;-H, --headers&lt;/code&gt;. The new &lt;code&gt;-b, --cookies&lt;/code&gt; is simply
+syntactic sugar around &lt;code&gt;-H, --headers&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;feroxbuster -u https://some-example-site.com -b sessionId=38afes7a8
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src="../session-cookie.png" alt="session-cookie"&gt;&lt;/p&gt;</description></item><item><title>Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>&lt;h2 id="dynamic-collection-settings"&gt;Dynamic Collection Settings&lt;/h2&gt;
+&lt;p&gt;Version 2.6.0 added a whole category of features named &lt;strong&gt;Dynamic Collection Settings&lt;/strong&gt;. The general premise of each
+feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p&gt;
+&lt;h2 id="collect-backups"&gt;Collect Backups&lt;/h2&gt;
+&lt;p&gt;Using &lt;code&gt;--collect-backups&lt;/code&gt; means that for every file found during a scan, &lt;code&gt;feroxbuster&lt;/code&gt; sends additional queries for the following default extensions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.bak&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.bak2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.old&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.swp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em&gt;found&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Forced Recursion</title><link>/feroxbuster-docs/docs/examples/force_recursion/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/force_recursion/</guid><description>&lt;h2 id="forced-recursion"&gt;Forced Recursion&lt;/h2&gt;
+&lt;p&gt;Version 2.7.0 added the ability to tell &lt;code&gt;feroxbuster&lt;/code&gt; to ignore its typical recursion logic in favor
+of recursing into any &amp;lsquo;found&amp;rsquo; asset. A &amp;lsquo;found&amp;rsquo; asset is an endpoint that was not filtered out by
+other scan settings (i.e. &amp;ndash;filter-status or similar).&lt;/p&gt;
+&lt;h2 id="when-to-use-forced-recursion"&gt;When to use Forced Recursion&lt;/h2&gt;
+&lt;p&gt;In order to know when forced recursion is useful, it&amp;rsquo;s useful to know how &lt;code&gt;feroxbuster&lt;/code&gt; determines
+into what it should and should not recurse.&lt;/p&gt;</description></item><item><title>Server and Client Certificate Management</title><link>/feroxbuster-docs/docs/examples/certificate-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/certificate-management/</guid><description>&lt;h1 id="server-and-client-certificate-management"&gt;Server and Client Certificate Management&lt;/h1&gt;
+&lt;p&gt;Version 2.10.0 introduces three flags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--server-certs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--client-cert&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--client-key&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="when-to-use-certificate-management"&gt;When to use Certificate Management&lt;/h1&gt;
+&lt;p&gt;When a server requires mutual transport layer security (mTLS) authentication,
 the client upon verification of the server certificate, is required to send its
 own certificate to the server. The server subsequently checks its list of trusted
-CAs and verifies the client&amp;rsquo;s certificate.&lt;/p>
-&lt;p>In such a situation, the &lt;code>--client-key&lt;/code> flag needs to be supplied a &lt;code>.pem&lt;/code> file
-which has the PKCS #8 PEM encoded private key and the &lt;code>--client-cert&lt;/code> flag must
+CAs and verifies the client&amp;rsquo;s certificate.&lt;/p&gt;
+&lt;p&gt;In such a situation, the &lt;code&gt;--client-key&lt;/code&gt; flag needs to be supplied a &lt;code&gt;.pem&lt;/code&gt; file
+which has the PKCS #8 PEM encoded private key and the &lt;code&gt;--client-cert&lt;/code&gt; flag must
 be supplied a PEM encoded certificate for the client. Additional root CA
-certificates may need to be supplied through &lt;code>--server-certs&lt;/code> as a &lt;code>.pem&lt;/code> or &lt;code>.der&lt;/code> file
-if the server uses a self-signed certificate.&lt;/p></description></item><item><title>Specify HTTP Request Method</title><link>/feroxbuster-docs/docs/examples/http-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/http-method/</guid><description>&lt;h2 id="specify-http-request-method">Specify HTTP Request Method&lt;/h2>
-&lt;p>Version 2.5.0 introduces the ability to specify the HTTP request method sent in each request. Some additional info:&lt;/p>
-&lt;ul>
-&lt;li>multiple methods may be used (i.e. &lt;code>-m POST GET&lt;/code>)&lt;/li>
-&lt;li>anything can be specified, not just valid http verbs (i.e. &lt;code>-m derp&lt;/code>)&lt;/li>
-&lt;/ul>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -m POST GET dErP
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="http-method" src="../http-method.gif">&lt;/p></description></item><item><title>Specify Cookies</title><link>/feroxbuster-docs/docs/examples/cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cookies/</guid><description>&lt;h2 id="specify-cookies-directly">Specify Cookies Directly&lt;/h2>
-&lt;p>Version 2.5.0 gave http cookies their own flag, separate from &lt;code>-H, --headers&lt;/code>. The new &lt;code>-b, --cookies&lt;/code> is simply
-syntactic sugar around &lt;code>-H, --headers&lt;/code>.&lt;/p>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -b sessionId=38afes7a8
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="session-cookie" src="../session-cookie.png">&lt;/p></description></item><item><title>Dynamic Collection Settings</title><link>/feroxbuster-docs/docs/examples/dynamic-collections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/dynamic-collections/</guid><description>&lt;h2 id="dynamic-collection-settings">Dynamic Collection Settings&lt;/h2>
-&lt;p>Version 2.6.0 added a whole category of features named &lt;strong>Dynamic Collection Settings&lt;/strong>. The general premise of each
-feature is that additional requests are made based on the target site&amp;rsquo;s observed state.&lt;/p>
-&lt;h2 id="collect-backups">Collect Backups&lt;/h2>
-&lt;p>Using &lt;code>--collect-backups&lt;/code> means that for every file found during a scan, &lt;code>feroxbuster&lt;/code> sends additional queries for the following default extensions:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>~&lt;/code>&lt;/li>
-&lt;li>&lt;code>.bak&lt;/code>&lt;/li>
-&lt;li>&lt;code>.bak2&lt;/code>&lt;/li>
-&lt;li>&lt;code>.old&lt;/code>&lt;/li>
-&lt;li>&lt;code>.1&lt;/code>&lt;/li>
-&lt;li>&lt;code>.swp&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>Any url that wasn&amp;rsquo;t filtered out via status code, size, similarity, etc&amp;hellip; is considered &lt;em>found&lt;/em>.&lt;/p></description></item><item><title>Forced Recursion</title><link>/feroxbuster-docs/docs/examples/force_recursion/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/force_recursion/</guid><description>&lt;h2 id="forced-recursion">Forced Recursion&lt;/h2>
-&lt;p>Version 2.7.0 added the ability to tell &lt;code>feroxbuster&lt;/code> to ignore its typical recursion logic in favor
-of recursing into any &amp;lsquo;found&amp;rsquo; asset. A &amp;lsquo;found&amp;rsquo; asset is an endpoint that was not filtered out by
-other scan settings (i.e. &amp;ndash;filter-status or similar).&lt;/p>
-&lt;h2 id="when-to-use-forced-recursion">When to use Forced Recursion&lt;/h2>
-&lt;p>In order to know when forced recursion is useful, it&amp;rsquo;s useful to know how &lt;code>feroxbuster&lt;/code> determines
-into what it should and should not recurse.&lt;/p></description></item><item><title>Configure scan from raw request</title><link>/feroxbuster-docs/docs/examples/raw-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/raw-request/</guid><description>&lt;h2 id="configure-a-scan-from-a-raw-request-eg-burp-or-similar">Configure a scan from a raw request (e.g. burp or similar)&lt;/h2>
-&lt;p>Version 2.11.0 introduces the ability to begin a scan by passing in a raw request file.&lt;/p>
-&lt;p>The following table outlines the behavior of raw request and cli interactions. See the &amp;lsquo;with cli parameters&amp;rsquo; example below for further details.&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th style="text-align: left">&lt;/th>
- &lt;th style="text-align: left">unique&lt;/th>
- &lt;th style="text-align: left">not unique&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td style="text-align: left">headers&lt;/td>
- &lt;td style="text-align: left">appended&lt;/td>
- &lt;td style="text-align: left">overridden by cli&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">methods&lt;/td>
- &lt;td style="text-align: left">appended&lt;/td>
- &lt;td style="text-align: left">ignored&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">user-agent&lt;/td>
- &lt;td style="text-align: left">n/a&lt;/td>
- &lt;td style="text-align: left">overridden by cli&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">cookies&lt;/td>
- &lt;td style="text-align: left">appended&lt;/td>
- &lt;td style="text-align: left">overridden by cli&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">query parameters&lt;/td>
- &lt;td style="text-align: left">appended&lt;/td>
- &lt;td style="text-align: left">overridden by cli&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="example-no-additional-parameters">Example: no additional parameters&lt;/h2>
-&lt;p>Given the following command and raw request file&lt;/p></description></item><item><title>Scan Directory Listings</title><link>/feroxbuster-docs/docs/examples/scan-dir-listings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/scan-dir-listings/</guid><description>&lt;h2 id="force-scans-to-recurse-into-directory-listings">Force scans to recurse into directory listings&lt;/h2>
-&lt;p>Version 2.11.0 allows users to force feroxbuster to scan directory listings. Prior to 2.11.0, when feroxbuster encountered a directory listing, it would simply parse the &lt;code>&amp;lt;a&amp;gt;&lt;/code> tags, report the results, queue any additional folders found in the &lt;code>&amp;lt;a&amp;gt;&lt;/code> tags, and then move onto its next objective.&lt;/p>
-&lt;p>Not scanning directory listings makes sense, generally, but web servers can be configured to both allow directory listing while also hiding files/folders from that listing. That&amp;rsquo;s where &lt;code>--scan-dir-listings&lt;/code> comes in. When &lt;code>--scan-dir-listings&lt;/code> is used, feroxbuster will perform it&amp;rsquo;s typical &lt;code>&amp;lt;a&amp;gt;&lt;/code> tag parsing et. al., but will also perform a scan of that directory.&lt;/p></description></item><item><title>Limit Number of Progress Bars</title><link>/feroxbuster-docs/docs/examples/limit-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-bars/</guid><description>&lt;h2 id="limit-the-number-of-progress-bars-shown-at-any-given-time">Limit the number of progress bars shown at any given time&lt;/h2>
-&lt;p>Version 2.11.0 introduces the ability to limit the number of progress bars feroxbuster displays at any given time. This is useful for very large and/or long running scans.&lt;/p>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com --limit-bars 4
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="limit-bars-demo" src="../limit-bars-demo.gif">&lt;/p></description></item></channel></rss>
+certificates may need to be supplied through &lt;code&gt;--server-certs&lt;/code&gt; as a &lt;code&gt;.pem&lt;/code&gt; or &lt;code&gt;.der&lt;/code&gt; file
+if the server uses a self-signed certificate.&lt;/p&gt;</description></item><item><title>Configure scan from raw request</title><link>/feroxbuster-docs/docs/examples/raw-request/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/raw-request/</guid><description>&lt;h2 id="configure-a-scan-from-a-raw-request-eg-burp-or-similar"&gt;Configure a scan from a raw request (e.g. burp or similar)&lt;/h2&gt;
+&lt;p&gt;Version 2.11.0 introduces the ability to begin a scan by passing in a raw request file.&lt;/p&gt;
+&lt;p&gt;The following table outlines the behavior of raw request and cli interactions. See the &amp;lsquo;with cli parameters&amp;rsquo; example below for further details.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;th&gt;unique&lt;/th&gt;
+ &lt;th&gt;not unique&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;headers&lt;/td&gt;
+ &lt;td&gt;appended&lt;/td&gt;
+ &lt;td&gt;overridden by cli&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;methods&lt;/td&gt;
+ &lt;td&gt;appended&lt;/td&gt;
+ &lt;td&gt;ignored&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;user-agent&lt;/td&gt;
+ &lt;td&gt;n/a&lt;/td&gt;
+ &lt;td&gt;overridden by cli&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;cookies&lt;/td&gt;
+ &lt;td&gt;appended&lt;/td&gt;
+ &lt;td&gt;overridden by cli&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;query parameters&lt;/td&gt;
+ &lt;td&gt;appended&lt;/td&gt;
+ &lt;td&gt;overridden by cli&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="example-no-additional-parameters"&gt;Example: no additional parameters&lt;/h2&gt;
+&lt;p&gt;Given the following command and raw request file&lt;/p&gt;</description></item><item><title>Scan Directory Listings</title><link>/feroxbuster-docs/docs/examples/scan-dir-listings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/scan-dir-listings/</guid><description>&lt;h2 id="force-scans-to-recurse-into-directory-listings"&gt;Force scans to recurse into directory listings&lt;/h2&gt;
+&lt;p&gt;Version 2.11.0 allows users to force feroxbuster to scan directory listings. Prior to 2.11.0, when feroxbuster encountered a directory listing, it would simply parse the &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tags, report the results, queue any additional folders found in the &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tags, and then move onto its next objective.&lt;/p&gt;
+&lt;p&gt;Not scanning directory listings makes sense, generally, but web servers can be configured to both allow directory listing while also hiding files/folders from that listing. That&amp;rsquo;s where &lt;code&gt;--scan-dir-listings&lt;/code&gt; comes in. When &lt;code&gt;--scan-dir-listings&lt;/code&gt; is used, feroxbuster will perform it&amp;rsquo;s typical &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tag parsing et. al., but will also perform a scan of that directory.&lt;/p&gt;</description></item><item><title>Limit Number of Progress Bars</title><link>/feroxbuster-docs/docs/examples/limit-bars/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/limit-bars/</guid><description>&lt;h2 id="limit-the-number-of-progress-bars-shown-at-any-given-time"&gt;Limit the number of progress bars shown at any given time&lt;/h2&gt;
+&lt;p&gt;Version 2.11.0 introduces the ability to limit the number of progress bars feroxbuster displays at any given time. This is useful for very large and/or long running scans.&lt;/p&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;feroxbuster -u https://some-example-site.com --limit-bars 4
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src="../limit-bars-demo.gif" alt="limit-bars-demo"&gt;&lt;/p&gt;</description></item><item><title>Unique Responses</title><link>/feroxbuster-docs/docs/examples/unique-responses/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/unique-responses/</guid><description>&lt;h2 id="show-only-unique-responses"&gt;Show Only Unique Responses&lt;/h2&gt;
+&lt;p&gt;Version 2.12.0 introduces the &lt;code&gt;--unique&lt;/code&gt; flag to automatically filter out duplicate and (very) near-duplicate responses during scanning. This feature is particularly useful when dealing with WAFs, load balancers, or applications with wildcard routing that generate many identical responses, reducing output noise and making results easier to analyze.&lt;/p&gt;
+&lt;p&gt;When &lt;code&gt;--unique&lt;/code&gt; is enabled, feroxbuster uses an intelligent similarity detection algorithm (simhash) to identify and filter out responses that are substantially similar to previously seen responses.&lt;/p&gt;</description></item><item><title>Response Size Limit</title><link>/feroxbuster-docs/docs/examples/response-size-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/response-size-limit/</guid><description>&lt;h2 id="limit-response-body-size"&gt;Limit Response Body Size&lt;/h2&gt;
+&lt;p&gt;Version 2.12.0 introduces the &lt;code&gt;--response-size-limit&lt;/code&gt; flag to prevent out-of-memory errors when scanning targets that return very large response bodies. This feature is particularly useful when encountering servers that serve large files such as backups, database dumps, or media files that could exhaust system memory.&lt;/p&gt;
+&lt;p&gt;By default, feroxbuster sets a 4MB (4,194,304 bytes) limit on response body reading, which provides protection against unexpected memory issues while still allowing most legitimate web content to be processed fully.&lt;/p&gt;</description></item><item><title>Scope</title><link>/feroxbuster-docs/docs/examples/scope/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/scope/</guid><description>&lt;h2 id="scope-option"&gt;Scope Option&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;--scope&lt;/code&gt; option allows you to specify additional domains that should be considered &amp;ldquo;in-scope&amp;rdquo; during feroxbuster scans. This can help you avoid accidentally attacking endpoints or hosts that you don&amp;rsquo;t have permission to test.&lt;/p&gt;
+&lt;h2 id="basic-usage"&gt;Basic Usage&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;feroxbuster -u https://example.com --scope other-example.com example-sibling.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="how-scope-works"&gt;How Scope Works&lt;/h2&gt;
+&lt;h3 id="default-behavior"&gt;Default Behavior&lt;/h3&gt;
+&lt;p&gt;By default, feroxbuster automatically includes the target URL&amp;rsquo;s domain in the scope list. When you specify additional URLs via &lt;code&gt;--scope&lt;/code&gt;, they are added to this internal scope list along with the original target.&lt;/p&gt;</description></item></channel></rss>

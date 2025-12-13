@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Recursion on feroxbuster</title><link>/feroxbuster-docs/tags/recursion/</link><description>Recent content in Recursion on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/recursion/index.xml" rel="self" type="application/rss+xml"/><item><title>Forced Recursion</title><link>/feroxbuster-docs/docs/examples/force_recursion/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/force_recursion/</guid><description>&lt;h2 id="forced-recursion">Forced Recursion&lt;/h2>
-&lt;p>Version 2.7.0 added the ability to tell &lt;code>feroxbuster&lt;/code> to ignore its typical recursion logic in favor
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Recursion on feroxbuster</title><link>/feroxbuster-docs/tags/recursion/</link><description>Recent content in Recursion on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/recursion/index.xml" rel="self" type="application/rss+xml"/><item><title>Forced Recursion</title><link>/feroxbuster-docs/docs/examples/force_recursion/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/force_recursion/</guid><description>&lt;h2 id="forced-recursion"&gt;Forced Recursion&lt;/h2&gt;
+&lt;p&gt;Version 2.7.0 added the ability to tell &lt;code&gt;feroxbuster&lt;/code&gt; to ignore its typical recursion logic in favor
 of recursing into any &amp;lsquo;found&amp;rsquo; asset. A &amp;lsquo;found&amp;rsquo; asset is an endpoint that was not filtered out by
-other scan settings (i.e. &amp;ndash;filter-status or similar).&lt;/p>
-&lt;h2 id="when-to-use-forced-recursion">When to use Forced Recursion&lt;/h2>
-&lt;p>In order to know when forced recursion is useful, it&amp;rsquo;s useful to know how &lt;code>feroxbuster&lt;/code> determines
-into what it should and should not recurse.&lt;/p></description></item></channel></rss>
+other scan settings (i.e. &amp;ndash;filter-status or similar).&lt;/p&gt;
+&lt;h2 id="when-to-use-forced-recursion"&gt;When to use Forced Recursion&lt;/h2&gt;
+&lt;p&gt;In order to know when forced recursion is useful, it&amp;rsquo;s useful to know how &lt;code&gt;feroxbuster&lt;/code&gt; determines
+into what it should and should not recurse.&lt;/p&gt;</description></item></channel></rss>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cookies on feroxbuster</title><link>/feroxbuster-docs/tags/cookies/</link><description>Recent content in Cookies on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/cookies/index.xml" rel="self" type="application/rss+xml"/><item><title>Specify Cookies</title><link>/feroxbuster-docs/docs/examples/cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cookies/</guid><description>&lt;h2 id="specify-cookies-directly">Specify Cookies Directly&lt;/h2>
-&lt;p>Version 2.5.0 gave http cookies their own flag, separate from &lt;code>-H, --headers&lt;/code>. The new &lt;code>-b, --cookies&lt;/code> is simply
-syntactic sugar around &lt;code>-H, --headers&lt;/code>.&lt;/p>
-&lt;h2 id="example">Example&lt;/h2>
-&lt;pre tabindex="0">&lt;code>feroxbuster -u https://some-example-site.com -b sessionId=38afes7a8
-&lt;/code>&lt;/pre>&lt;p>&lt;img alt="session-cookie" src="../session-cookie.png">&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cookies on feroxbuster</title><link>/feroxbuster-docs/tags/cookies/</link><description>Recent content in Cookies on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/cookies/index.xml" rel="self" type="application/rss+xml"/><item><title>Specify Cookies</title><link>/feroxbuster-docs/docs/examples/cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/cookies/</guid><description>&lt;h2 id="specify-cookies-directly"&gt;Specify Cookies Directly&lt;/h2&gt;
+&lt;p&gt;Version 2.5.0 gave http cookies their own flag, separate from &lt;code&gt;-H, --headers&lt;/code&gt;. The new &lt;code&gt;-b, --cookies&lt;/code&gt; is simply
+syntactic sugar around &lt;code&gt;-H, --headers&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="example"&gt;Example&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;feroxbuster -u https://some-example-site.com -b sessionId=38afes7a8
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src="../session-cookie.png" alt="session-cookie"&gt;&lt;/p&gt;</description></item></channel></rss>

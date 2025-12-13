@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Burp on feroxbuster</title><link>/feroxbuster-docs/tags/burp/</link><description>Recent content in Burp on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/burp/index.xml" rel="self" type="application/rss+xml"/><item><title>Core Features</title><link>/feroxbuster-docs/docs/examples/core-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/core-features/</guid><description>&lt;h3 id="multiple-values">Multiple Values&lt;/h3>
-&lt;p>Options that take multiple values are very flexible. Consider the following ways of specifying extensions:&lt;/p>
-&lt;pre tabindex="0">&lt;code>./feroxbuster -u http://127.1 -x pdf -x js,html -x php txt json,docx
-&lt;/code>&lt;/pre>&lt;p>The command above adds .pdf, .js, .html, .php, .txt, .json, and .docx to each url&lt;/p>
-&lt;p>All of the methods above (multiple flags, space separated, comma separated, etc&amp;hellip;) are valid and interchangeable. The
-same goes for urls, headers, status codes, queries, and size filters.&lt;/p></description></item><item><title>Replay Responses</title><link>/feroxbuster-docs/docs/examples/replay-proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/replay-proxy/</guid><description>&lt;h2 id="replay-responses-to-a-proxy-based-on-status-code">Replay Responses to a Proxy based on Status Code&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Burp on feroxbuster</title><link>/feroxbuster-docs/tags/burp/</link><description>Recent content in Burp on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/burp/index.xml" rel="self" type="application/rss+xml"/><item><title>Core Features</title><link>/feroxbuster-docs/docs/examples/core-features/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/core-features/</guid><description>&lt;h3 id="multiple-values"&gt;Multiple Values&lt;/h3&gt;
+&lt;p&gt;Options that take multiple values are very flexible. Consider the following ways of specifying extensions:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;./feroxbuster -u http://127.1 -x pdf -x js,html -x php txt json,docx
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command above adds .pdf, .js, .html, .php, .txt, .json, and .docx to each url&lt;/p&gt;
+&lt;p&gt;All of the methods above (multiple flags, space separated, comma separated, etc&amp;hellip;) are valid and interchangeable. The
+same goes for urls, headers, status codes, queries, and size filters.&lt;/p&gt;</description></item><item><title>Replay Responses</title><link>/feroxbuster-docs/docs/examples/replay-proxy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/examples/replay-proxy/</guid><description>&lt;h2 id="replay-responses-to-a-proxy-based-on-status-code"&gt;Replay Responses to a Proxy based on Status Code&lt;/h2&gt;
 
 
-&lt;div class="alert alert-warning" role="alert">
-&lt;h4 class="alert-heading">Heads up&lt;/h4>
+&lt;div class="alert alert-warning" role="alert"&gt;
+&lt;h4 class="alert-heading"&gt;Heads up&lt;/h4&gt;
 
  this means that for every response that matches your replay criteria, you&amp;rsquo;ll end up sending the request that
 generated that response a second time. Depending on the target and your engagement terms (if any), it may not make sense
 from a traffic generated perspective.
 
-&lt;/div>
+&lt;/div&gt;
 
-&lt;p>The &lt;code>--replay-proxy&lt;/code> and &lt;code>--replay-codes&lt;/code> options were added as a way to only send a select few responses to a proxy.
-This is in stark contrast to &lt;code>--proxy&lt;/code> which proxies EVERY request.&lt;/p></description></item></channel></rss>
+&lt;p&gt;The &lt;code&gt;--replay-proxy&lt;/code&gt; and &lt;code&gt;--replay-codes&lt;/code&gt; options were added as a way to only send a select few responses to a proxy.
+This is in stark contrast to &lt;code&gt;--proxy&lt;/code&gt; which proxies EVERY request.&lt;/p&gt;</description></item></channel></rss>

@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on feroxbuster</title><link>/feroxbuster-docs/tags/docker/</link><description>Recent content in Docker on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker Install</title><link>/feroxbuster-docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-docker/</guid><description>&lt;h2 id="docker-install">Docker Install&lt;/h2>
-&lt;blockquote>
-&lt;p>The following steps assume you have docker installed / setup&lt;/p>
-&lt;/blockquote>
-&lt;p>Thanks to github user &lt;strong>@EONRaider&lt;/strong>, we have an official docker image pushed to the docker hub with each new release.&lt;/p>
-&lt;p>You can simply jump right into usage with &lt;code>sudo docker run epi052/feroxbuster ...&lt;/code>!&lt;/p>
-&lt;h2 id="basic-usage">Basic usage&lt;/h2>
-&lt;pre tabindex="0">&lt;code>sudo docker run --init -it epi052/feroxbuster -u http://example.com -x js,html
-&lt;/code>&lt;/pre>&lt;h2 id="piping-from-stdin-and-proxying-all-requests-through-socks5-proxy">Piping from stdin and proxying all requests through socks5 proxy&lt;/h2>
-&lt;pre tabindex="0">&lt;code>cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdin -x js,html --proxy socks5://127.0.0.1:9050
-&lt;/code>&lt;/pre>&lt;h2 id="mount-a-volume-to-pass-in-ferox-configtoml">Mount a volume to pass in &lt;code>ferox-config.toml&lt;/code>&lt;/h2>
-&lt;p>You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="../../configuration/ferox-config-toml/">&lt;code>ferox-buster.toml&lt;/code>&lt;/a> can
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on feroxbuster</title><link>/feroxbuster-docs/tags/docker/</link><description>Recent content in Docker on feroxbuster</description><generator>Hugo</generator><language>en</language><atom:link href="/feroxbuster-docs/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker Install</title><link>/feroxbuster-docs/docs/installation/install-docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/feroxbuster-docs/docs/installation/install-docker/</guid><description>&lt;h2 id="docker-install"&gt;Docker Install&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The following steps assume you have docker installed / setup&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Thanks to github user &lt;strong&gt;@EONRaider&lt;/strong&gt;, we have an official docker image pushed to the docker hub with each new release.&lt;/p&gt;
+&lt;p&gt;You can simply jump right into usage with &lt;code&gt;sudo docker run epi052/feroxbuster ...&lt;/code&gt;!&lt;/p&gt;
+&lt;h2 id="basic-usage"&gt;Basic usage&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;sudo docker run --init -it epi052/feroxbuster -u http://example.com -x js,html
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="piping-from-stdin-and-proxying-all-requests-through-socks5-proxy"&gt;Piping from stdin and proxying all requests through socks5 proxy&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;cat targets.txt | sudo docker run --net=host --init -i epi052/feroxbuster --stdin -x js,html --proxy socks5://127.0.0.1:9050
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="mount-a-volume-to-pass-in-ferox-configtoml"&gt;Mount a volume to pass in &lt;code&gt;ferox-config.toml&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;You&amp;rsquo;ve got some options available if you want to pass in a config file. &lt;a href="../../configuration/ferox-config-toml/"&gt;&lt;code&gt;ferox-buster.toml&lt;/code&gt;&lt;/a&gt; can
 live in multiple locations and still be valid, so it&amp;rsquo;s up to you how you&amp;rsquo;d like to pass it in. Below are a few valid
-examples:&lt;/p></description></item></channel></rss>
+examples:&lt;/p&gt;</description></item></channel></rss>
