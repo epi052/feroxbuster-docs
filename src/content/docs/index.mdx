@@ -1,0 +1,34 @@
+---
+title: feroxbuster
+description: A fast, simple, recursive content discovery tool written in Rust
+template: splash
+hero:
+  tagline: A fast, simple, recursive content discovery tool written in Rust
+  image:
+    file: ../../assets/ferox-logo.png
+  actions:
+    - text: Get Started
+      link: /feroxbuster-docs/overview/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/epi052/feroxbuster
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="Lightning Fast" icon="rocket">
+    Built in Rust for maximum performance. Scan thousands of paths per second.
+  </Card>
+  <Card title="Recursive Discovery" icon="seti:folder">
+    Automatically discovers and scans new directories as they're found.
+  </Card>
+  <Card title="Highly Configurable" icon="setting">
+    Extensive filtering, proxying, and customization options.
+  </Card>
+  <Card title="Smart Features" icon="approve-check">
+    Auto-tune, link extraction, dynamic wordlists, and more.
+  </Card>
+</CardGrid>
