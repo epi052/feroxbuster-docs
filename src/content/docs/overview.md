@@ -3,6 +3,20 @@ title: Overview
 description: What feroxbuster is and what it does
 ---
 
+⚠️ **Security Notice – Domain Impersonation**
+
+The domain **feroxbuster.com** is **NOT affiliated** with this project, its maintainers, or any official feroxbuster releases.
+
+Official feroxbuster downloads are distributed **ONLY** through:
+
+- [https://github.com/epi052/feroxbuster](https://github.com/epi052/feroxbuster/releases)
+- package repositories listed in this README
+- package repositories listed in the [installation docs](https://epi052.github.io/feroxbuster-docs/installation/android/)
+
+We do **not** distribute software from feroxbuster.com, and we cannot vouch for the authenticity or safety of files hosted there.  
+
+If you downloaded feroxbuster from any other domain, we strongly recommend deleting it and reinstalling from an official source.
+
 ## What the heck is a ferox anyway?
 
 Ferox is short for Ferric Oxide. Ferric Oxide, simply put, is rust. The name rustbuster was taken, so I decided on a variation.
