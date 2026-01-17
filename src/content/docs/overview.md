@@ -3,7 +3,7 @@ title: Overview
 description: What feroxbuster is and what it does
 ---
 
-⚠️ **Security Notice – Domain Impersonation**
+## ⚠️ **Security Notice – Domain Impersonation**
 
 The domain **feroxbuster.com** is **NOT affiliated** with this project, its maintainers, or any official feroxbuster releases.
 
