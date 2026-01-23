@@ -10,9 +10,6 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'feroxbuster',
-			logo: {
-				src: './src/assets/ferox-logo.png',
-			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/epi052/feroxbuster' },
 				{ icon: 'x.com', label: 'Twitter', href: 'https://twitter.com/epi052' },
