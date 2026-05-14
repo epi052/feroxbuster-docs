@@ -9,7 +9,8 @@ The domain **feroxbuster.com** is **NOT affiliated** with this project, its main
 
 Official feroxbuster downloads are distributed **ONLY** through:
 
-- [https://github.com/epi052/feroxbuster](https://github.com/epi052/feroxbuster/releases)
+- [https://github.com/epi052/feroxbuster](https://github.com/epi052/feroxbuster/releases) (open source)
+- [https://www.feroxbuster.pro](https://www.feroxbuster.pro) (commercial)
 - package repositories listed in this README
 - package repositories listed in the [installation docs](https://epi052.github.io/feroxbuster-docs/installation/android/)
 
